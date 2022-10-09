@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "573797168295",
+    "firebase_url": "https://myhome-81670-default-rtdb.firebaseio.com",
+    "project_id": "myhome-81670",
+    "storage_bucket": "myhome-81670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573797168295:android:0bb24ec3883480da1d1782",
+        "android_client_info": {
+          "package_name": "com.example.myhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573797168295-arlh6ftkcrgj0e1dfm7amehgctandcl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0AtHssr8dP_Vn2R6_k-dT5FswueqPXP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573797168295-arlh6ftkcrgj0e1dfm7amehgctandcl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573797168295:android:993d433b6ffc2ab01d1782",
+        "android_client_info": {
+          "package_name": "com.example.teleinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573797168295-arlh6ftkcrgj0e1dfm7amehgctandcl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0AtHssr8dP_Vn2R6_k-dT5FswueqPXP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573797168295-arlh6ftkcrgj0e1dfm7amehgctandcl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573797168295:android:a78fcaa43631b7ac1d1782",
+        "android_client_info": {
+          "package_name": "com.example.teleomluvenky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573797168295-arlh6ftkcrgj0e1dfm7amehgctandcl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0AtHssr8dP_Vn2R6_k-dT5FswueqPXP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573797168295-arlh6ftkcrgj0e1dfm7amehgctandcl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

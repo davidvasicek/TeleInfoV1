@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".administration.__ActivityMainAdministration">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:id="@+id/inviteTeacher"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Učitelé"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"
+            android:tag="tagForDelete"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/teacherName"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:id="@+id/inviteTeachedddr"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Předměty"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"
+            android:tag="tagForDelete"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/teacherNameddd"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:id="@+id/inviteTeacherfff"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Učebny"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"
+            android:tag="tagForDelete"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/teacherNamefff"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:id="@+id/inviteTeachervf"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Telefonní kontakty"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"
+            android:tag="tagForDelete"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/teacherNamsdge"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:id="@+id/inviteTeagfgcher"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Harmonogram roku"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"
+            android:tag="tagForDelete"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/teacherNamyfhdye"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:id="@+id/inviteTeagdvfgcher"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Registrované zařízení"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"
+            android:tag="tagForDelete"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/teacherNamyfhvdye"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+
+
+
+
+
+
+</LinearLayout>

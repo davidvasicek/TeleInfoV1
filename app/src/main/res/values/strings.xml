@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">TeleInfo</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!--- Settings theme activity -->
+    <string name="settingsThemeActivity_TextView_ThemeTitle">#_Schéma</string>
+    <string name="settingsThemeActivity_TextView_MainThemeTitle">#_Nastavení hlavní barvy</string>
+    <string name="settingsThemeActivity_TextView_MainThemeSubtitle">#_Nastavte hlavní barvu Vaší aplikace</string>
+    <string name="settingsThemeActivity_TextView_AppBarThemeTitle">#_Nastavení schématu navigační lišty</string>
+    <string name="settingsThemeActivity_TextView_AppBarThemeSubtitle">#_Nastavte schéma vaší navigační lišty</string>
+    <string name="settingsThemeActivity_TextView_GraphColorTitle">#_Nastavení barvy grafů</string>
+    <string name="settingsThemeActivity_TextView_GraphColorSubtitle">#_Nastavte barvu Vaších grafů</string>
+    <string name="settingsThemeActivity_TextView_LoginTitle">#_Přihlašování</string>
+    <string name="settingsThemeActivity_TextView_ColorLoginTitle">#_Nastavení pozadí vašeho přihlašování</string>
+    <string name="settingsThemeActivity_TextView_ColorLoginSubtitle">#_Nastavte barvu pozadí Vašeho přihlašování</string>
+    <string name="settingsThemeActivity_TextView_ThemeDark">#_Tmavé</string>
+    <string name="settingsThemeActivity_TextView_ThemeLight">#_Světlé</string>
+    <string name="settingsThemeActivity_TextView_ColorTabLayoutNonSelectedTextTitle">#_Nastavení sekundární barvy tabů</string>
+    <string name="settingsThemeActivity_TextView_ColorTabLayoutNonSelectedTextSubtitle">#_Nastavte barvu textů Vaších tabů, které nejsou vybrány</string>
+
+
+    <string name="mainSettingsActivity_TextView_ResetDeleteTitle">#_Resetování / Mazání nastavení</string>
+    <string name="mainSettingsActivity_TextView_NotificationsTitle">#_Notifikace</string>
+    <string name="mainSettingsActivity_TextView_UnitsTitle">#_Jednotky</string>
+    <string name="mainSettingsActivity_TextView_SensorSettingsTitle">#_Nastavení senzorů</string>
+    <string name="mainSettingsActivity_TextView_ThemeSelect">#_Téma aplikace</string>
+    <string name="mainSettingsActivity_TextView_Info">#_Info</string>
+    <string name="mainSettingsActivity_TextView_SmartHomeModeTitle">#_Smart Home režím</string>
+    <string name="mainSettingsActivity_TextView_SmartHomeModeSubtitle">#_Zapnutím smart Home režímu umožníte jednotlivýým senzorům přiřazovat lokalizaci v rámci vaší kompozice domácnosti</string>
+
+
+    //settingsMenu
+
+    <string name="settingsMenu_TextView_Application">#_Aplikace</string>
+    <string name="settingsMenu_TextView_Reset">#_Resetování / Mazání nastavení</string>
+    <string name="settingsMenu_TextView_NotificationsTitle">#_Notifikace</string>
+    <string name="settingsMenu_TextView_Theme">#_Vzhled aplikace</string>
+    <string name="settingsMenu_TextView_SensorsAndDevices">#_Senzory a zařízení</string>
+    <string name="settingsMenu_TextView_LightsGeneral">#_Osvětlení - Obecné</string>
+    <string name="settingsMenu_TextView_LightsBtn">#_Osvětlení - vypínače</string>
+    <string name="settingsMenu_TextView_Plants">#_Rostliny</string>
+    <string name="settingsMenu_TextView_Others">#_Ostatní</string>
+    <string name="settingsMenu_TextView_Info">#_Informace</string>
+
+
+    <string name="locationNone">#_Žádný</string>
+    <string name="locationBathroom">#_Koupelna</string>
+    <string name="locationBedroom">#_Ložnice</string>
+    <string name="locationCellar">#_Sklep</string>
+    <string name="locationCloakRoom">#_Šatna</string>
+    <string name="locationDiningRoom">#_Jídelna</string>
+    <string name="locationGarage">#_Garáž</string>
+    <string name="locationGarden">#_Zahrada</string>
+    <string name="locationHall">#_Předsíň</string>
+    <string name="locationChildrensRoom">#_Dětský pokoj</string>
+    <string name="locationKitchen">#_Kuchyň</string>
+    <string name="locationLaundry">#_Prádelna</string>
+    <string name="locationLivingRoom">#_Obývací pokoj</string>
+    <string name="locationOffice">#_Kancelář</string>
+    <string name="locationPantry">#_Spižírna</string>
+    <string name="locationStaircase">#_Schodiště</string>
+    <string name="locationTechnicalRoom">#_Technická místnost</string>
+    <string name="locationTerrace">#_Terasa</string>
+    <string name="locationUtilityRoom">#_Úklidová místnost</string>
+    <string name="locationWc">#_Toaleta</string>
+    <string name="locationWorkroom">#_Dílna</string>
+    <string name="locationUnknown">#_Naznámý</string>
+
+
+</resources>

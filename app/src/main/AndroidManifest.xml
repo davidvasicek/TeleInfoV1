@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.teleinfo">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TeleInfo"
+        tools:targetApi="31">
+        <activity
+            android:name=".login._ActivityMainLogin"
+            android:exported="false" />
+        <activity
+            android:name=".administration._ActivityFragmentViewAdministration"
+            android:exported="false" />
+        <activity
+            android:name=".administration.__ActivityMainAdministration"
+            android:exported="false" />
+        <activity
+            android:name=".rozvrh.ListTeachersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rozvrh.SettingColorsTimeTable"
+            android:exported="false" />
+        <activity
+            android:name=".rozvrh.TeleInfoDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rozvrh.RozvrhNove"
+            android:exported="false" />
+        <activity
+            android:name=".rozvrh.RozvrhNove1"
+            android:exported="false" />
+        <activity
+            android:name=".rozvrh.RozvrhMain"
+            android:exported="false" />
+        <activity
+            android:name=".settings._ActivityMainSettings"
+            android:exported="false" />
+        <activity
+            android:name=".settings.ActivityFragmentView"
+            android:exported="false"
+            android:parentActivityName=".settings._ActivityMainSettings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".settings._ActivityMainSettings" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

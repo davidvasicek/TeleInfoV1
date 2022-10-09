@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/purple700colorAccent"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:id="@+id/menuDate"
+        />
+
+   
+
+
+
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:id="@+id/BreakfastTitle"/>
+
+    
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:id="@+id/Breakfast"/>
+
+    
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_secondary"
+            android:textSize="10dp"
+            android:id="@+id/BreakfastAllergens"/>
+
+    
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:id="@+id/BrunchTitle"/>
+
+    
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:id="@+id/Brunch"/>
+
+    
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_secondary"
+            android:textSize="10dp"
+            android:id="@+id/BrunchAllergens"/>
+
+    
+
+
+
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:id="@+id/LunchTitle"/>
+
+    
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:id="@+id/Lunch"/>
+
+    
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_secondary"
+            android:textSize="10dp"
+            android:id="@+id/LunchAllergens"/>
+
+    
+
+
+
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:id="@+id/SnackTitle"/>
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:id="@+id/Snack"/>
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_secondary"
+            android:textSize="10dp"
+            android:id="@+id/SnackAllergens"/>
+
+
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:id="@+id/DinnerTitle"/>
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:id="@+id/Dinner"/>
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_secondary"
+            android:textSize="10dp"
+            android:id="@+id/DinnerAllergens"/>
+
+
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:id="@+id/DinnerSecondTitle"/>
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:id="@+id/DinnerSecond"/>
+
+    <TextView
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:tag="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="----------------"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_secondary"
+            android:textSize="10dp"
+            android:id="@+id/DinnerSecondAllergens"/>
+
+    <TextView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

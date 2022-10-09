@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ing. David Vašíček"
+            android:gravity="left"
+            android:id="@+id/color1SelectBottomSheetDialogTextViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="14dp"
+            android:tag="tagForDelete"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Funkce: "
+            android:id="@+id/color1SelectBottomSheetDialogTexfcvfftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:tag="tagForDelete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Pedagogický pracovník\nVýchovný poradce"
+            android:gravity="left"
+            android:id="@+id/color1fbvSelectBottomSheetDialogTegxffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:tag="tagForDelete"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Kontakt: "
+            android:gravity="center_vertical"
+            android:id="@+id/color1SelectBottofgfmSvgfgheetDialogTexffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:tag="tagForDelete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="vasicek@teleinformatika.eu"
+            android:gravity="left"
+            android:id="@+id/color1SelectBottofgfgmSheetDfgfgialogTegxffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="18dp"
+            android:tag="tagForDelete"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardBackgroundColor="#EEEEEE"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kabinet"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="A 1006"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:tag="tagForDelete"
+                    android:id="@+id/classRoomdd"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardBackgroundColor="#EEEEEE"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telefon"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="327"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:tag="tagForDelete"
+                    android:id="@+id/classRoomdddd"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardBackgroundColor="#EEEEEE"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Konzultace"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ČT 7:25"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:tag="tagForDelete"
+                    android:id="@+id/classRoom"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Vyučované předměty: "
+            android:gravity="center_vertical"
+            android:id="@+id/color1SelectBottofgfmSvgfghcveeghfftDialogTexffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:tag="tagForDelete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Programovací jazyky, Operační systémy, Praxe"
+            android:gravity="left"
+            android:id="@+id/color1cvSelectBottofgfggmSheetDfgfgialogTegxffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="18dp"
+            android:tag="tagForDelete"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Třídní učitel: "
+            android:gravity="center_vertical"
+            android:id="@+id/color1SelectBottofgfmSvgfghcveetDialogTexffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:tag="tagForDelete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="4.A"
+            android:gravity="left"
+            android:id="@+id/color1cvSelectBottofgfgmSheetDfgfgialogTegxffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="18dp"
+            android:tag="tagForDelete"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Správce učeben: "
+            android:gravity="center_vertical"
+            android:id="@+id/color1SelectBottofgfmSvgfdghcveetDialogTexffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:tag="tagForDelete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="17"
+            android:gravity="left"
+            android:id="@+id/color1cvSelectBottofgfgmSheetdfDfgfgialogTegxffftViewTitle"
+            android:textColor="@color/text_primary"
+            android:textSize="18dp"
+            android:tag="tagForDelete"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
