@@ -26,11 +26,14 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_permissions.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_run_guide.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_security_auth_priority.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_security_credentials.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_security_fingerprint.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_security_pin.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide_fragment_run_guide.xml" value="0.1421875" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/hhhhhhhhhhhhhhhhhhhhhhh.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/login_activity_change_password.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/login_activity_main.xml" value="0.1421875" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/login_bottom_sheet_dialog_credentials_login.xml" value="0.1286231884057971" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/login_fragment_first_login_qr.xml" value="0.152" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/login_fragment_new_pin_dialog.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/rozvrh_activity_rozvrh_main.xml" value="0.18802083333333333" />
