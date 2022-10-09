@@ -38,6 +38,8 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class _ActivityMainLogin extends AppCompatActivity {
 
+    //test
+
     FragmentManager fragmentManager;
 
     FrameLayout frameLayout;
