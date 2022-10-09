@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:background="@color/line"
+            android:gravity=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Nový PIN"
+                    android:gravity="center"
+                    android:id="@+id/loginWithPinDialogTextViewTitle"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Zadejte váš nový pin kód"
+                    android:gravity="center"
+                    android:id="@+id/loginWithPinDialogTextViewInstructions"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/testicek"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/login_fragmentNewPinLinearLayoutPins"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/testicek1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/login_fragmentNewPinLinearLayoutPins1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:id="@+id/login_fragmentNewPinTextViewButton1"
+                        android:text="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton2"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="2"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton3"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="3"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton4"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="4"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton5"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="5"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton6"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="6"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton7"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="7"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton8"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="8"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton9"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="9"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewOK"
+                        android:layout_height="45dp"
+                        android:layout_width="45dp"
+                        android:text="OK"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:tag="tagForDelete"
+                        android:textColor="@color/text_primary"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/login_fragmentNewPinImageViewSuccessStatus"
+                        android:layout_height="45dp"
+                        android:layout_width="45dp"
+                        android:text="fp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/login_fragmentNewPinTextViewButton0"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:text="0"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+                        android:textSize="20dp"
+                        android:tag="tagForDelete"
+                        android:textColor="#212121"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    >
+                    
+                    <ImageView
+                        android:id="@+id/login_fragmentNewPinImageViewButtonDelete"
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"
+                        android:text="fp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:src="@drawable/backspace"
+                        android:background="?selectableItemBackgroundBorderless"
+                        />
+                    
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/login_fragmentNewPinButtonResetPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="Resetovat nový pin"
+                android:textColor="@color/text_primary"
+                android:textSize="12dp"
+                android:tag="tagForDeleteButton" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="|"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:tag="tagForDelete"
+                android:textColor="#212121"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?selectableItemBackgroundBorderless"
+                />
+
+
+            <Button
+                android:id="@+id/login_fragmentNewPinButtonShowPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="Ukázat pin"
+                android:textColor="@color/text_primary"
+                android:textSize="12dp"
+                android:tag="tagForDeleteButton" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/loginWithPinDialogButtonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="Cancel"
+                android:textColor="@color/text_primary"
+                android:textSize="12dp"
+                android:tag="tagForDeleteButton" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

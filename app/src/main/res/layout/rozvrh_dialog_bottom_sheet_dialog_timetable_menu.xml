@@ -757,7 +757,7 @@
                         android:layout_marginTop="2.5dp"
                         android:layout_marginBottom="2.5dp"
                         android:layout_gravity="right"
-                        app:cardBackgroundColor="@color/amber500colorPrimary">
+                        app:cardBackgroundColor="@color/amber500text_primary">
 
                     </androidx.cardview.widget.CardView>
 
@@ -832,7 +832,7 @@
                                 android:layout_marginTop="2.5dp"
                                 android:layout_marginBottom="2.5dp"
                                 android:layout_gravity="right"
-                                app:cardBackgroundColor="@color/amber500colorPrimary">
+                                app:cardBackgroundColor="@color/amber500text_primary">
 
                             </androidx.cardview.widget.CardView>
 
@@ -907,7 +907,7 @@
                                 android:layout_marginTop="2.5dp"
                                 android:layout_marginBottom="2.5dp"
                                 android:layout_gravity="right"
-                                app:cardBackgroundColor="@color/amber500colorPrimary">
+                                app:cardBackgroundColor="@color/amber500text_primary">
 
                             </androidx.cardview.widget.CardView>
 
@@ -982,7 +982,7 @@
                                 android:layout_marginTop="2.5dp"
                                 android:layout_marginBottom="2.5dp"
                                 android:layout_gravity="right"
-                                app:cardBackgroundColor="@color/amber500colorPrimary">
+                                app:cardBackgroundColor="@color/amber500text_primary">
 
                             </androidx.cardview.widget.CardView>
 
@@ -1086,7 +1086,7 @@
                         android:layout_marginTop="2.5dp"
                         android:layout_marginBottom="2.5dp"
                         android:layout_gravity="right"
-                        app:cardBackgroundColor="@color/green900colorPrimary">
+                        app:cardBackgroundColor="@color/green900text_primary">
 
                     </androidx.cardview.widget.CardView>
 
@@ -1235,7 +1235,7 @@
                         android:layout_marginTop="2.5dp"
                         android:layout_marginBottom="2.5dp"
                         android:layout_gravity="right"
-                        app:cardBackgroundColor="@color/green900colorPrimary">
+                        app:cardBackgroundColor="@color/green900text_primary">
 
                     </androidx.cardview.widget.CardView>
 
@@ -1311,7 +1311,7 @@
                         android:layout_marginTop="2.5dp"
                         android:layout_marginBottom="2.5dp"
                         android:layout_gravity="right"
-                        app:cardBackgroundColor="@color/blueGray700colorPrimary">
+                        app:cardBackgroundColor="@color/blueGray700text_primary">
 
                     </androidx.cardview.widget.CardView>
 
@@ -1868,7 +1868,7 @@
                                 android:layout_marginTop="2.5dp"
                                 android:layout_marginBottom="2.5dp"
                                 android:layout_gravity="right"
-                                app:cardBackgroundColor="@color/amber500colorPrimary">
+                                app:cardBackgroundColor="@color/amber500text_primary">
 
                             </androidx.cardview.widget.CardView>
 
@@ -1943,7 +1943,7 @@
                                 android:layout_marginTop="2.5dp"
                                 android:layout_marginBottom="2.5dp"
                                 android:layout_gravity="right"
-                                app:cardBackgroundColor="@color/amber500colorPrimary">
+                                app:cardBackgroundColor="@color/amber500text_primary">
 
                             </androidx.cardview.widget.CardView>
 
@@ -2018,7 +2018,7 @@
                                 android:layout_marginTop="2.5dp"
                                 android:layout_marginBottom="2.5dp"
                                 android:layout_gravity="right"
-                                app:cardBackgroundColor="@color/amber500colorPrimary">
+                                app:cardBackgroundColor="@color/amber500text_primary">
 
                             </androidx.cardview.widget.CardView>
 
@@ -2092,7 +2092,7 @@
                                 android:layout_marginTop="2.5dp"
                                 android:layout_marginBottom="2.5dp"
                                 android:layout_gravity="right"
-                                app:cardBackgroundColor="@color/amber500colorPrimary">
+                                app:cardBackgroundColor="@color/amber500text_primary">
 
                             </androidx.cardview.widget.CardView>
 

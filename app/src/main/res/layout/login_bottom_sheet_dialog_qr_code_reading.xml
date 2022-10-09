@@ -8,8 +8,8 @@
         android:id="@+id/scanner_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/blueGray700colorPrimary"
-        android:backgroundTint="@color/blueGray700colorPrimary"
+        android:background="@color/blueGray700text_primary"
+        android:backgroundTint="@color/blueGray700text_primary"
 
         app:autoFocusButtonColor="@android:color/white"
         app:autoFocusButtonVisible="true"

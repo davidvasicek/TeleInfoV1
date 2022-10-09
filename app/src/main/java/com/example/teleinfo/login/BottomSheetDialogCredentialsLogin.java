@@ -10,6 +10,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -90,7 +91,27 @@ public class BottomSheetDialogCredentialsLogin extends BottomSheetDialogFragment
             @Override
             public void onClick(View v) {
 
+                if(TextUtils.isEmpty(userName)){
+
+                    Toast.makeText(getContext(),"Email je prázdný",Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if(!userName.contains("@") && !userName.contains(".") || userName.contains(" ")){
+
+                    Toast.makeText(getContext(),"Email je ve špatném tvaru",Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)){
+
+                    Toast.makeText(getContext(),"Email je prázdný",Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
                 credentialsListener.applyCredentialsListener(userName, password);
+                dismiss();
 
             }
         });

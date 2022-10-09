@@ -21,232 +21,232 @@
     <color name="text_secondary">#9E9E9E</color>
     <color name="text_tertiary">#E1BEE7</color>
 
-    <color name="red500colorPrimary">#F44336</color>
-    <color name="red500colorPrimaryDark">#F44336</color>
+    <color name="red500text_primary">#F44336</color>
+    <color name="red500text_primaryDark">#F44336</color>
     <color name="red500colorAccent">#F44336</color>
 
-    <color name="red700colorPrimary">#D32F2F</color>
-    <color name="red700colorPrimaryDark">#D32F2F</color>
+    <color name="red700text_primary">#D32F2F</color>
+    <color name="red700text_primaryDark">#D32F2F</color>
     <color name="red700colorAccent">#D32F2F</color>
 
-    <color name="red900colorPrimary">#B71C1C</color>
-    <color name="red900colorPrimaryDark">#B71C1C</color>
+    <color name="red900text_primary">#B71C1C</color>
+    <color name="red900text_primaryDark">#B71C1C</color>
     <color name="red900colorAccent">#B71C1C</color>
 
-    <color name="pink500colorPrimary">#E91E63</color>
-    <color name="pink500colorPrimaryDark">#E91E63</color>
+    <color name="pink500text_primary">#E91E63</color>
+    <color name="pink500text_primaryDark">#E91E63</color>
     <color name="pink500colorAccent">#E91E63</color>
 
-    <color name="pink700colorPrimary">#C2185B</color>
-    <color name="pink700colorPrimaryDark">#C2185B</color>
+    <color name="pink700text_primary">#C2185B</color>
+    <color name="pink700text_primaryDark">#C2185B</color>
     <color name="pink700colorAccent">#C2185B</color>
 
-    <color name="pink900colorPrimary">#880E4F</color>
-    <color name="pink900colorPrimaryDark">#880E4F</color>
+    <color name="pink900text_primary">#880E4F</color>
+    <color name="pink900text_primaryDark">#880E4F</color>
     <color name="pink900colorAccent">#880E4F</color>
 
-    <color name="purple500colorPrimary">#9C27B0</color>
-    <color name="purple500colorPrimaryDark">#9C27B0</color>
+    <color name="purple500text_primary">#9C27B0</color>
+    <color name="purple500text_primaryDark">#9C27B0</color>
     <color name="purple500colorAccent">#9C27B0</color>
 
-    <color name="purple700colorPrimary">#7B1FA2</color>
-    <color name="purple700colorPrimaryDark">#7B1FA2</color>
+    <color name="purple700text_primary">#7B1FA2</color>
+    <color name="purple700text_primaryDark">#7B1FA2</color>
     <color name="purple700colorAccent">#7B1FA2</color>
 
-    <color name="purple900colorPrimary">#4A148C</color>
-    <color name="purple900colorPrimaryDark">#4A148C</color>
+    <color name="purple900text_primary">#4A148C</color>
+    <color name="purple900text_primaryDark">#4A148C</color>
     <color name="purple900colorAccent">#4A148C</color>
 
-    <color name="deepPurple500colorPrimary">#673AB7</color>
-    <color name="deepPurple500colorPrimaryDark">#673AB7</color>
+    <color name="deepPurple500text_primary">#673AB7</color>
+    <color name="deepPurple500text_primaryDark">#673AB7</color>
     <color name="deepPurple500colorAccent">#673AB7</color>
 
-    <color name="deepPurple700colorPrimary">#512DA8</color>
-    <color name="deepPurple700colorPrimaryDark">#512DA8</color>
+    <color name="deepPurple700text_primary">#512DA8</color>
+    <color name="deepPurple700text_primaryDark">#512DA8</color>
     <color name="deepPurple700colorAccent">#512DA8</color>
 
-    <color name="deepPurple900colorPrimary">#311B92</color>
-    <color name="deepPurple900colorPrimaryDark">#311B92</color>
+    <color name="deepPurple900text_primary">#311B92</color>
+    <color name="deepPurple900text_primaryDark">#311B92</color>
     <color name="deepPurple900colorAccent">#311B92</color>
 
-    <color name="indigo500colorPrimary">#3F51B5</color>
-    <color name="indigo500colorPrimaryDark">#3F51B5</color>
+    <color name="indigo500text_primary">#3F51B5</color>
+    <color name="indigo500text_primaryDark">#3F51B5</color>
     <color name="indigo500colorAccent">#3F51B5</color>
 
-    <color name="indigo700colorPrimary">#303F9F</color>
-    <color name="indigo700colorPrimaryDark">#303F9F</color>
+    <color name="indigo700text_primary">#303F9F</color>
+    <color name="indigo700text_primaryDark">#303F9F</color>
     <color name="indigo700colorAccent">#303F9F</color>
 
-    <color name="indigo900colorPrimary">#1A237E</color>
-    <color name="indigo900colorPrimaryDark">#1A237E</color>
+    <color name="indigo900text_primary">#1A237E</color>
+    <color name="indigo900text_primaryDark">#1A237E</color>
     <color name="indigo900colorAccent">#1A237E</color>
 
-    <color name="blue500colorPrimary">#2196F3</color>
-    <color name="blue500colorPrimaryDark">#2196F3</color>
+    <color name="blue500text_primary">#2196F3</color>
+    <color name="blue500text_primaryDark">#2196F3</color>
     <color name="blue500colorAccent">#2196F3</color>
 
-    <color name="blue700colorPrimary">#1976D2</color>
-    <color name="blue700colorPrimaryDark">#1976D2</color>
+    <color name="blue700text_primary">#1976D2</color>
+    <color name="blue700text_primaryDark">#1976D2</color>
     <color name="blue700colorAccent">#1976D2</color>
 
-    <color name="blue900colorPrimary">#0D47A1</color>
-    <color name="blue900colorPrimaryDark">#0D47A1</color>
+    <color name="blue900text_primary">#0D47A1</color>
+    <color name="blue900text_primaryDark">#0D47A1</color>
     <color name="blue900colorAccent">#0D47A1</color>
 
-    <color name="lightBlue500colorPrimary">#03A9F4</color>
-    <color name="lightBlue500colorPrimaryDark">#03A9F4</color>
+    <color name="lightBlue500text_primary">#03A9F4</color>
+    <color name="lightBlue500text_primaryDark">#03A9F4</color>
     <color name="lightBlue500colorAccent">#03A9F4</color>
 
-    <color name="lightBlue700colorPrimary">#0288D1</color>
-    <color name="lightBlue700colorPrimaryDark">#0288D1</color>
+    <color name="lightBlue700text_primary">#0288D1</color>
+    <color name="lightBlue700text_primaryDark">#0288D1</color>
     <color name="lightBlue700colorAccent">#0288D1</color>
 
-    <color name="lightBlue900colorPrimary">#01579B</color>
-    <color name="lightBlue900colorPrimaryDark">#01579B</color>
+    <color name="lightBlue900text_primary">#01579B</color>
+    <color name="lightBlue900text_primaryDark">#01579B</color>
     <color name="lightBlue900colorAccent">#01579B</color>
 
-    <color name="cyan500colorPrimary">#00BCD4</color>
-    <color name="cyan500colorPrimaryDark">#00BCD4</color>
+    <color name="cyan500text_primary">#00BCD4</color>
+    <color name="cyan500text_primaryDark">#00BCD4</color>
     <color name="cyan500colorAccent">#00BCD4</color>
 
-    <color name="cyan700colorPrimary">#0097A7</color>
-    <color name="cyan700colorPrimaryDark">#0097A7</color>
+    <color name="cyan700text_primary">#0097A7</color>
+    <color name="cyan700text_primaryDark">#0097A7</color>
     <color name="cyan700colorAccent">#0097A7</color>
 
-    <color name="cyan900colorPrimary">#006064</color>
-    <color name="cyan900colorPrimaryDark">#006064</color>
+    <color name="cyan900text_primary">#006064</color>
+    <color name="cyan900text_primaryDark">#006064</color>
     <color name="cyan900colorAccent">#006064</color>
 
-    <color name="teal500colorPrimary">#009688</color>
-    <color name="teal500colorPrimaryDark">#009688</color>
+    <color name="teal500text_primary">#009688</color>
+    <color name="teal500text_primaryDark">#009688</color>
     <color name="teal500colorAccent">#009688</color>
 
-    <color name="teal700colorPrimary">#00796B</color>
-    <color name="teal700colorPrimaryDark">#00796B</color>
+    <color name="teal700text_primary">#00796B</color>
+    <color name="teal700text_primaryDark">#00796B</color>
     <color name="teal700colorAccent">#00796B</color>
 
-    <color name="teal900colorPrimary">#004D40</color>
-    <color name="teal900colorPrimaryDark">#004D40</color>
+    <color name="teal900text_primary">#004D40</color>
+    <color name="teal900text_primaryDark">#004D40</color>
     <color name="teal900colorAccent">#004D40</color>
 
-    <color name="green500colorPrimary">#4CAF50</color>
-    <color name="green500colorPrimaryDark">#4CAF50</color>
+    <color name="green500text_primary">#4CAF50</color>
+    <color name="green500text_primaryDark">#4CAF50</color>
     <color name="green500colorAccent">#4CAF50</color>
 
-    <color name="green700colorPrimary">#388E3C</color>
-    <color name="green700colorPrimaryDark">#388E3C</color>
+    <color name="green700text_primary">#388E3C</color>
+    <color name="green700text_primaryDark">#388E3C</color>
     <color name="green700colorAccent">#388E3C</color>
 
-    <color name="green900colorPrimary">#1B5E20</color>
-    <color name="green900colorPrimaryDark">#1B5E20</color>
+    <color name="green900text_primary">#1B5E20</color>
+    <color name="green900text_primaryDark">#1B5E20</color>
     <color name="green900colorAccent">#1B5E20</color>
 
-    <color name="light500colorPrimary">#8BC34A</color>
-    <color name="light500colorPrimaryDark">#8BC34A</color>
+    <color name="light500text_primary">#8BC34A</color>
+    <color name="light500text_primaryDark">#8BC34A</color>
     <color name="light500colorAccent">#8BC34A</color>
 
-    <color name="light700colorPrimary">#689F38</color>
-    <color name="light700colorPrimaryDark">#689F38</color>
+    <color name="light700text_primary">#689F38</color>
+    <color name="light700text_primaryDark">#689F38</color>
     <color name="light700colorAccent">#689F38</color>
 
-    <color name="light900colorPrimary">#33691E</color>
-    <color name="light900colorPrimaryDark">#33691E</color>
+    <color name="light900text_primary">#33691E</color>
+    <color name="light900text_primaryDark">#33691E</color>
     <color name="light900colorAccent">#33691E</color>
 
-    <color name="lime500colorPrimary">#CDDC39</color>
-    <color name="lime500colorPrimaryDark">#CDDC39</color>
+    <color name="lime500text_primary">#CDDC39</color>
+    <color name="lime500text_primaryDark">#CDDC39</color>
     <color name="lime500colorAccent">#CDDC39</color>
 
-    <color name="lime700colorPrimary">#AFB42B</color>
-    <color name="lime700colorPrimaryDark">#AFB42B</color>
+    <color name="lime700text_primary">#AFB42B</color>
+    <color name="lime700text_primaryDark">#AFB42B</color>
     <color name="lime700colorAccent">#AFB42B</color>
 
-    <color name="lime900colorPrimary">#827717</color>
-    <color name="lime900colorPrimaryDark">#827717</color>
+    <color name="lime900text_primary">#827717</color>
+    <color name="lime900text_primaryDark">#827717</color>
     <color name="lime900colorAccent">#827717</color>
 
-    <color name="yellow500colorPrimary">#FFEB3B</color>
-    <color name="yellow500colorPrimaryDark">#FFEB3B</color>
+    <color name="yellow500text_primary">#FFEB3B</color>
+    <color name="yellow500text_primaryDark">#FFEB3B</color>
     <color name="yellow500colorAccent">#FFEB3B</color>
 
-    <color name="yellow700colorPrimary">#FBC02D</color>
-    <color name="yellow700colorPrimaryDark">#FBC02D</color>
+    <color name="yellow700text_primary">#FBC02D</color>
+    <color name="yellow700text_primaryDark">#FBC02D</color>
     <color name="yellow700colorAccent">#FBC02D</color>
 
-    <color name="yellow900colorPrimary">#F57F17</color>
-    <color name="yellow900colorPrimaryDark">#F57F17</color>
+    <color name="yellow900text_primary">#F57F17</color>
+    <color name="yellow900text_primaryDark">#F57F17</color>
     <color name="yellow900colorAccent">#F57F17</color>
 
-    <color name="amber500colorPrimary">#FFC107</color>
-    <color name="amber500colorPrimaryDark">#FFC107</color>
+    <color name="amber500text_primary">#FFC107</color>
+    <color name="amber500text_primaryDark">#FFC107</color>
     <color name="amber500colorAccent">#FFC107</color>
 
-    <color name="amber700colorPrimary">#FFA000</color>
-    <color name="amber700colorPrimaryDark">#FFA000</color>
+    <color name="amber700text_primary">#FFA000</color>
+    <color name="amber700text_primaryDark">#FFA000</color>
     <color name="amber700colorAccent">#FFA000</color>
 
-    <color name="amber900colorPrimary">#FF6F00</color>
-    <color name="amber900colorPrimaryDark">#FF6F00</color>
+    <color name="amber900text_primary">#FF6F00</color>
+    <color name="amber900text_primaryDark">#FF6F00</color>
     <color name="amber900colorAccent">#FF6F00</color>
 
-    <color name="orange500colorPrimary">#FF9800</color>
-    <color name="orange500colorPrimaryDark">#FF9800</color>
+    <color name="orange500text_primary">#FF9800</color>
+    <color name="orange500text_primaryDark">#FF9800</color>
     <color name="orange500colorAccent">#FF9800</color>
 
-    <color name="orange700colorPrimary">#F57C00</color>
-    <color name="orange700colorPrimaryDark">#F57C00</color>
+    <color name="orange700text_primary">#F57C00</color>
+    <color name="orange700text_primaryDark">#F57C00</color>
     <color name="orange700colorAccent">#F57C00</color>
 
-    <color name="orange900colorPrimary">#E65100</color>
-    <color name="orange900colorPrimaryDark">#E65100</color>
+    <color name="orange900text_primary">#E65100</color>
+    <color name="orange900text_primaryDark">#E65100</color>
     <color name="orange900colorAccent">#E65100</color>
 
-    <color name="deepOrange500colorPrimary">#FF5722</color>
-    <color name="deepOrange500colorPrimaryDark">#FF5722</color>
+    <color name="deepOrange500text_primary">#FF5722</color>
+    <color name="deepOrange500text_primaryDark">#FF5722</color>
     <color name="deepOrange500colorAccent">#FF5722</color>
 
-    <color name="deepOrange700colorPrimary">#E64A19</color>
-    <color name="deepOrange700colorPrimaryDark">#E64A19</color>
+    <color name="deepOrange700text_primary">#E64A19</color>
+    <color name="deepOrange700text_primaryDark">#E64A19</color>
     <color name="deepOrange700colorAccent">#E64A19</color>
 
-    <color name="deepOrange900colorPrimary">#BF360C</color>
-    <color name="deepOrange900colorPrimaryDark">#BF360C</color>
+    <color name="deepOrange900text_primary">#BF360C</color>
+    <color name="deepOrange900text_primaryDark">#BF360C</color>
     <color name="deepOrange900colorAccent">#BF360C</color>
 
-    <color name="brown500colorPrimary">#795548</color>
-    <color name="brown500colorPrimaryDark">#795548</color>
+    <color name="brown500text_primary">#795548</color>
+    <color name="brown500text_primaryDark">#795548</color>
     <color name="brown500colorAccent">#795548</color>
 
-    <color name="brown700colorPrimary">#5D4037</color>
-    <color name="brown700colorPrimaryDark">#5D4037</color>
+    <color name="brown700text_primary">#5D4037</color>
+    <color name="brown700text_primaryDark">#5D4037</color>
     <color name="brown700colorAccent">#5D4037</color>
 
-    <color name="brown900colorPrimary">#3E2723</color>
-    <color name="brown900colorPrimaryDark">#3E2723</color>
+    <color name="brown900text_primary">#3E2723</color>
+    <color name="brown900text_primaryDark">#3E2723</color>
     <color name="brown900colorAccent">#3E2723</color>
 
-    <color name="gray500colorPrimary">#9E9E9E</color>
-    <color name="gray500colorPrimaryDark">#9E9E9E</color>
+    <color name="gray500text_primary">#9E9E9E</color>
+    <color name="gray500text_primaryDark">#9E9E9E</color>
     <color name="gray500colorAccent">#9E9E9E</color>
 
-    <color name="gray700colorPrimary">#616161</color>
-    <color name="gray700colorPrimaryDark">#616161</color>
+    <color name="gray700text_primary">#616161</color>
+    <color name="gray700text_primaryDark">#616161</color>
     <color name="gray700colorAccent">#616161</color>
 
-    <color name="gray900colorPrimary">#212121</color>
-    <color name="gray900colorPrimaryDark">#212121</color>
+    <color name="gray900text_primary">#212121</color>
+    <color name="gray900text_primaryDark">#212121</color>
     <color name="gray900colorAccent">#212121</color>
 
-    <color name="blueGray500colorPrimary">#607D8B</color>
-    <color name="blueGray500colorPrimaryDark">#607D8B</color>
+    <color name="blueGray500text_primary">#607D8B</color>
+    <color name="blueGray500text_primaryDark">#607D8B</color>
     <color name="blueGray500colorAccent">#607D8B</color>
 
-    <color name="blueGray700colorPrimary">#455A64</color>
-    <color name="blueGray700colorPrimaryDark">#455A64</color>
+    <color name="blueGray700text_primary">#455A64</color>
+    <color name="blueGray700text_primaryDark">#455A64</color>
     <color name="blueGray700colorAccent">#455A64</color>
 
-    <color name="blueGray900colorPrimary">#263238</color>
-    <color name="blueGray900colorPrimaryDark">#263238</color>
+    <color name="blueGray900text_primary">#263238</color>
+    <color name="blueGray900text_primaryDark">#263238</color>
     <color name="blueGray900colorAccent">#263238</color>
 
 </resources>

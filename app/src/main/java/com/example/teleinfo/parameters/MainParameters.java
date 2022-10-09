@@ -85,9 +85,17 @@ public interface MainParameters {
     String DINNER_SECOND_SHOW = "DinnerSecondShow";
 
 
+    String LOGGED_USER = "LoggedUser";
+    String LOGGED_USER_PASSWORD = "LoggedUserPassword";  // později se smaže
 
+    String AUTH_PREFERENCE = "AuthPreference";
 
-
+    String FINGERPRINT_AUTH = "FingerPrintAuth";
+    String TIME_OF_LAST_BLOCKED_READER = "TimeOfLastBlockedReader";
+    String FINGERPRINT_HARDWARE_IS_DETECTED = "FingerprintHardwareIsDetected";
+    public static final int NUMBER_OF_DEFAULT_PINS = 6;
+    String PIN_AUTH = "PinAuth";
+    String PIN = "Pin";
 
 
 

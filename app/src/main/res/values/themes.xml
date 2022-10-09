@@ -42,8 +42,8 @@
 
     <style name="Theme.App.red500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/red500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/red500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/red500text_primary</item>
+        <item name="colorPrimaryDark">@color/red500text_primaryDark</item>
         <item name="colorAccent">@color/red500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -52,8 +52,8 @@
 
     <style name="Theme.App.red700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/red700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/red700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/red700text_primary</item>
+        <item name="colorPrimaryDark">@color/red700text_primaryDark</item>
         <item name="colorAccent">@color/red700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -62,8 +62,8 @@
 
     <style name="Theme.App.red900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/red900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/red900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/red900text_primary</item>
+        <item name="colorPrimaryDark">@color/red900text_primaryDark</item>
         <item name="colorAccent">@color/red900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -72,8 +72,8 @@
 
     <style name="Theme.App.pink500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/pink500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/pink500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/pink500text_primary</item>
+        <item name="colorPrimaryDark">@color/pink500text_primaryDark</item>
         <item name="colorAccent">@color/pink500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -82,8 +82,8 @@
 
     <style name="Theme.App.pink700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/pink700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/pink700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/pink700text_primary</item>
+        <item name="colorPrimaryDark">@color/pink700text_primaryDark</item>
         <item name="colorAccent">@color/pink700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -92,8 +92,8 @@
 
     <style name="Theme.App.pink900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/pink900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/pink900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/pink900text_primary</item>
+        <item name="colorPrimaryDark">@color/pink900text_primaryDark</item>
         <item name="colorAccent">@color/pink900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -102,8 +102,8 @@
 
     <style name="Theme.App.purple500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/purple500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/purple500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/purple500text_primary</item>
+        <item name="colorPrimaryDark">@color/purple500text_primaryDark</item>
         <item name="colorAccent">@color/purple500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -112,8 +112,8 @@
 
     <style name="Theme.App.purple700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/purple700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/purple700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/purple700text_primary</item>
+        <item name="colorPrimaryDark">@color/purple700text_primaryDark</item>
         <item name="colorAccent">@color/purple700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -122,8 +122,8 @@
 
     <style name="Theme.App.purple900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/purple900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/purple900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/purple900text_primary</item>
+        <item name="colorPrimaryDark">@color/purple900text_primaryDark</item>
         <item name="colorAccent">@color/purple900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -132,8 +132,8 @@
 
     <style name="Theme.App.deepPurple500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/deepPurple500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/deepPurple500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/deepPurple500text_primary</item>
+        <item name="colorPrimaryDark">@color/deepPurple500text_primaryDark</item>
         <item name="colorAccent">@color/deepPurple500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -142,8 +142,8 @@
 
     <style name="Theme.App.deepPurple700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/deepPurple700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/deepPurple700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/deepPurple700text_primary</item>
+        <item name="colorPrimaryDark">@color/deepPurple700text_primaryDark</item>
         <item name="colorAccent">@color/deepPurple700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -152,8 +152,8 @@
 
     <style name="Theme.App.deepPurple900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/deepPurple900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/deepPurple900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/deepPurple900text_primary</item>
+        <item name="colorPrimaryDark">@color/deepPurple900text_primaryDark</item>
         <item name="colorAccent">@color/deepPurple900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -162,8 +162,8 @@
 
     <style name="Theme.App.indigo500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/indigo500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/indigo500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/indigo500text_primary</item>
+        <item name="colorPrimaryDark">@color/indigo500text_primaryDark</item>
         <item name="colorAccent">@color/indigo500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -172,8 +172,8 @@
 
     <style name="Theme.App.indigo700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/indigo700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/indigo700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/indigo700text_primary</item>
+        <item name="colorPrimaryDark">@color/indigo700text_primaryDark</item>
         <item name="colorAccent">@color/indigo700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -182,8 +182,8 @@
 
     <style name="Theme.App.indigo900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/indigo900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/indigo900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/indigo900text_primary</item>
+        <item name="colorPrimaryDark">@color/indigo900text_primaryDark</item>
         <item name="colorAccent">@color/indigo900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -192,8 +192,8 @@
 
     <style name="Theme.App.blue500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/blue500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/blue500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/blue500text_primary</item>
+        <item name="colorPrimaryDark">@color/blue500text_primaryDark</item>
         <item name="colorAccent">@color/blue500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -202,8 +202,8 @@
 
     <style name="Theme.App.blue700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/blue700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/blue700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/blue700text_primary</item>
+        <item name="colorPrimaryDark">@color/blue700text_primaryDark</item>
         <item name="colorAccent">@color/blue700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -212,8 +212,8 @@
 
     <style name="Theme.App.blue900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/blue900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/blue900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/blue900text_primary</item>
+        <item name="colorPrimaryDark">@color/blue900text_primaryDark</item>
         <item name="colorAccent">@color/blue900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -222,8 +222,8 @@
 
     <style name="Theme.App.lightBlue500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/lightBlue500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/lightBlue500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/lightBlue500text_primary</item>
+        <item name="colorPrimaryDark">@color/lightBlue500text_primaryDark</item>
         <item name="colorAccent">@color/lightBlue500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -232,8 +232,8 @@
 
     <style name="Theme.App.lightBlue700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/lightBlue700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/lightBlue700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/lightBlue700text_primary</item>
+        <item name="colorPrimaryDark">@color/lightBlue700text_primaryDark</item>
         <item name="colorAccent">@color/lightBlue700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -242,8 +242,8 @@
 
     <style name="Theme.App.lightBlue900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/lightBlue900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/lightBlue900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/lightBlue900text_primary</item>
+        <item name="colorPrimaryDark">@color/lightBlue900text_primaryDark</item>
         <item name="colorAccent">@color/lightBlue900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -252,8 +252,8 @@
 
     <style name="Theme.App.cyan500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/cyan500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/cyan500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/cyan500text_primary</item>
+        <item name="colorPrimaryDark">@color/cyan500text_primaryDark</item>
         <item name="colorAccent">@color/cyan500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -262,8 +262,8 @@
 
     <style name="Theme.App.cyan700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/cyan700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/cyan700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/cyan700text_primary</item>
+        <item name="colorPrimaryDark">@color/cyan700text_primaryDark</item>
         <item name="colorAccent">@color/cyan700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -272,8 +272,8 @@
 
     <style name="Theme.App.cyan900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/cyan900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/cyan900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/cyan900text_primary</item>
+        <item name="colorPrimaryDark">@color/cyan900text_primaryDark</item>
         <item name="colorAccent">@color/cyan900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -282,8 +282,8 @@
 
     <style name="Theme.App.teal500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/teal500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/teal500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/teal500text_primary</item>
+        <item name="colorPrimaryDark">@color/teal500text_primaryDark</item>
         <item name="colorAccent">@color/teal500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -292,8 +292,8 @@
 
     <style name="Theme.App.teal700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/teal700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/teal700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/teal700text_primary</item>
+        <item name="colorPrimaryDark">@color/teal700text_primaryDark</item>
         <item name="colorAccent">@color/teal700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -302,8 +302,8 @@
 
     <style name="Theme.App.teal900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/teal900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/teal900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/teal900text_primary</item>
+        <item name="colorPrimaryDark">@color/teal900text_primaryDark</item>
         <item name="colorAccent">@color/teal900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -312,8 +312,8 @@
 
     <style name="Theme.App.green500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/green500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/green500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/green500text_primary</item>
+        <item name="colorPrimaryDark">@color/green500text_primaryDark</item>
         <item name="colorAccent">@color/green500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -322,8 +322,8 @@
 
     <style name="Theme.App.green700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/green700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/green700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/green700text_primary</item>
+        <item name="colorPrimaryDark">@color/green700text_primaryDark</item>
         <item name="colorAccent">@color/green700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -332,8 +332,8 @@
 
     <style name="Theme.App.green900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/green900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/green900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/green900text_primary</item>
+        <item name="colorPrimaryDark">@color/green900text_primaryDark</item>
         <item name="colorAccent">@color/green900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -342,8 +342,8 @@
 
     <style name="Theme.App.light500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/light500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/light500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/light500text_primary</item>
+        <item name="colorPrimaryDark">@color/light500text_primaryDark</item>
         <item name="colorAccent">@color/light500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -352,8 +352,8 @@
 
     <style name="Theme.App.light700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/light700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/light700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/light700text_primary</item>
+        <item name="colorPrimaryDark">@color/light700text_primaryDark</item>
         <item name="colorAccent">@color/light700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -362,8 +362,8 @@
 
     <style name="Theme.App.light900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/light900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/light900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/light900text_primary</item>
+        <item name="colorPrimaryDark">@color/light900text_primaryDark</item>
         <item name="colorAccent">@color/light900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -372,8 +372,8 @@
 
     <style name="Theme.App.lime500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/lime500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/lime500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/lime500text_primary</item>
+        <item name="colorPrimaryDark">@color/lime500text_primaryDark</item>
         <item name="colorAccent">@color/lime500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -382,8 +382,8 @@
 
     <style name="Theme.App.lime700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/lime700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/lime700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/lime700text_primary</item>
+        <item name="colorPrimaryDark">@color/lime700text_primaryDark</item>
         <item name="colorAccent">@color/lime700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -392,8 +392,8 @@
 
     <style name="Theme.App.lime900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/lime900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/lime900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/lime900text_primary</item>
+        <item name="colorPrimaryDark">@color/lime900text_primaryDark</item>
         <item name="colorAccent">@color/lime900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -402,14 +402,14 @@
 
     <style name="Theme.App.yellow500" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 
-        <item name="colorPrimary">@color/yellow500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/yellow500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/yellow500text_primary</item>
+        <item name="colorPrimaryDark">@color/yellow500text_primaryDark</item>
         <item name="colorAccent">@color/yellow500colorAccent</item>
-        <item name="colorPrimaryVariant">@color/yellow500colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/yellow500text_primaryDark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/yellow500colorPrimaryDark</item>
-        <item name="colorSecondaryVariant">@color/yellow500colorPrimaryDark</item>
+        <item name="colorSecondary">@color/yellow500text_primaryDark</item>
+        <item name="colorSecondaryVariant">@color/yellow500text_primaryDark</item>
         <item name="colorOnSecondary">@color/black</item>
 
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -427,8 +427,8 @@
 
     <style name="Theme.App.yellow700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/yellow700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/yellow700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/yellow700text_primary</item>
+        <item name="colorPrimaryDark">@color/yellow700text_primaryDark</item>
         <item name="colorAccent">@color/yellow700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -437,8 +437,8 @@
 
     <style name="Theme.App.yellow900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/yellow900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/yellow900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/yellow900text_primary</item>
+        <item name="colorPrimaryDark">@color/yellow900text_primaryDark</item>
         <item name="colorAccent">@color/yellow900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -447,8 +447,8 @@
 
     <style name="Theme.App.amber500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/amber500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/amber500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/amber500text_primary</item>
+        <item name="colorPrimaryDark">@color/amber500text_primaryDark</item>
         <item name="colorAccent">@color/amber500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -457,8 +457,8 @@
 
     <style name="Theme.App.amber700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/amber700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/amber700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/amber700text_primary</item>
+        <item name="colorPrimaryDark">@color/amber700text_primaryDark</item>
         <item name="colorAccent">@color/amber700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -467,8 +467,8 @@
 
     <style name="Theme.App.amber900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/amber900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/amber900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/amber900text_primary</item>
+        <item name="colorPrimaryDark">@color/amber900text_primaryDark</item>
         <item name="colorAccent">@color/amber900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -477,8 +477,8 @@
 
     <style name="Theme.App.orange500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/orange500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/orange500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/orange500text_primary</item>
+        <item name="colorPrimaryDark">@color/orange500text_primaryDark</item>
         <item name="colorAccent">@color/orange500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -487,8 +487,8 @@
 
     <style name="Theme.App.orange700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/orange700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/orange700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/orange700text_primary</item>
+        <item name="colorPrimaryDark">@color/orange700text_primaryDark</item>
         <item name="colorAccent">@color/orange700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -497,8 +497,8 @@
 
     <style name="Theme.App.orange900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/orange900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/orange900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/orange900text_primary</item>
+        <item name="colorPrimaryDark">@color/orange900text_primaryDark</item>
         <item name="colorAccent">@color/orange900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -507,8 +507,8 @@
 
     <style name="Theme.App.deepOrange500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/deepOrange500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/deepOrange500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/deepOrange500text_primary</item>
+        <item name="colorPrimaryDark">@color/deepOrange500text_primaryDark</item>
         <item name="colorAccent">@color/deepOrange500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -517,8 +517,8 @@
 
     <style name="Theme.App.deepOrange700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/deepOrange700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/deepOrange700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/deepOrange700text_primary</item>
+        <item name="colorPrimaryDark">@color/deepOrange700text_primaryDark</item>
         <item name="colorAccent">@color/deepOrange700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -527,8 +527,8 @@
 
     <style name="Theme.App.deepOrange900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/deepOrange900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/deepOrange900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/deepOrange900text_primary</item>
+        <item name="colorPrimaryDark">@color/deepOrange900text_primaryDark</item>
         <item name="colorAccent">@color/deepOrange900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -537,8 +537,8 @@
 
     <style name="Theme.App.brown500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/brown500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/brown500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/brown500text_primary</item>
+        <item name="colorPrimaryDark">@color/brown500text_primaryDark</item>
         <item name="colorAccent">@color/brown500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -547,8 +547,8 @@
 
     <style name="Theme.App.brown700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/brown700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/brown700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/brown700text_primary</item>
+        <item name="colorPrimaryDark">@color/brown700text_primaryDark</item>
         <item name="colorAccent">@color/brown700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -557,8 +557,8 @@
 
     <style name="Theme.App.brown900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/brown900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/brown900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/brown900text_primary</item>
+        <item name="colorPrimaryDark">@color/brown900text_primaryDark</item>
         <item name="colorAccent">@color/brown900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -567,8 +567,8 @@
 
     <style name="Theme.App.gray500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/gray500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/gray500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/gray500text_primary</item>
+        <item name="colorPrimaryDark">@color/gray500text_primaryDark</item>
         <item name="colorAccent">@color/gray500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -577,8 +577,8 @@
 
     <style name="Theme.App.gray700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/gray700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/gray700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/gray700text_primary</item>
+        <item name="colorPrimaryDark">@color/gray700text_primaryDark</item>
         <item name="colorAccent">@color/gray700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -587,8 +587,8 @@
 
     <style name="Theme.App.gray900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/gray900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/gray900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/gray900text_primary</item>
+        <item name="colorPrimaryDark">@color/gray900text_primaryDark</item>
         <item name="colorAccent">@color/gray900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -597,8 +597,8 @@
 
     <style name="Theme.App.blueGray500" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/blueGray500colorPrimary</item>
-        <item name="colorPrimaryDark">@color/blueGray500colorPrimaryDark</item>
+        <item name="colorPrimary">@color/blueGray500text_primary</item>
+        <item name="colorPrimaryDark">@color/blueGray500text_primaryDark</item>
         <item name="colorAccent">@color/blueGray500colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -607,8 +607,8 @@
 
     <style name="Theme.App.blueGray700" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/blueGray700colorPrimary</item>
-        <item name="colorPrimaryDark">@color/blueGray700colorPrimaryDark</item>
+        <item name="colorPrimary">@color/blueGray700text_primary</item>
+        <item name="colorPrimaryDark">@color/blueGray700text_primaryDark</item>
         <item name="colorAccent">@color/blueGray700colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -617,8 +617,8 @@
 
     <style name="Theme.App.blueGray900" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="colorPrimary">@color/blueGray900colorPrimary</item>
-        <item name="colorPrimaryDark">@color/blueGray900colorPrimaryDark</item>
+        <item name="colorPrimary">@color/blueGray900text_primary</item>
+        <item name="colorPrimaryDark">@color/blueGray900text_primaryDark</item>
         <item name="colorAccent">@color/blueGray900colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
