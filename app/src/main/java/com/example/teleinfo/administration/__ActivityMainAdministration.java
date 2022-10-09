@@ -12,6 +12,10 @@ import com.example.teleinfo.settings.ActivityFragmentView;
 
 public class __ActivityMainAdministration extends AppCompatActivity {
 
+
+
+    4545454
+
     LinearLayout inviteTeacher;
 
     @Override
