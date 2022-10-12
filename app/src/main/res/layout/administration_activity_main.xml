@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:clickable="true"
-        android:id="@+id/inviteTeachedddr"
+        android:id="@+id/inviteSubjects"
         android:layout_margin="10dp"
         android:foreground="?android:attr/selectableItemBackground">
 
@@ -59,7 +59,7 @@
             android:tag="tagForDelete"
             android:layout_marginRight="2dp"
             android:layout_marginLeft="10dp"
-            android:id="@+id/teacherNameddd"
+            android:id="@+id/SubjectsNameddd"
             />
 
 

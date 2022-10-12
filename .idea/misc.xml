@@ -9,13 +9,19 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/activity_main_guide.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_activity_fragment_view.xml" value="0.264" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_activity_main.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_bottom_sheet_dialog_subjects_edit_new.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_bottom_sheet_dialog_teacher_edit.xml" value="0.2" />
-        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_fragment_teachers.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_bottom_sheet_dialog_teacher_edit_new.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_fragment_subjects.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_fragment_subjects_adapter_item.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_fragment_teachers.xml" value="0.1" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/administration_fragment_teachers_adapter_item.xml" value="0.3910355486862442" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ddddddddddddddddddddddddd.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/dialog_bottom_sheet_dialog_select_color_adapter_item.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/dialog_easy_radio_group_list.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/dialog_sensor_list_activity_sorting_dialog_adapter_row.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fffffffffffffffff.xml" value="0.1421875" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ffffffffffffffffffff.xml" value="0.13802083333333334" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fffffffffffffffffffff.xml" value="0.1421875" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ffffffffffffffffffffffffff.xml" value="0.22735507246376813" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ffffffffffffffffffffffffffffffffff.xml" value="0.22826086956521738" />
@@ -58,6 +64,7 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/settings_light_bottom_sheet_dialog.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/settings_main_activity.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/settings_menu.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/menu/action_bar_plus.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/menu/action_bar_timetable.xml" value="0.36666666666666664" />
       </map>
     </option>

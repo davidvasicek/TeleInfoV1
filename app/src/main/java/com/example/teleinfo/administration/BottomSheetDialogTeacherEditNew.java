@@ -13,12 +13,12 @@ import com.example.teleinfo.R;
 import com.example.teleinfo.parameters.GetThemeStyle;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-public class BottomSheetDialogTeacherEdit extends BottomSheetDialogFragment {
+public class BottomSheetDialogTeacherEditNew extends BottomSheetDialogFragment {
 
 
 
 
-    public BottomSheetDialogTeacherEdit() {
+    public BottomSheetDialogTeacherEditNew() {
 
     }
     
@@ -28,7 +28,7 @@ public class BottomSheetDialogTeacherEdit extends BottomSheetDialogFragment {
     public void setupDialog(Dialog dialog, int style) {
         SharedPreferences shrPref = getActivity().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         super.setupDialog(dialog, new GetThemeStyle().getThemeStyle(shrPref.getString(CURRENT_THEME, "#212121")));
-        View contentView = View.inflate(getContext(), R.layout.administration_bottom_sheet_dialog_teacher_edit, null);
+        View contentView = View.inflate(getContext(), R.layout.administration_bottom_sheet_dialog_teacher_edit_new, null);
         dialog.setContentView(contentView);
 
 

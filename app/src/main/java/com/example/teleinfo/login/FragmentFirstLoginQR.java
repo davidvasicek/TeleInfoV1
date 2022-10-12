@@ -70,7 +70,24 @@ public class FragmentFirstLoginQR extends Fragment implements BottomSheetDialogQ
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/DavidVasicek/AccessKey");
 
-        //mDatabaseReference.setValue("aaabbbccc");
+
+        mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/DavidVasicek/");
+
+
+
+        mDatabaseReference.child("titlesBeforeName").setValue("Ing.");
+        mDatabaseReference.child("Name").setValue("David");
+        mDatabaseReference.child("Surname").setValue("Vašíček");
+        mDatabaseReference.child("titlesAfterTheName").setValue("");
+        mDatabaseReference.child("shortcut").setValue("Vaš");
+        mDatabaseReference.child("email").setValue("vasicek@teleinformatika.eu");
+        mDatabaseReference.child("phoneNumber").setValue("731 531 389");
+        mDatabaseReference.child("officeNumber").setValue("A 1006");
+
+        mDatabaseReference.child("registeredDevices/64564564564564/DeviceID").setValue("64564564564564");
+        mDatabaseReference.child("registeredDevices/64564564564564/Brand").setValue("Xiaomi");
+        mDatabaseReference.child("registeredDevices/64564564564564/Token").setValue("hkjfdhkgdfáýgídfžáýbdfýháýdsfžýáýh");
+
 
         activityLoginWithKeyButtcconLogin = (Button)rootView.findViewById(R.id.activityLoginWithKeyButtcconLogin);
         activityLoginWithKxeyccTextViewKeyRequest = (TextView)rootView.findViewById(R.id.activityLoginWithKxeyccTextViewKeyRequest);

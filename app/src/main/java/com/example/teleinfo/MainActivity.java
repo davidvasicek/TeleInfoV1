@@ -3,11 +3,7 @@ package com.example.teleinfo;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.teleinfo.administration.BottomSheetDialogTeacherEdit;
-import com.example.teleinfo.administration._ActivityFragmentViewAdministration;
-import com.example.teleinfo.login.ChangePasswordActivity;
 import com.example.teleinfo.login._ActivityMainLogin;
-import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
         //BottomSheetDialogTeacherEdit bottomSheetDialogTeacherEdit = new BottomSheetDialogTeacherEdit();
         //bottomSheetDialogTeacherEdit.show(getSupportFragmentManager(), "exampleBottomSheet");
 
-      //  Intent intent = new Intent(getApplicationContext(), _ActivityMainLogin.class);
-      //  startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), _ActivityMainLogin.class);
+      startActivity(intent);
 
-        Intent intent = new Intent(getApplicationContext(), ChangePasswordActivity.class);
-        startActivity(intent);
+        //   Intent intent = new Intent(getApplicationContext(), ChangePasswordActivity.class);
+        //   //    startActivity(intent);
 
     }
 

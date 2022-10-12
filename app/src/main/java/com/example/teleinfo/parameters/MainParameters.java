@@ -32,6 +32,15 @@ public interface MainParameters {
 
 
 
+
+    public static final int ADMINISTRATION_NEW = 0;  // nový objekt
+    public static final int ADMINISTRATION_EDIT = 1;  // editovat objekt
+
+    public static final int ADMINISTRATION_TEACHERS = 0;  // Učitelé
+    public static final int ADMINISTRATION_SUBJECTS = 1;  // Předměty
+    public static final int ADMINISTRATION_SCHOOL_ROOMS = 2;  // Učebny
+
+
     // ----------------------- rozvrh ---------------------------------
 
     public static final int CLASSIC_HOUR_IN_MINUTES = 45;  // běžná hodina

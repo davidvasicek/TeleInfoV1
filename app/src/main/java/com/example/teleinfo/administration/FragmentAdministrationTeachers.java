@@ -1,12 +1,6 @@
 package com.example.teleinfo.administration;
 
-import static com.example.teleinfo.parameters.MainParameters.BREAKFAST_SHOW;
-import static com.example.teleinfo.parameters.MainParameters.BRUNCH_SHOW;
-import static com.example.teleinfo.parameters.MainParameters.DINNER_SECOND_SHOW;
-import static com.example.teleinfo.parameters.MainParameters.DINNER_SHOW;
-import static com.example.teleinfo.parameters.MainParameters.LUNCH_SHOW;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
-import static com.example.teleinfo.parameters.MainParameters.SNACK_SHOW;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -23,14 +17,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teleinfo.R;
-import com.example.teleinfo.rozvrh.DinningRoomMenuObject;
+import com.example.teleinfo.rozvrh.BottomSheetDialogTeacherCard;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentAdministrationTeachers extends Fragment {
     
-    private List<DinningRoomMenuObject> mTeachersAdministrationList;
+    private List<String> mTeachersAdministrationList;
     private TeachersAdministrationAdapter mTeachersAdministrationAdapter;
 
     RecyclerView recyclerView;
@@ -62,6 +56,8 @@ public class FragmentAdministrationTeachers extends Fragment {
 
 
         mTeachersAdministrationList = new ArrayList<>();
+        mTeachersAdministrationList.add("Ing. David Vašíček");
+
 
 
 
@@ -81,13 +77,13 @@ public class FragmentAdministrationTeachers extends Fragment {
 
     public class TeachersAdministrationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-        private List<DinningRoomMenuObject> mMainLightsList;
+        private List<String> mMainLightsList;
         private Context mContext;
         SharedPreferences mSharedPreferences;
 
         FragmentManager fragmentManager;
 
-        public TeachersAdministrationAdapter(List<DinningRoomMenuObject> list, Context context, FragmentManager fragmentManager) {
+        public TeachersAdministrationAdapter(List<String> list, Context context, FragmentManager fragmentManager) {
 
             this.mMainLightsList = list;
             this.mContext = context;
@@ -99,7 +95,7 @@ public class FragmentAdministrationTeachers extends Fragment {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-            return new TeachersAdministrationAdapter.MainLightsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.rozvrh_bottom_sheet_dialog_dinning_room_menu_adapter_item,parent,false));
+            return new TeachersAdministrationAdapter.MainLightsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.administration_fragment_teachers_adapter_item,parent,false));
 
         }
 
@@ -108,12 +104,35 @@ public class FragmentAdministrationTeachers extends Fragment {
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
-            final DinningRoomMenuObject dinningRoomMenuObject = mMainLightsList.get(position);
+            final String dinningRoomMenuObject = mMainLightsList.get(position);
 
-            TeachersAdministrationAdapter.MainLightsViewHolder mainLightsViewHolder = (TeachersAdministrationAdapter.MainLightsViewHolder)holder;
+            MainLightsViewHolder mainLightsViewHolder = (MainLightsViewHolder)holder;
 
 
+            mainLightsViewHolder.teacherNamedsf.setText(dinningRoomMenuObject);
 
+            //TODO p5ed2lat na klik na linear LAzout
+            mainLightsViewHolder.teacherNamedsf.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
+                    bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
+
+                }
+            });
+
+            mainLightsViewHolder.teacherNamedsf.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+
+                    BottomSheetDialogTeacherEditNew bottomSheetDialogTeacherEditNew = new BottomSheetDialogTeacherEditNew();
+                    bottomSheetDialogTeacherEditNew.show(getChildFragmentManager(), "exampleBottomSheet");
+
+
+                    return false;
+                }
+            });
 
 
 
@@ -133,48 +152,14 @@ public class FragmentAdministrationTeachers extends Fragment {
 
         class MainLightsViewHolder extends RecyclerView.ViewHolder{
 
-            TextView menuDate;
-            TextView BreakfastTitle;
-            TextView Breakfast;
-            TextView BreakfastAllergens;
-            TextView BrunchTitle;
-            TextView Brunch;
-            TextView BrunchAllergens;
-            TextView LunchTitle;
-            TextView Lunch;
-            TextView LunchAllergens;
-            TextView SnackTitle;
-            TextView Snack;
-            TextView SnackAllergens;
-            TextView DinnerTitle;
-            TextView Dinner;
-            TextView DinnerAllergens;
-            TextView DinnerSecondTitle;
-            TextView DinnerSecond;
-            TextView DinnerSecondAllergens;
+            TextView teacherNamedsf;
+
 
             public MainLightsViewHolder(View itemView){
                 super(itemView);
 
-                menuDate = itemView.findViewById(R.id.menuDate);
-                BreakfastTitle = itemView.findViewById(R.id.BreakfastTitle);
-                Breakfast = itemView.findViewById(R.id.Breakfast);
-                BreakfastAllergens = itemView.findViewById(R.id.BreakfastAllergens);
-                BrunchTitle = itemView.findViewById(R.id.BrunchTitle);
-                Brunch = itemView.findViewById(R.id.Brunch);
-                BrunchAllergens = itemView.findViewById(R.id.BrunchAllergens);
-                LunchTitle = itemView.findViewById(R.id.LunchTitle);
-                Lunch = itemView.findViewById(R.id.Lunch);
-                LunchAllergens = itemView.findViewById(R.id.LunchAllergens);
-                SnackTitle = itemView.findViewById(R.id.SnackTitle);
-                Snack = itemView.findViewById(R.id.Snack);
-                SnackAllergens = itemView.findViewById(R.id.SnackAllergens);
-                DinnerTitle = itemView.findViewById(R.id.DinnerTitle);
-                Dinner = itemView.findViewById(R.id.Dinner);
-                DinnerAllergens = itemView.findViewById(R.id.DinnerAllergens);
-                DinnerSecondTitle = itemView.findViewById(R.id.DinnerSecondTitle);
-                DinnerSecond = itemView.findViewById(R.id.DinnerSecond);
-                DinnerSecondAllergens = itemView.findViewById(R.id.DinnerSecondAllergens);
+                teacherNamedsf = itemView.findViewById(R.id.teacherNamedsf);
+
 
             }
         }

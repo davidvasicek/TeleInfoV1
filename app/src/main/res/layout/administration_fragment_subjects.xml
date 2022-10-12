@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/LinearLayoutFilterRow">
+
+
+
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+            android:id="@+id/subjectsThemedToggleButtonGroupFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:justifyContent="flex_start"
+            android:layout_marginLeft="10dp"
+
+            >
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_text="Vše"
+                android:tag="all"
+                app:toggle_selectedBackgroundColor = "@color/amber500text_primaryDark"
+
+                />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_text="IKT"
+                android:tag="IKT"
+                app:toggle_selectedBackgroundColor = "@color/amber500text_primaryDark"
+                />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_text="IT"
+                android:tag="IT"
+                app:toggle_selectedBackgroundColor = "@color/amber500text_primaryDark"
+                />
+
+            <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:toggle_text="IKT a IT"
+                android:tag="IKT_IT"
+                app:toggle_selectedBackgroundColor = "@color/amber500text_primaryDark"
+                />
+
+
+        </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Nepodařilo se načíst žádná data"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="13dp"
+            android:tag="tagForDelete"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Zkontrolujte připojení k internetu"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="11dp"
+            android:tag="tagForDelete"
+            android:textAllCaps="true"/>
+
+        <Button
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_ButtonRefrest"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Opakovat"
+            android:layout_marginTop="120dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            />
+
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_AVLoadingIndicatorViewIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            style="@style/AVLoadingIndicatorView"
+            android:visibility="visible"
+            app:indicatorName="BallClipRotatePulseIndicator"
+            app:indicatorColor="@color/text_secondary"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

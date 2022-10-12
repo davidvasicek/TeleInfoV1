@@ -12,11 +12,8 @@ import com.example.teleinfo.settings.ActivityFragmentView;
 
 public class __ActivityMainAdministration extends AppCompatActivity {
 
-
-
-    4545454
-
     LinearLayout inviteTeacher;
+    LinearLayout inviteSubjects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +21,27 @@ public class __ActivityMainAdministration extends AppCompatActivity {
         setContentView(R.layout.administration_activity_main);
 
         inviteTeacher = (LinearLayout)findViewById(R.id.inviteTeacher);
+        inviteSubjects = (LinearLayout)findViewById(R.id.inviteSubjects);
+
 
         inviteTeacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-
                 Intent intent = new Intent(getApplicationContext(), _ActivityFragmentViewAdministration.class);
                 intent.putExtra("stringTag", "administrationLinearLayoutTeachers");
+                startActivity(intent);
+
+            }
+        });
+
+
+        inviteSubjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), _ActivityFragmentViewAdministration.class);
+                intent.putExtra("stringTag", "administrationLinearLayoutSubjects");
                 startActivity(intent);
 
             }
