@@ -41,31 +41,16 @@
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"/>
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:text="Priorita zabezpečovací metody"
-        android:tag="tagForDelete"
-        android:textSize="12dp"
-        />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:textAllCaps="false"
-        android:text="Vyberte metodu přihlašování, \n kterou budete v budoucnu upřednosťnovat. \n \n Pokud s výběrem této metody nebudete spokojeni, vždy můžete upřednostnit jinou variantu."
+        android:text="Vyberte metodu přihlašování, \n kterou budete v budoucnu upřednosťnovat. \n \n Pokud s výběrem této metody nebudete spokojeni, můžete v budoucnu upřednostnit jinou variantu."
         android:tag="tagForDelete"
         android:textSize="12dp"
         />
@@ -78,7 +63,7 @@
         android:background="@color/line"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
 
     <LinearLayout
@@ -102,7 +87,6 @@
         android:gravity="center"
         >
 
-
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -111,25 +95,30 @@
             android:id="@+id/dfsdfsdf">
 
             <RadioButton
-                android:id="@+id/radioButtonCredentials"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email a heslo"
-                android:layout_marginTop="10dp"/>
-
-            <RadioButton
                 android:id="@+id/radioButtonFingerprint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Otisk prstu"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:textAllCaps="true"
+                android:text="Otisk prstu" />
 
             <RadioButton
                 android:id="@+id/radioButtonPin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pin"
+                android:textAllCaps="true"
                 android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonCredentials"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email a heslo"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp"/>
+
+
         </RadioGroup>
     </LinearLayout>
 

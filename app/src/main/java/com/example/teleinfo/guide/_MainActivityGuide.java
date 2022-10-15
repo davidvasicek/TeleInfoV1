@@ -23,7 +23,7 @@ import android.widget.FrameLayout;
 import com.example.teleinfo.R;
 import com.example.teleinfo.parameters.GetThemeStyle;
 
-public class _MainActivityGuide extends AppCompatActivity implements RunGuideFragment.OnGuideOptionClickListener,GuideSecurityPinFragment.OnGuideOptionClickListener, GuideSecurityFingerprintFragment.OnGuideOptionClickListener{
+public class _MainActivityGuide extends AppCompatActivity implements RunGuideFragment.OnGuideOptionClickListener,GuideSecurityPinFragment.OnGuideOptionClickListener, GuideSecurityFingerprintFragment.OnGuideOptionClickListener, GuideSecurityCredentialsFragment.OnGuideOptionClickListener{
 
     FragmentManager fragmentManager;
     String keyOption;
@@ -64,7 +64,7 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
 
         isHardwareDetected = fingerprintManager.isHardwareDetected();
 
-        Log.i("Inmetry", "isHardwareDetected: " + isHardwareDetected);
+        Log.e("Inmetry", "isHardwareDetected: " + isHardwareDetected);
 
         mEditor.putBoolean(FINGERPRINT_HARDWARE_IS_DETECTED, isHardwareDetected );
         mEditor.commit();
@@ -110,6 +110,16 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
             case "changeToFingerprintFragment": {
 
                 GuideSecurityFingerprintFragment fragment = GuideSecurityFingerprintFragment.newInstance(this.counter, totalPageCount);
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.settingsContainer19, fragment)
+                        .commit();
+                break;
+            }
+
+            case "changeToCredentialsFragment": {
+
+                GuideSecurityCredentialsFragment fragment = GuideSecurityCredentialsFragment.newInstance(this.counter, totalPageCount);
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer19, fragment)

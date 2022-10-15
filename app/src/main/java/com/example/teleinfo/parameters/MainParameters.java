@@ -12,6 +12,24 @@ public interface MainParameters {
     //endSector
 
 
+    String LOGIN_METHOD = "LoginMethod";
+    String TIME_OF_LAST_BLOCKED_READER = "TimeOfLastBlockedReader";
+    String FINGERPRINT_HARDWARE_IS_DETECTED = "FingerprintHardwareIsDetected";
+    String LOGIN_PIN = "LoginPin";
+    String LOGIN_CREDENTIAL_PASSWORD = "LoginCredentialPassword";
+
+
+
+    String DEVICE_IS_PAIRED = "DeviceIsPaired";
+    String USER_ROLE = "UserRole";
+    String USER_TIME_TABLE = "UserTimeTable";
+
+
+    public static final int LOGIN_BY_FINGERPRINT = 1; // přihlášení otiskem prstu
+    public static final int LOGIN_BY_PIN = 2; // přihlášení pinem
+    public static final int LOGIN_BY_CREDENTIALS = 3; // přihlášení údaji
+
+
     // MAIN LIGHTS ---------------------------------------------------------------------------------
 
     String ON_HEADERS_OF_LOCATIONS_MAIN_LIGHTS = "onHeadersOfLocationsMainLights";
@@ -100,8 +118,7 @@ public interface MainParameters {
     String AUTH_PREFERENCE = "AuthPreference";
 
     String FINGERPRINT_AUTH = "FingerPrintAuth";
-    String TIME_OF_LAST_BLOCKED_READER = "TimeOfLastBlockedReader";
-    String FINGERPRINT_HARDWARE_IS_DETECTED = "FingerprintHardwareIsDetected";
+
     public static final int NUMBER_OF_DEFAULT_PINS = 6;
     String PIN_AUTH = "PinAuth";
     String PIN = "Pin";

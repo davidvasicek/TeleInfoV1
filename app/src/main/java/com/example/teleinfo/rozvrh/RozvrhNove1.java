@@ -334,7 +334,7 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
     Menu mMenu;
 
 String child="";
-    int listingDates = 7;
+    int listingDates = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -359,6 +359,13 @@ String child="";
         action = intent.getStringExtra("action");
 
         datumyNasmazani = new ArrayList<>();
+
+        datumyNasmazani.add("14_10_2022");
+        datumyNasmazani.add("13_10_2022");
+        datumyNasmazani.add("12_10_2022");
+        datumyNasmazani.add("11_10_2022");
+        datumyNasmazani.add("10_10_2022");
+
         datumyNasmazani.add("7_10_2022");
         datumyNasmazani.add("6_10_2022");
         datumyNasmazani.add("5_10_2022");
@@ -440,10 +447,14 @@ String child="";
         }else if(action.compareTo("weeklyBySchoolroom") == 0){
 
             child = "rozvrh/denniUceben";
+            getSupportActionBar().setTitle(Html.fromHtml("<small>" + datumyNasmazani.get(listingDates) + "</small>"));
+
 
         }else if(action.compareTo("weeklyByTeacher") == 0){
 
             child = "rozvrh/denniUcitelu";
+            getSupportActionBar().setTitle(Html.fromHtml("<small>" + datumyNasmazani.get(listingDates) + "</small>"));
+
 
         }else if(action.compareTo("weeklyBySchoolClass") == 0){
 
@@ -2790,6 +2801,15 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
     }
 
     public void addHour(int columnID, HourObject hourObject, String text, int leftMargin, String mimoradneUdalosti){
+
+        Log.e(TAG, "koko: -----------------------------"  );
+        Log.e(TAG, "koko: " + hourObject.Ucebna );
+        Log.e(TAG, "koko: " + hourObject.VyucHod );
+        Log.e(TAG, "koko: " + hourObject.Datum );
+        Log.e(TAG, "koko: " + hourObject.Den );
+        Log.e(TAG, "koko: " + hourObject.neocekavanaUdalost );
+        Log.e(TAG, "koko: " + hourObject.Trida );
+
 
         int hodnota = parseInt(hourObject.VyucHod.replaceAll("[\\D]",""));
 

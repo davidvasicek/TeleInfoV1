@@ -2,6 +2,9 @@ package com.example.teleinfo.login;
 
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_COLOR_APP_BAR;
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
+import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_FINGERPRINT;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_METHOD;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 
 import androidx.annotation.NonNull;
@@ -75,9 +78,30 @@ public class _ActivityMainLogin extends AppCompatActivity {
 
         frameLayout = findViewById(R.id.settingsContainer1111);
 
-        fragmentManager.beginTransaction()
-                .replace(R.id.settingsContainer1111, new FragmentFirstLoginQR())
-                .commit();
+
+        if(mSharedPreferences.getBoolean(DEVICE_IS_PAIRED, false)){
+
+            if(mSharedPreferences.getInt(LOGIN_METHOD, -1) == LOGIN_BY_FINGERPRINT){
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.settingsContainer1111, new FragmentLoginWithFingerprint())
+                        .commit();
+
+            }
+
+
+
+
+
+        }else{
+
+            fragmentManager.beginTransaction()
+                    .replace(R.id.settingsContainer1111, new FragmentFirstLoginQR())
+                    .commit();
+
+        }
+
+
 
 
         if(intent.getStringExtra("stringTag") != null){

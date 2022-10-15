@@ -96,8 +96,13 @@ public class FragmentAdministrationSubjects extends Fragment implements BottomSh
         View rootView = inflater.inflate(R.layout.administration_fragment_subjects, container, false);
 
         mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
+        //mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/Teachers");
         mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/Subjects");
-/*
+
+
+
+
+        /*
 
 
 

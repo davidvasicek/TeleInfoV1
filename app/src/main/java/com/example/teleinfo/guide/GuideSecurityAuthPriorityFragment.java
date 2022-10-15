@@ -2,7 +2,13 @@ package com.example.teleinfo.guide;
 
 
 import static com.example.teleinfo.parameters.MainParameters.AUTH_PREFERENCE;
+import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
 import static com.example.teleinfo.parameters.MainParameters.FINGERPRINT_AUTH;
+import static com.example.teleinfo.parameters.MainParameters.FINGERPRINT_HARDWARE_IS_DETECTED;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_CREDENTIALS;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_FINGERPRINT;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_PIN;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_METHOD;
 import static com.example.teleinfo.parameters.MainParameters.PIN_AUTH;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 
@@ -103,44 +109,25 @@ public class GuideSecurityAuthPriorityFragment extends Fragment {
 
         String authPreference = mSharedPreferences.getString(AUTH_PREFERENCE, "CREDENTIALS");
 
-        Boolean authFingerPrint = mSharedPreferences.getBoolean(FINGERPRINT_AUTH, true);
-        Boolean authPinPrint = mSharedPreferences.getBoolean(PIN_AUTH, true);
-
-        Log.i("Inmetry", "authFingerPrint: " + authFingerPrint);
-
-        Log.i("Inmetry", "authPinPrint: " + authPinPrint);
+        Boolean fingerprintHardwareIsDetected = mSharedPreferences.getBoolean(FINGERPRINT_HARDWARE_IS_DETECTED, false);
 
 
-        radioButtonCredentials.setChecked(true);
+if(fingerprintHardwareIsDetected){
 
-        // pokud nebude zapnute overovani otiskem, nezobrazuj radiobutton
-        if(authFingerPrint){
-            radioButtonFingerprint.setVisibility(View.VISIBLE);
-        }else{
-            radioButtonFingerprint.setVisibility(View.GONE);
-        }
+    radioButtonFingerprint.setVisibility(View.VISIBLE);
+    radioButtonFingerprint.setChecked(true);
 
-        // pokud nebude zapnute overovani pinem, nezobrazuj radiobutton
-        if(authPinPrint){
-            radioButtonPin.setVisibility(View.VISIBLE);
-        }else{
-            radioButtonPin.setVisibility(View.GONE);
-        }
+}else{
 
-       /* if(authPreference.compareTo("CREDENTIALS") == 0){
+    radioButtonFingerprint.setVisibility(View.GONE);
+    radioButtonPin.setChecked(true);
 
-            radioButtonCredentials.setChecked(true);
-        }
+}
 
-        if(authPreference.compareTo("FINGERPRINT") == 0){
 
-            radioButtonFingerprint.setChecked(true);
-        }
 
-        if(authPreference.compareTo("PIN") == 0){
 
-            radioButtonPin.setChecked(true);
-        }*/
+
 
         radioButtonCredentials.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,8 +148,7 @@ public class GuideSecurityAuthPriorityFragment extends Fragment {
 
                 Toast.makeText(getContext(), "finger", Toast.LENGTH_SHORT).show();
 
-                mEditor.putString(AUTH_PREFERENCE, "FINGERPRINT" );
-                mEditor.commit();
+
             }
         });
 
@@ -182,7 +168,37 @@ public class GuideSecurityAuthPriorityFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                mCallback.onGuideOptionClickListener("changeToFinish", +1);
+
+                if(radioButtonFingerprint.isChecked()){
+
+                   mEditor.putInt(LOGIN_METHOD, LOGIN_BY_FINGERPRINT );
+                    mEditor.putBoolean(DEVICE_IS_PAIRED, true );
+                   mEditor.commit();
+
+                    mCallback.onGuideOptionClickListener("changeToFingerprintFragment", +1);
+
+                }
+
+                if(radioButtonPin.isChecked()){
+
+                    //mEditor.putInt(AUTH_PREFERENCE, LOGIN_BY_PIN );
+                    //mEditor.commit();
+
+                    mCallback.onGuideOptionClickListener("changeToPinFragment", +1);
+
+                }
+
+                if(radioButtonCredentials.isChecked()){
+
+                    //mEditor.putInt(AUTH_PREFERENCE, LOGIN_BY_CREDENTIALS );
+                    //mEditor.commit();
+
+                    mCallback.onGuideOptionClickListener("changeToCredentialsFragment", +1);
+
+                }
+
+
+
 
             }
         });

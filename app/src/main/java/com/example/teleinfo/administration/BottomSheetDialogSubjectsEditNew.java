@@ -23,6 +23,8 @@ import com.example.teleinfo.login.BottomSheetDialogCredentialsLogin;
 import com.example.teleinfo.parameters.GetThemeStyle;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -42,6 +44,9 @@ public class BottomSheetDialogSubjectsEditNew extends BottomSheetDialogFragment 
 
     int action;
     ObjectSubjects objectSubjects;
+
+    private FirebaseDatabase mFirebaseDatabaseDatabase;
+    private DatabaseReference mDatabaseReference;
 
     private BottomSheetDialogSubjectsEditNewListener bottomSheetDialogSubjectsEditNewListener;
 
@@ -86,6 +91,9 @@ public class BottomSheetDialogSubjectsEditNew extends BottomSheetDialogFragment 
         super.setupDialog(dialog, new GetThemeStyle().getThemeStyle(shrPref.getString(CURRENT_THEME, "#212121")));
         View contentView = View.inflate(getContext(), R.layout.administration_bottom_sheet_dialog_subjects_edit_new, null);
         dialog.setContentView(contentView);
+
+        mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/Subjects");
 
 
         textViewTitle = (TextView)contentView.findViewById(R.id.administrationBottomSheetDialogSubjectEditNewTextViewTitle);
@@ -135,7 +143,19 @@ public class BottomSheetDialogSubjectsEditNew extends BottomSheetDialogFragment 
 
                 }
 
-                bottomSheetDialogSubjectsEditNewListener.applyBottomSheetDialogSubjectsEditNewListener(objectSubjectsNew, action);
+
+                if(action == ADMINISTRATION_NEW){
+
+
+                    objectSubjectsNew.Key = mDatabaseReference.push().getKey();
+
+                }
+
+                mDatabaseReference.child(objectSubjectsNew.Key ).setValue(objectSubjectsNew);
+
+
+
+               // bottomSheetDialogSubjectsEditNewListener.applyBottomSheetDialogSubjectsEditNewListener(objectSubjectsNew, action);
 
 
             }

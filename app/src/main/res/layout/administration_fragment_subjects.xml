@@ -18,7 +18,7 @@
         <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
             android:id="@+id/subjectsThemedToggleButtonGroupFilter"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:justifyContent="flex_start"
             android:layout_marginLeft="10dp"
 
@@ -78,7 +78,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/administrationsOrganizationsOrganizationsListActivity_RecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="match_parent"
+         >
+
+        </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
             android:id="@+id/administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow1"

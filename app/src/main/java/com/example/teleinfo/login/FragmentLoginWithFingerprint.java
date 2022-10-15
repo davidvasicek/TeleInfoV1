@@ -1,9 +1,7 @@
-package com.example.teleinfo.guide;
-
+package com.example.teleinfo.login;
 
 import static android.content.Context.FINGERPRINT_SERVICE;
 import static android.content.Context.KEYGUARD_SERVICE;
-import static com.example.teleinfo.parameters.MainParameters.FINGERPRINT_AUTH;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 import static com.example.teleinfo.parameters.MainParameters.TIME_OF_LAST_BLOCKED_READER;
 
@@ -27,7 +25,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +34,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.teleinfo.R;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -54,26 +52,17 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
+public class FragmentLoginWithFingerprint extends Fragment {
 
-public class GuideSecurityFingerprintFragment extends Fragment {
-
-
-    private SharedPreferences mSharedPreferences;
-    private SharedPreferences.Editor mEditor;
-
-
-    TextView textViewNumberOfPage;
-    ImageView imageViewIcon;
-    TextView ddfdfdfd;
-    Button buttonNext;
-    Button buttonPrevious;
-    TextView timer;
-    LinearLayout linearLayoutFingerprintSettings;
-    TextView dsvxvxvd;
-    ImageView sensorViewMainFragmentChartImageViewGraphLinesf;
+    TextView textViewFingerprintTextStatus;
+    TextView textViewLoginStatus;
+    TextView textViewNameOfUser;
+    TextView textViewLoginWithCredentials;
+    ImageView imageViewFingerprintIcon;
+    ImageView imageViewFingerprintStatus;
+    AVLoadingIndicatorView aVLoadingIndicatorViewLogging;
 
 
-    String numberOfPage = "";
 
     boolean isVerify = false;
 
@@ -89,8 +78,7 @@ public class GuideSecurityFingerprintFragment extends Fragment {
     private static final String FINGERPRINT_KEY = "key_name";
 
     private static final int REQUEST_USE_FINGERPRINT = 300;
-
-
+    
     private int onAuthenticationFailedCount = 0;
 
     private static final long START_TIME_IN_MILLIS = 30000;
@@ -101,99 +89,43 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
 
 
-
-
-
-
-
-
-
-
-    public interface OnGuideOptionClickListener {
-        void onGuideOptionClickListener(String keyOption, int counter);
+    public FragmentLoginWithFingerprint() {
+        // Required empty public constructor
     }
-
-    private OnGuideOptionClickListener mCallback;
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-        try {
-            mCallback = (OnGuideOptionClickListener) context;
-        } catch (Exception e) {
-            throw new ClassCastException(context.toString() + " must implement SettingOptionsFragment.OnOptionClickListener");
-        }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
-
-    public GuideSecurityFingerprintFragment(){
-
-    }
-
-    public static GuideSecurityFingerprintFragment newInstance(int counter, int totalCount) {
-        GuideSecurityFingerprintFragment myFragment = new GuideSecurityFingerprintFragment();
-
-        Bundle args = new Bundle();
-        args.putInt("count", counter);
-        args.putInt("totalCount", totalCount);
-        myFragment.setArguments(args);
-
-        return myFragment;
-    }
-
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
 
-        View rootView = inflater.inflate(R.layout.guide__fragment_security_fingerprint, container, false);
+        View rootView = inflater.inflate(R.layout.login_fragment_fingerprint, container, false);
 
-        if (getArguments() != null) {
+        textViewFingerprintTextStatus = (TextView)rootView.findViewById(R.id.loginFragmentFingerprintTextViewFingerprintTextStatus);
+        textViewLoginStatus = (TextView)rootView.findViewById(R.id.loginFragmentFingerprintTextViewLoginStatus);
+        textViewNameOfUser = (TextView)rootView.findViewById(R.id.loginFragmentFingerprintTextViewNameOfUser);
+        textViewLoginWithCredentials = (TextView)rootView.findViewById(R.id.loginFragmentFingerprintTextViewLoginWithCredentials);
+        imageViewFingerprintIcon = (ImageView)rootView.findViewById(R.id.loginFragmentFingerprintImageViewFingerprintIcon);
+        imageViewFingerprintStatus = (ImageView)rootView.findViewById(R.id.loginFragmentFingerprintImageViewFingerprintStatus);
+        aVLoadingIndicatorViewLogging = (AVLoadingIndicatorView)rootView.findViewById(R.id.loginFragmentFingerprintAVLoadingIndicatorViewLogging);
 
-            int counter = getArguments().getInt("count");
-            int totalCount = getArguments().getInt("totalCount");
-
-            numberOfPage = counter + " / " + totalCount;
-
-        }
+        textViewLoginStatus.setVisibility(View.GONE);
+        textViewNameOfUser.setVisibility(View.GONE);
+        aVLoadingIndicatorViewLogging.setVisibility(View.GONE);
+        imageViewFingerprintStatus.setVisibility(View.GONE);
+        textViewFingerprintTextStatus.setVisibility(View.GONE);
 
         mSharedPreferences = getActivity().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
-
-        buttonNext = (Button)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintButtonNext);
-        buttonPrevious = (Button)rootView.findViewById(R.id.guide_fragmentSecurityFingerprinButtonPrevious);
-
-        textViewNumberOfPage = (TextView)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintTextViewNumberOfPage);
-        textViewNumberOfPage.setText(numberOfPage);
-
-        imageViewIcon = (ImageView)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintButtonSetFingerprint);
-
-        timer = (TextView)rootView.findViewById(R.id.timer);
-        ddfdfdfd = (TextView)rootView.findViewById(R.id.ddfdfdfd);
-        linearLayoutFingerprintSettings = (LinearLayout)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintLinearLayoutFingerprintSettings);
-        dsvxvxvd = (TextView)rootView.findViewById(R.id.dsvxvxvd);
-
-        sensorViewMainFragmentChartImageViewGraphLinesf = (ImageView)rootView.findViewById(R.id.sensorViewMainFragmentChartImageViewGraphLinesf);
-
-
-
-        ddfdfdfd.setVisibility(View.GONE);
-        imageViewIcon.setVisibility(View.GONE);
-        timer.setVisibility(View.GONE);
-
-        buttonNext.setEnabled(false);
-        buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
-
-        buttonNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                mCallback.onGuideOptionClickListener("changeToPinFragment", +1);
-            }
-        });
-
 
 
         Long lastTime = mSharedPreferences.getLong(TIME_OF_LAST_BLOCKED_READER, 0);
@@ -215,8 +147,115 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         return rootView;
     }
+
+
+
+
+
+
+    boolean login(String username, String password) {
+
+
+/*
+        String email = username.replace("@","_").replace(".","_");
+        Log.e(TAG, "___________________" + email);
+
+        textViewNameOfUser.setVisibility(View.VISIBLE);
+        textViewStatus.setVisibility(View.VISIBLE);
+        aVLoadingIndicatorViewLogging.setVisibility(View.VISIBLE);
+
+        textViewStatus.setText("Ověřuji uživatele");
+        textViewStatus.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+
+        textViewNameOfUser.setText(username);
+        buttonQRScan.setVisibility(View.GONE);
+        textViewLoginWithCredentials.setVisibility(View.GONE);
+        textViewInfoText.setVisibility(View.GONE);
+
+        mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/" + email + "/adminstračníInfo/AccessKey");
+
+        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.getValue(String.class).compareTo(password) == 0){
+
+                    Log.e(TAG, "___________________" + " anooooooooo");
+                    // otevři průvodce nastavením android aplikací (zabezpečení, vzhled, notifikace - notifikace stavu baterií, notifikace offlinosti senzorů, notifikace událostí
+                    // notifikace narozenin a svátků.......)
+
+                    mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/" + email + "/adminstračníInfo");
+
+                    mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+
+
+                            Log.e(TAG, "___________________" + dataSnapshot.child("PairTimeTable").getValue(String.class) );
+                            Log.e(TAG, "___________________" + dataSnapshot.child("role").getValue(int.class) );
+
+
+                            Intent myIntent = new Intent(getContext(), _MainActivityGuide.class);
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            getActivity().startActivity(myIntent);
+
+
+                        }
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+
+
+                }else{
+
+                    Log.e(TAG, "___________________" + "neeeeeeee");
+                    Toast.makeText(getContext(),"klíč nenení správný",Toast.LENGTH_LONG).show();
+
+                    textViewNameOfUser.setVisibility(View.GONE);
+                    textViewStatus.setVisibility(View.VISIBLE);
+                    aVLoadingIndicatorViewLogging.setVisibility(View.GONE);
+
+                    textViewStatus.setText("Ověření se nazdařilo\n\nEmail nebo heslo není správné");
+                    textViewStatus.setTextColor(getContext().getResources().getColor(R.color.red700colorAccent));
+                    textViewNameOfUser.setText("");
+                    buttonQRScan.setVisibility(View.VISIBLE);
+                    textViewLoginWithCredentials.setVisibility(View.VISIBLE);
+                    textViewInfoText.setVisibility(View.VISIBLE);
+
+                }
+
+
+
+
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+*/
+        return true;
+    }
+
 
 
     public void startTimer() {
@@ -224,13 +263,15 @@ public class GuideSecurityFingerprintFragment extends Fragment {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                Log.e("mylog", "??????????????: oooooooooooo");
+
                 mTimeLeftInMillis = millisUntilFinished;
-                timer.setVisibility(View.VISIBLE);
+                textViewFingerprintTextStatus.setVisibility(View.VISIBLE);
+                textViewFingerprintTextStatus.setText("kokot");
                 updateCountDownText();
 
-                dsvxvxvd.setVisibility(View.GONE);
-                sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.GONE);
-                imageViewIcon.setVisibility(View.GONE);
+               textViewFingerprintTextStatus.setVisibility(View.GONE);
+               imageViewFingerprintStatus.setVisibility(View.GONE);
 
 
 
@@ -243,15 +284,14 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
                 initFingerprint();
                 onAuthenticationFailedCount=0;
-                timer.setVisibility(View.GONE);
+                textViewFingerprintTextStatus.setVisibility(View.GONE);
+
+                textViewFingerprintTextStatus.setText("");
+
+                textViewFingerprintTextStatus.setVisibility(View.VISIBLE);
 
 
-
-                dsvxvxvd.setVisibility(View.VISIBLE);
-                sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.VISIBLE);
-
-
-                Log.e("klmmmmmmmmmmmmmm", "konec timeru");
+                Log.e("klmmmmmmmmmmmmmm", "konec textViewFingerprintTextStatusu");
                 //mTimerRunning = false;
                 //mButtonStartPause.setText("Start");
                 //mButtonStartPause.setVisibility(View.INVISIBLE);
@@ -270,7 +310,7 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
         String timeLeftFormatted = String.format(Locale.getDefault(), "%02d", seconds);
 
-        timer.setText("Čtečka otisku prstů je zablokována. K obnovení dojde za \n" + timeLeftFormatted + " sekund");
+        textViewFingerprintTextStatus.setText("Čtečka otisku prstů je zablokována. K obnovení dojde za \n" + timeLeftFormatted + " sekund");
     }
 
 
@@ -298,19 +338,21 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void checkDeviceFingerprintSupport() {
+
         if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
+
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.USE_FINGERPRINT}, REQUEST_USE_FINGERPRINT);
+
         } else {
             if (!fingerprintManager.isHardwareDetected()) {
                 Toast.makeText(getContext(), "Fingerprint is not supported in this device", Toast.LENGTH_LONG).show();
             }
             if (!fingerprintManager.hasEnrolledFingerprints()) {
 
-                ddfdfdfd.setText("Otisk prstu ještěnení nakonfigurován");
+                textViewFingerprintTextStatus.setText("Otisk prstu ještěnení nakonfigurován");
 
-                dsvxvxvd.setVisibility(View.GONE);
-                sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.GONE);
-                imageViewIcon.setVisibility(View.GONE);
+                textViewFingerprintTextStatus.setVisibility(View.GONE);
+                imageViewFingerprintStatus.setVisibility(View.GONE);
 
                 Toast.makeText(getContext(), "Fingerprint not yet configured", Toast.LENGTH_LONG).show();
             }
@@ -418,16 +460,16 @@ public class GuideSecurityFingerprintFragment extends Fragment {
             }
 
             //textViewReply.setText(getResources().getString(R.string.loginWithFingerprint_TextView_ReplySuccess));
-            imageViewIcon.setImageResource(R.drawable.success);
-            imageViewIcon.setVisibility(View.VISIBLE);
-            dsvxvxvd.setAllCaps(true);
-            dsvxvxvd.setTextColor(getActivity().getResources().getColor(R.color.green500text_primary));
-            dsvxvxvd.setText("Otisk prstu ověřen");
+            imageViewFingerprintStatus.setImageResource(R.drawable.success);
+            imageViewFingerprintStatus.setVisibility(View.VISIBLE);
+            textViewFingerprintTextStatus.setAllCaps(true);
+            textViewFingerprintTextStatus.setTextColor(getActivity().getResources().getColor(R.color.green500text_primary));
+            textViewFingerprintTextStatus.setText("Otisk prstu ověřen");
 
             isVerify = true;
-
-            buttonNext.setEnabled(true);
-            buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+            
+            // TODO ... 
+            
             //finish();
             //startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
@@ -439,23 +481,24 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
             onAuthenticationFailedCount++;
 
-            if(onAuthenticationFailedCount >= 5){
+            if(onAuthenticationFailedCount >= 4){
 
 
 
-                        mEditor.putLong(TIME_OF_LAST_BLOCKED_READER, System.currentTimeMillis());
-                        mEditor.commit();
+                mEditor.putLong(TIME_OF_LAST_BLOCKED_READER, System.currentTimeMillis());
+                mEditor.commit();
 
                 mTimeLeftInMillis = START_TIME_IN_MILLIS;
                 startTimer();
+                Log.e("mylog", "??????????????: aaaaaaaaaaaaa");
             }
 
-            ddfdfdfd.setText("Počet zbývajících pokusů: " + (5-onAuthenticationFailedCount));
-            ddfdfdfd.setVisibility(View.VISIBLE);
-            ddfdfdfd.postDelayed(new Runnable() {
+            textViewFingerprintTextStatus.setText("Počet zbývajících pokusů: " + (5-onAuthenticationFailedCount));
+            textViewFingerprintTextStatus.setVisibility(View.VISIBLE);
+            textViewFingerprintTextStatus.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ddfdfdfd.setVisibility(View.GONE);
+                    textViewFingerprintTextStatus.setVisibility(View.GONE);
                 }
             }, 1500);
 
@@ -470,23 +513,23 @@ public class GuideSecurityFingerprintFragment extends Fragment {
                 }
             });*/
 
-           // textViewReply.setText(getResources().getString(R.string.loginWithFingerprint_TextView_ReplyNegative));
+            // textViewReply.setText(getResources().getString(R.string.loginWithFingerprint_TextView_ReplyNegative));
 
-            imageViewIcon.setImageResource(R.drawable.failure);
-           // final Animation animShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake_pf);
-           // imageViewIcon.startAnimation(animShake);
-            imageViewIcon.setVisibility(View.VISIBLE);
-            imageViewIcon.postDelayed(new Runnable() {
+            imageViewFingerprintStatus.setImageResource(R.drawable.failure);
+            // final Animation animShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake_pf);
+            // imageViewFingerprintStatus.startAnimation(animShake);
+            imageViewFingerprintStatus.setVisibility(View.VISIBLE);
+            imageViewFingerprintStatus.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                   // imageViewIcon.setImageResource(R.drawable.ic_fingerprint);
-                   // imageViewIcon.getDrawable().setColorFilter(getResources().getColor(R.color.line), PorterDuff.Mode.SRC_ATOP );
+                    // imageViewFingerprintStatus.setImageResource(R.drawable.ic_fingerprint);
+                    // imageViewFingerprintStatus.getDrawable().setColorFilter(getResources().getColor(R.color.line), PorterDuff.Mode.SRC_ATOP );
                     //textViewReply.setText("");
-                    imageViewIcon.setVisibility(View.GONE);
+                    imageViewFingerprintStatus.setVisibility(View.GONE);
 
 
                 }
-            }, 600);
+            }, 1500);
 
 
         }
@@ -508,3 +551,7 @@ public class GuideSecurityFingerprintFragment extends Fragment {
     }
 
 }
+
+
+
+

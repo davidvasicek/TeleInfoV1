@@ -66,14 +66,16 @@ public class RunGuideFragment extends Fragment {
             public void onClick(View v) {
 
 
-                if(mSharedPreferences.getBoolean(FINGERPRINT_HARDWARE_IS_DETECTED, true )){
+                mCallback.onGuideOptionClickListener("changeToAuthPrioritFragment", +1);
 
-                    mCallback.onGuideOptionClickListener("changeToFingerprintFragment", +1);
+               // if(mSharedPreferences.getBoolean(FINGERPRINT_HARDWARE_IS_DETECTED, true )){
 
-                }else{
+                 //   mCallback.onGuideOptionClickListener("changeToFingerprintFragment", +1);
 
-                    mCallback.onGuideOptionClickListener("changeToPinFragment", +1);
-                }
+               // }else{
+
+               //     mCallback.onGuideOptionClickListener("changeToPinFragment", +1);
+               // }
 
 
 

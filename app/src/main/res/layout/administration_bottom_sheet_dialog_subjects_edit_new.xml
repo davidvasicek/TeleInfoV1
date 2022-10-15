@@ -156,14 +156,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="40dp"
                                     android:layout_margin="3dp"
-                                    app:toggle_text="IKT" />
+                                    app:toggle_text="Informační a komunikační technologie (IKT)" />
 
                                 <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
                                     android:id="@+id/administrationBottomSheetDialogSubjectEditNewThemedButtonTag2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="40dp"
                                     android:layout_margin="3dp"
-                                    app:toggle_text="IT" />
+                                    app:toggle_text="Informační technologie (IT)" />
 
                                 <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
                                     android:id="@+id/administrationBottomSheetDialogSubjectEditNewThemedButtonTag3"

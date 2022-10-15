@@ -23,10 +23,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
-                android:text="VÍTEJTE V APLIKACI"
+                android:text="V Í T E J T E  V  A P L I K A C I"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:id="@+id/loginWithKeyActivityTextVifdfdewTitle"
                 android:textColor="@color/text_primary"
                 android:textSize="16dp"
                 android:tag="tagForDelete"/>
@@ -38,8 +37,6 @@
                 android:layout_centerHorizontal="true"
                 android:text="T e l e I n f o"
                 android:gravity="center"
-
-                android:id="@+id/loginWithKeyActivityTextViewTitle"
                 android:textColor="@color/text_primary"
                 android:textSize="24dp"
                 android:tag="tagForDelete"/>
@@ -65,7 +62,7 @@
 
 
             <TextView
-                android:id="@+id/activityLoginWithKxeyTextViewKeyRequest"
+                android:id="@+id/loginFragmentFirstLoginQRTextViewInfoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Prosím, načtěte QR kód s Vašimi přihlašovacími údaji"
@@ -76,7 +73,7 @@
                 android:tag="tagForDelete"/>
 
             <Button
-                android:id="@+id/activityLoginWithKeyButtcconLogin"
+                android:id="@+id/loginFragmentFirstLoginQRButtonQRScan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -88,31 +85,35 @@
                 android:text="NASKENUJ KÓD" />
 
 
-            <TextView
-                android:id="@+id/activityLoginWithKxeycccccTextViewKeyRequest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:gravity="center_horizontal"
-                android:tag="tagForDelete"
-                android:text="Probíhá přihlašování uživatele"
-                android:textColor="@color/text_primary"
-                android:textSize="@dimen/text_size_text" />
 
             <TextView
-                android:id="@+id/activityLoginWithKxeyccTextViewKeyRequest"
+                android:id="@+id/loginFragmentFirstLoginQRTextViewStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:gravity="center_horizontal"
                 android:tag="tagForDelete"
                 android:text=""
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_size_text"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/loginFragmentFirstLoginQRTextViewNameOfUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:tag="tagForDelete"
+                android:text="Probíhá přihlašování uživatele"
                 android:textColor="@color/text_primary"
-                android:textSize="@dimen/text_size_text" />
+                android:textSize="14dp" />
+
 
 
             <com.wang.avi.AVLoadingIndicatorView
-                android:id="@+id/rozvrh_loadingIndicator"
+                android:id="@+id/loginFragmentFirstLoginQRAVLoadingIndicatorViewLogging"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -130,59 +131,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_weight="0.15">
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:id="@+id/activityLoginWithKeyLinearLayoutAuthStatus"
-                    android:layout_weight="0.85">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="-"
-                        android:textColor="@color/text_secondary"
-                        android:singleLine="true"
-                        android:gravity="center_vertical"
-                        android:id="@+id/activityLoginWithKeyImageViewAuthStatusIcon" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
 
 
     <LinearLayout
@@ -220,7 +168,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/activityLoginWithKeyTextViewLostKey"
+                            android:id="@+id/loginFragmentFirstLoginQRTextViewLoginWithCredentials"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Příhlásit se pomocí údajů"
