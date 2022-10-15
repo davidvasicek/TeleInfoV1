@@ -15,8 +15,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:textSize="18dp"
-        android:textColor="@color/text_primary"
-        />
+        android:textColor="@color/text_primary" />
 
     <TextView
         android:layout_width="match_parent"
@@ -27,10 +26,9 @@
         android:layout_marginBottom="20dp"
         android:gravity="center"
         android:textAllCaps="true"
-        android:text="Přizpůsobte vaše zabezpečovací metody"
+        android:text="Biometrie"
         android:tag="tagForDelete"
-        android:textSize="12dp"
-        />
+        android:textSize="12dp" />
 
 
     <LinearLayout
@@ -43,18 +41,16 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:textAllCaps="false"
-        android:text="Vyberte metodu přihlašování, \n kterou budete v budoucnu upřednosťnovat. \n \n Pokud s výběrem této metody nebudete spokojeni, můžete v budoucnu upřednostnit jinou variantu."
+        android:text="Umožňuje uživateli přistupovat do aplikace na základě předloženého otisku prstu"
         android:tag="tagForDelete"
-        android:textSize="12dp"
-        />
-
+        android:textSize="12dp" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -65,72 +61,142 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"/>
 
-
-    <LinearLayout
-        android:id="@+id/guide_fragmentSecurityAuthPriorityLayoutPinSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        >
+        android:orientation="vertical">
 
-        <RadioGroup
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/dfsdfsdf">
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:gravity="center">
 
-            <RadioButton
-                android:id="@+id/radioButtonFingerprint"
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textAllCaps="true"
-                android:text="Otisk prstu" />
+                android:orientation="vertical"
+                >
 
-            <RadioButton
-                android:id="@+id/radioButtonPin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Pin"
-                android:textAllCaps="true"
-                android:layout_marginTop="10dp"/>
-
-            <RadioButton
-                android:id="@+id/radioButtonCredentials"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email a heslo"
-                android:textAllCaps="true"
-                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="Přiložte prst na čtečku otisku prstu"
+                    android:tag="tagForDelete"
+                    android:textSize="12dp"
+                    android:id="@+id/guideFragmentAuthByFingerprintTextViewInstructions"
+                    />
 
 
-        </RadioGroup>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        >
+
+
+                        <ImageView
+                            android:id="@+id/guideFragmentAuthByFingerprintImageViewFingerprintIcon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/fingerprint3" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/success"
+                            android:id="@+id/guideFragmentAuthByFingerprintImageViewFingertprintStatus"
+                            android:layout_marginLeft="65dp"
+                            android:layout_marginTop="65dp"/>
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:text="Počet pokusů: 3"
+                    android:tag="tagForDelete"
+                    android:textSize="12dp"
+                    android:id="@+id/guideFragmentAuthByFingerprintTextViewFingerprintStatus"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:text="Pin nenastaven"
+                    android:tag="tagForDelete"
+                    android:textSize="12dp"
+                    android:textColor="@color/red500text_primaryDark"
+                    android:id="@+id/guideFragmentAuthByFingerprintTextViewFingerprintStatus1"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
     </LinearLayout>
-
-
-
-
-
-
-
-
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -153,7 +219,6 @@
                 android:gravity="bottom"
                 android:layout_marginBottom="10dp">
 
-
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -167,7 +232,7 @@
                         android:layout_weight="1">
 
                         <Button
-                            android:id="@+id/login_fragmentRegisterButtonLoginPrevious"
+                            android:id="@+id/guideFragmentAuthByFingerprintButtonPrevious"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="?selectableItemBackgroundBorderless"
@@ -188,10 +253,10 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="1/6"
+                            android:text="2/6"
                             android:gravity="center"
                             android:tag="tagForDelete"
-                            android:textSize="18dp"
+                            android:textSize="14dp"
                             />
 
 
@@ -206,7 +271,7 @@
                         android:layout_weight="1">
 
                         <Button
-                            android:id="@+id/login_fragmentRegisterButtonLogin"
+                            android:id="@+id/guideFragmentAuthByFingerprintButtonNext"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -230,13 +295,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
-
-
-
 
 
 

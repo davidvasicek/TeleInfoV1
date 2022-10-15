@@ -54,7 +54,7 @@
         android:layout_marginBottom="20dp"
         android:gravity="center"
         android:textAllCaps="false"
-        android:text="david.vasicek77@gmail.com"
+        android:text="vasicek@teleinformatika.eu"
         android:id="@+id/guide_fragmentRunGuideTextViewPairedUser"
         android:tag="tagForDelete"
         android:textSize="14dp"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="Pokračovat do aplikace"
-            android:id="@+id/guide_fragmentRunGuideButtonRunGuide"
+            android:id="@+id/guideFragmentFinishButtonContinueToApp"
             android:gravity="center"
             android:foregroundGravity="center"/>
 

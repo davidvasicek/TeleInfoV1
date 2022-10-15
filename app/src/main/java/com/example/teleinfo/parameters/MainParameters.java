@@ -12,17 +12,36 @@ public interface MainParameters {
     //endSector
 
 
-    String LOGIN_METHOD = "LoginMethod";
+
+
+
+
+
     String TIME_OF_LAST_BLOCKED_READER = "TimeOfLastBlockedReader";
     String FINGERPRINT_HARDWARE_IS_DETECTED = "FingerprintHardwareIsDetected";
-    String LOGIN_PIN = "LoginPin";
-    String LOGIN_CREDENTIAL_PASSWORD = "LoginCredentialPassword";
+
 
 
 
     String DEVICE_IS_PAIRED = "DeviceIsPaired";
-    String USER_ROLE = "UserRole";
+
+
+
+    String USER_EMAIL_LOGGED = "UserEmailLogged";
+    String USER_PASSWORD_LOGGED = "UserPasswordLogged";
     String USER_TIME_TABLE = "UserTimeTable";
+    String USER_ROLE = "UserRole";
+
+    String AUTH_PRIORITY = "AuthPriority";
+    String AUTH_PIN_OR_PASSWORD = "AuthPinOrPassword";
+
+    public static final int NUMBER_OF_DEFAULT_PINS = 4;
+
+
+
+
+
+
 
 
     public static final int LOGIN_BY_FINGERPRINT = 1; // přihlášení otiskem prstu
@@ -30,13 +49,8 @@ public interface MainParameters {
     public static final int LOGIN_BY_CREDENTIALS = 3; // přihlášení údaji
 
 
-    // MAIN LIGHTS ---------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------
 
-    String ON_HEADERS_OF_LOCATIONS_MAIN_LIGHTS = "onHeadersOfLocationsMainLights";
-    String ON_DESCRIPTION_MAIN_LIGHTS = "onDescriptionMainLights";
-    String ON_SAVE_SORTING_MAIN_LIGHTS = "onSaveSortingMainLights";
-    String ON_SAVE_SORTING_VALUE_MAIN_LIGHTS = "onSaveSortingValueMainLights";
-    String ON_SHOW_ATTRIBUTES_MAIN_LIGHTS = "onShowAttributesMainLights";
 
     public static final int IS_ONLINE = 0;  // nternet je dostupný
     public static final int ERROR_CODE_NO_WIFI_NO_DATA = 1; // wifi ani data nejsou zapnuty
@@ -112,16 +126,7 @@ public interface MainParameters {
     String DINNER_SECOND_SHOW = "DinnerSecondShow";
 
 
-    String LOGGED_USER = "LoggedUser";
-    String LOGGED_USER_PASSWORD = "LoggedUserPassword";  // později se smaže
 
-    String AUTH_PREFERENCE = "AuthPreference";
-
-    String FINGERPRINT_AUTH = "FingerPrintAuth";
-
-    public static final int NUMBER_OF_DEFAULT_PINS = 6;
-    String PIN_AUTH = "PinAuth";
-    String PIN = "Pin";
 
 
 

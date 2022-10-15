@@ -1,13 +1,17 @@
 package com.example.teleinfo.login;
 
+import static android.content.ContentValues.TAG;
 import static android.content.Context.FINGERPRINT_SERVICE;
 import static android.content.Context.KEYGUARD_SERVICE;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 import static com.example.teleinfo.parameters.MainParameters.TIME_OF_LAST_BLOCKED_READER;
+import static com.example.teleinfo.parameters.MainParameters.USER_EMAIL_LOGGED;
+import static com.example.teleinfo.parameters.MainParameters.USER_PASSWORD_LOGGED;
 
 import android.Manifest;
 import android.app.KeyguardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
@@ -33,7 +37,14 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.teleinfo.MainActivity;
 import com.example.teleinfo.R;
+import com.example.teleinfo.guide._MainActivityGuide;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.IOException;
@@ -62,7 +73,11 @@ public class FragmentLoginWithFingerprint extends Fragment {
     ImageView imageViewFingerprintStatus;
     AVLoadingIndicatorView aVLoadingIndicatorViewLogging;
 
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mDatabaseReference;
 
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
 
     boolean isVerify = false;
 
@@ -89,8 +104,6 @@ public class FragmentLoginWithFingerprint extends Fragment {
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
-    private SharedPreferences mSharedPreferences;
-    private SharedPreferences.Editor mEditor;
 
 
     public FragmentLoginWithFingerprint() {
@@ -117,6 +130,9 @@ public class FragmentLoginWithFingerprint extends Fragment {
         imageViewFingerprintIcon = (ImageView)rootView.findViewById(R.id.loginFragmentFingerprintImageViewFingerprintIcon);
         imageViewFingerprintStatus = (ImageView)rootView.findViewById(R.id.loginFragmentFingerprintImageViewFingerprintStatus);
         aVLoadingIndicatorViewLogging = (AVLoadingIndicatorView)rootView.findViewById(R.id.loginFragmentFingerprintAVLoadingIndicatorViewLogging);
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/");
 
         textViewLoginStatus.setVisibility(View.GONE);
         textViewNameOfUser.setVisibility(View.GONE);
@@ -168,24 +184,25 @@ public class FragmentLoginWithFingerprint extends Fragment {
 
 
 
-    boolean login(String username, String password) {
+    boolean login() {
+
+        String username = mSharedPreferences.getString(USER_EMAIL_LOGGED, "");
+        String password = mSharedPreferences.getString(USER_PASSWORD_LOGGED, "");
+
+        textViewNameOfUser.setVisibility(View.VISIBLE);
+        textViewLoginStatus.setVisibility(View.VISIBLE);
+        aVLoadingIndicatorViewLogging.setVisibility(View.VISIBLE);
+
+        textViewLoginStatus.setText("Ověřuji uživatele");
+        textViewLoginStatus.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+
+        textViewNameOfUser.setText(username);
+        textViewLoginWithCredentials.setVisibility(View.GONE);
 
 
-/*
         String email = username.replace("@","_").replace(".","_");
         Log.e(TAG, "___________________" + email);
 
-        textViewNameOfUser.setVisibility(View.VISIBLE);
-        textViewStatus.setVisibility(View.VISIBLE);
-        aVLoadingIndicatorViewLogging.setVisibility(View.VISIBLE);
-
-        textViewStatus.setText("Ověřuji uživatele");
-        textViewStatus.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
-
-        textViewNameOfUser.setText(username);
-        buttonQRScan.setVisibility(View.GONE);
-        textViewLoginWithCredentials.setVisibility(View.GONE);
-        textViewInfoText.setVisibility(View.GONE);
 
         mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/" + email + "/adminstračníInfo/AccessKey");
 
@@ -210,9 +227,10 @@ public class FragmentLoginWithFingerprint extends Fragment {
                             Log.e(TAG, "___________________" + dataSnapshot.child("role").getValue(int.class) );
 
 
-                            Intent myIntent = new Intent(getContext(), _MainActivityGuide.class);
+                            Intent myIntent = new Intent(getContext(), MainActivity.class);
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getActivity().startActivity(myIntent);
+                            getActivity().finish();
 
 
                         }
@@ -230,15 +248,13 @@ public class FragmentLoginWithFingerprint extends Fragment {
                     Toast.makeText(getContext(),"klíč nenení správný",Toast.LENGTH_LONG).show();
 
                     textViewNameOfUser.setVisibility(View.GONE);
-                    textViewStatus.setVisibility(View.VISIBLE);
+                    textViewLoginStatus.setVisibility(View.VISIBLE);
                     aVLoadingIndicatorViewLogging.setVisibility(View.GONE);
 
-                    textViewStatus.setText("Ověření se nazdařilo\n\nEmail nebo heslo není správné");
-                    textViewStatus.setTextColor(getContext().getResources().getColor(R.color.red700colorAccent));
+                    textViewLoginStatus.setText("Ověření se nazdařilo\n\nEmail nebo heslo není správné");
+                    textViewLoginStatus.setTextColor(getContext().getResources().getColor(R.color.red700colorAccent));
                     textViewNameOfUser.setText("");
-                    buttonQRScan.setVisibility(View.VISIBLE);
                     textViewLoginWithCredentials.setVisibility(View.VISIBLE);
-                    textViewInfoText.setVisibility(View.VISIBLE);
 
                 }
 
@@ -252,7 +268,7 @@ public class FragmentLoginWithFingerprint extends Fragment {
             }
         });
 
-*/
+
         return true;
     }
 
@@ -263,15 +279,15 @@ public class FragmentLoginWithFingerprint extends Fragment {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                Log.e("mylog", "??????????????: oooooooooooo");
+
 
                 mTimeLeftInMillis = millisUntilFinished;
                 textViewFingerprintTextStatus.setVisibility(View.VISIBLE);
                 textViewFingerprintTextStatus.setText("kokot");
                 updateCountDownText();
 
-               textViewFingerprintTextStatus.setVisibility(View.GONE);
-               imageViewFingerprintStatus.setVisibility(View.GONE);
+               //textViewFingerprintTextStatus.setVisibility(View.GONE);
+               //imageViewFingerprintStatus.setVisibility(View.GONE);
 
 
 
@@ -281,6 +297,8 @@ public class FragmentLoginWithFingerprint extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onFinish() {
+
+                Log.e("mylog", "??????????????: oooooooooooo");
 
                 initFingerprint();
                 onAuthenticationFailedCount=0;
@@ -454,6 +472,8 @@ public class FragmentLoginWithFingerprint extends Fragment {
         public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
             super.onAuthenticationSucceeded(result);
 
+            login();
+
             Vibrator vibrator = (Vibrator) getActivity().getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
             if (vibrator != null) {
                 vibrator.vibrate(200);
@@ -479,6 +499,9 @@ public class FragmentLoginWithFingerprint extends Fragment {
         public void onAuthenticationFailed() {
             super.onAuthenticationFailed();
 
+            Log.e("mylog", "??????????????:oppppppppppppppp");
+
+
             onAuthenticationFailedCount++;
 
             if(onAuthenticationFailedCount >= 4){
@@ -493,7 +516,7 @@ public class FragmentLoginWithFingerprint extends Fragment {
                 Log.e("mylog", "??????????????: aaaaaaaaaaaaa");
             }
 
-            textViewFingerprintTextStatus.setText("Počet zbývajících pokusů: " + (5-onAuthenticationFailedCount));
+            textViewFingerprintTextStatus.setText("Počet zbývajících pokusů: " + (4-onAuthenticationFailedCount));
             textViewFingerprintTextStatus.setVisibility(View.VISIBLE);
             textViewFingerprintTextStatus.postDelayed(new Runnable() {
                 @Override

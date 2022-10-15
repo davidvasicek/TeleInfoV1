@@ -58,6 +58,9 @@ public class NewPinFragmentDialog extends BottomSheetDialogFragment {
     LinearLayout testicek1;
 
 
+
+
+
     private LinearLayout linearLayoutsPin[];
     private LinearLayout linearLayoutsPin1[];
 

@@ -1,9 +1,18 @@
 package com.example.teleinfo.guide;
 
+import static com.example.teleinfo.parameters.MainParameters.AUTH_PIN_OR_PASSWORD;
+import static com.example.teleinfo.parameters.MainParameters.AUTH_PRIORITY;
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
+import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
 import static com.example.teleinfo.parameters.MainParameters.FINGERPRINT_HARDWARE_IS_DETECTED;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_CREDENTIALS;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
+import static com.example.teleinfo.parameters.MainParameters.USER_EMAIL_LOGGED;
+import static com.example.teleinfo.parameters.MainParameters.USER_PASSWORD_LOGGED;
+import static com.example.teleinfo.parameters.MainParameters.USER_ROLE;
+import static com.example.teleinfo.parameters.MainParameters.USER_TIME_TABLE;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -12,6 +21,7 @@ import androidx.fragment.app.FragmentManager;
 import android.Manifest;
 import android.app.KeyguardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
@@ -19,11 +29,18 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
+import com.example.teleinfo.MainActivity;
 import com.example.teleinfo.R;
 import com.example.teleinfo.parameters.GetThemeStyle;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
-public class _MainActivityGuide extends AppCompatActivity implements RunGuideFragment.OnGuideOptionClickListener,GuideSecurityPinFragment.OnGuideOptionClickListener, GuideSecurityFingerprintFragment.OnGuideOptionClickListener, GuideSecurityCredentialsFragment.OnGuideOptionClickListener{
+public class _MainActivityGuide extends AppCompatActivity implements a_RunGuideFragment.OnGuideOptionClickListener, c_b_GuideSecurityPinFragment.OnGuideOptionClickListener, c_a_GuideSecurityFingerprintFragment.OnGuideOptionClickListener, c_c_GuideSecurityCredentialsFragment.OnGuideOptionClickListener{
 
     FragmentManager fragmentManager;
     String keyOption;
@@ -37,6 +54,12 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
     private SharedPreferences.Editor mEditor;
 
     boolean isHardwareDetected;
+
+    int authMethod;
+    String pinOrPassword;
+    String token = null;
+
+    Intent intent;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -56,7 +79,7 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
         if (frameLayout != null) {
 
             fragmentManager.beginTransaction()
-                    .add(R.id.settingsContainer19, new RunGuideFragment())
+                    .add(R.id.settingsContainer19, new a_RunGuideFragment())
                     .commit();
         }
 
@@ -74,6 +97,35 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
         //     totalPageCount--;
         //}
 
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w("Lojza", "Fetching FCM registration token failed", task.getException());
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        token = task.getResult();
+
+                       // FirebaseDatabase database = FirebaseDatabase.getInstance();
+                      //  DatabaseReference myRef = database.getReference("TeleInfo/FCM/DeviceInfo");
+
+                        //AndroidDevicesObject androidDevicesObject = new AndroidDevicesObject();
+
+                        //androidDevicesObject.Device_ID = Device_ID;
+                        //androidDevicesObject.Device_Name = android.os.Build.BRAND + " " + android.os.Build.MODEL;
+                        //androidDevicesObject.Token = token;
+
+                       // myRef.setValue(token);
+
+                        // Log and toast
+
+                        Log.d("lojza", "aaaaaaaaaa");
+                       // Toast.makeText(MainActivity.this, "aaaaaaaaaa", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
 
 
@@ -90,15 +142,14 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
     }
 
     @Override
-    public void onGuideOptionClickListener(String keyOption, int counter) {
-
-        this.counter += counter;
-
+    public void onGuideOptionClickListener(String keyOption, int keyOptions, String valueOptions ) {
 
         switch (keyOption) {
             case "changeToPinFragment": {
 
-                GuideSecurityPinFragment fragment = GuideSecurityPinFragment.newInstance(this.counter, totalPageCount);
+                authMethod = keyOptions;
+
+                c_b_GuideSecurityPinFragment fragment = new c_b_GuideSecurityPinFragment();
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer19, fragment)
@@ -109,7 +160,9 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
 
             case "changeToFingerprintFragment": {
 
-                GuideSecurityFingerprintFragment fragment = GuideSecurityFingerprintFragment.newInstance(this.counter, totalPageCount);
+                authMethod = keyOptions;
+
+                c_a_GuideSecurityFingerprintFragment fragment = new c_a_GuideSecurityFingerprintFragment();
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer19, fragment)
@@ -119,7 +172,9 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
 
             case "changeToCredentialsFragment": {
 
-                GuideSecurityCredentialsFragment fragment = GuideSecurityCredentialsFragment.newInstance(this.counter, totalPageCount);
+                authMethod = keyOptions;
+
+                c_c_GuideSecurityCredentialsFragment fragment = new c_c_GuideSecurityCredentialsFragment();
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer19, fragment)
@@ -127,9 +182,9 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
                 break;
             }
 
-            case "changeToAuthPrioritFragment": {
+            case "changeToAuthPriorityFragment": {
 
-                GuideSecurityAuthPriorityFragment fragment = GuideSecurityAuthPriorityFragment.newInstance(this.counter, totalPageCount);
+                b_GuideSecurityAuthPriorityFragment fragment = new b_GuideSecurityAuthPriorityFragment();
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer19, fragment)
@@ -137,9 +192,11 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
                 break;
             }
 
-            case "changeToPermissionsFragment": {
+            case "changeToNotificationsFragment": {
 
-                GuidePermissions fragment = GuidePermissions.newInstance(this.counter, totalPageCount);
+                pinOrPassword = valueOptions;
+
+                d_GuideNotificationsFragment fragment = new d_GuideNotificationsFragment();
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer19, fragment)
@@ -149,7 +206,55 @@ public class _MainActivityGuide extends AppCompatActivity implements RunGuideFra
 
             case "changeToFinish": {
 
-                GuideFinishFragment fragment = GuideFinishFragment.newInstance(this.counter, totalPageCount);
+                boolean status;
+
+                if(token != null){
+
+                    status = true;
+
+                }else{
+
+                    status = false;
+
+                }
+
+                GuideFinishFragment fragment = GuideFinishFragment.newInstance(status);
+
+                intent = getIntent();
+
+                mEditor.putInt(AUTH_PRIORITY, authMethod );
+                mEditor.putString(AUTH_PIN_OR_PASSWORD, pinOrPassword);
+                mEditor.putString(USER_EMAIL_LOGGED, intent.getStringExtra("Email"));
+                mEditor.putString(USER_PASSWORD_LOGGED, intent.getStringExtra("Password"));
+                mEditor.putString(USER_TIME_TABLE, intent.getStringExtra("PairTimeTable"));
+                mEditor.putString(USER_ROLE, intent.getStringExtra("Role"));
+
+
+
+
+
+
+
+                 // uložit jméno
+                // uložit příjmení
+                // uložit přezdívku
+                // uložit rozvh
+                // uložit máOmluvenky modul
+                // uložit email
+                // uložit
+                // uložit
+                // uložit
+                // uložit autentizační metodu
+                // uložit heslo, pokud je to nutné dle metody
+                // uložit heslo přístupové do celé aplikace pro budoucí přihlašování
+                // uložit je třídní truefalse
+                // uložit jaká je jeho třída?
+                // uložit
+                // uložit zařízení je spárováno
+
+
+                mEditor.putBoolean(DEVICE_IS_PAIRED, true );
+                mEditor.commit();
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer19, fragment)

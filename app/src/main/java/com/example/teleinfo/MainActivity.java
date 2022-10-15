@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         //BottomSheetDialogTeacherEdit bottomSheetDialogTeacherEdit = new BottomSheetDialogTeacherEdit();
         //bottomSheetDialogTeacherEdit.show(getSupportFragmentManager(), "exampleBottomSheet");
 
-         Intent intent = new Intent(getApplicationContext(), _ActivityMainLogin.class);
-        startActivity(intent);
+        // Intent intent = new Intent(getApplicationContext(), _ActivityMainLogin.class);
+       // startActivity(intent);
 
         // Intent intent = new Intent(getApplicationContext(), testRecyclerViewHorizontal.class);
         // startActivity(intent);
@@ -60,35 +60,6 @@ public class MainActivity extends AppCompatActivity {
         //   //    startActivity(intent);
 
 
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w("Lojza", "Fetching FCM registration token failed", task.getException());
-                            return;
-                        }
-
-                        // Get new FCM registration token
-                        String token = task.getResult();
-
-                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference myRef = database.getReference("TeleInfo/FCM/DeviceInfo");
-
-                        //AndroidDevicesObject androidDevicesObject = new AndroidDevicesObject();
-
-                        //androidDevicesObject.Device_ID = Device_ID;
-                        //androidDevicesObject.Device_Name = android.os.Build.BRAND + " " + android.os.Build.MODEL;
-                        //androidDevicesObject.Token = token;
-
-                        myRef.setValue(token);
-
-                        // Log and toast
-
-                        Log.d("lojza", "aaaaaaaaaa");
-                        Toast.makeText(MainActivity.this, "aaaaaaaaaa", Toast.LENGTH_SHORT).show();
-                    }
-                });
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel("notification_channel", "notification_channel", NotificationManager.IMPORTANCE_DEFAULT);

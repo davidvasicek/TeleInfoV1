@@ -2,6 +2,8 @@ package com.example.teleinfo.login;
 
 import static android.content.ContentValues.TAG;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
+import static com.example.teleinfo.parameters.MainParameters.USER_ROLE;
+import static com.example.teleinfo.parameters.MainParameters.USER_TIME_TABLE;
 
 import android.content.Context;
 import android.content.Intent;
@@ -54,6 +56,9 @@ public class FragmentFirstLoginQR extends Fragment implements BottomSheetDialogQ
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
 
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
+
     public FragmentFirstLoginQR() {
         // Required empty public constructor
     }
@@ -71,8 +76,10 @@ public class FragmentFirstLoginQR extends Fragment implements BottomSheetDialogQ
         View rootView = inflater.inflate(R.layout.login_fragment_first_login_qr, container, false);
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-
         mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/");
+
+        mSharedPreferences = getActivity().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
 
 
       //  mDatabaseReference.child("titlesBeforeName").setValue("Ing.");
@@ -217,19 +224,29 @@ public class FragmentFirstLoginQR extends Fragment implements BottomSheetDialogQ
                     // notifikace narozenin a svátků.......)
 
                     mDatabaseReference = mFirebaseDatabase.getReference("TeleInfo/Administration/Users/" + email + "/adminstračníInfo");
-
                     mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
 
 
-                            Log.e(TAG, "___________________" + dataSnapshot.child("PairTimeTable").getValue(String.class) );
-                            Log.e(TAG, "___________________" + dataSnapshot.child("role").getValue(int.class) );
+
+
+                           // Log.e(TAG, "___________________" + dataSnapshot.child("PairTimeTable").getValue(String.class) );
+                         //   Log.e(TAG, "___________________" + dataSnapshot.child("role").getValue(int.class) );
+
+
+
+
 
 
                             Intent myIntent = new Intent(getContext(), _MainActivityGuide.class);
+                            myIntent.putExtra("Email", email);
+                            myIntent.putExtra("Password", password);
+                            myIntent.putExtra("PairTimeTable", dataSnapshot.child("PairTimeTable").getValue(String.class));
+                            myIntent.putExtra("Role", dataSnapshot.child("role").getValue(int.class));
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             getActivity().startActivity(myIntent);
+                            getActivity().finish();
 
 
                         }

@@ -1,9 +1,8 @@
 package com.example.teleinfo.guide;
 
-
 import static android.content.Context.FINGERPRINT_SERVICE;
 import static android.content.Context.KEYGUARD_SERVICE;
-import static com.example.teleinfo.parameters.MainParameters.FINGERPRINT_AUTH;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_FINGERPRINT;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 import static com.example.teleinfo.parameters.MainParameters.TIME_OF_LAST_BLOCKED_READER;
 
@@ -26,8 +25,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,22 +52,22 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
 
-public class GuideSecurityFingerprintFragment extends Fragment {
+public class c_a_GuideSecurityFingerprintFragment extends Fragment {
 
 
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
 
 
-    TextView textViewNumberOfPage;
-    ImageView imageViewIcon;
-    TextView ddfdfdfd;
-    Button buttonNext;
+    TextView textViewInstructions;
+    TextView textViewFingerprintStatus;
+    TextView textViewFingerprintStatus1;
+    ImageView imageViewFingerprintIcon;
+    ImageView imageViewFingertprintStatus;
     Button buttonPrevious;
-    TextView timer;
-    LinearLayout linearLayoutFingerprintSettings;
-    TextView dsvxvxvd;
-    ImageView sensorViewMainFragmentChartImageViewGraphLinesf;
+    Button buttonNext;
+
+
 
 
     String numberOfPage = "";
@@ -93,10 +90,10 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
     private int onAuthenticationFailedCount = 0;
 
-    private static final long START_TIME_IN_MILLIS = 30000;
+    private static final long START_TIME_IN_MILLIS = 90000;
 
 
-    private CountDownTimer mCountDownTimer;
+    private CountDownTimer mCountDowntextViewFingerprintStatus;
 
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
@@ -112,7 +109,7 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
 
     public interface OnGuideOptionClickListener {
-        void onGuideOptionClickListener(String keyOption, int counter);
+        void onGuideOptionClickListener(String keyOption, int keyOptions, String valueOptions);
     }
 
     private OnGuideOptionClickListener mCallback;
@@ -128,12 +125,12 @@ public class GuideSecurityFingerprintFragment extends Fragment {
         }
     }
 
-    public GuideSecurityFingerprintFragment(){
+    public c_a_GuideSecurityFingerprintFragment(){
 
     }
 
-    public static GuideSecurityFingerprintFragment newInstance(int counter, int totalCount) {
-        GuideSecurityFingerprintFragment myFragment = new GuideSecurityFingerprintFragment();
+    public static c_a_GuideSecurityFingerprintFragment newInstance(int counter, int totalCount) {
+        c_a_GuideSecurityFingerprintFragment myFragment = new c_a_GuideSecurityFingerprintFragment();
 
         Bundle args = new Bundle();
         args.putInt("count", counter);
@@ -148,7 +145,7 @@ public class GuideSecurityFingerprintFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.guide__fragment_security_fingerprint, container, false);
+        View rootView = inflater.inflate(R.layout.guide_fragment_auth_by_fingerprint, container, false);
 
         if (getArguments() != null) {
 
@@ -161,76 +158,69 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
         mSharedPreferences = getActivity().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
+        
+        textViewInstructions = (TextView)rootView.findViewById(R.id.guideFragmentAuthByFingerprintTextViewInstructions);
+        textViewFingerprintStatus = (TextView)rootView.findViewById(R.id.guideFragmentAuthByFingerprintTextViewFingerprintStatus);
+        textViewFingerprintStatus1 = (TextView)rootView.findViewById(R.id.guideFragmentAuthByFingerprintTextViewFingerprintStatus1);
+        imageViewFingerprintIcon = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByFingerprintImageViewFingerprintIcon);
+        imageViewFingertprintStatus = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByFingerprintImageViewFingertprintStatus);
+        buttonPrevious = (Button)rootView.findViewById(R.id.guideFragmentAuthByFingerprintButtonPrevious);
+        buttonNext = (Button)rootView.findViewById(R.id.guideFragmentAuthByFingerprintButtonNext);
+        
+        imageViewFingertprintStatus.setVisibility(View.GONE);
+        textViewFingerprintStatus.setVisibility(View.GONE);
+        textViewFingerprintStatus1.setVisibility(View.GONE);
 
-        buttonNext = (Button)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintButtonNext);
-        buttonPrevious = (Button)rootView.findViewById(R.id.guide_fragmentSecurityFingerprinButtonPrevious);
-
-        textViewNumberOfPage = (TextView)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintTextViewNumberOfPage);
-        textViewNumberOfPage.setText(numberOfPage);
-
-        imageViewIcon = (ImageView)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintButtonSetFingerprint);
-
-        timer = (TextView)rootView.findViewById(R.id.timer);
-        ddfdfdfd = (TextView)rootView.findViewById(R.id.ddfdfdfd);
-        linearLayoutFingerprintSettings = (LinearLayout)rootView.findViewById(R.id.guide_fragmentSecurityFingerprintLinearLayoutFingerprintSettings);
-        dsvxvxvd = (TextView)rootView.findViewById(R.id.dsvxvxvd);
-
-        sensorViewMainFragmentChartImageViewGraphLinesf = (ImageView)rootView.findViewById(R.id.sensorViewMainFragmentChartImageViewGraphLinesf);
-
-
-
-        ddfdfdfd.setVisibility(View.GONE);
-        imageViewIcon.setVisibility(View.GONE);
-        timer.setVisibility(View.GONE);
-
-        buttonNext.setEnabled(false);
-        buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
 
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                mCallback.onGuideOptionClickListener("changeToPinFragment", +1);
+                mCallback.onGuideOptionClickListener("changeToNotificationsFragment",  LOGIN_BY_FINGERPRINT, "");
             }
         });
+        buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+        buttonNext.setEnabled(false);
 
+        buttonPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-
+                mCallback.onGuideOptionClickListener("changeToAuthPriorityFragment", -1, null);
+            }
+        });
+        
         Long lastTime = mSharedPreferences.getLong(TIME_OF_LAST_BLOCKED_READER, 0);
 
-        if(System.currentTimeMillis()-lastTime >30000){
+        if(System.currentTimeMillis()-lastTime >90000){
 
             mTimeLeftInMillis = START_TIME_IN_MILLIS;
             initFingerprint();
 
         }else{
 
-            mTimeLeftInMillis = 30000-((System.currentTimeMillis()-lastTime));
+            mTimeLeftInMillis = 90000-((System.currentTimeMillis()-lastTime));
 
 
-            startTimer();
+            starttextViewFingerprintStatus();
         }
-
-
-
 
 
         return rootView;
     }
+    
+    public void starttextViewFingerprintStatus() {
 
-
-    public void startTimer() {
-
-        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
+        mCountDowntextViewFingerprintStatus = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 mTimeLeftInMillis = millisUntilFinished;
-                timer.setVisibility(View.VISIBLE);
+                textViewFingerprintStatus.setVisibility(View.VISIBLE);
                 updateCountDownText();
 
-                dsvxvxvd.setVisibility(View.GONE);
-                sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.GONE);
-                imageViewIcon.setVisibility(View.GONE);
+                textViewFingerprintStatus1.setVisibility(View.GONE);
+                //sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.GONE);
+                imageViewFingertprintStatus.setVisibility(View.GONE);
 
 
 
@@ -243,23 +233,23 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
                 initFingerprint();
                 onAuthenticationFailedCount=0;
-                timer.setVisibility(View.GONE);
+                textViewFingerprintStatus.setVisibility(View.GONE);
 
 
 
-                dsvxvxvd.setVisibility(View.VISIBLE);
-                sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.VISIBLE);
+                textViewFingerprintStatus1.setVisibility(View.VISIBLE);
+                //sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.VISIBLE);
 
 
-                Log.e("klmmmmmmmmmmmmmm", "konec timeru");
-                //mTimerRunning = false;
+                Log.e("klmmmmmmmmmmmmmm", "konec textViewFingerprintStatusu");
+                //mtextViewFingerprintStatusRunning = false;
                 //mButtonStartPause.setText("Start");
                 //mButtonStartPause.setVisibility(View.INVISIBLE);
                 //mButtonReset.setVisibility(View.VISIBLE);
             }
         }.start();
 
-        //mTimerRunning = true;
+        //mtextViewFingerprintStatusRunning = true;
         //mButtonStartPause.setText("pause");
         //mButtonReset.setVisibility(View.INVISIBLE);
     }
@@ -270,7 +260,7 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
         String timeLeftFormatted = String.format(Locale.getDefault(), "%02d", seconds);
 
-        timer.setText("Čtečka otisku prstů je zablokována. K obnovení dojde za \n" + timeLeftFormatted + " sekund");
+        textViewFingerprintStatus.setText("Čtečka otisku prstů je zablokována. K obnovení dojde za \n" + timeLeftFormatted + " sekund");
     }
 
 
@@ -306,11 +296,11 @@ public class GuideSecurityFingerprintFragment extends Fragment {
             }
             if (!fingerprintManager.hasEnrolledFingerprints()) {
 
-                ddfdfdfd.setText("Otisk prstu ještěnení nakonfigurován");
+                textViewFingerprintStatus.setText("Otisk prstu ještěnení nakonfigurován");
 
-                dsvxvxvd.setVisibility(View.GONE);
-                sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.GONE);
-                imageViewIcon.setVisibility(View.GONE);
+                textViewFingerprintStatus1.setVisibility(View.GONE);
+                //sensorViewMainFragmentChartImageViewGraphLinesf.setVisibility(View.GONE);
+                imageViewFingertprintStatus.setVisibility(View.GONE);
 
                 Toast.makeText(getContext(), "Fingerprint not yet configured", Toast.LENGTH_LONG).show();
             }
@@ -418,16 +408,18 @@ public class GuideSecurityFingerprintFragment extends Fragment {
             }
 
             //textViewReply.setText(getResources().getString(R.string.loginWithFingerprint_TextView_ReplySuccess));
-            imageViewIcon.setImageResource(R.drawable.success);
-            imageViewIcon.setVisibility(View.VISIBLE);
-            dsvxvxvd.setAllCaps(true);
-            dsvxvxvd.setTextColor(getActivity().getResources().getColor(R.color.green500text_primary));
-            dsvxvxvd.setText("Otisk prstu ověřen");
+            imageViewFingertprintStatus.setImageResource(R.drawable.success);
+            imageViewFingertprintStatus.setVisibility(View.VISIBLE);
+            textViewFingerprintStatus1.setAllCaps(true);
+            textViewFingerprintStatus1.setTextColor(getActivity().getResources().getColor(R.color.green500text_primary));
+            textViewFingerprintStatus1.setText("Otisk prstu ověřen");
 
             isVerify = true;
 
             buttonNext.setEnabled(true);
             buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+
+
             //finish();
             //startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
@@ -439,7 +431,7 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
             onAuthenticationFailedCount++;
 
-            if(onAuthenticationFailedCount >= 5){
+            if(onAuthenticationFailedCount >= 4){
 
 
 
@@ -447,15 +439,15 @@ public class GuideSecurityFingerprintFragment extends Fragment {
                         mEditor.commit();
 
                 mTimeLeftInMillis = START_TIME_IN_MILLIS;
-                startTimer();
+                starttextViewFingerprintStatus();
             }
 
-            ddfdfdfd.setText("Počet zbývajících pokusů: " + (5-onAuthenticationFailedCount));
-            ddfdfdfd.setVisibility(View.VISIBLE);
-            ddfdfdfd.postDelayed(new Runnable() {
+            textViewFingerprintStatus.setText("Počet zbývajících pokusů: " + (5-onAuthenticationFailedCount));
+            textViewFingerprintStatus.setVisibility(View.VISIBLE);
+            textViewFingerprintStatus.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ddfdfdfd.setVisibility(View.GONE);
+                    textViewFingerprintStatus.setVisibility(View.GONE);
                 }
             }, 1500);
 
@@ -472,17 +464,17 @@ public class GuideSecurityFingerprintFragment extends Fragment {
 
            // textViewReply.setText(getResources().getString(R.string.loginWithFingerprint_TextView_ReplyNegative));
 
-            imageViewIcon.setImageResource(R.drawable.failure);
+            imageViewFingertprintStatus.setImageResource(R.drawable.failure);
            // final Animation animShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake_pf);
-           // imageViewIcon.startAnimation(animShake);
-            imageViewIcon.setVisibility(View.VISIBLE);
-            imageViewIcon.postDelayed(new Runnable() {
+           // imageViewFingertprintStatus.startAnimation(animShake);
+            imageViewFingertprintStatus.setVisibility(View.VISIBLE);
+            imageViewFingertprintStatus.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                   // imageViewIcon.setImageResource(R.drawable.ic_fingerprint);
-                   // imageViewIcon.getDrawable().setColorFilter(getResources().getColor(R.color.line), PorterDuff.Mode.SRC_ATOP );
+                   // imageViewFingertprintStatus.setImageResource(R.drawable.ic_fingerprint);
+                   // imageViewFingertprintStatus.getDrawable().setColorFilter(getResources().getColor(R.color.line), PorterDuff.Mode.SRC_ATOP );
                     //textViewReply.setText("");
-                    imageViewIcon.setVisibility(View.GONE);
+                    imageViewFingertprintStatus.setVisibility(View.GONE);
 
 
                 }

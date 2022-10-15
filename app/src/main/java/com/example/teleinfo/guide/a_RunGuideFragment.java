@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import com.example.teleinfo.R;
 
 
-public class RunGuideFragment extends Fragment {
+public class a_RunGuideFragment extends Fragment {
 
     TextView textViewSubtitle;
     TextView textViewMessage;
@@ -28,7 +28,7 @@ public class RunGuideFragment extends Fragment {
     private SharedPreferences.Editor mEditor;
 
     public interface OnGuideOptionClickListener {
-        void onGuideOptionClickListener(String keyOption, int counter);
+        void onGuideOptionClickListener(String keyOption, int keyOptions, String valueOptions);
     }
 
     private OnGuideOptionClickListener mCallback;
@@ -45,7 +45,7 @@ public class RunGuideFragment extends Fragment {
     }
 
 
-    public RunGuideFragment(){
+    public a_RunGuideFragment(){
 
     }
 
@@ -66,7 +66,7 @@ public class RunGuideFragment extends Fragment {
             public void onClick(View v) {
 
 
-                mCallback.onGuideOptionClickListener("changeToAuthPrioritFragment", +1);
+                mCallback.onGuideOptionClickListener("changeToAuthPriorityFragment", -1, null);
 
                // if(mSharedPreferences.getBoolean(FINGERPRINT_HARDWARE_IS_DETECTED, true )){
 

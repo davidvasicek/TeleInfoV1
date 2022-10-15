@@ -1,61 +1,67 @@
-package com.example.teleinfo.login;
+package com.example.teleinfo.guide;
 
+
+
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_CREDENTIALS;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
-import static com.example.teleinfo.parameters.MainParameters.USER_EMAIL_LOGGED;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
+
+import android.os.Build;
 import android.os.Bundle;
+
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
 
 import com.example.teleinfo.R;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
-import org.jetbrains.annotations.NotNull;
+public class c_c_GuideSecurityCredentialsFragment extends Fragment {
 
-public class ChangePasswordActivity extends AppCompatActivity {
 
-    TextView textViewTitle;
-    TextView textViewSubtitle;
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
+
+
     TextView textViewPasswordStrengthIndicatorText;
-    TextView textViewPasswordText;
     TextView textViewPasswordStrengthMatchesText;
-    TextInputEditText textInputEditTextPasswordInput;
-    TextInputEditText textInputEditTextPasswordInput1;
-    Button buttonNextToPasswordRepeat;
-    Button buttonShow;
-    Button buttonBack;
-    Button buttonLogin;
-    LinearLayout linearLayoutNewPassword;
-    LinearLayout linearLayoutPasswordRequirements;
-    LinearLayout linearLayoutPasswordStrengthIndicator;
     ImageView imageViewPasswordRequirementsEightCharacters;
     ImageView imageViewPasswordRequirementsLowerCaseLetter;
     ImageView imageViewPasswordRequirementsCapitalLetter;
     ImageView imageViewPasswordRequirementsNumber;
     ImageView imageViewPasswordRequirementsSpecialCharacter;
     ImageView imageViewPasswordRequirementsNoSpace;
-    LinearLayout linearLayoutRepeatPassword;
+    TextInputEditText textInputEditTextPasswordInput;
+    TextInputEditText textInputEditTextPasswordInputRepeat;
+    LinearLayout linearLayoutPasswordRequirements;
+    LinearLayout linearLayoutPasswordStrengthIndicator;
+    LinearLayout linearLayoutPasswordRequirementsEightCharacters;
+    LinearLayout linearLayoutPasswordRequirementsLowerCaseLetter;
+    LinearLayout linearLayoutPasswordRequirementsCapitalLetter;
+    LinearLayout linearLayoutPasswordRequirementsNumber;
+    LinearLayout linearLayoutPasswordRequirementsSpecialCharacter;
+    LinearLayout linearLayoutPasswordRequirementsNoSpace;
     LinearLayout linearLayoutPasswordMatches;
     LinearLayout linearLayoutPasswordMatchesIndicator;
+    Button buttonPrevious;
+    Button buttonNext;
 
-    String email;
-    boolean passwordIsGeneretedByApp;
-    String password;
+
+
 
     String passwordEditText;
     String passwordRepeatEditText;
@@ -69,43 +75,103 @@ public class ChangePasswordActivity extends AppCompatActivity {
     boolean passwordRequirementsSpecialCharacter = false;
     boolean passwordRequirementsNoSpace = false;
 
-    private SharedPreferences mSharedPreferences;
-    private SharedPreferences.Editor mEditor;
+
+
+    public interface OnGuideOptionClickListener {
+        void onGuideOptionClickListener(String keyOption, int keyOptions, String valueOptions);
+    }
+
+    private OnGuideOptionClickListener mCallback;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_activity_change_password);
+    public void onAttach(Context context) {
+        super.onAttach(context);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        try {
+            mCallback = (OnGuideOptionClickListener) context;
+        } catch (Exception e) {
+            throw new ClassCastException(context.toString() + " must implement SettingOptionsFragment.OnOptionClickListener");
+        }
+    }
 
-        textViewTitle = (TextView)findViewById(R.id.loginWithCredentialsActivityTextViewTitle);
-        textViewSubtitle = (TextView)findViewById(R.id.loginWithCredentialsActivityTextViewSubtitle);
-        textViewPasswordStrengthIndicatorText = (TextView)findViewById(R.id.login_fragmentAuthenticationPasswordTextViewPasswordStrengthIndicatorText);
-        textViewPasswordText = (TextView)findViewById(R.id.login_fragmentAuthenticationPasswordTextViewPasswordText);
-        textViewPasswordStrengthMatchesText = (TextView)findViewById(R.id.login_fragmentAuthenticationPasswordTextViewPasswordStrengthMatchesText);
-        textInputEditTextPasswordInput = (TextInputEditText)findViewById(R.id.login_fragmentAuthenticationPasswordTextInputEditTextPasswordInput);
-        textInputEditTextPasswordInput1 = (TextInputEditText)findViewById(R.id.login_fragmentAuthenticationPasswordTextInputEditTextPasswordInput1);
-        buttonNextToPasswordRepeat = (Button)findViewById(R.id.login_fragmentAuthenticationPasswordButtonNextToPasswordRepeat);
-        buttonShow = (Button)findViewById(R.id.login_fragmentAuthenticationPasswordButtonShow);
-        buttonBack = (Button)findViewById(R.id.login_fragmentAuthenticationPasswordButtonBack);
-        buttonLogin = (Button)findViewById(R.id.login_fragmentAuthenticationPasswordButtonLogin);
-        linearLayoutNewPassword = (LinearLayout)findViewById(R.id.login_fragmentAuthenticationPasswordLinearLayoutNewPassword);
-        linearLayoutPasswordRequirements = (LinearLayout)findViewById(R.id.login_fragmentAuthenticationPasswordLinearLayoutPasswordRequirements);
-        linearLayoutPasswordStrengthIndicator = (LinearLayout)findViewById(R.id.login_fragmentAuthenticationPasswordLinearLayoutPasswordStrengthIndicator);
-        imageViewPasswordRequirementsEightCharacters = (ImageView)findViewById(R.id.login_fragmentAuthenticationPasswordImageViewPasswordRequirementsEightCharacters);
-        imageViewPasswordRequirementsLowerCaseLetter = (ImageView)findViewById(R.id.login_fragmentAuthenticationPasswordImageViewPasswordRequirementsLowerCaseLetter);
-        imageViewPasswordRequirementsCapitalLetter = (ImageView)findViewById(R.id.login_fragmentAuthenticationPasswordImageViewPasswordRequirementsCapitalLetter);
-        imageViewPasswordRequirementsNumber = (ImageView)findViewById(R.id.login_fragmentAuthenticationPasswordImageViewPasswordRequirementsNumber);
-        imageViewPasswordRequirementsSpecialCharacter = (ImageView)findViewById(R.id.login_fragmentAuthenticationPasswordImageViewPasswordRequirementsSpecialCharacter);
-        imageViewPasswordRequirementsNoSpace = (ImageView)findViewById(R.id.login_fragmentAuthenticationPasswordImageViewPasswordRequirementsNoSpace);
-        linearLayoutRepeatPassword = (LinearLayout)findViewById(R.id.login_fragmentAuthenticationPasswordLinearLayoutRepeatPassword);
-        linearLayoutPasswordMatches = (LinearLayout)findViewById(R.id.login_fragmentAuthenticationPasswordLinearLayoutPasswordMatches);
-        linearLayoutPasswordMatchesIndicator = (LinearLayout)findViewById(R.id.login_fragmentAuthenticationPasswordLinearLayoutPasswordMatchesIndicator);
+    public c_c_GuideSecurityCredentialsFragment(){
+
+    }
+
+    public static c_c_GuideSecurityCredentialsFragment newInstance(int counter, int totalCount) {
+        c_c_GuideSecurityCredentialsFragment myFragment = new c_c_GuideSecurityCredentialsFragment();
+
+        Bundle args = new Bundle();
+        args.putInt("count", counter);
+        args.putInt("totalCount", totalCount);
+        myFragment.setArguments(args);
+
+        return myFragment;
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.guide_fragment_auth_by_credentials, container, false);
+
+        if (getArguments() != null) {
+
+            int counter = getArguments().getInt("count");
+            int totalCount = getArguments().getInt("totalCount");
+
+        }
+
+        mSharedPreferences = getActivity().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
+
+        textViewPasswordStrengthIndicatorText = (TextView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsTextViewPasswordStrengthIndicatorText);
+        textViewPasswordStrengthMatchesText = (TextView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsTextViewPasswordStrengthMatchesText);
+        imageViewPasswordRequirementsEightCharacters = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsImageViewPasswordRequirementsEightCharacters);
+        imageViewPasswordRequirementsLowerCaseLetter = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsImageViewPasswordRequirementsLowerCaseLetter);
+        imageViewPasswordRequirementsCapitalLetter = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsImageViewPasswordRequirementsCapitalLetter);
+        imageViewPasswordRequirementsNumber = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsImageViewPasswordRequirementsNumber);
+        imageViewPasswordRequirementsSpecialCharacter = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsImageViewPasswordRequirementsSpecialCharacter);
+        imageViewPasswordRequirementsNoSpace = (ImageView)rootView.findViewById(R.id.guideFragmentAuthByCredentialsImageViewPasswordRequirementsNoSpace);
+        textInputEditTextPasswordInput = (TextInputEditText)rootView.findViewById(R.id.guideFragmentAuthByCredentialsTextInputEditTextPasswordInput);
+        textInputEditTextPasswordInputRepeat = (TextInputEditText)rootView.findViewById(R.id.guideFragmentAuthByCredentialsTextInputEditTextPasswordInputRepeat);
+        linearLayoutPasswordRequirements = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordRequirements);
+        linearLayoutPasswordStrengthIndicator = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordStrengthIndicator);
+        linearLayoutPasswordRequirementsEightCharacters = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordRequirementsEightCharacters);
+        linearLayoutPasswordRequirementsLowerCaseLetter = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordRequirementsLowerCaseLetter);
+        linearLayoutPasswordRequirementsCapitalLetter = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordRequirementsCapitalLetter);
+        linearLayoutPasswordRequirementsNumber = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordRequirementsNumber);
+        linearLayoutPasswordRequirementsSpecialCharacter = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordRequirementsSpecialCharacter);
+        linearLayoutPasswordRequirementsNoSpace = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordRequirementsNoSpace);
+        linearLayoutPasswordMatches = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordMatches);
+        linearLayoutPasswordMatchesIndicator = (LinearLayout)rootView.findViewById(R.id.guideFragmentAuthByCredentialsLinearLayoutPasswordMatchesIndicator);
+        buttonPrevious = (Button)rootView.findViewById(R.id.guideFragmentAuthByCredentialsButtonPrevious);
+        buttonNext = (Button)rootView.findViewById(R.id.guideFragmentAuthByCredentialsButtonNext);
+
+        textInputEditTextPasswordInputRepeat.setEnabled(false);
+
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mCallback.onGuideOptionClickListener("changeToNotificationsFragment", LOGIN_BY_CREDENTIALS, passwordEditText);
+            }
+        });
+        buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+        buttonNext.setEnabled(false);
+
+        buttonPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mCallback.onGuideOptionClickListener("changeToAuthPriorityFragment", -1, null);
+            }
+        });
+
 
         textViewPasswordStrengthIndicatorText.setText("Žádné");
-        linearLayoutPasswordStrengthIndicator.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.text_secondary));
+        linearLayoutPasswordStrengthIndicator.setBackgroundColor(getContext().getResources().getColor(R.color.text_secondary));
 
         imageViewPasswordRequirementsEightCharacters.setImageResource(R.drawable.failure);
         imageViewPasswordRequirementsLowerCaseLetter.setImageResource(R.drawable.failure);
@@ -113,12 +179,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         imageViewPasswordRequirementsNumber.setImageResource(R.drawable.failure);
         imageViewPasswordRequirementsSpecialCharacter.setImageResource(R.drawable.failure);
         imageViewPasswordRequirementsNoSpace.setImageResource(R.drawable.failure);
-
-        buttonNextToPasswordRepeat.setVisibility(View.GONE);
-
-        linearLayoutNewPassword.setVisibility(View.VISIBLE);
-        linearLayoutRepeatPassword.setVisibility(View.GONE);
-
+        
         textInputEditTextPasswordInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -141,12 +202,12 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                 passwordEditText = editable.toString();
 
-                textInputEditTextPasswordInput1.setFilters(new InputFilter[] { new InputFilter.LengthFilter(passwordLength) });
+                textInputEditTextPasswordInputRepeat.setFilters(new InputFilter[] { new InputFilter.LengthFilter(passwordLength) });
             }
         });
 
 
-        textInputEditTextPasswordInput1.addTextChangedListener(new TextWatcher() {
+        textInputEditTextPasswordInputRepeat.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -178,13 +239,13 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                         if (p == rp) {
 
-                            linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500text_primary));
+                            linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.green500text_primary));
                             countOfCorrectCharacter++;
 
 
                         } else {
 
-                            linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.red700colorAccent));
+                            linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.red700colorAccent));
 
 
                         }
@@ -192,7 +253,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                     } else {
 
-                        linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.text_secondary));
+                        linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.text_secondary));
                     }
 
                 }
@@ -202,12 +263,13 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                 if(passwordEditText.compareTo(passwordRepeatEditText) == 0){
 
-
-                    buttonLogin.setVisibility(View.VISIBLE);
+                    buttonNext.setEnabled(true);
+                    buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_primary));
                 }
                 else{
 
-                    buttonLogin.setVisibility(View.GONE);
+                    buttonNext.setEnabled(false);
+                    buttonNext.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
 
                 }
 
@@ -217,68 +279,17 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
 
 
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                mSharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
-                mEditor = mSharedPreferences.edit();
-
-                mSharedPreferences.getString(USER_EMAIL_LOGGED, "");
 
 
 
-
-
-            }
-        });
-
-
-
-        buttonShow.setOnTouchListener(new View.OnTouchListener() {
-
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if(event.getAction() == MotionEvent.ACTION_DOWN ) {
-
-                    StringBuilder mCode;
-                    mCode = new StringBuilder(100);
-
-                    for(int i = 0; i< passwordEditText.length(); i++){
-
-                        char c = passwordEditText.charAt(i);
-                        mCode.append(c);
-                        mCode.append(" ");
-                    }
-
-                    textViewPasswordText.setText(mCode);
-
-                } else
-
-                if(event.getAction() == MotionEvent.ACTION_UP){
-
-                    StringBuilder mCode;
-                    mCode = new StringBuilder(100);
-
-                    for(int i = 0; i< passwordEditText.length(); i++){
-
-                        mCode.append("* ");
-                    }
-
-                    textViewPasswordText.setText(mCode);
-                }
-                return false;
-            }
-        });
-
+/*
         buttonNextToPasswordRepeat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //textInputEditTextPasswordInput.clearFocus();
-                //InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
-                //imm.hideSoftInputFromWindow(getApplicationContext().getWindowToken(), 0);
+                //InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
+                //imm.hideSoftInputFromWindow(getContext().getWindowToken(), 0);
 
                 textViewSubtitle.setText("Zopakujte heslo, kterým se budete do aplikace autentizovat");
 
@@ -312,19 +323,19 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                             if (p == rp) {
 
-                                linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500text_primary));
+                                linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.green500text_primary));
                                 countOfCorrectCharacter++;
 
                             } else {
 
-                                linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.red700colorAccent));
+                                linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.red700colorAccent));
 
                             }
 
 
                         } else {
 
-                            linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.text_secondary));
+                            linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.text_secondary));
                         }
                     }
 
@@ -334,27 +345,17 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
             }
         });
+*/
 
 
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        
 
-                //textInputEditTextPasswordInput1.clearFocus();
-                //InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
-                //imm.hideSoftInputFromWindow(rootView.getWindowToken(), 0);
-
-                textViewSubtitle.setText("Nastavte Vaše nové heslo, kterým se budete do aplikace autentizovat");
-
-                linearLayoutNewPassword.setVisibility(View.VISIBLE);
-                linearLayoutRepeatPassword.setVisibility(View.GONE);
-
-
-            }
-        });
-
+        return rootView;
     }
+
+
+
 
 
     private void calculateMatches(int numberOfCharacters) {
@@ -373,11 +374,11 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         for(int i = 0; i<numberOfCharacters; i++){
 
-            linearLayoutsCharacters[i] = new LinearLayout(getApplicationContext());
+            linearLayoutsCharacters[i] = new LinearLayout(getContext());
 
             linearLayoutsCharacters[i].setLayoutParams(lpSections);
             linearLayoutsCharacters[i].setOrientation(LinearLayout.HORIZONTAL);
-            linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.text_secondary));
+            linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.text_secondary));
             linearLayoutPasswordMatchesIndicator.addView(linearLayoutsCharacters[i]);
         }
 
@@ -394,7 +395,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         if (passwordLength == 0)
         {
             textViewPasswordStrengthIndicatorText.setText("Žádné");
-            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.text_secondary));
+            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getContext().getResources().getColor(R.color.text_secondary));
 
             imageViewPasswordRequirementsCapitalLetter.setImageResource(R.drawable.failure);
             imageViewPasswordRequirementsLowerCaseLetter.setImageResource(R.drawable.failure);
@@ -521,25 +522,25 @@ public class ChangePasswordActivity extends AppCompatActivity {
         if (strengthPoints <= 3)
         {
             textViewPasswordStrengthIndicatorText.setText("Nízké");
-            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.red700colorAccent));
+            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getContext().getResources().getColor(R.color.red700colorAccent));
         }
         else if (strengthPoints <= 6) {
             textViewPasswordStrengthIndicatorText.setText("Střední");
-            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.amber500colorAccent));
+            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getContext().getResources().getColor(R.color.amber500colorAccent));
         }
         else if (strengthPoints <= 9){
             textViewPasswordStrengthIndicatorText.setText("Vysoké");
-            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500text_primary));
+            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getContext().getResources().getColor(R.color.green500text_primary));
         }
 
 
         if(passwordRequirementsEightCharacters && passwordRequirementsLowerCaseLetter && passwordRequirementsCapitalLetter && passwordRequirementsNumber && passwordRequirementsSpecialCharacter && passwordRequirementsNoSpace){
 
-            buttonNextToPasswordRepeat.setVisibility(View.VISIBLE);
+            textInputEditTextPasswordInputRepeat.setEnabled(true);
 
         }else{
 
-            buttonNextToPasswordRepeat.setVisibility(View.GONE);
+            textInputEditTextPasswordInputRepeat.setEnabled(false);
         }
 
     }
