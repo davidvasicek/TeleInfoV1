@@ -18,6 +18,8 @@ public interface MainParameters {
 
 
     String TIME_OF_LAST_BLOCKED_READER = "TimeOfLastBlockedReader";
+    String TIME_OF_LAST_BLOCKED_PIN = "TimeOfLastBlockedPin";
+
     String FINGERPRINT_HARDWARE_IS_DETECTED = "FingerprintHardwareIsDetected";
 
 

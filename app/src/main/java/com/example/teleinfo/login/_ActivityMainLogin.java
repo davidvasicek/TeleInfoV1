@@ -5,6 +5,7 @@ import static com.example.teleinfo.parameters.MainParameters.CURRENT_COLOR_APP_B
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
 import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
 import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_FINGERPRINT;
+import static com.example.teleinfo.parameters.MainParameters.LOGIN_BY_PIN;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 
 import androidx.annotation.NonNull;
@@ -85,6 +86,14 @@ public class _ActivityMainLogin extends AppCompatActivity {
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.settingsContainer1111, new FragmentLoginWithFingerprint())
+                        .commit();
+
+            }
+
+            if(mSharedPreferences.getInt(AUTH_PRIORITY, -1) == LOGIN_BY_PIN){
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.settingsContainer1111, new FragmentLoginWithPin())
                         .commit();
 
             }
