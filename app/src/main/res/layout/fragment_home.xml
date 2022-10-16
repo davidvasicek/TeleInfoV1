@@ -13,16 +13,52 @@
         android:orientation="horizontal"
         tools:ignore="MissingConstraints">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_weight="1">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_rozvrh_my"
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="AKTUÁLNÍ ROZVRH"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_rozvrh_mya"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -30,26 +66,226 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:cardBackgroundColor="#E0E0E0"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
+                    android:layout_height="match_parent">
 
-                    <TextView
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_rozvrh_my"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardElevation="3dp"
+                    android:elevation="3dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#90A4AE"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="5dp">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="MŮJ ROZVRH"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Můj rozvrh"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:gravity="center"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="UDÁLOSTI (Dnes)"
+                                android:textColor="@color/text_primary"
+                                android:textAllCaps="true"
+                                android:textSize="12dp"
+                                android:tag="tagForDelete"
+                                android:textStyle="bold"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/mainActivityFragmentHomeLinearLayoutRowUserStatisticsWaiting"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="0.15">
+
+
+
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="25dp"
+                                        android:background="@color/amber500text_primaryDark"
+                                        >
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="PPP"
+                                            android:paddingTop="4dp"
+                                            android:paddingBottom="4dp"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textSize="10dp"
+                                            android:background="@color/amber500text_primaryDark"
+
+                                            />
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="25dp"
+                                        android:layout_marginLeft="10dp"
+                                        >
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="9:55 - 1.P"
+                                            android:paddingTop="4dp"
+                                            android:paddingBottom="4dp"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textSize="10dp"
+                                            android:background="@color/blue500text_primary"
+
+                                            />
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="25dp"
+                                        android:layout_marginLeft="10dp"
+                                        >
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="9:55 - Jíd."
+                                            android:paddingTop="4dp"
+                                            android:paddingBottom="4dp"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textSize="10dp"
+                                            android:background="@color/orange500colorAccent"
+
+                                            />
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardCornerRadius="25dp"
+                                        android:layout_marginLeft="10dp"
+
+
+                                        >
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="9:55 - Jíd."
+                                            android:paddingTop="4dp"
+                                            android:paddingBottom="4dp"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textSize="10dp"
+                                            android:background="@color/orange500colorAccent"
+
+                                            />
+                                    </com.google.android.material.card.MaterialCardView>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
 
                 </LinearLayout>
 
-
             </androidx.cardview.widget.CardView>
+
+
 
 
         </LinearLayout>
@@ -57,6 +293,18 @@
 
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
 
 
     <LinearLayout
@@ -79,9 +327,11 @@
                 android:layout_weight="1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="DENNÍ ROZVRHY"
-                android:textColor="@color/text_secondary"
-                android:textSize="@dimen/text_size_text"
+                android:textColor="@color/text_primary"
+                android:textAllCaps="true"
+                android:textSize="14dp"
                 android:tag="tagForDelete"
+                android:textStyle="bold"
                 />
         </LinearLayout>
 
@@ -113,8 +363,10 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:cardBackgroundColor="#90A4AE"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -124,10 +376,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="DLE UČITELŮ"
+                        android:text="ROZVRH\nUČITELŮ"
                         android:textSize="12dp"
                         android:gravity="center"
-                        android:textColor="@color/text_primary"/>
+                        android:textColor="#263238"/>
 
                 </LinearLayout>
 
@@ -155,8 +407,9 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:cardBackgroundColor="#90A4AE"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -166,10 +419,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="DLE UČEBEN"
-                        android:textSize="12dp"
                         android:gravity="center"
-                        android:textColor="@color/text_primary"/>
+                        android:text="ROZVRH\nUČEBEN"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -198,8 +451,9 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:cardBackgroundColor="#90A4AE"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -209,7 +463,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="DLE TŘÍD"
+                        android:text="ROZVRH\nTŘÍD"
                         android:textSize="12dp"
                         android:gravity="center"
                         android:textColor="@color/text_primary"/>
@@ -249,9 +503,11 @@
                 android:layout_weight="1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="TÝDENNÍ ROZVRHY"
-                android:textColor="@color/text_secondary"
-                android:textSize="@dimen/text_size_text"
+                android:textColor="@color/text_primary"
+                android:textSize="14dp"
+                android:textAllCaps="true"
                 android:tag="tagForDelete"
+                android:textStyle="bold"
                 />
         </LinearLayout>
 
@@ -281,8 +537,9 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:cardBackgroundColor="#90A4AE"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -292,7 +549,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="UČITEL"
+                        android:text="ROZVRH\nUČITELE"
                         android:textSize="12dp"
                         android:gravity="center"
                         android:textColor="@color/text_primary"/>
@@ -323,8 +580,9 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:cardBackgroundColor="#90A4AE"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -334,7 +592,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="UČEBNA"
+                        android:text="ROZVRH\nUČEBNY"
                         android:textSize="12dp"
                         android:gravity="center"
                         android:textColor="@color/text_primary"/>
@@ -366,8 +624,9 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:cardBackgroundColor="#90A4AE"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -377,7 +636,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="TŘÍDA"
+                        android:text="ROZVRH\nTŘÍDY"
                         android:textSize="12dp"
                         android:gravity="center"
                         android:textColor="@color/text_primary"/>
@@ -394,6 +653,20 @@
 
 
     </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+
 
 
     <LinearLayout
@@ -416,9 +689,11 @@
                 android:layout_weight="1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="FUNKCE"
-                android:textColor="@color/text_secondary"
-                android:textSize="@dimen/text_size_text"
+                android:textColor="@color/text_primary"
+                android:textSize="14dp"
+                android:textAllCaps="true"
                 android:tag="tagForDelete"
+                android:textStyle="bold"
                 />
         </LinearLayout>
 
@@ -454,7 +729,7 @@
                 app:cardElevation="3dp"
                 android:elevation="3dp"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
+                app:cardBackgroundColor="#B0BEC5"
                 android:foreground="?android:attr/selectableItemBackground">
 
                 <LinearLayout
@@ -465,7 +740,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="NAJDI UČEBNU"
+                        android:text="NAJDI VOLNOU UČEBNU"
                         android:textSize="12dp"
                         android:gravity="center"
                         android:textColor="@color/text_primary"/>
@@ -503,9 +778,11 @@
                 android:layout_weight="1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="RYCHLÉ VOLBY"
-                android:textColor="@color/text_secondary"
-                android:textSize="@dimen/text_size_text"
+                android:textColor="@color/text_primary"
+                android:textSize="14dp"
+                android:textAllCaps="true"
                 android:tag="tagForDelete"
+                android:textStyle="bold"
                 />
         </LinearLayout>
 
@@ -516,7 +793,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -534,7 +813,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
+                app:cardBackgroundColor="#B0BEC5"
                 android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -546,24 +825,34 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="UČITEL"
+                        android:text="ROZVRH\nUČITELE"
                         android:gravity="center"
                         android:textColor="@color/text_primary"
-                        android:textSize="12dp"
+                        android:textSize="9dp"
                         android:tag="tagForDelete"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#546E7A"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Václav\nJedlička"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
                         android:tag="tagForDelete"
-                        />
+                        android:text="Václav\nJedlička"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -590,7 +879,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
+                app:cardBackgroundColor="#B0BEC5"
                 android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -602,24 +891,34 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="UČITEL"
+                        android:text="ROZVRH\nUČITELE"
                         android:gravity="center"
                         android:textColor="@color/text_primary"
-                        android:textSize="12dp"
+                        android:textSize="9dp"
                         android:tag="tagForDelete"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#546E7A"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Pavel\nDědičík"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
                         android:tag="tagForDelete"
-                        />
+                        android:text="Pavel\nDědičík"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -628,6 +927,7 @@
 
 
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -645,7 +945,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
+                app:cardBackgroundColor="#B0BEC5"
                 android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -657,24 +957,34 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="UČEBNA"
+                        android:text="ROZVRH\nUČEBNY"
                         android:gravity="center"
                         android:textColor="@color/text_primary"
-                        android:textSize="12dp"
+                        android:textSize="9dp"
                         android:tag="tagForDelete"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#546E7A"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="17"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
                         android:tag="tagForDelete"
-                        />
+                        android:text="1"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -700,7 +1010,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
+                app:cardBackgroundColor="#B0BEC5"
                 android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -712,24 +1022,99 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TŘÍDA"
+                        android:text="ROZVRH\nUČEBNY"
                         android:gravity="center"
                         android:textColor="@color/text_primary"
-                        android:textSize="12dp"
+                        android:textSize="9dp"
                         android:tag="tagForDelete"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#546E7A"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="3.A"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:tag="tagForDelete"
+                        android:text="17"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_speed_dial_5"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:cardBackgroundColor="#B0BEC5"
+                android:foreground="?android:attr/selectableItemBackground">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ROZVRH\nTŘÍDY"
                         android:gravity="center"
                         android:textColor="@color/text_primary"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
+                        android:textSize="9dp"
                         android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
                         />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#546E7A"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:tag="tagForDelete"
+                        android:text="3.A"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>

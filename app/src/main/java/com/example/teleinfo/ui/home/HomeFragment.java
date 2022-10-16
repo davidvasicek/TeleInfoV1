@@ -1,12 +1,15 @@
 package com.example.teleinfo.ui.home;
 
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_COLOR_TAB_LAYOUT_NON_SELECTED_TEXT;
+import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 import static com.example.teleinfo.parameters.MainParameters.SHOW_BREAKS;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,7 +72,8 @@ public class HomeFragment extends Fragment {
 
 
 
-
+             //   TextView iiiiiiiiiii = (TextView) root.findViewById(R.id.iiiiiiiiiii);
+       // makeRoundCorner(getContext().getResources().getColor(R.color.red700colorAccent),50,iiiiiiiiiii,0,0);
 
 
 
@@ -86,6 +90,19 @@ public class HomeFragment extends Fragment {
         card_view_speed_dial_2 = (CardView)root.findViewById(R.id.card_view_speed_dial_2);
         card_view_speed_dial_3 = (CardView)root.findViewById(R.id.card_view_speed_dial_3);
         card_view_speed_dial_4 = (CardView)root.findViewById(R.id.card_view_speed_dial_4);
+
+
+
+        //card_view_rozvrh_my.setCardBackgroundColor(Color.parseColor(mSharedPreferences.getString(CURRENT_THEME, "#212121")));
+
+
+
+       // GradientDrawable gd = new GradientDrawable(
+         //       GradientDrawable.Orientation.BL_TR,
+         //       new int[] {0xFFF48FB1,0xFFEC407A,0xFFD81B60});
+        //gd.setCornerRadius(20f);
+
+       // card_view_rozvrh_dle_ucitelu.setBackground(gd);
 
 
         card_view_rozvrh_my.setOnClickListener(new View.OnClickListener() {
@@ -339,6 +356,20 @@ public class HomeFragment extends Fragment {
         //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
+
+
+    public static void makeRoundCorner(int bgcolor,int radius,View v,int strokeWidth,int strokeColor)
+    {
+        GradientDrawable gdDefault = new GradientDrawable();
+        gdDefault.setColor(bgcolor);
+        gdDefault.setCornerRadius(radius);
+        gdDefault.setStroke(strokeWidth, strokeColor);
+        v.setBackground(gdDefault);
+    }
+
+
+
+
 
     @Override
     public void onDestroyView() {
