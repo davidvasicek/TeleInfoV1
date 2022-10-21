@@ -68,12 +68,14 @@
                 android:clickable="true"
                 app:cardBackgroundColor="#E0E0E0"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="5dp">
+                app:cardCornerRadius="5dp"
+                >
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    >
 
 
 
@@ -1075,7 +1077,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                app:cardBackgroundColor="#B0BEC5"
+                app:cardBackgroundColor="#EEEEEE"
                 android:foreground="?android:attr/selectableItemBackground">
 
 
@@ -1084,37 +1086,17 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="ROZVRH\nTŘÍDY"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"
-                        android:textSize="9dp"
-                        android:tag="tagForDelete"
-                        android:layout_marginTop="5dp"
-                        />
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#546E7A"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"/>
 
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:tag="tagForDelete"
-                        android:text="3.A"
+                        android:text="+"
                         android:textColor="@color/text_primary"
-                        android:textSize="10dp"
-                        android:textStyle="bold" />
+                        android:textSize="20dp" />
 
 
                 </LinearLayout>

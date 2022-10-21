@@ -97,7 +97,7 @@ public class FragmentAdministrationSubjects extends Fragment implements BottomSh
 
         mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
         //mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/Teachers");
-        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/Subjects");
+        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/");
 
 
 

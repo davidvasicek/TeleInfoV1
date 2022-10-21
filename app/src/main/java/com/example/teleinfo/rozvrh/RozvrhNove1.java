@@ -129,7 +129,9 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
     String Hour8From = "14:50";
     String Hour8To = "15:35";
 
-
+    String Hour9Title = "9. HOD";
+    String Hour9From = "15:40";
+    String Hour9To = "16:25";
 
     String Break0Title = "5 MIN";
     String Break0From = "8:10";
@@ -167,6 +169,9 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
     String Break8From = "15:35";
     String Break8To = "15:40";
 
+    String Break9sTitle = "5 MIN";
+    String Break9From = "16:25";
+    String Break9To = "16:30";
 
 
     int marginHour0;
@@ -178,6 +183,7 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
     int marginHour6;
     int marginHour7;
     int marginHour8;
+    int marginHour9;
 
     int marginBreak0;
     int marginBreak1;
@@ -188,6 +194,7 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
     int marginBreak6;
     int marginBreak7;
     int marginBreak8;
+    int marginBreak9;
 
     int marginBreak2a;
     int marginBreak2b;
@@ -263,6 +270,7 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
     LinearLayout linearLayoutsLineBorderHour6[];
     LinearLayout linearLayoutsLineBorderHour7[];
     LinearLayout linearLayoutsLineBorderHour8[];
+    LinearLayout linearLayoutsLineBorderHour9[];
 
     LinearLayout linearLayoutsLineBorderBreak0[];
     LinearLayout linearLayoutsLineBorderBreak1[];
@@ -273,7 +281,7 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
     LinearLayout linearLayoutsLineBorderBreak6[];
     LinearLayout linearLayoutsLineBorderBreak7[];
     LinearLayout linearLayoutsLineBorderBreak8[];
-
+    LinearLayout linearLayoutsLineBorderBreak9[];
 
     LinearLayout linearLayoutsLineBorderTest[];
     ImageView imageViewsLineBorderTest[];
@@ -359,6 +367,13 @@ String child="";
         action = intent.getStringExtra("action");
 
         datumyNasmazani = new ArrayList<>();
+
+
+        datumyNasmazani.add("21_10_2022");
+        datumyNasmazani.add("20_10_2022");
+        datumyNasmazani.add("19_10_2022");
+        datumyNasmazani.add("18_10_2022");
+        datumyNasmazani.add("17_10_2022");
 
         datumyNasmazani.add("14_10_2022");
         datumyNasmazani.add("13_10_2022");
@@ -1236,11 +1251,11 @@ String child="";
 
         dates = new ArrayList<>();
 
-        dates.add("26_9_2022");
-        dates.add("27_9_2022");
-        dates.add("28_9_2022");
-        dates.add("29_9_2022");
-        dates.add("30_9_2022");
+        dates.add("17_10_2022");
+        dates.add("18_10_2022");
+        dates.add("19_10_2022");
+        dates.add("20_10_2022");
+        dates.add("21_10_2022");
 
         columnSize = dates.size();
 
@@ -1409,11 +1424,11 @@ String child="";
 
         dates = new ArrayList<>();
 
-        dates.add("3_10_2022");
-        dates.add("4_10_2022");
-        dates.add("5_10_2022");
-        dates.add("6_10_2022");
-        dates.add("7_10_2022");
+        dates.add("17_10_2022");
+        dates.add("18_10_2022");
+        dates.add("19_10_2022");
+        dates.add("20_10_2022");
+        dates.add("21_10_2022");
 
         columnSize = dates.size();
 
@@ -1642,11 +1657,11 @@ String child="";
 
         dates = new ArrayList<>();
 
-        dates.add("19_9_2022");
-        dates.add("20_9_2022");
-        dates.add("21_9_2022");
-        dates.add("22_9_2022");
-        dates.add("23_9_2022");
+        dates.add("17_10_2022");
+        dates.add("18_10_2022");
+        dates.add("19_10_2022");
+        dates.add("20_10_2022");
+        dates.add("21_10_2022");
 
         columnSize = dates.size();
 
@@ -2042,6 +2057,15 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
 
         }
 
+        else if(actualTimeInInt >= getIntFromTime(Hour9From) && actualTimeInInt <= getIntFromTime(Hour9To)-1){
+
+            return marginHour9 + getDifferenceTimeInMinutes(actualTime, Hour9From) * velKlasickeHod/CLASSIC_HOUR_IN_MINUTES;
+
+        }else if(actualTimeInInt >= getIntFromTime(Break9From) && actualTimeInInt <= getIntFromTime(Break9To)-1){
+
+            return marginBreak9 + getDifferenceTimeInMinutes(actualTime, Break9From) * velMalePrestavky/5;
+
+        }
 
 
 
@@ -2123,6 +2147,10 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
     marginHour6 = velHeaderu + 6*velKlasickeHod + 4*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
     marginHour7 = velHeaderu + 6*velKlasickeHod + 1*velSesteHod + 5*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
     marginHour8 = velHeaderu + 7*velKlasickeHod + 1*velSesteHod + 6*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
+    marginHour9 = velHeaderu + 8*velKlasickeHod + 1*velSesteHod + 7*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
+
+
+
 
     marginBreak0 = velHeaderu + 1*velKlasickeHod;
     marginBreak1 = velHeaderu + 2*velKlasickeHod + 1*velMalePrestavky;
@@ -2133,6 +2161,8 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
     marginBreak6 = velHeaderu + 6*velKlasickeHod  + 1*velSesteHod + 4*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
     marginBreak7 = velHeaderu + 7*velKlasickeHod  + 1*velSesteHod + 5*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
     marginBreak8 = velHeaderu + 8*velKlasickeHod  + 1*velSesteHod + 6*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
+    marginBreak9 = velHeaderu + 9*velKlasickeHod  + 1*velSesteHod + 7*velMalePrestavky + 1*velStredniPrestavky + 1*velVelkePrestavky;
+
 
     marginBreak2a = marginBreak2;
     marginBreak2b = marginBreak2+velVelkePrestavky/2;
@@ -2193,6 +2223,8 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         addHourHeader(6, Hour6Title, Hour6From + "\n13:30" , "13:10\n" + Hour6To);
         addHourHeader(7, Hour7Title, Hour7From, Hour7To);
         addHourHeader(8, Hour8Title, Hour8From, Hour8To);
+        addHourHeader(9, Hour9Title, Hour9From, Hour9To);
+
 
         String Hour6From = "12:45\n13:30";
         String Hour6To = "13:10\n13:55";
@@ -2206,6 +2238,7 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         addBreakHeader(6, "d_6p","5 MIN");
         addBreakHeader(7, "d_7p","5 MIN");
         addBreakHeader(8, "d_8p","5 MIN");
+        addBreakHeader(9, "d_9p","5 MIN");
 
         createBorderHeader(0, getMarginHour(String.valueOf(0)));
         createBorderHeader(1, getMarginHour(String.valueOf(1)));
@@ -2216,16 +2249,18 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         createBorderHeader(6, getMarginHour(String.valueOf(6)));
         createBorderHeader(7, getMarginHour(String.valueOf(7)));
         createBorderHeader(8, getMarginHour(String.valueOf(8)));
+        createBorderHeader(9, getMarginHour(String.valueOf(9)));
 
-        createBorderHeader(9,  getMarginBreak("d_0p"));
-        createBorderHeader(10, getMarginBreak("d_1p"));
-        createBorderHeader(11, getMarginBreak("d_2p"));
-        createBorderHeader(12, getMarginBreak("d_3p"));
-        createBorderHeader(13, getMarginBreak("d_4p"));
-        createBorderHeader(14, getMarginBreak("d_5p"));
-        createBorderHeader(15, getMarginBreak("d_6p"));
-        createBorderHeader(16, getMarginBreak("d_7p"));
-        createBorderHeader(17, getMarginBreak("d_8p"));
+        createBorderHeader(10,  getMarginBreak("d_0p"));
+        createBorderHeader(11, getMarginBreak("d_1p"));
+        createBorderHeader(12, getMarginBreak("d_2p"));
+        createBorderHeader(13, getMarginBreak("d_3p"));
+        createBorderHeader(14, getMarginBreak("d_4p"));
+        createBorderHeader(15, getMarginBreak("d_5p"));
+        createBorderHeader(16, getMarginBreak("d_6p"));
+        createBorderHeader(17, getMarginBreak("d_7p"));
+        createBorderHeader(18, getMarginBreak("d_8p"));
+        createBorderHeader(19, getMarginBreak("d_9p"));
 
     }
 
@@ -2342,6 +2377,8 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         linearLayoutsLineBorderHour6 = new LinearLayout[columnSize];
         linearLayoutsLineBorderHour7 = new LinearLayout[columnSize];
         linearLayoutsLineBorderHour8 = new LinearLayout[columnSize];
+        linearLayoutsLineBorderHour9 = new LinearLayout[columnSize];
+
 
         linearLayoutsLineBorderBreak0 = new LinearLayout[columnSize];
         linearLayoutsLineBorderBreak1 = new LinearLayout[columnSize];
@@ -2352,6 +2389,7 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         linearLayoutsLineBorderBreak6 = new LinearLayout[columnSize];
         linearLayoutsLineBorderBreak7 = new LinearLayout[columnSize];
         linearLayoutsLineBorderBreak8 = new LinearLayout[columnSize];
+        linearLayoutsLineBorderBreak9 = new LinearLayout[columnSize];
 
         linearLayoutsLineBorderTest = new LinearLayout[columnSize];
 
@@ -2502,6 +2540,19 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         linearLayoutsLineBorderHour8[columnID].setOrientation(LinearLayout.VERTICAL);
         linearLayoutsLineBorderHour8[columnID].setBackgroundColor(lineBorderColor);
 
+        linearLayoutsLineBorderHour9[columnID] = new LinearLayout(getApplicationContext());
+        LinearLayout.LayoutParams lp_columnLineBorderHour9 = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, // Width of TextView
+                lineBorderHeight);
+        lp_columnLineBorderHour9.setMargins(0,marginHour9,0,0);
+        linearLayoutsLineBorderHour9[columnID].setLayoutParams(lp_columnLineBorderHour9);
+        linearLayoutsLineBorderHour9[columnID].setOrientation(LinearLayout.VERTICAL);
+        linearLayoutsLineBorderHour9[columnID].setBackgroundColor(lineBorderColor);
+
+
+
+
+
         linearLayoutsLineBorderBreak0[columnID] = new LinearLayout(getApplicationContext());
         LinearLayout.LayoutParams lp_columnLineBorderBreak0 = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, // Width of TextView
@@ -2583,6 +2634,19 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         linearLayoutsLineBorderBreak8[columnID].setOrientation(LinearLayout.VERTICAL);
         linearLayoutsLineBorderBreak8[columnID].setBackgroundColor(lineBorderColor);
 
+
+        linearLayoutsLineBorderBreak9[columnID] = new LinearLayout(getApplicationContext());
+        LinearLayout.LayoutParams lp_columnLineBorderBreak9 = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, // Width of TextView
+                lineBorderHeight);
+        lp_columnLineBorderBreak9.setMargins(0,marginBreak9,0,0);
+        linearLayoutsLineBorderBreak9[columnID].setLayoutParams(lp_columnLineBorderBreak9);
+        linearLayoutsLineBorderBreak9[columnID].setOrientation(LinearLayout.VERTICAL);
+        linearLayoutsLineBorderBreak9[columnID].setBackgroundColor(lineBorderColor);
+
+
+
+
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderHour0[columnID]);
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderHour1[columnID]);
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderHour2[columnID]);
@@ -2592,6 +2656,8 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderHour6[columnID]);
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderHour7[columnID]);
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderHour8[columnID]);
+        relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderHour9[columnID]);
+
 
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderBreak0[columnID]);
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderBreak1[columnID]);
@@ -2602,7 +2668,7 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderBreak6[columnID]);
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderBreak7[columnID]);
         relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderBreak8[columnID]);
-
+        relativeLayoutsColumn[columnID].addView(linearLayoutsLineBorderBreak9[columnID]);
     }
 
     public void addColumnHeader(int columnID, String headerString){
@@ -2870,7 +2936,19 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
 
             textViewsRow1Hour[actualIndexOfHour].setText(hourObject.udalostPopis.split(" ")[0]);
             textViewsRow2Hour[actualIndexOfHour].setText(hourObject.Trida);
-            textViewsRow3Hour[actualIndexOfHour].setText(hourObject.Ucebna);
+
+
+
+            if(hourObject.Ucebna.contains("class=AbsZdroj")){
+
+                String textHTML  = hourObject.Ucebna.replace("_",": ").replace("<span class=AbsZdroj>", "<font color='" + getResources().getColor(R.color.timetableColorRedTeacher) + "'>").replace("</span>","</font>");
+                textViewsRow3Hour[actualIndexOfHour].setText( Html.fromHtml(textHTML), TextView.BufferType.SPANNABLE);
+
+            }else{
+
+                textViewsRow3Hour[actualIndexOfHour].setText(hourObject.Ucebna);
+            }
+
 
 
 
@@ -3286,6 +3364,11 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
                 return velMalePrestavky;
             }
 
+            if(breakKey.compareTo("d_9p") == 0){
+
+                return velMalePrestavky;
+            }
+
             if(breakKey.compareTo("d_MorningSupervision") == 0){
 
                 return velMorningSupervision+velMalePrestavky;
@@ -3689,6 +3772,11 @@ s("12:35-12:45")){
                 return marginHour8;
             }
 
+            if(hour.compareTo("9") == 0){
+
+                return marginHour9;
+            }
+
     return 0;
 
 
@@ -3749,6 +3837,11 @@ s("12:35-12:45")){
             if(breakKey.compareTo("d_8p") == 0){
 
                 return marginBreak8;
+            }
+
+            if(breakKey.compareTo("d_9p") == 0){
+
+                return marginBreak9;
             }
 
             if(breakKey.compareTo("d_MorningSupervision") == 0){

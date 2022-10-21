@@ -102,7 +102,7 @@ public class b_GuideSecurityAuthPriorityFragment extends Fragment {
 
         buttonPrevious.setVisibility(View.GONE);
 
-        String authPreference = mSharedPreferences.getString(AUTH_PRIORITY, "CREDENTIALS");
+        //String authPreference = mSharedPreferences.getString(AUTH_PRIORITY, "CREDENTIALS");
 
         Boolean fingerprintHardwareIsDetected = mSharedPreferences.getBoolean(FINGERPRINT_HARDWARE_IS_DETECTED, false);
 

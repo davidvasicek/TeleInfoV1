@@ -27,12 +27,14 @@ import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.teleinfo.MainActivity;
 import com.example.teleinfo.R;
+import com.example.teleinfo.administration.ObjectAndroidDevices;
 import com.example.teleinfo.parameters.GetThemeStyle;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -83,6 +85,8 @@ public class _MainActivityGuide extends AppCompatActivity implements a_RunGuideF
                     .commit();
         }
 
+        intent = getIntent();
+
         FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
 
         isHardwareDetected = fingerprintManager.isHardwareDetected();
@@ -109,16 +113,21 @@ public class _MainActivityGuide extends AppCompatActivity implements a_RunGuideF
                         // Get new FCM registration token
                         token = task.getResult();
 
-                       // FirebaseDatabase database = FirebaseDatabase.getInstance();
-                      //  DatabaseReference myRef = database.getReference("TeleInfo/FCM/DeviceInfo");
 
-                        //AndroidDevicesObject androidDevicesObject = new AndroidDevicesObject();
+                        String email = intent.getStringExtra("Email").replace("@","_").replace(".","_");
 
-                        //androidDevicesObject.Device_ID = Device_ID;
-                        //androidDevicesObject.Device_Name = android.os.Build.BRAND + " " + android.os.Build.MODEL;
-                        //androidDevicesObject.Token = token;
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        DatabaseReference myRef = database.getReference("/TeleInfo/Administration/Users/" + email+ "/PairedDevices/");
 
-                       // myRef.setValue(token);
+                        ObjectAndroidDevices objectAndroidDevices = new ObjectAndroidDevices();
+                        objectAndroidDevices.Device_ID = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+                        objectAndroidDevices.Device_Name = android.os.Build.BRAND + " " + android.os.Build.MODEL;
+                        objectAndroidDevices.Token = token;
+                        objectAndroidDevices.timeStamp = System.currentTimeMillis();
+                        objectAndroidDevices.accessStatus = true;
+
+                        // TODO add On complete listener
+                        myRef.child(objectAndroidDevices.Device_ID).setValue(objectAndroidDevices);
 
                         // Log and toast
 
@@ -220,7 +229,7 @@ public class _MainActivityGuide extends AppCompatActivity implements a_RunGuideF
 
                 GuideFinishFragment fragment = GuideFinishFragment.newInstance(status);
 
-                intent = getIntent();
+
 
                 mEditor.putInt(AUTH_PRIORITY, authMethod );
                 mEditor.putString(AUTH_PIN_OR_PASSWORD, pinOrPassword);

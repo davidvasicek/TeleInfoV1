@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:id="@+id/teachersLinearClick"
+    android:foreground="?android:attr/selectableItemBackground">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -96,35 +98,42 @@
             android:layout_marginRight="10dp"
             >
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:cardCornerRadius="5dp"
-                android:background="@color/red700colorAccent"
-                >
-                <com.google.android.material.textview.MaterialTextView
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="2"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:textSize="14dp"
-                    android:background="@color/red700colorAccent"
-                    android:gravity="center"
-                    android:textStyle="bold"
+                    android:text="do 15 st."
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:id="@+id/teacherNamedsssssvcsssddssssvsfs" />
 
+            </LinearLayout>
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
 
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="A 1006"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:id="@+id/teacherNamedsssxxxxxsfss" />
 
-
-
-
-
-            </com.google.android.material.card.MaterialCardView>
-
+            </LinearLayout>
 
 
 
@@ -140,17 +149,5 @@
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

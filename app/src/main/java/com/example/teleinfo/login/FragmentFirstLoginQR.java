@@ -115,7 +115,7 @@ public class FragmentFirstLoginQR extends Fragment implements BottomSheetDialogQ
 
         má omluvenkový modul ........ true or false
         je třídní    true false a jaké třídy
-
+        uživatel má přístup
 
 
 

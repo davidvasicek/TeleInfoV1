@@ -2,6 +2,7 @@ package com.example.teleinfo.ui.home;
 
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_COLOR_TAB_LAYOUT_NON_SELECTED_TEXT;
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
+import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 import static com.example.teleinfo.parameters.MainParameters.SHOW_BREAKS;
 
@@ -70,7 +71,8 @@ public class HomeFragment extends Fragment {
         mSharedPreferences = getContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
 
-
+        mEditor.putBoolean(DEVICE_IS_PAIRED, false );
+        mEditor.commit();
 
              //   TextView iiiiiiiiiii = (TextView) root.findViewById(R.id.iiiiiiiiiii);
        // makeRoundCorner(getContext().getResources().getColor(R.color.red700colorAccent),50,iiiiiiiiiii,0,0);

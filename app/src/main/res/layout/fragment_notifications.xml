@@ -664,7 +664,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text=""
+                        android:text="OMLUVENKY"
                         android:textSize="12dp"
                         android:gravity="center"
                         android:textColor="@color/text_primary"/>

@@ -14,6 +14,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.teleinfo.login._ActivityMainLogin;
+import com.example.teleinfo.modules.ClassRooms_BottomSheetDialogClassRoomsList;
 import com.example.teleinfo.parameters.GetThemeStyle;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,7 +36,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-
+    private FirebaseDatabase mFirebaseDatabaseDatabase;
+    private DatabaseReference mDatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences mSharPref = getApplication().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
@@ -79,6 +81,19 @@ public class MainActivity extends AppCompatActivity {
         //   //    startActivity(intent);
 
 
+      //  mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
+      //  mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/");
+
+
+        ClassRooms_BottomSheetDialogClassRoomsList classRooms_bottomSheetDialogClassRoomsList = new ClassRooms_BottomSheetDialogClassRoomsList();
+        classRooms_bottomSheetDialogClassRoomsList.show(getSupportFragmentManager(), "exampleBottomSheet");
+
+
+
+
+
+
+
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel("notification_channel", "notification_channel", NotificationManager.IMPORTANCE_DEFAULT);
@@ -104,3 +119,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+
+// https://www.geeksforgeeks.org/android-horizontal-recyclerview-with-examples/ reczcler view calendar
+// https://viblo.asia/p/lam-viec-voi-bottom-sheet-Do754jjXZM6
+// expand bottom sheet dialog
+
+
+// filter https://github.com/Krupen/FabulousFilter
+
+// https://github.com/Hamadakram/AlertView
+
