@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Relative Layout-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/relativelayout">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Kalendář"
+            android:textAllCaps="true"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <TextView
+                android:id="@+id/textviewllgfl"
+                android:gravity="center_horizontal"
+                android:textSize="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/text_primary"
+                android:text="Minulý týden"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/unselected_date">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textviewlll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Pondělí"
+                            android:textAllCaps="true"
+                            android:textColor="@color/text_primary"
+                            android:textSize="10dp"
+                            android:layout_weight="1"
+                            />
+
+
+
+                    <TextView
+                        android:id="@+id/textview"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="17"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.8"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textviehwaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                    <TextView
+                        android:id="@+id/textviewaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2022"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textvieghwlll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10dp"
+
+
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textviewllffl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Pátek"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/textvieffcvbw"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="21"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.8"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textviehwffaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                    <TextView
+                        android:id="@+id/textviewaffa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2022"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <TextView
+                android:id="@+id/textviewllgdffl"
+                android:gravity="center_horizontal"
+                android:textSize="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/text_primary"
+                android:text="Aktuální týden"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selected_date"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textviewlfgfll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Pondělí"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/textvifgfew"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.8"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textviefgfghwaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                    <TextView
+                        android:id="@+id/textviewfgfaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2022"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textvieghfgfwlll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10dp"
+
+
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textviewllfgffl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Pátek"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/textvieffw"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="28"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.8"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textviehwdfgffaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                    <TextView
+                        android:id="@+id/textviedfgwaffa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2022"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+            <TextView
+                android:id="@+id/textvxcdiewllgdffl"
+                android:gravity="center_horizontal"
+                android:textSize="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/text_primary"
+                android:text="Příští týden"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/unselected_date">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textvdgdiewlll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Pondělí"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/textdgdfview"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="31"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.8"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textvidfgdehwaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                    <TextView
+                        android:id="@+id/textviewdfgaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2022"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textvieghwdglll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10dp"
+
+
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textviedgwllffl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Pátek"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_primary"
+                        android:textSize="10dp"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/textvidgfeffw"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.8"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textviehwffdgaa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                    <TextView
+                        android:id="@+id/textvidgewaffa"
+                        android:gravity="center_horizontal"
+
+                        android:textSize="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2022"
+                        android:textColor="@color/text_primary"
+                        android:layout_weight="0.1"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

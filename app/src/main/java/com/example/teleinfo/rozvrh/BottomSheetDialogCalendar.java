@@ -1,22 +1,38 @@
-package com.example.teleinfo;
+package com.example.teleinfo.rozvrh;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import static android.content.ContentValues.TAG;
+import static com.example.teleinfo.parameters.MainParameters.COLOR_ROW_HEADER_HOUR;
+import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
+import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 
-import android.os.Bundle;
+import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.teleinfo.rozvrh.ObjectDates;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.teleinfo.R;
+import com.example.teleinfo.login.BottomSheetDialogCredentialsLogin;
+import com.example.teleinfo.login.BottomSheetDialogQRCodeReading;
+import com.example.teleinfo.parameters.GetThemeStyle;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class testRecyclerViewHorizontal extends AppCompatActivity {
+public class BottomSheetDialogCalendar extends BottomSheetDialogFragment {
 
     RecyclerView recyclerView;
     ArrayList<ObjectDates> source;
@@ -24,26 +40,99 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
     Adapter adapter;
     LinearLayoutManager HorizontalLayout;
 
+    private DayDateListener dayDateListener;
+
+
     View ChildView;
     int RecyclerViewItemPosition;
 
+    int selectedDay;
+    int selectedMonth;
+    int selectedYear;
+
+    int selectedPosition;
+
+    public BottomSheetDialogCalendar(int selectedDay, int selectedMonth, int selectedYear) {
+
+        this.selectedDay = selectedDay;
+        this.selectedMonth = selectedMonth;
+        this.selectedYear = selectedYear;
+
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_activity_test_recycler_view_horizontal);
-        // initialisation with id's
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
-        RecyclerViewLayoutManager = new LinearLayoutManager(getApplicationContext());
+    public void onAttach(Context context) {
+
+        Log.e(TAG, "onAttach: ClassCastException aaaa: " + getChildFragmentManager() + "   -   " +  getParentFragmentManager() + "   -   " + getParentFragment() + "   -   " );
+
+        if(getChildFragmentManager() == null){
+
+            try{
+                Log.e(TAG, "onAttach: ClassCastException aaaa: "  );
+
+                dayDateListener = (DayDateListener) context;
+            }catch (ClassCastException e){
+                Log.e(TAG, "onAttach: ClassCastException 11: " + e.getMessage() );
+            }
+        }else{
+            try{
+                Log.e(TAG, "onAttach: ClassCastException oooo: "  );
+
+                dayDateListener = (DayDateListener) context;
+                Log.e(TAG, "onAttach: ClassCastException oooo1: " );
+            }catch (ClassCastException e){
+                Log.e(TAG, "onAttach: ClassCastException 22: " + e.getMessage() );
+            }
+        }
+        super.onAttach(context);
+    }
+
+
+
+
+
+
+
+
+
+    @SuppressLint("RestrictedApi")
+    @Override
+    public void setupDialog(Dialog dialog, int style) {
+        SharedPreferences shrPref = getActivity().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        super.setupDialog(dialog, new GetThemeStyle().getThemeStyle(shrPref.getString(CURRENT_THEME, "#212121")));
+        View contentView = View.inflate(getContext(), R.layout.test_activity_test_recycler_view_horizontal, null);
+        dialog.setContentView(contentView);
+
+        recyclerView = (RecyclerView)contentView.findViewById(R.id.recyclerview);
+        RecyclerViewLayoutManager = new LinearLayoutManager(getContext());
 
         recyclerView.setLayoutManager(RecyclerViewLayoutManager);
         AddItemsToRecyclerViewArrayList();
 
+        for(int i = 0; i<source.size(); i++){
+
+            ObjectDates objectDates = source.get(i);
+
+            if(selectedDay == objectDates.day && selectedMonth == objectDates.month && selectedYear == objectDates.year){
+
+                selectedPosition = i;
+                Log.e(TAG, "pozice " + i);
+
+                break;
+
+            }
+        }
+
+
         adapter = new Adapter(source);
 
-        HorizontalLayout = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL,false);
+        HorizontalLayout = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(HorizontalLayout);
+        recyclerView.scrollToPosition(selectedPosition-2);
 
         recyclerView.setAdapter(adapter);
+
     }
 
     public void AddItemsToRecyclerViewArrayList()
@@ -125,14 +214,14 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
         }
 
         @Override
-        public MyView onCreateViewHolder(ViewGroup parent, int viewType) {
+        public Adapter.MyView onCreateViewHolder(ViewGroup parent, int viewType) {
             View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.test_activity_test_recycler_view_horizontal_item, parent, false);
 
-            return new MyView(itemView);
+            return new Adapter.MyView(itemView);
         }
 
         @Override
-        public void onBindViewHolder(final MyView holder, final int position) {
+        public void onBindViewHolder(final MyView holder, int position) {
 
             ObjectDates objectDates = list.get(position);
 
@@ -140,15 +229,68 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
             // Recycler view with the list items
             holder.textviewlll.setText(objectDates.theNameOfTheDayOfTheWeek);
             holder.textView.setText(objectDates.day + "");
-            holder.textviewaa.setText(objectDates.month + " | " + objectDates.year);
+            holder.textviehwaa.setText(objectDates.month + "");
+            holder.textviewaa.setText(objectDates.year + "");
+
+            if(objectDates.dayOfTheWeek == 6 || objectDates.dayOfTheWeek == 7){
+
+                holder.textviewlll.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+                holder.textView.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+                holder.textviehwaa.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+                holder.textviewaa.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+
+            }else{
+
+                holder.textviewlll.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+                holder.textView.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+                holder.textviehwaa.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+                holder.textviewaa.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+
+                if(position == selectedPosition){
+
+                    holder.date1.setBackground(getContext().getResources().getDrawable(R.drawable.selected_date));
+                    holder.date1.getBackground().setColorFilter(Color.parseColor("#42A5F5"), PorterDuff.Mode.SRC_ATOP);
+
+                }else{
+
+                    holder.date1.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+
+                }
+            }
 
 
-            if(objectDates.day == 3){
+            if(position == selectedPosition){
+
+                holder.date1.setBackground(getContext().getResources().getDrawable(R.drawable.selected_date));
+
+                holder.date1.getBackground().setColorFilter(Color.parseColor("#42A5F5"), PorterDuff.Mode.SRC_ATOP);
+                holder.textviewlll.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+                holder.textView.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+                holder.textviehwaa.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+                holder.textviewaa.setTextColor(getContext().getResources().getColor(R.color.text_primary));
+
+            }else{
+
+                holder.date1.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+
+                if(objectDates.dayOfTheWeek == 6 || objectDates.dayOfTheWeek == 7){
+
+                    holder.textviewlll.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+                    holder.textView.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+                    holder.textviehwaa.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+                    holder.textviewaa.setTextColor(getContext().getResources().getColor(R.color.text_secondary));
+
+                }
+
+            }
+
+
+
+            if(objectDates.day == 26){
 
                 holder.weekTitle.setVisibility(View.VISIBLE);
 
             }else{
-
 
                 holder.weekTitle.setVisibility(View.INVISIBLE);
 
@@ -157,6 +299,20 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
             holder.date2.setVisibility(View.GONE);
             holder.dateSeparator.setVisibility(View.GONE);
             //holder.weekTitle.setVisibility(View.GONE);
+
+
+            holder.date1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    selectedPosition = position;
+                    notifyDataSetChanged();
+
+
+                    dayDateListener.applyDayDateListener(objectDates.day, objectDates.month, objectDates.year);
+
+                }
+            });
 
 
         }
@@ -172,12 +328,15 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
             // Text View
             TextView textView;
             TextView textviewlll;
+            TextView textviehwaa;
             TextView textviewaa;
 
             LinearLayout date1;
             LinearLayout date2;
             LinearLayout dateSeparator;
             LinearLayout weekTitle;
+
+
 
             // parameterised constructor for View Holder class
             // which takes the view as a parameter
@@ -187,6 +346,7 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
                 // initialise TextView with id
                 textView = (TextView)view.findViewById(R.id.textview);
                 textviewlll = (TextView)view.findViewById(R.id.textviewlll);
+                textviehwaa = (TextView)view.findViewById(R.id.textviehwaa);
                 textviewaa = (TextView)view.findViewById(R.id.textviewaa);
 
                 date1 = (LinearLayout)view.findViewById(R.id.date1);
@@ -201,5 +361,24 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+
+//    @Nullable
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//        View v = inflater.inflate(R.layout.color1_select_bottom_sheet_dialog, container, false);
+//        return v;
+//    }
+
+
+
+
+    public interface DayDateListener {
+        void applyDayDateListener(int day, int month, int year);
+    }
 
 }

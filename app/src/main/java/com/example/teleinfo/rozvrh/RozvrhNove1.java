@@ -66,7 +66,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
+public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, BottomSheetDialogCalendar.DayDateListener {
 
 
     int velColumn = (int)(190*1); //šířa slpoupce
@@ -343,6 +343,12 @@ public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.
 
 String child="";
     int listingDates = 0;
+    
+    
+    String dateToShow = "19_10_2022";
+    int dayToShow;
+    int monthToShow;
+    int yearToShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -350,6 +356,10 @@ String child="";
         SharedPreferences mSharPref = getApplication().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         setTheme(new GetThemeStyle().getThemeStyle(mSharPref.getString(CURRENT_THEME, "#212121")));;
         setContentView(R.layout.rozvrh_activity_rozvrh_nove1);
+
+        dayToShow = 26;
+        monthToShow = 10;
+        yearToShow = 2022;
 
         mSharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
@@ -457,18 +467,18 @@ String child="";
             child = "rozvrh/denniUcitelu";
 
             Log.e(TAG, "color ___________________ kkkk" );
-            getSupportActionBar().setTitle(Html.fromHtml("<small>" + datumyNasmazani.get(listingDates) + "</small>"));
+            getSupportActionBar().setTitle(Html.fromHtml("<small>" + dateToShow + "</small>"));
 
         }else if(action.compareTo("weeklyBySchoolroom") == 0){
 
             child = "rozvrh/denniUceben";
-            getSupportActionBar().setTitle(Html.fromHtml("<small>" + datumyNasmazani.get(listingDates) + "</small>"));
+            getSupportActionBar().setTitle(Html.fromHtml("<small>" + dateToShow + "</small>"));
 
 
         }else if(action.compareTo("weeklyByTeacher") == 0){
 
             child = "rozvrh/denniUcitelu";
-            getSupportActionBar().setTitle(Html.fromHtml("<small>" + datumyNasmazani.get(listingDates) + "</small>"));
+            getSupportActionBar().setTitle(Html.fromHtml("<small>" + dateToShow + "</small>"));
 
 
         }else if(action.compareTo("weeklyBySchoolClass") == 0){
@@ -681,17 +691,17 @@ String child="";
 
         for (DataSnapshot dataSnapshott: dataSnapshot.getChildren()) {
 
-            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").getChildren()) {
+            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").getChildren()) {
 
-                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                             viewCardSizeHour++;
                 }
             }
 
-            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").getChildren()) {
+            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").getChildren()) {
 
-                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                     viewCardSizeOther++;
                 }
@@ -732,14 +742,14 @@ String child="";
 
                 for (DataSnapshot dataSnapshott: dataSnapshot.getChildren()) {
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").getChildren()) {
 
                         if(dataSnapshoth.getChildrenCount() > 1){
 
                             int count = 0;
                             String novaTrida;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 novaTrida = dataSnapshott.getKey().replace('_', '.');
 
@@ -753,7 +763,7 @@ String child="";
 
                             String novaTrida;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 novaTrida = dataSnapshott.getKey().replace('_', '.');
 
@@ -765,14 +775,14 @@ String child="";
                     }
 
                     // Zobraz všechny potřebné prvky
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").getChildren()) {
 
                         if(dataSnapshoth.getChildrenCount() > 1){
 
                             int count = 0;
                             String novaTrida;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 novaTrida = dataSnapshott.getKey().replace('_', '.');
 
@@ -786,7 +796,7 @@ String child="";
 
                             String novaTrida;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 novaTrida = dataSnapshott.getKey().replace('_', '.');
 
@@ -874,18 +884,18 @@ String child="";
 
                 for (DataSnapshot dataSnapshott: dataSnapshot.getChildren()) {
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").getChildren()) {
 
-                        for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                        for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                             viewCardSizeHour++;
 
                         }
                     }
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").getChildren()) {
 
-                        for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                        for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                             viewCardSizeOther++;
 
@@ -925,13 +935,13 @@ String child="";
                 // ---------------------------------- ucebny ---------------------------------
                 for (DataSnapshot dataSnapshott: dataSnapshot.getChildren()) {
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").getChildren()) {
 
                         if(dataSnapshoth.getChildrenCount() > 1){
 
                             int count = 0;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 HourObject hourObject = dataSnapshotu.getValue(HourObject.class);
 
@@ -941,7 +951,7 @@ String child="";
 
                         }else{
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 HourObject hourObject = dataSnapshotu.getValue(HourObject.class);
 
@@ -950,13 +960,13 @@ String child="";
                         }
                     }
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").getChildren()) {
 
                         if(dataSnapshoth.getChildrenCount() > 1){
 
                             int count = 0;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 OthersObject othersObject = dataSnapshotu.getValue(OthersObject.class);
 
@@ -966,7 +976,7 @@ String child="";
 
                         }else{
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 OthersObject othersObject = dataSnapshotu.getValue(OthersObject.class);
 
@@ -1052,27 +1062,27 @@ String child="";
 
         for (DataSnapshot dataSnapshott: dataSnapshot.getChildren()) {
 
-            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").getChildren()) {
+            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").getChildren()) {
 
-                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                     viewCardSizeHour++;
 
                 }
             }
 
-            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").getChildren()) {
+            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").getChildren()) {
 
-                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                     viewCardSizeOther++;
 
                 }
             }
 
-            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("Dozor").getChildren()) {
+            for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("Dozor").getChildren()) {
 
-                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("Dozor").child(dataSnapshoth.getKey()).getChildren()) {
+                for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("Dozor").child(dataSnapshoth.getKey()).getChildren()) {
 
                     viewCardSizeSupervision++;
 
@@ -1121,13 +1131,13 @@ String child="";
                 // ---------------------------------- učitelé ---------------------------------
                 for (DataSnapshot dataSnapshott: dataSnapshot.getChildren()) {
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").getChildren()) {
 
                         if(dataSnapshoth.getChildrenCount() > 1){
 
                             int count = 0;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 HourObject hourObject = dataSnapshotu.getValue(HourObject.class);
 
@@ -1137,7 +1147,7 @@ String child="";
 
                         }else{
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("hodina").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 HourObject hourObject = dataSnapshotu.getValue(HourObject.class);
 
@@ -1153,13 +1163,13 @@ String child="";
                         }
                     }
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").getChildren()) {
 
                         if(dataSnapshoth.getChildrenCount() > 1){
 
                             int count = 0;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 OthersObject othersObject = dataSnapshotu.getValue(OthersObject.class);
 
@@ -1169,7 +1179,7 @@ String child="";
 
                         }else{
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("others").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("others").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 OthersObject othersObject = dataSnapshotu.getValue(OthersObject.class);
 
@@ -1178,13 +1188,13 @@ String child="";
                         }
                     }
 
-                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("Dozor").getChildren()) {
+                    for (DataSnapshot dataSnapshoth: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("Dozor").getChildren()) {
 
                         if(dataSnapshoth.getChildrenCount() > 1){
 
                             int count = 0;
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("Dozor").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("Dozor").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 SupervisionObject supervisionObject = dataSnapshotu.getValue(SupervisionObject.class);
                                 supervisionObject.key = dataSnapshoth.getKey();
@@ -1195,7 +1205,7 @@ String child="";
 
                         }else{
 
-                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(datumyNasmazani.get(listingDates)).child("Dozor").child(dataSnapshoth.getKey()).getChildren()) {
+                            for (DataSnapshot dataSnapshotu: dataSnapshot.child(dataSnapshott.getKey()).child(dateToShow).child("Dozor").child(dataSnapshoth.getKey()).getChildren()) {
 
                                 SupervisionObject supervisionObject = dataSnapshotu.getValue(SupervisionObject.class);
                                 supervisionObject.key = dataSnapshoth.getKey();
@@ -4003,7 +4013,7 @@ s("12:35-12:45")){
 
 */
                 listingDates++;
-                getSupportActionBar().setTitle(Html.fromHtml("<small>" + datumyNasmazani.get(listingDates) + "</small>"));
+                getSupportActionBar().setTitle(Html.fromHtml("<small>" + dateToShow + "</small>"));
                 linearLayoutMain.removeAllViews();
                 kkkkkkkkkk.removeAllViews();
                 createTimeTable(dataSnapshot_global);
@@ -4013,11 +4023,15 @@ s("12:35-12:45")){
             case R.id.dateRight:
 
 
-                listingDates--;
-                getSupportActionBar().setTitle(Html.fromHtml("<small>" + datumyNasmazani.get(listingDates) + "</small>"));
-                linearLayoutMain.removeAllViews();
-                kkkkkkkkkk.removeAllViews();
-                createTimeTable(dataSnapshot_global);
+                //listingDates--;
+               // getSupportActionBar().setTitle(Html.fromHtml("<small>" + dateToShow + "</small>"));
+               // linearLayoutMain.removeAllViews();
+               // kkkkkkkkkk.removeAllViews();
+               // createTimeTable(dataSnapshot_global);
+
+                BottomSheetDialogCalendar bottomSheetDialogCalendar = new BottomSheetDialogCalendar(dayToShow, monthToShow, yearToShow);
+                bottomSheetDialogCalendar.show(getSupportFragmentManager(), "exampleBottomSheet");
+
 
                 return(true);
 
@@ -4055,6 +4069,26 @@ s("12:35-12:45")){
 
 
         recreate();
+
+    }
+
+    @Override
+    public void applyDayDateListener(int day, int month, int year) {
+
+        dayToShow = day;
+        monthToShow = month;
+        yearToShow = year;
+
+        Log.e(TAG, "smrdim " + day + "_" + month + "_" + year );
+        dateToShow = day + "_" + month + "_" + year;
+
+
+        getSupportActionBar().setTitle(Html.fromHtml("<small>" + dateToShow + "</small>"));
+        linearLayoutMain.removeAllViews();
+        kkkkkkkkkk.removeAllViews();
+        createTimeTable(dataSnapshot_global);
+
+
 
     }
 }

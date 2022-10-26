@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.example.teleinfo.login._ActivityMainLogin;
 import com.example.teleinfo.modules.ClassRooms_BottomSheetDialogClassRoomsList;
 import com.example.teleinfo.parameters.GetThemeStyle;
+import com.example.teleinfo.rozvrh.BottomSheetDialogCalendar;
+import com.example.teleinfo.rozvrh.BottomSheetDialogCalendarWeeks;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -67,14 +69,14 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
 
-        //BottomSheetDialogTeacherEdit bottomSheetDialogTeacherEdit = new BottomSheetDialogTeacherEdit();
-        //bottomSheetDialogTeacherEdit.show(getSupportFragmentManager(), "exampleBottomSheet");
+        BottomSheetDialogCalendarWeeks bottomSheetDialogCalendarWeeks = new BottomSheetDialogCalendarWeeks();
+        bottomSheetDialogCalendarWeeks.show(getSupportFragmentManager(), "exampleBottomSheet");
 
         // Intent intent = new Intent(getApplicationContext(), _ActivityMainLogin.class);
        // startActivity(intent);
 
-         Intent intent = new Intent(getApplicationContext(), testRecyclerViewHorizontal.class);
-         startActivity(intent);
+       //  Intent intent = new Intent(getApplicationContext(), testRecyclerViewHorizontal.class);
+        // startActivity(intent);
 
 
         //   Intent intent = new Intent(getApplicationContext(), ChangePasswordActivity.class);
