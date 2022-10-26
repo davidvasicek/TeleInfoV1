@@ -11,11 +11,10 @@
     <!--Recycler View widget-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
-        android:scrollbars="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerInParent="true"
+        >
 
     </androidx.recyclerview.widget.RecyclerView>
 

@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
         // Intent intent = new Intent(getApplicationContext(), _ActivityMainLogin.class);
        // startActivity(intent);
 
-        // Intent intent = new Intent(getApplicationContext(), testRecyclerViewHorizontal.class);
-        // startActivity(intent);
+         Intent intent = new Intent(getApplicationContext(), testRecyclerViewHorizontal.class);
+         startActivity(intent);
 
 
         //   Intent intent = new Intent(getApplicationContext(), ChangePasswordActivity.class);

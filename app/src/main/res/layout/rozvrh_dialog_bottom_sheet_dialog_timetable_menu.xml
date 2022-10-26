@@ -31,14 +31,6 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp">
 
-        <devs.mulham.horizontalcalendar.HorizontalCalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:textColorNormal="#bababa"
-            app:textColorSelected="#FFFF"
-            app:selectorColor="#c62828"
-            app:selectedDateBackground="@color/purple700colorAccent"/>
 
 
         <com.vivekkaushik.datepicker.DatePickerTimeline
@@ -51,10 +43,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:dateTextColor="@color/brown900colorAccent"
-            app:dayTextColor="@color/brown900colorAccent"
-            app:monthTextColor="@color/blueGray900colorAccent"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
 
 

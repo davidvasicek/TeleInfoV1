@@ -71,8 +71,7 @@ public class HomeFragment extends Fragment {
         mSharedPreferences = getContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
 
-        mEditor.putBoolean(DEVICE_IS_PAIRED, false );
-        mEditor.commit();
+
 
              //   TextView iiiiiiiiiii = (TextView) root.findViewById(R.id.iiiiiiiiiii);
        // makeRoundCorner(getContext().getResources().getColor(R.color.red700colorAccent),50,iiiiiiiiiii,0,0);

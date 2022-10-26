@@ -17,6 +17,7 @@ import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
+    boolean sss = true;
 
     public void onMessageReceived(RemoteMessage remoteMessage) {
 
@@ -35,13 +36,19 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         //mEditor.putString(PAIRING_STATUS, "waitingForUserVerification");
         //mEditor.commit();
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "notification_channel")
-                .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setAutoCancel(true);
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
-        managerCompat.notify(123, builder.build());
+        if(sss){
+
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "notification_channel")
+                    .setSmallIcon(R.drawable.ic_launcher_background)
+                    .setContentTitle(title)
+                    .setContentText(message)
+                    .setAutoCancel(true);
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+            managerCompat.notify(123, builder.build());
+
+        }
+
+
     }
 
 

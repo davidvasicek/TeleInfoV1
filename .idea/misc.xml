@@ -25,7 +25,7 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ffffffffffffffffffffffffff.xml" value="0.22735507246376813" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ffffffffffffffffffffffffffffffffff.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
-        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_home.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_home.xml" value="0.34017971758664955" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_notifications.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/gggggggggggggggg.xml" value="0.1421875" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_finish.xml" value="0.17916666666666667" />
@@ -72,6 +72,8 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/settings_light_bottom_sheet_dialog.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/settings_main_activity.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/settings_menu.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/test_activity_test_recycler_view_horizontal.xml" value="0.25" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/test_activity_test_recycler_view_horizontal_item.xml" value="0.25" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/menu/action_bar_timetable.xml" value="0.36666666666666664" />
       </map>
     </option>

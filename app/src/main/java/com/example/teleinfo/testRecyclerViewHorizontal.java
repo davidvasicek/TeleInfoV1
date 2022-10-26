@@ -68,12 +68,9 @@ public class testRecyclerViewHorizontal extends AppCompatActivity {
         // Adding items to ArrayList
         source = new ArrayList<>();
         source.add("11");
-        source.add("12");
+        source.add("25.10 - 2.11.");
         source.add("13");
-        source.add("14");
-        source.add("15");
-        source.add("16");
-        source.add("17");
+
     }
 
     public class Adapter extends RecyclerView.Adapter<Adapter.MyView> {

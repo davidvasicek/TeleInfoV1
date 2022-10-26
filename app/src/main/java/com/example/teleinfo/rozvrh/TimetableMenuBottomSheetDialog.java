@@ -75,7 +75,7 @@ public class TimetableMenuBottomSheetDialog extends BottomSheetDialogFragment im
         View contentView = View.inflate(getContext(), R.layout.rozvrh_dialog_bottom_sheet_dialog_timetable_menu, null);
         dialog.setContentView(contentView);
 
-
+/*
         Date dt1 = new Date(System.currentTimeMillis()-3*24*60*60*1000);
         Date dt2 = new Date(System.currentTimeMillis()+3*24*60*60*1000);
         Date dt3 = new Date(System.currentTimeMillis());
@@ -118,11 +118,12 @@ public class TimetableMenuBottomSheetDialog extends BottomSheetDialogFragment im
         });
 
 
-
+*/
         DatePickerTimeline datePickerTimeline = contentView.findViewById(R.id.datePickerTimeline);
 
         // Set a Start date (Default, 1 Jan 1970)
         datePickerTimeline.setInitialDate(2022, 8, 21);
+        //datePickerTimeline.
         //datePickerTimeline.set
 
         //datePickerTimeline.setDat(2022, 10, 16);

@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Card View widget-->
-<androidx.cardview.widget.CardView
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/cardview"
-    android:layout_width="60dp"
+    android:layout_width="70dp"
     android:layout_height="80dp"
-    card_view:contentPadding="8dp"
-    card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="8dp"
-    android:layout_margin="5dp">
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
 
-<LinearLayout
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:layout_marginRight="5dp"
-android:layout_marginBottom="10dp"
-android:layout_marginLeft="5dp">
 
-    <!--Text View over Card View-->
-    <TextView
-        android:id="@+id/textviewlll"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:textSize="12dp"
+
+    <LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="říjen"/>
+        android:layout_height="match_parent"
+>
 
-    <TextView
-        android:id="@+id/textview"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:textSize="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="13"/>
+        <!--Text View over Card View-->
+        <TextView
+            android:id="@+id/textviewlll"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="říjen"/>
 
-    <TextView
-        android:id="@+id/textviewaa"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:textSize="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pá"/>
+        <TextView
+            android:id="@+id/textview"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="13"/>
+
+        <TextView
+            android:id="@+id/textviewaa"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pá"/>
 
 
-</LinearLayout>
-
-
+    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>
+
+
+

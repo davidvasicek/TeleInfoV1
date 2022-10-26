@@ -1,6 +1,11 @@
 package com.example.teleinfo.ui.notifications;
 
+import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
+import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,8 +38,10 @@ public class NotificationsFragment extends Fragment {
     CardView card_view_school_plan;
     CardView card_view_supervision;
     CardView card_view_administration;
+    CardView card_view_erasepaire;
 
-
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
 
     private FragmentNotificationsBinding binding;
 
@@ -58,6 +65,10 @@ public class NotificationsFragment extends Fragment {
         card_view_school_plan = (CardView)root.findViewById(R.id.card_view_school_plan);
         card_view_supervision = (CardView)root.findViewById(R.id.card_view_supervision);
         card_view_administration = (CardView)root.findViewById(R.id.card_view_administration);
+        card_view_erasepaire = (CardView)root.findViewById(R.id.card_view_erasepaire);
+
+        mSharedPreferences = getContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
 
 
 
@@ -183,6 +194,16 @@ public class NotificationsFragment extends Fragment {
 
                 Intent intent = new Intent(getContext(), __ActivityMainAdministration.class);
                 startActivity(intent);
+
+            }
+        });
+
+        card_view_erasepaire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mEditor.putBoolean(DEVICE_IS_PAIRED, false );
+                mEditor.commit();
 
             }
         });
