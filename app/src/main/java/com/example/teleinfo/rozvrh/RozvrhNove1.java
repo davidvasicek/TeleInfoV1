@@ -20,6 +20,8 @@ import static com.example.teleinfo.parameters.MainParameters.NO_DATA;
 import static com.example.teleinfo.parameters.MainParameters.NO_INTERNET;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 import static com.example.teleinfo.parameters.MainParameters.SHOW_BREAKS;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_CURRENT_DAY_HIGHLIGHTED;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_EVEN_AND_ODD_COLUMNS;
 import static com.example.teleinfo.parameters.MainParameters.SHOW_TIME_LINE;
 import static com.example.teleinfo.parameters.MainParameters.SIXTH_HOUR_IN_MINUTES;
 import static java.lang.Integer.parseInt;
@@ -2415,15 +2417,30 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
         linearLayoutsColumn[columnID].setLayoutParams(lp_columns);
         linearLayoutsColumn[columnID].setOrientation(LinearLayout.VERTICAL);
 
-        if(columnID%2 == 1){
 
-            linearLayoutsColumn[columnID].setBackgroundColor(Color.parseColor("#F5F5F5"));
+        if(mSharedPreferences.getBoolean(SHOW_EVEN_AND_ODD_COLUMNS, true)){
+
+            if(columnID%2 == 1){
+
+                linearLayoutsColumn[columnID].setBackgroundColor(Color.parseColor("#F5F5F5"));
+
+            }
 
         }
 
-        if(columnID == 2){
 
-            linearLayoutsColumn[columnID].setBackgroundColor(Color.parseColor("#EFEBE9"));
+
+
+        // TODO ale jen v případě, že se zobrazované datum rovná dnešnímu datu
+        // a nepřekreslovat celý rozvrh. stačí jen ovládat jednotlivé ůrvky na displeji
+        // skrytí odučených dnů pouze v aktuálním týdnu
+        if(action.contains("weekly")){
+
+            if(columnID == 4-1 && mSharedPreferences.getBoolean(SHOW_CURRENT_DAY_HIGHLIGHTED, true)){
+
+                linearLayoutsColumn[columnID].setBackgroundColor(Color.parseColor("#EFEBE9"));
+
+            }
 
         }
 
@@ -2721,12 +2738,22 @@ public int getDifferenceTimeInMinutes(String actualTime, String startTime){
 
 
 
-        if(columnID == 2){
 
-            cardViewHeader[columnID].setCardBackgroundColor(Color.parseColor("#D7CCC8"));
 
+        if(action.contains("weekly")){
+
+            if(columnID == 4-1 && mSharedPreferences.getBoolean(SHOW_CURRENT_DAY_HIGHLIGHTED, true)){
+
+                cardViewHeader[columnID].setCardBackgroundColor(Color.parseColor("#D7CCC8"));
+
+            }
 
         }
+
+
+
+
+
 
 
 

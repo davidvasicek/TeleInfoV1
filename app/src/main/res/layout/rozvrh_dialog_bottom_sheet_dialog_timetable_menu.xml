@@ -82,7 +82,7 @@
                     <Switch
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/sensorListActivitySettingsBottomSheetDialogSwitchShowHeaderLocation"
+                        android:id="@+id/bbbbbbbbbbbbbbSwitchShowBreaks"
                         />
 
                 </LinearLayout>
@@ -150,7 +150,7 @@
                     <Switch
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/sensorListActivitySettingsBottomSheetDialogSwitchShowDescription"
+                        android:id="@+id/bbbbbbbbbbbbbbSwitchShowTimeLine"
                         />
 
                 </LinearLayout>
@@ -218,7 +218,7 @@
                     <Switch
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/sensorListActivitySettingsBottomSheetDialogSwitchsaveSorting"
+                        android:id="@+id/bbbbbbbbbbbbbbSwitchShowEvenAndOddColumns"
                         />
 
                 </LinearLayout>
@@ -286,7 +286,7 @@
                     <Switch
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/sensorListActivitySettingsBottomSheetDialogSwitchShowAttributes"
+                        android:id="@+id/bbbbbbbbbbbbbbSwitchShowCanceledClassed"
                         />
 
                 </LinearLayout>
@@ -354,7 +354,7 @@
                     <Switch
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/sensorListActifffvitySettingsBottomSheetDialogSwitchShowAttributes"
+                        android:id="@+id/bbbbbbbbbbbbbbSwitchHideLearnedDays"
                         />
 
                 </LinearLayout>
@@ -490,7 +490,7 @@
                             <Switch
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/sensorssListActifffvitySettingsBottomSheetDialogSwitchShowAttributes"
+                                android:id="@+id/bbbbbbbbbbbbbbSwitchShowConsultationHour"
                                 />
 
                         </LinearLayout>
@@ -558,7 +558,7 @@
                             <Switch
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/sensorssListActifffvitySettghghingsBottomSheetDialogSwitchShowAttributes"
+                                android:id="@+id/bbbbbbbbbbbbbbSwitchShowCurrentDayHighlighted"
                                 />
 
                         </LinearLayout>
@@ -568,6 +568,75 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="0.2">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zobrazit Oběd"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12dp"
+                                android:tag="tagForDelete" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zobrazuje obědy"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="2dp"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12dp"
+                                android:tag="tagForDelete"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="0.80"
+                            android:gravity="center_vertical">
+
+                            <Switch
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bbbbbbbbbbbbbbSwitchShowLunch"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"

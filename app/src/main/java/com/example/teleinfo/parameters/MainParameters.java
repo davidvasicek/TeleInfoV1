@@ -1,5 +1,7 @@
 package com.example.teleinfo.parameters;
 
+import android.widget.Switch;
+
 //sector Class
 public interface MainParameters {
 
@@ -100,11 +102,6 @@ public interface MainParameters {
 
 
 
-    String SHOW_BREAKS = "showBreaks";
-    String SHOW_TIME_LINE = "showTimeLine";
-
-
-
     String COLOR_COLUMN_HEADER = "ColorColumnHeader";
     String COLOR_ROW_HEADER_HOUR = "ColorRowHeaderHour";
     String COLOR_ROW_HEADER_BREAK = "ColorRowHeaderBreak";
@@ -119,6 +116,23 @@ public interface MainParameters {
     String COLOR_CONSULTATION_HOUR = "ColorConsultationHour";
     String COLOR_SCHOOL_ACTIONS = "ColorSchoolActions";
     String COLOR_LUNCH = "ColorLunch";
+
+
+
+    String SHOW_BREAKS = "ShowBreaks";
+    String SHOW_TIME_LINE = "ShowTimeLine";
+    String SHOW_EVEN_AND_ODD_COLUMNS = "ShowEvenAndOddColumns";
+    String SHOW_CANCELED_CLASSED = "ShowCanceledClassed";
+    String HIDE_LEARNED_DAYS = "HideLearnedDays";
+    String SHOW_CONSULTATION_HOUR = "ShowConsultationHour";
+    String SHOW_CURRENT_DAY_HIGHLIGHTED = "ShowCurrentDayHighlighted";
+    String SHOW_LUNCH_IN_SCHEDULE = "ShowLunchInShedule";
+
+
+
+
+
+
 
     String BREAKFAST_SHOW = "BreakfastShow";
     String BRUNCH_SHOW = "BrunchShow";

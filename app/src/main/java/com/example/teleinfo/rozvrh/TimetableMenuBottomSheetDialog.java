@@ -1,5 +1,6 @@
 package com.example.teleinfo.rozvrh;
 
+import static com.example.teleinfo.parameters.MainParameters.BRUNCH_SHOW;
 import static com.example.teleinfo.parameters.MainParameters.COLOR_CLASSIC_HOUR;
 import static com.example.teleinfo.parameters.MainParameters.COLOR_CLASSIC_SUPERVISION;
 import static com.example.teleinfo.parameters.MainParameters.COLOR_CLASS_LESSON;
@@ -15,7 +16,15 @@ import static com.example.teleinfo.parameters.MainParameters.COLOR_ROW_HEADER_BR
 import static com.example.teleinfo.parameters.MainParameters.COLOR_ROW_HEADER_HOUR;
 import static com.example.teleinfo.parameters.MainParameters.COLOR_SCHOOL_ACTIONS;
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
+import static com.example.teleinfo.parameters.MainParameters.HIDE_LEARNED_DAYS;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_BREAKS;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_CANCELED_CLASSED;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_CONSULTATION_HOUR;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_CURRENT_DAY_HIGHLIGHTED;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_EVEN_AND_ODD_COLUMNS;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_LUNCH_IN_SCHEDULE;
+import static com.example.teleinfo.parameters.MainParameters.SHOW_TIME_LINE;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -23,6 +32,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.view.View;
+import android.widget.Switch;
 
 import androidx.cardview.widget.CardView;
 
@@ -60,6 +70,16 @@ public class TimetableMenuBottomSheetDialog extends BottomSheetDialogFragment im
     CardView card_viewSchoolActions;
     CardView card_viewLunch;
 
+    Switch switchShowBreaks;
+    Switch switchShowTimeLine;
+    Switch switchShowEvenAndOddColumns;
+    Switch switchShowCanceledClassed;
+    Switch switchHideLearnedDays;
+    Switch switchShowConsultationHour;
+    Switch switchShowCurrentDayHighlighted;
+    Switch switchShowLunch;
+
+
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
 
@@ -75,50 +95,7 @@ public class TimetableMenuBottomSheetDialog extends BottomSheetDialogFragment im
         View contentView = View.inflate(getContext(), R.layout.rozvrh_dialog_bottom_sheet_dialog_timetable_menu, null);
         dialog.setContentView(contentView);
 
-/*
-        Date dt1 = new Date(System.currentTimeMillis()-3*24*60*60*1000);
-        Date dt2 = new Date(System.currentTimeMillis()+3*24*60*60*1000);
-        Date dt3 = new Date(System.currentTimeMillis());
 
-        Calendar calendar1 = Calendar.getInstance();
-        calendar1.setTime(dt1);
-
-        Calendar calendar2 = Calendar.getInstance();
-        calendar2.setTime(dt2);
-
-        Calendar calendar3 = Calendar.getInstance();
-        calendar3.setTime(dt3);
-
-        //https://github.com/Mulham-Raee/Horizontal-Calendar
-
-        HorizontalCalendar horizontalCalendar = new HorizontalCalendar.Builder(contentView, R.id.calendarView)
-                .range(calendar1, calendar2)
-                .datesNumberOnScreen(5)   // Number of Dates cells shown on screen (default to 5).
-                .configure()    // starts configuration.
-               // .formatTopText("MMM")       // default to "MMM".
-               // .formatMiddleText("dd")    // default to "dd".
-             //   .formatBottomText("EEE")    // default to "EEE".
-
-                .showTopText(true)              // show or hide TopText (default to true).
-                    .showBottomText(true)           // show or hide BottomText (default to true).
-                    .textColor(Color.LTGRAY, Color.LTGRAY)    // default to (Color.LTGRAY, Color.WHITE).
-                    //.selectedDateBackground(Color.parseColor("#FF0000"))      // set selected date cell background.
-                .selectorColor(Color.parseColor("#00FF00"))               // set selection indicator bar's color (default to colorAccent).
-                .end()          // ends configuration.
-                .defaultSelectedDate(calendar3)    // Date to be selected at start (default to current day `Calendar.getInstance()`).
-                .build();
-
-
-
-        horizontalCalendar.setCalendarListener(new HorizontalCalendarListener() {
-            @Override
-            public void onDateSelected(Calendar date, int position) {
-                //do something
-            }
-        });
-
-
-*/
 
         card_viewColumnHeader = (CardView)contentView.findViewById(R.id.card_viewColumnHeader);
         card_viewRowHeaderHour = (CardView)contentView.findViewById(R.id.card_viewRowHeaderHour);
@@ -135,8 +112,119 @@ public class TimetableMenuBottomSheetDialog extends BottomSheetDialogFragment im
         card_viewSchoolActions = (CardView)contentView.findViewById(R.id.card_viewSchoolActions);
         card_viewLunch = (CardView)contentView.findViewById(R.id.card_viewLunch);
 
+
+        switchShowBreaks = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchShowBreaks);
+        switchShowTimeLine = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchShowTimeLine);
+        switchShowEvenAndOddColumns = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchShowEvenAndOddColumns);
+        switchShowCanceledClassed = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchShowCanceledClassed);
+        switchHideLearnedDays = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchHideLearnedDays);
+        switchShowConsultationHour = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchShowConsultationHour);
+        switchShowCurrentDayHighlighted = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchShowCurrentDayHighlighted);
+        switchShowLunch = (Switch)contentView.findViewById(R.id.bbbbbbbbbbbbbbSwitchShowLunch);
+
+
+
+
         mSharedPreferences = getContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
+
+
+        switchShowBreaks.setChecked(mSharedPreferences.getBoolean(SHOW_BREAKS, true));
+        switchShowBreaks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(SHOW_BREAKS, switchShowBreaks.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+
+        switchShowTimeLine.setChecked(mSharedPreferences.getBoolean(SHOW_TIME_LINE, true));
+        switchShowTimeLine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(SHOW_TIME_LINE, switchShowTimeLine.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+        switchShowEvenAndOddColumns.setChecked(mSharedPreferences.getBoolean(SHOW_EVEN_AND_ODD_COLUMNS, true));
+        switchShowEvenAndOddColumns.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(SHOW_EVEN_AND_ODD_COLUMNS, switchShowEvenAndOddColumns.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+        switchShowCanceledClassed.setChecked(mSharedPreferences.getBoolean(SHOW_CANCELED_CLASSED, true));
+        switchShowCanceledClassed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(SHOW_CANCELED_CLASSED, switchShowCanceledClassed.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+        switchHideLearnedDays.setChecked(mSharedPreferences.getBoolean(HIDE_LEARNED_DAYS, false));
+        switchHideLearnedDays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(HIDE_LEARNED_DAYS, switchHideLearnedDays.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+        switchShowConsultationHour.setChecked(mSharedPreferences.getBoolean(SHOW_CONSULTATION_HOUR, false));
+        switchShowConsultationHour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(SHOW_CONSULTATION_HOUR, switchShowConsultationHour.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+        switchShowCurrentDayHighlighted.setChecked(mSharedPreferences.getBoolean(SHOW_CURRENT_DAY_HIGHLIGHTED, true));
+        switchShowCurrentDayHighlighted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(SHOW_CURRENT_DAY_HIGHLIGHTED, switchShowCurrentDayHighlighted.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+        switchShowLunch.setChecked(mSharedPreferences.getBoolean(SHOW_LUNCH_IN_SCHEDULE, true));
+        switchShowLunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mEditor.putBoolean(SHOW_LUNCH_IN_SCHEDULE, switchShowLunch.isChecked());
+                mEditor.commit();
+
+            }
+        });
+
+
+
+
+
+
+
+
 
         List<String> colors = new ArrayList<>();
 
