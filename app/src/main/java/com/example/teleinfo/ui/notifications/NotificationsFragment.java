@@ -19,6 +19,8 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.teleinfo.R;
 import com.example.teleinfo.administration.__ActivityMainAdministration;
 import com.example.teleinfo.databinding.FragmentNotificationsBinding;
+import com.example.teleinfo.modules.Apologies_ApologiesMainActivity;
+import com.example.teleinfo.modules.Apologies_ApologiesObject;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenu;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenuSettings;
 import com.example.teleinfo.rozvrh.BottomSheetDialogTeacherCard;
@@ -39,6 +41,9 @@ public class NotificationsFragment extends Fragment {
     CardView card_view_supervision;
     CardView card_view_administration;
     CardView card_view_erasepaire;
+    CardView card_view_apologies;
+
+
 
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
@@ -66,6 +71,10 @@ public class NotificationsFragment extends Fragment {
         card_view_supervision = (CardView)root.findViewById(R.id.card_view_supervision);
         card_view_administration = (CardView)root.findViewById(R.id.card_view_administration);
         card_view_erasepaire = (CardView)root.findViewById(R.id.card_view_erasepaire);
+        card_view_apologies = (CardView)root.findViewById(R.id.card_view_apologies);
+
+
+
 
         mSharedPreferences = getContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
@@ -207,6 +216,25 @@ public class NotificationsFragment extends Fragment {
 
             }
         });
+
+        card_view_apologies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getContext(), Apologies_ApologiesMainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
+
+
+
+
+
 
 
 

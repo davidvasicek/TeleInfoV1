@@ -1,16 +1,20 @@
 package com.example.teleinfo.modules;
 
+import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
 import static com.example.teleinfo.parameters.MainParameters.IS_ONLINE;
+import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -23,6 +27,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.teleinfo.R;
+import com.example.teleinfo.parameters.GetThemeStyle;
 import com.example.teleinfo.parameters.IsOnline;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -59,24 +64,24 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
     private DatabaseReference mDatabaseReference;
     private ChildEventListener listener;
 
-
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences shrPref = getApplication().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        setTheme(new GetThemeStyle().getThemeStyle(shrPref.getString(CURRENT_THEME, "#212121")));
         setContentView(R.layout.apologies_apologies_main_activity);
-
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbardd);
+        setSupportActionBar(toolbar);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        // setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        getSupportActionBar().setTitle(Html.fromHtml("<small>" + "4.C   |   Lenka Glacová" + "</small>"));
+        getSupportActionBar().setTitle(Html.fromHtml("<small>" + "Omluvenky 4.C" + "</small>"));
 
         mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabaseDatabase.getReference("omluvenkyLG") ;
