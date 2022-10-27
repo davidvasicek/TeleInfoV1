@@ -66,7 +66,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, BottomSheetDialogCalendar.DayDateListener {
+public class RozvrhNove1 extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, BottomSheetDialogCalendar.DayDateListener, BottomSheetDialogCalendarWeeks.DayDateListenerWeeks {
 
 
     int velColumn = (int)(190*1); //šířa slpoupce
@@ -360,6 +360,15 @@ String child="";
         dayToShow = 26;
         monthToShow = 10;
         yearToShow = 2022;
+
+        dates = new ArrayList<>();
+
+        dates.add("24_10_2022");
+        dates.add("25_10_2022");
+        dates.add("26_10_2022");
+        dates.add("27_10_2022");
+        dates.add("28_10_2022");
+
 
         mSharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
@@ -1259,14 +1268,6 @@ String child="";
 
 
 
-        dates = new ArrayList<>();
-
-        dates.add("17_10_2022");
-        dates.add("18_10_2022");
-        dates.add("19_10_2022");
-        dates.add("20_10_2022");
-        dates.add("21_10_2022");
-
         columnSize = dates.size();
 
         initViewElement();
@@ -1432,13 +1433,7 @@ String child="";
         getSupportActionBar().setTitle(Html.fromHtml("<small>" + nameOfTeacher.split("_")[0] + " " + nameOfTeacher.split("_")[1] + "</small>"));
 
 
-        dates = new ArrayList<>();
 
-        dates.add("17_10_2022");
-        dates.add("18_10_2022");
-        dates.add("19_10_2022");
-        dates.add("20_10_2022");
-        dates.add("21_10_2022");
 
         columnSize = dates.size();
 
@@ -1665,13 +1660,6 @@ String child="";
 
 
 
-        dates = new ArrayList<>();
-
-        dates.add("17_10_2022");
-        dates.add("18_10_2022");
-        dates.add("19_10_2022");
-        dates.add("20_10_2022");
-        dates.add("21_10_2022");
 
         columnSize = dates.size();
 
@@ -4029,9 +4017,24 @@ s("12:35-12:45")){
                // kkkkkkkkkk.removeAllViews();
                // createTimeTable(dataSnapshot_global);
 
-                BottomSheetDialogCalendar bottomSheetDialogCalendar = new BottomSheetDialogCalendar(dayToShow, monthToShow, yearToShow);
-                bottomSheetDialogCalendar.show(getSupportFragmentManager(), "exampleBottomSheet");
+                //
 
+
+
+
+
+
+                        if(action.contains("daily")){
+
+                            BottomSheetDialogCalendar bottomSheetDialogCalendar = new BottomSheetDialogCalendar(dayToShow, monthToShow, yearToShow);
+                            bottomSheetDialogCalendar.show(getSupportFragmentManager(), "exampleBottomSheet");
+
+                        }else if(action.contains("weekly")){
+
+                            BottomSheetDialogCalendarWeeks bottomSheetDialogCalendarWeeks = new BottomSheetDialogCalendarWeeks();
+                            bottomSheetDialogCalendarWeeks.show(getSupportFragmentManager(), "exampleBottomSheet");
+
+                        }
 
                 return(true);
 
@@ -4087,6 +4090,28 @@ s("12:35-12:45")){
         linearLayoutMain.removeAllViews();
         kkkkkkkkkk.removeAllViews();
         createTimeTable(dataSnapshot_global);
+
+
+
+    }
+
+    @Override
+    public void applyDayDateListenerWeeks(ObjectDatesWeek objectDatesWeek) {
+
+
+        dates = new ArrayList<>();
+
+        dates.add(objectDatesWeek.day1 + "_" + objectDatesWeek.month1 + "_" + objectDatesWeek.year1);
+        dates.add(objectDatesWeek.day2 + "_" + objectDatesWeek.month2 + "_" + objectDatesWeek.year2);
+        dates.add(objectDatesWeek.day3 + "_" + objectDatesWeek.month3 + "_" + objectDatesWeek.year3);
+        dates.add(objectDatesWeek.day4 + "_" + objectDatesWeek.month4 + "_" + objectDatesWeek.year4);
+        dates.add(objectDatesWeek.day5 + "_" + objectDatesWeek.month5 + "_" + objectDatesWeek.year5);
+
+        getSupportActionBar().setTitle(Html.fromHtml("<small>" + objectDatesWeek.weekTitle + "</small>"));
+        linearLayoutMain.removeAllViews();
+        kkkkkkkkkk.removeAllViews();
+        createTimeTable(dataSnapshot_global);
+
 
 
 

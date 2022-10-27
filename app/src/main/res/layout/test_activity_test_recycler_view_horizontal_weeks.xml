@@ -56,7 +56,7 @@
             >
 
             <TextView
-                android:id="@+id/textviewllgfl"
+                android:id="@+id/aaaaaaaaaaTextViewPreviousWeekTitle"
                 android:gravity="center_horizontal"
                 android:textSize="8dp"
                 android:layout_width="match_parent"
@@ -72,7 +72,8 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/unselected_date">
+                android:background="@drawable/unselected_date"
+                android:id="@+id/aaaaaaaaaaLinearLayoutPreviousWeek">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -81,7 +82,7 @@
                     android:layout_weight="1">
 
                         <TextView
-                            android:id="@+id/textviewlll"
+                            android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateFromTheNameOfTheDayOfTheWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
@@ -95,7 +96,7 @@
 
 
                     <TextView
-                        android:id="@+id/textview"
+                        android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateFromDay"
                         android:gravity="center"
                         android:layout_marginBottom="4dp"
                         android:textSize="20dp"
@@ -107,7 +108,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/textviehwaa"
+                        android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateFromMonth"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -119,7 +120,7 @@
 
 
                     <TextView
-                        android:id="@+id/textviewaa"
+                        android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateFromYear"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -162,7 +163,7 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/textviewllffl"
+                        android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateToTheNameOfTheDayOfTheWeek"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -174,7 +175,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/textvieffcvbw"
+                        android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateToDay"
                         android:gravity="center"
                         android:layout_marginBottom="4dp"
                         android:textSize="20dp"
@@ -186,7 +187,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/textviehwffaa"
+                        android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateToMonth"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -198,7 +199,7 @@
 
 
                     <TextView
-                        android:id="@+id/textviewaffa"
+                        android:id="@+id/aaaaaaaaaaTextViewPreviousWeekDateToYear"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -227,7 +228,7 @@
             >
 
             <TextView
-                android:id="@+id/textviewllgdffl"
+                android:id="@+id/aaaaaaaaaaTextViewActualWeekTitle"
                 android:gravity="center_horizontal"
                 android:textSize="8dp"
                 android:layout_width="match_parent"
@@ -245,6 +246,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selected_date"
+                android:id="@+id/aaaaaaaaaaLinearLayoutActualWeek"
+
                 >
 
                 <LinearLayout
@@ -254,7 +257,7 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/textviewlfgfll"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateFromTheNameOfTheDayOfTheWeek"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -268,7 +271,7 @@
 
 
                     <TextView
-                        android:id="@+id/textvifgfew"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateFromDay"
                         android:gravity="center"
                         android:layout_marginBottom="4dp"
                         android:textSize="20dp"
@@ -280,7 +283,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/textviefgfghwaa"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateFromMonth"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -292,7 +295,7 @@
 
 
                     <TextView
-                        android:id="@+id/textviewfgfaa"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateFromYear"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -335,7 +338,7 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/textviewllfgffl"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateToTheNameOfTheDayOfTheWeek"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -347,7 +350,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/textvieffw"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateToDay"
                         android:gravity="center"
                         android:layout_marginBottom="4dp"
                         android:textSize="20dp"
@@ -359,7 +362,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/textviehwdfgffaa"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateToMonth"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -371,7 +374,7 @@
 
 
                     <TextView
-                        android:id="@+id/textviedfgwaffa"
+                        android:id="@+id/aaaaaaaaaaTextViewActualWeekDateToYear"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -400,7 +403,7 @@
             >
 
             <TextView
-                android:id="@+id/textvxcdiewllgdffl"
+                android:id="@+id/aaaaaaaaaaTextViewNextWeekTitle"
                 android:gravity="center_horizontal"
                 android:textSize="8dp"
                 android:layout_width="match_parent"
@@ -417,7 +420,8 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/unselected_date">
+                android:background="@drawable/unselected_date"
+                android:id="@+id/aaaaaaaaaaLinearLayoutNextWeek">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -426,7 +430,7 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/textvdgdiewlll"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateFromTheNameOfTheDayOfTheWeek"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -440,7 +444,7 @@
 
 
                     <TextView
-                        android:id="@+id/textdgdfview"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateFromDay"
                         android:gravity="center"
                         android:layout_marginBottom="4dp"
                         android:textSize="20dp"
@@ -452,7 +456,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/textvidfgdehwaa"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateFromMonth"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -464,7 +468,7 @@
 
 
                     <TextView
-                        android:id="@+id/textviewdfgaa"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateFromYear"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -507,7 +511,7 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/textviedgwllffl"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateToTheNameOfTheDayOfTheWeek"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -519,7 +523,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/textvidgfeffw"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateToDay"
                         android:gravity="center"
                         android:layout_marginBottom="4dp"
                         android:textSize="20dp"
@@ -531,7 +535,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/textviehwffdgaa"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateToMonth"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"
@@ -543,7 +547,7 @@
 
 
                     <TextView
-                        android:id="@+id/textvidgewaffa"
+                        android:id="@+id/aaaaaaaaaaTextViewNextWeekDateToYear"
                         android:gravity="center_horizontal"
 
                         android:textSize="11dp"

@@ -43,6 +43,45 @@ public class BottomSheetDialogCalendarWeeks extends BottomSheetDialogFragment {
 
     int selectedPosition;
 
+
+
+    TextView textViewPreviousWeekTitle;
+    TextView textViewPreviousWeekDateFromTheNameOfTheDayOfTheWeek;
+    TextView textViewPreviousWeekDateFromDay;
+    TextView textViewPreviousWeekDateFromMonth;
+    TextView textViewPreviousWeekDateFromYear;
+    TextView textViewPreviousWeekDateToTheNameOfTheDayOfTheWeek;
+    TextView textViewPreviousWeekDateToDay;
+    TextView textViewPreviousWeekDateToMonth;
+    TextView textViewPreviousWeekDateToYear;
+    TextView textViewActualWeekTitle;
+    TextView textViewActualWeekDateFromTheNameOfTheDayOfTheWeek;
+    TextView textViewActualWeekDateFromDay;
+    TextView textViewActualWeekDateFromMonth;
+    TextView textViewActualWeekDateFromYear;
+    TextView textViewActualWeekDateToTheNameOfTheDayOfTheWeek;
+    TextView textViewActualWeekDateToDay;
+    TextView textViewActualWeekDateToMonth;
+    TextView textViewActualWeekDateToYear;
+    TextView textViewNextWeekTitle;
+    TextView textViewNextWeekDateFromTheNameOfTheDayOfTheWeek;
+    TextView textViewNextWeekDateFromDay;
+    TextView textViewNextWeekDateFromMonth;
+    TextView textViewNextWeekDateFromYear;
+    TextView textViewNextWeekDateToTheNameOfTheDayOfTheWeek;
+    TextView textViewNextWeekDateToDay;
+    TextView textViewNextWeekDateToMonth;
+    TextView textViewNextWeekDateToYear;
+    LinearLayout linearLayoutPreviousWeek;
+    LinearLayout linearLayoutActualWeek;
+    LinearLayout linearLayoutNextWeek;
+
+
+    
+    
+    
+    
+
     public BottomSheetDialogCalendarWeeks() {
 
 
@@ -78,7 +117,7 @@ public class BottomSheetDialogCalendarWeeks extends BottomSheetDialogFragment {
     }
 
     public interface DayDateListenerWeeks {
-        void applyDayDateListener(int day, int month, int year);
+        void applyDayDateListenerWeeks(ObjectDatesWeek objectDatesWeek);
     }
 
 
@@ -96,8 +135,185 @@ public class BottomSheetDialogCalendarWeeks extends BottomSheetDialogFragment {
         View contentView = View.inflate(getContext(), R.layout.test_activity_test_recycler_view_horizontal_weeks, null);
         dialog.setContentView(contentView);
 
+        textViewPreviousWeekTitle = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekTitle);
+        textViewPreviousWeekDateFromTheNameOfTheDayOfTheWeek = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateFromTheNameOfTheDayOfTheWeek);
+        textViewPreviousWeekDateFromDay = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateFromDay);
+        textViewPreviousWeekDateFromMonth = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateFromMonth);
+        textViewPreviousWeekDateFromYear = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateFromYear);
+        textViewPreviousWeekDateToTheNameOfTheDayOfTheWeek = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateToTheNameOfTheDayOfTheWeek);
+        textViewPreviousWeekDateToDay = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateToDay);
+        textViewPreviousWeekDateToMonth = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateToMonth);
+        textViewPreviousWeekDateToYear = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewPreviousWeekDateToYear);
+        textViewActualWeekTitle = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekTitle);
+        textViewActualWeekDateFromTheNameOfTheDayOfTheWeek = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateFromTheNameOfTheDayOfTheWeek);
+        textViewActualWeekDateFromDay = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateFromDay);
+        textViewActualWeekDateFromMonth = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateFromMonth);
+        textViewActualWeekDateFromYear = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateFromYear);
+        textViewActualWeekDateToTheNameOfTheDayOfTheWeek = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateToTheNameOfTheDayOfTheWeek);
+        textViewActualWeekDateToDay = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateToDay);
+        textViewActualWeekDateToMonth = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateToMonth);
+        textViewActualWeekDateToYear = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewActualWeekDateToYear);
+        textViewNextWeekTitle = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekTitle);
+        textViewNextWeekDateFromTheNameOfTheDayOfTheWeek = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateFromTheNameOfTheDayOfTheWeek);
+        textViewNextWeekDateFromDay = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateFromDay);
+        textViewNextWeekDateFromMonth = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateFromMonth);
+        textViewNextWeekDateFromYear = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateFromYear);
+        textViewNextWeekDateToTheNameOfTheDayOfTheWeek = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateToTheNameOfTheDayOfTheWeek);
+        textViewNextWeekDateToDay = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateToDay);
+        textViewNextWeekDateToMonth = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateToMonth);
+        textViewNextWeekDateToYear = (TextView)contentView.findViewById(R.id.aaaaaaaaaaTextViewNextWeekDateToYear);
+        linearLayoutPreviousWeek = (LinearLayout)contentView.findViewById(R.id.aaaaaaaaaaLinearLayoutPreviousWeek);
+        linearLayoutActualWeek = (LinearLayout)contentView.findViewById(R.id.aaaaaaaaaaLinearLayoutActualWeek);
+        linearLayoutNextWeek = (LinearLayout)contentView.findViewById(R.id.aaaaaaaaaaLinearLayoutNextWeek);
+
 
         AddItemsToRecyclerViewArrayList();
+
+
+        ObjectDatesWeek objectDatesWeek1 = new ObjectDatesWeek();
+        objectDatesWeek1.day1 = 17;
+        objectDatesWeek1.month1 = 10;
+        objectDatesWeek1.year1 = 2022;
+        objectDatesWeek1.dayOfTheWeek1 = 1;
+        objectDatesWeek1.day2 = 18;
+        objectDatesWeek1.month2 = 10;
+        objectDatesWeek1.year2 = 2022;
+        objectDatesWeek1.dayOfTheWeek2 = 2;
+        objectDatesWeek1.day3 = 19;
+        objectDatesWeek1.month3 = 10;
+        objectDatesWeek1.year3 = 2022;
+        objectDatesWeek1.dayOfTheWeek3 = 3;
+        objectDatesWeek1.day4 = 20;
+        objectDatesWeek1.month4 = 10;
+        objectDatesWeek1.year4 = 2022;
+        objectDatesWeek1.dayOfTheWeek4 = 4;
+        objectDatesWeek1.day5 = 21;
+        objectDatesWeek1.month5 = 10;
+        objectDatesWeek1.year5 = 2022;
+        objectDatesWeek1.dayOfTheWeek5 = 5;
+        objectDatesWeek1.theNameOfTheDayOfTheWeek1 = "Pondělí";
+        objectDatesWeek1.shortTheNameOfTheDayOfTheWeek1 = "Po";
+        objectDatesWeek1.theNameOfTheDayOfTheWeek2 = "Úterý";
+        objectDatesWeek1.shortTheNameOfTheDayOfTheWeek2 = "Út";
+        objectDatesWeek1.theNameOfTheDayOfTheWeek3 = "Středa";
+        objectDatesWeek1.shortTheNameOfTheDayOfTheWeek3 = "St";
+        objectDatesWeek1.theNameOfTheDayOfTheWeek4 = "Čtvrtek";
+        objectDatesWeek1.shortTheNameOfTheDayOfTheWeek4 = "Čt";
+        objectDatesWeek1.theNameOfTheDayOfTheWeek5 = "Pátek";
+        objectDatesWeek1.shortTheNameOfTheDayOfTheWeek5 = "Pá";
+        objectDatesWeek1.weekTitle= "Předchozí týden";
+
+
+
+
+        ObjectDatesWeek objectDatesWeek2 = new ObjectDatesWeek();
+        objectDatesWeek2.day1 = 24;
+        objectDatesWeek2.month1 = 10;
+        objectDatesWeek2.year1 = 2022;
+        objectDatesWeek2.dayOfTheWeek1 = 1;
+        objectDatesWeek2.day2 = 25;
+        objectDatesWeek2.month2 = 10;
+        objectDatesWeek2.year2 = 2022;
+        objectDatesWeek2.dayOfTheWeek2 = 2;
+        objectDatesWeek2.day3 = 26;
+        objectDatesWeek2.month3 = 10;
+        objectDatesWeek2.year3 = 2022;
+        objectDatesWeek2.dayOfTheWeek3 = 3;
+        objectDatesWeek2.day4 = 27;
+        objectDatesWeek2.month4 = 10;
+        objectDatesWeek2.year4 = 2022;
+        objectDatesWeek2.dayOfTheWeek4 = 4;
+        objectDatesWeek2.day5 = 28;
+        objectDatesWeek2.month5 = 10;
+        objectDatesWeek2.year5 = 2022;
+        objectDatesWeek2.dayOfTheWeek5 = 5;
+        objectDatesWeek2.theNameOfTheDayOfTheWeek1 = "Pondělí";
+        objectDatesWeek2.shortTheNameOfTheDayOfTheWeek1 = "Po";
+        objectDatesWeek2.theNameOfTheDayOfTheWeek2 = "Úterý";
+        objectDatesWeek2.shortTheNameOfTheDayOfTheWeek2 = "Út";
+        objectDatesWeek2.theNameOfTheDayOfTheWeek3 = "Středa";
+        objectDatesWeek2.shortTheNameOfTheDayOfTheWeek3 = "St";
+        objectDatesWeek2.theNameOfTheDayOfTheWeek4 = "Čtvrtek";
+        objectDatesWeek2.shortTheNameOfTheDayOfTheWeek4 = "Čt";
+        objectDatesWeek2.theNameOfTheDayOfTheWeek5 = "Pátek";
+        objectDatesWeek2.shortTheNameOfTheDayOfTheWeek5 = "Pá";
+        objectDatesWeek2.weekTitle= "Aktuální týden";
+
+
+
+        ObjectDatesWeek objectDatesWeek3 = new ObjectDatesWeek();
+        objectDatesWeek3.day1 = 31;
+        objectDatesWeek3.month1 = 10;
+        objectDatesWeek3.year1 = 2022;
+        objectDatesWeek3.dayOfTheWeek1 = 1;
+        objectDatesWeek3.day2 = 1;
+        objectDatesWeek3.month2 = 11;
+        objectDatesWeek3.year2 = 2022;
+        objectDatesWeek3.dayOfTheWeek2 = 2;
+        objectDatesWeek3.day3 = 2;
+        objectDatesWeek3.month3 = 11;
+        objectDatesWeek3.year3 = 2022;
+        objectDatesWeek3.dayOfTheWeek3 = 3;
+        objectDatesWeek3.day4 = 3;
+        objectDatesWeek3.month4 = 11;
+        objectDatesWeek3.year4 = 2022;
+        objectDatesWeek3.dayOfTheWeek4 = 4;
+        objectDatesWeek3.day5 = 4;
+        objectDatesWeek3.month5 = 11;
+        objectDatesWeek3.year5 = 2022;
+        objectDatesWeek3.dayOfTheWeek5 = 5;
+        objectDatesWeek3.theNameOfTheDayOfTheWeek1 = "Pondělí";
+        objectDatesWeek3.shortTheNameOfTheDayOfTheWeek1 = "Po";
+        objectDatesWeek3.theNameOfTheDayOfTheWeek2 = "Úterý";
+        objectDatesWeek3.shortTheNameOfTheDayOfTheWeek2 = "Út";
+        objectDatesWeek3.theNameOfTheDayOfTheWeek3 = "Středa";
+        objectDatesWeek3.shortTheNameOfTheDayOfTheWeek3 = "St";
+        objectDatesWeek3.theNameOfTheDayOfTheWeek4 = "Čtvrtek";
+        objectDatesWeek3.shortTheNameOfTheDayOfTheWeek4 = "Čt";
+        objectDatesWeek3.theNameOfTheDayOfTheWeek5 = "Pátek";
+        objectDatesWeek3.shortTheNameOfTheDayOfTheWeek5 = "Pá";
+        objectDatesWeek3.weekTitle= "Příští týden";
+
+
+
+
+        textViewPreviousWeekTitle.setText(objectDatesWeek1.weekTitle);
+        textViewPreviousWeekDateFromTheNameOfTheDayOfTheWeek.setText(objectDatesWeek1.theNameOfTheDayOfTheWeek5);
+        textViewPreviousWeekDateFromDay.setText(objectDatesWeek1.day1 + "");
+        textViewPreviousWeekDateFromMonth.setText(objectDatesWeek1.month1 + "");
+        textViewPreviousWeekDateFromYear.setText(objectDatesWeek1.year1 + "");
+        textViewPreviousWeekDateToTheNameOfTheDayOfTheWeek.setText(objectDatesWeek1.theNameOfTheDayOfTheWeek1);
+        textViewPreviousWeekDateToDay.setText(objectDatesWeek1.day5 + "");
+        textViewPreviousWeekDateToMonth.setText(objectDatesWeek1.month5 + "");
+        textViewPreviousWeekDateToYear.setText(objectDatesWeek1.year5 + "");
+
+
+        textViewActualWeekTitle.setText(objectDatesWeek2.weekTitle);
+        textViewActualWeekDateFromTheNameOfTheDayOfTheWeek.setText(objectDatesWeek2.theNameOfTheDayOfTheWeek5);
+        textViewActualWeekDateFromDay.setText(objectDatesWeek2.day1 + "");
+        textViewActualWeekDateFromMonth.setText(objectDatesWeek2.month1 + "");
+        textViewActualWeekDateFromYear.setText(objectDatesWeek2.year1 + "");
+        textViewActualWeekDateToTheNameOfTheDayOfTheWeek.setText(objectDatesWeek2.theNameOfTheDayOfTheWeek1);
+        textViewActualWeekDateToDay.setText(objectDatesWeek2.day5 + "");
+        textViewActualWeekDateToMonth.setText(objectDatesWeek2.month5 + "");
+        textViewActualWeekDateToYear.setText(objectDatesWeek2.year5 + "");
+
+
+
+        textViewNextWeekTitle.setText(objectDatesWeek3.weekTitle);
+        textViewNextWeekDateFromTheNameOfTheDayOfTheWeek.setText(objectDatesWeek3.theNameOfTheDayOfTheWeek5);
+        textViewNextWeekDateFromDay.setText(objectDatesWeek3.day1 + "");
+        textViewNextWeekDateFromMonth.setText(objectDatesWeek3.month1 + "");
+        textViewNextWeekDateFromYear.setText(objectDatesWeek3.year1 + "");
+        textViewNextWeekDateToTheNameOfTheDayOfTheWeek.setText(objectDatesWeek3.theNameOfTheDayOfTheWeek1);
+        textViewNextWeekDateToDay.setText(objectDatesWeek3.day5 + "");
+        textViewNextWeekDateToMonth.setText(objectDatesWeek3.month5 + "");
+        textViewNextWeekDateToYear.setText(objectDatesWeek3.year5 + "");
+
+
+
+
+
 
         for(int i = 0; i<source.size(); i++){
 
@@ -112,6 +328,55 @@ public class BottomSheetDialogCalendarWeeks extends BottomSheetDialogFragment {
 
             }
         }
+
+
+
+        linearLayoutPreviousWeek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                linearLayoutPreviousWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+                linearLayoutActualWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+                linearLayoutNextWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+
+                linearLayoutPreviousWeek.setBackground(getContext().getResources().getDrawable(R.drawable.selected_date));
+                linearLayoutPreviousWeek.getBackground().setColorFilter(Color.parseColor("#42A5F5"), PorterDuff.Mode.SRC_ATOP);
+
+
+                dayDateListenerWeeks.applyDayDateListenerWeeks(objectDatesWeek1);
+            }
+        });
+
+        linearLayoutActualWeek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                linearLayoutPreviousWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+                linearLayoutActualWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+                linearLayoutNextWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+
+                linearLayoutActualWeek.setBackground(getContext().getResources().getDrawable(R.drawable.selected_date));
+                linearLayoutActualWeek.getBackground().setColorFilter(Color.parseColor("#42A5F5"), PorterDuff.Mode.SRC_ATOP);
+
+                dayDateListenerWeeks.applyDayDateListenerWeeks(objectDatesWeek2);
+            }
+        });
+
+        linearLayoutNextWeek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                linearLayoutPreviousWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+                linearLayoutActualWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+                linearLayoutNextWeek.setBackground(getContext().getResources().getDrawable(R.drawable.unselected_date));
+
+                linearLayoutNextWeek.setBackground(getContext().getResources().getDrawable(R.drawable.selected_date));
+                linearLayoutNextWeek.getBackground().setColorFilter(Color.parseColor("#42A5F5"), PorterDuff.Mode.SRC_ATOP);
+
+                dayDateListenerWeeks.applyDayDateListenerWeeks(objectDatesWeek3);
+
+            }
+        });
 
 
 

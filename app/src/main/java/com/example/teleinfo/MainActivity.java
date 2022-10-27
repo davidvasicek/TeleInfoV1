@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
 
-        BottomSheetDialogCalendarWeeks bottomSheetDialogCalendarWeeks = new BottomSheetDialogCalendarWeeks();
-        bottomSheetDialogCalendarWeeks.show(getSupportFragmentManager(), "exampleBottomSheet");
+        //BottomSheetDialogCalendarWeeks bottomSheetDialogCalendarWeeks = new BottomSheetDialogCalendarWeeks();
+       // bottomSheetDialogCalendarWeeks.show(getSupportFragmentManager(), "exampleBottomSheet");
 
         // Intent intent = new Intent(getApplicationContext(), _ActivityMainLogin.class);
        // startActivity(intent);

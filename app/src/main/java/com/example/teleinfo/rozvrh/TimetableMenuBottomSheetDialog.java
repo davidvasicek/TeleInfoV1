@@ -119,22 +119,6 @@ public class TimetableMenuBottomSheetDialog extends BottomSheetDialogFragment im
 
 
 */
-        DatePickerTimeline datePickerTimeline = contentView.findViewById(R.id.datePickerTimeline);
-
-        // Set a Start date (Default, 1 Jan 1970)
-        datePickerTimeline.setInitialDate(2022, 8, 21);
-        //datePickerTimeline.
-        //datePickerTimeline.set
-
-        //datePickerTimeline.setDat(2022, 10, 16);
-
-        // Set a date Selected Listener
-        datePickerTimeline.setOnDateSelectedListener(new OnDateSelectedListener() {
-            @Override
-            public void onDateSelected(int year, int month, int day, int dayOfWeek) {
-                //Do Something
-            }
-        });
 
         card_viewColumnHeader = (CardView)contentView.findViewById(R.id.card_viewColumnHeader);
         card_viewRowHeaderHour = (CardView)contentView.findViewById(R.id.card_viewRowHeaderHour);
