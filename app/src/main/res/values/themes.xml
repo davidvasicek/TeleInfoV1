@@ -2,16 +2,16 @@
     <!-- Base application theme. -->
     <style name="Theme.TeleInfo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+            <item name="colorPrimary">@color/red700colorAccent</item>
+            <item name="colorPrimaryVariant">@color/red700colorAccent</item>
+            <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+            <item name="colorSecondary">@color/red700colorAccent</item>
+            <item name="colorSecondaryVariant">@color/red700colorAccent</item>
+            <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+            <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -25,12 +25,12 @@
 
     <style name="AppBottomSheetDialogTheme"
         parent="Theme.Design.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+            <item name="bottomSheetStyle">@style/AppModalStyle</item>
     </style>
 
     <style name="AppModalStyle"
         parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/rounded_corner_bottom_sheet_dialog</item>
+            <item name="android:background">@drawable/rounded_corner_bottom_sheet_dialog</item>
     </style>
 
 
@@ -41,588 +41,3511 @@
 
 
     <style name="Theme.App.red500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/red500text_primary</item>
-        <item name="colorPrimaryDark">@color/red500text_primaryDark</item>
-        <item name="colorAccent">@color/red500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/red500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/red500colorPrimaryDark</item>
+            <item name="colorAccent">@color/red500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.red700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/red700text_primary</item>
-        <item name="colorPrimaryDark">@color/red700text_primaryDark</item>
-        <item name="colorAccent">@color/red700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/red700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/red700colorPrimaryDark</item>
+            <item name="colorAccent">@color/red700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.red900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/red900text_primary</item>
-        <item name="colorPrimaryDark">@color/red900text_primaryDark</item>
-        <item name="colorAccent">@color/red900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/red900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/red900colorPrimaryDark</item>
+            <item name="colorAccent">@color/red900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.pink500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/pink500text_primary</item>
-        <item name="colorPrimaryDark">@color/pink500text_primaryDark</item>
-        <item name="colorAccent">@color/pink500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/pink500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/pink500colorPrimaryDark</item>
+            <item name="colorAccent">@color/pink500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.pink700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/pink700text_primary</item>
-        <item name="colorPrimaryDark">@color/pink700text_primaryDark</item>
-        <item name="colorAccent">@color/pink700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/pink700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/pink700colorPrimaryDark</item>
+            <item name="colorAccent">@color/pink700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.pink900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/pink900text_primary</item>
-        <item name="colorPrimaryDark">@color/pink900text_primaryDark</item>
-        <item name="colorAccent">@color/pink900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/pink900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/pink900colorPrimaryDark</item>
+            <item name="colorAccent">@color/pink900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.purple500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/purple500text_primary</item>
-        <item name="colorPrimaryDark">@color/purple500text_primaryDark</item>
-        <item name="colorAccent">@color/purple500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/purple500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/purple500colorPrimaryDark</item>
+            <item name="colorAccent">@color/purple500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.purple700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/purple700text_primary</item>
-        <item name="colorPrimaryDark">@color/purple700text_primaryDark</item>
-        <item name="colorAccent">@color/purple700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/purple700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/purple700colorPrimaryDark</item>
+            <item name="colorAccent">@color/purple700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.purple900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/purple900text_primary</item>
-        <item name="colorPrimaryDark">@color/purple900text_primaryDark</item>
-        <item name="colorAccent">@color/purple900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/purple900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/purple900colorPrimaryDark</item>
+            <item name="colorAccent">@color/purple900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.deepPurple500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/deepPurple500text_primary</item>
-        <item name="colorPrimaryDark">@color/deepPurple500text_primaryDark</item>
-        <item name="colorAccent">@color/deepPurple500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/deepPurple500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/deepPurple500colorPrimaryDark</item>
+            <item name="colorAccent">@color/deepPurple500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.deepPurple700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/deepPurple700text_primary</item>
-        <item name="colorPrimaryDark">@color/deepPurple700text_primaryDark</item>
-        <item name="colorAccent">@color/deepPurple700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/deepPurple700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/deepPurple700colorPrimaryDark</item>
+            <item name="colorAccent">@color/deepPurple700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.deepPurple900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/deepPurple900text_primary</item>
-        <item name="colorPrimaryDark">@color/deepPurple900text_primaryDark</item>
-        <item name="colorAccent">@color/deepPurple900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/deepPurple900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/deepPurple900colorPrimaryDark</item>
+            <item name="colorAccent">@color/deepPurple900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.indigo500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/indigo500text_primary</item>
-        <item name="colorPrimaryDark">@color/indigo500text_primaryDark</item>
-        <item name="colorAccent">@color/indigo500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/indigo500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/indigo500colorPrimaryDark</item>
+            <item name="colorAccent">@color/indigo500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.indigo700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/indigo700text_primary</item>
-        <item name="colorPrimaryDark">@color/indigo700text_primaryDark</item>
-        <item name="colorAccent">@color/indigo700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/indigo700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/indigo700colorPrimaryDark</item>
+            <item name="colorAccent">@color/indigo700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.indigo900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/indigo900text_primary</item>
-        <item name="colorPrimaryDark">@color/indigo900text_primaryDark</item>
-        <item name="colorAccent">@color/indigo900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/indigo900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/indigo900colorPrimaryDark</item>
+            <item name="colorAccent">@color/indigo900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.blue500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/blue500text_primary</item>
-        <item name="colorPrimaryDark">@color/blue500text_primaryDark</item>
-        <item name="colorAccent">@color/blue500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/blue500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/blue500colorPrimaryDark</item>
+            <item name="colorAccent">@color/blue500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.blue700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/blue700text_primary</item>
-        <item name="colorPrimaryDark">@color/blue700text_primaryDark</item>
-        <item name="colorAccent">@color/blue700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/blue700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/blue700colorPrimaryDark</item>
+            <item name="colorAccent">@color/blue700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.blue900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/blue900text_primary</item>
-        <item name="colorPrimaryDark">@color/blue900text_primaryDark</item>
-        <item name="colorAccent">@color/blue900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/blue900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/blue900colorPrimaryDark</item>
+            <item name="colorAccent">@color/blue900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.lightBlue500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/lightBlue500text_primary</item>
-        <item name="colorPrimaryDark">@color/lightBlue500text_primaryDark</item>
-        <item name="colorAccent">@color/lightBlue500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/lightBlue500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/lightBlue500colorPrimaryDark</item>
+            <item name="colorAccent">@color/lightBlue500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.lightBlue700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/lightBlue700text_primary</item>
-        <item name="colorPrimaryDark">@color/lightBlue700text_primaryDark</item>
-        <item name="colorAccent">@color/lightBlue700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/lightBlue700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/lightBlue700colorPrimaryDark</item>
+            <item name="colorAccent">@color/lightBlue700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.lightBlue900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/lightBlue900text_primary</item>
-        <item name="colorPrimaryDark">@color/lightBlue900text_primaryDark</item>
-        <item name="colorAccent">@color/lightBlue900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/lightBlue900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/lightBlue900colorPrimaryDark</item>
+            <item name="colorAccent">@color/lightBlue900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.cyan500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/cyan500text_primary</item>
-        <item name="colorPrimaryDark">@color/cyan500text_primaryDark</item>
-        <item name="colorAccent">@color/cyan500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/cyan500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/cyan500colorPrimaryDark</item>
+            <item name="colorAccent">@color/cyan500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.cyan700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/cyan700text_primary</item>
-        <item name="colorPrimaryDark">@color/cyan700text_primaryDark</item>
-        <item name="colorAccent">@color/cyan700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/cyan700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/cyan700colorPrimaryDark</item>
+            <item name="colorAccent">@color/cyan700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.cyan900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/cyan900text_primary</item>
-        <item name="colorPrimaryDark">@color/cyan900text_primaryDark</item>
-        <item name="colorAccent">@color/cyan900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/cyan900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/cyan900colorPrimaryDark</item>
+            <item name="colorAccent">@color/cyan900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.teal500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/teal500text_primary</item>
-        <item name="colorPrimaryDark">@color/teal500text_primaryDark</item>
-        <item name="colorAccent">@color/teal500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/teal500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/teal500colorPrimaryDark</item>
+            <item name="colorAccent">@color/teal500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.teal700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/teal700text_primary</item>
-        <item name="colorPrimaryDark">@color/teal700text_primaryDark</item>
-        <item name="colorAccent">@color/teal700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/teal700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/teal700colorPrimaryDark</item>
+            <item name="colorAccent">@color/teal700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.teal900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/teal900text_primary</item>
-        <item name="colorPrimaryDark">@color/teal900text_primaryDark</item>
-        <item name="colorAccent">@color/teal900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/teal900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/teal900colorPrimaryDark</item>
+            <item name="colorAccent">@color/teal900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.green500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/green500text_primary</item>
-        <item name="colorPrimaryDark">@color/green500text_primaryDark</item>
-        <item name="colorAccent">@color/green500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/green500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/green500colorPrimaryDark</item>
+            <item name="colorAccent">@color/green500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.green700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/green700text_primary</item>
-        <item name="colorPrimaryDark">@color/green700text_primaryDark</item>
-        <item name="colorAccent">@color/green700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/green700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/green700colorPrimaryDark</item>
+            <item name="colorAccent">@color/green700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.green900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/green900text_primary</item>
-        <item name="colorPrimaryDark">@color/green900text_primaryDark</item>
-        <item name="colorAccent">@color/green900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/green900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/green900colorPrimaryDark</item>
+            <item name="colorAccent">@color/green900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.light500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/light500text_primary</item>
-        <item name="colorPrimaryDark">@color/light500text_primaryDark</item>
-        <item name="colorAccent">@color/light500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/light500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/light500colorPrimaryDark</item>
+            <item name="colorAccent">@color/light500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.light700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/light700text_primary</item>
-        <item name="colorPrimaryDark">@color/light700text_primaryDark</item>
-        <item name="colorAccent">@color/light700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/light700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/light700colorPrimaryDark</item>
+            <item name="colorAccent">@color/light700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.light900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/light900text_primary</item>
-        <item name="colorPrimaryDark">@color/light900text_primaryDark</item>
-        <item name="colorAccent">@color/light900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/light900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/light900colorPrimaryDark</item>
+            <item name="colorAccent">@color/light900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.lime500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/lime500text_primary</item>
-        <item name="colorPrimaryDark">@color/lime500text_primaryDark</item>
-        <item name="colorAccent">@color/lime500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/lime500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/lime500colorPrimaryDark</item>
+            <item name="colorAccent">@color/lime500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.lime700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/lime700text_primary</item>
-        <item name="colorPrimaryDark">@color/lime700text_primaryDark</item>
-        <item name="colorAccent">@color/lime700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/lime700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/lime700colorPrimaryDark</item>
+            <item name="colorAccent">@color/lime700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.lime900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/lime900text_primary</item>
-        <item name="colorPrimaryDark">@color/lime900text_primaryDark</item>
-        <item name="colorAccent">@color/lime900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/lime900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/lime900colorPrimaryDark</item>
+            <item name="colorAccent">@color/lime900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
-    <style name="Theme.App.yellow500" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-
-        <item name="colorPrimary">@color/yellow500text_primary</item>
-        <item name="colorPrimaryDark">@color/yellow500text_primaryDark</item>
-        <item name="colorAccent">@color/yellow500colorAccent</item>
-        <item name="colorPrimaryVariant">@color/yellow500text_primaryDark</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/yellow500text_primaryDark</item>
-        <item name="colorSecondaryVariant">@color/yellow500text_primaryDark</item>
-        <item name="colorOnSecondary">@color/black</item>
-
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
-
-
-
+    <style name="Theme.App.yellow500" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+            <item name="colorPrimary">@color/yellow500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/yellow500colorPrimaryDark</item>
+            <item name="colorAccent">@color/yellow500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
-
-
-
-
 
     <style name="Theme.App.yellow700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/yellow700text_primary</item>
-        <item name="colorPrimaryDark">@color/yellow700text_primaryDark</item>
-        <item name="colorAccent">@color/yellow700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/yellow700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/yellow700colorPrimaryDark</item>
+            <item name="colorAccent">@color/yellow700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.yellow900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/yellow900text_primary</item>
-        <item name="colorPrimaryDark">@color/yellow900text_primaryDark</item>
-        <item name="colorAccent">@color/yellow900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/yellow900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/yellow900colorPrimaryDark</item>
+            <item name="colorAccent">@color/yellow900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.amber500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/amber500text_primary</item>
-        <item name="colorPrimaryDark">@color/amber500text_primaryDark</item>
-        <item name="colorAccent">@color/amber500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/amber500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/amber500colorPrimaryDark</item>
+            <item name="colorAccent">@color/amber500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.amber700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/amber700text_primary</item>
-        <item name="colorPrimaryDark">@color/amber700text_primaryDark</item>
-        <item name="colorAccent">@color/amber700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/amber700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/amber700colorPrimaryDark</item>
+            <item name="colorAccent">@color/amber700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.amber900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/amber900text_primary</item>
-        <item name="colorPrimaryDark">@color/amber900text_primaryDark</item>
-        <item name="colorAccent">@color/amber900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/amber900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/amber900colorPrimaryDark</item>
+            <item name="colorAccent">@color/amber900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.orange500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/orange500text_primary</item>
-        <item name="colorPrimaryDark">@color/orange500text_primaryDark</item>
-        <item name="colorAccent">@color/orange500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/orange500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/orange500colorPrimaryDark</item>
+            <item name="colorAccent">@color/orange500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.orange700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/orange700text_primary</item>
-        <item name="colorPrimaryDark">@color/orange700text_primaryDark</item>
-        <item name="colorAccent">@color/orange700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/orange700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/orange700colorPrimaryDark</item>
+            <item name="colorAccent">@color/orange700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.orange900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/orange900text_primary</item>
-        <item name="colorPrimaryDark">@color/orange900text_primaryDark</item>
-        <item name="colorAccent">@color/orange900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/orange900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/orange900colorPrimaryDark</item>
+            <item name="colorAccent">@color/orange900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.deepOrange500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/deepOrange500text_primary</item>
-        <item name="colorPrimaryDark">@color/deepOrange500text_primaryDark</item>
-        <item name="colorAccent">@color/deepOrange500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/deepOrange500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/deepOrange500colorPrimaryDark</item>
+            <item name="colorAccent">@color/deepOrange500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.deepOrange700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/deepOrange700text_primary</item>
-        <item name="colorPrimaryDark">@color/deepOrange700text_primaryDark</item>
-        <item name="colorAccent">@color/deepOrange700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/deepOrange700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/deepOrange700colorPrimaryDark</item>
+            <item name="colorAccent">@color/deepOrange700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.deepOrange900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/deepOrange900text_primary</item>
-        <item name="colorPrimaryDark">@color/deepOrange900text_primaryDark</item>
-        <item name="colorAccent">@color/deepOrange900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/deepOrange900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/deepOrange900colorPrimaryDark</item>
+            <item name="colorAccent">@color/deepOrange900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.brown500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/brown500text_primary</item>
-        <item name="colorPrimaryDark">@color/brown500text_primaryDark</item>
-        <item name="colorAccent">@color/brown500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/brown500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/brown500colorPrimaryDark</item>
+            <item name="colorAccent">@color/brown500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.brown700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/brown700text_primary</item>
-        <item name="colorPrimaryDark">@color/brown700text_primaryDark</item>
-        <item name="colorAccent">@color/brown700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/brown700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/brown700colorPrimaryDark</item>
+            <item name="colorAccent">@color/brown700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.brown900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/brown900text_primary</item>
-        <item name="colorPrimaryDark">@color/brown900text_primaryDark</item>
-        <item name="colorAccent">@color/brown900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/brown900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/brown900colorPrimaryDark</item>
+            <item name="colorAccent">@color/brown900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.gray500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/gray500text_primary</item>
-        <item name="colorPrimaryDark">@color/gray500text_primaryDark</item>
-        <item name="colorAccent">@color/gray500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/gray500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/gray500colorPrimaryDark</item>
+            <item name="colorAccent">@color/gray500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.gray700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/gray700text_primary</item>
-        <item name="colorPrimaryDark">@color/gray700text_primaryDark</item>
-        <item name="colorAccent">@color/gray700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/gray700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/gray700colorPrimaryDark</item>
+            <item name="colorAccent">@color/gray700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.gray900" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/gray900text_primary</item>
-        <item name="colorPrimaryDark">@color/gray900text_primaryDark</item>
-        <item name="colorAccent">@color/gray900colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/gray900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/gray900colorPrimaryDark</item>
+            <item name="colorAccent">@color/gray900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.blueGray500" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/blueGray500text_primary</item>
-        <item name="colorPrimaryDark">@color/blueGray500text_primaryDark</item>
-        <item name="colorAccent">@color/blueGray500colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/blueGray500colorPrimary</item>
+            <item name="colorPrimaryDark">@color/blueGray500colorPrimaryDark</item>
+            <item name="colorAccent">@color/blueGray500colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.blueGray700" parent="Theme.AppCompat.Light.DarkActionBar">
-
-        <item name="colorPrimary">@color/blueGray700text_primary</item>
-        <item name="colorPrimaryDark">@color/blueGray700text_primaryDark</item>
-        <item name="colorAccent">@color/blueGray700colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        
+            <item name="colorPrimary">@color/blueGray700colorPrimary</item>
+            <item name="colorPrimaryDark">@color/blueGray700colorPrimaryDark</item>
+            <item name="colorAccent">@color/blueGray700colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Theme.App.blueGray900" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+            <item name="colorPrimary">@color/blueGray900colorPrimary</item>
+            <item name="colorPrimaryDark">@color/blueGray900colorPrimaryDark</item>
+            <item name="colorAccent">@color/blueGray900colorAccent</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
 
-        <item name="colorPrimary">@color/blueGray900text_primary</item>
-        <item name="colorPrimaryDark">@color/blueGray900text_primaryDark</item>
-        <item name="colorAccent">@color/blueGray900colorAccent</item>
+
+
+
+
+
+
+
+
+
+
+
+
+    <style name="Theme.App.red_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_050</item>
+        <item name="colorPrimaryDark">@color/red_050</item>
+        <item name="colorAccent">@color/red_050</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
+
+
+    <style name="Theme.App.red_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_100</item>
+        <item name="colorPrimaryDark">@color/red_100</item>
+        <item name="colorAccent">@color/red_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_200</item>
+        <item name="colorPrimaryDark">@color/red_200</item>
+        <item name="colorAccent">@color/red_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_300</item>
+        <item name="colorPrimaryDark">@color/red_300</item>
+        <item name="colorAccent">@color/red_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_400</item>
+        <item name="colorPrimaryDark">@color/red_400</item>
+        <item name="colorAccent">@color/red_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorPrimaryDark">@color/red_500</item>
+        <item name="colorAccent">@color/red_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_600</item>
+        <item name="colorPrimaryDark">@color/red_600</item>
+        <item name="colorAccent">@color/red_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_700</item>
+        <item name="colorPrimaryDark">@color/red_700</item>
+        <item name="colorAccent">@color/red_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_800</item>
+        <item name="colorPrimaryDark">@color/red_800</item>
+        <item name="colorAccent">@color/red_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_900</item>
+        <item name="colorPrimaryDark">@color/red_900</item>
+        <item name="colorAccent">@color/red_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_A100</item>
+        <item name="colorPrimaryDark">@color/red_A100</item>
+        <item name="colorAccent">@color/red_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_A200</item>
+        <item name="colorPrimaryDark">@color/red_A200</item>
+        <item name="colorAccent">@color/red_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_A400</item>
+        <item name="colorPrimaryDark">@color/red_A400</item>
+        <item name="colorAccent">@color/red_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.red_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/red_A700</item>
+        <item name="colorPrimaryDark">@color/red_A700</item>
+        <item name="colorAccent">@color/red_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_050</item>
+        <item name="colorPrimaryDark">@color/pink_050</item>
+        <item name="colorAccent">@color/pink_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_100</item>
+        <item name="colorPrimaryDark">@color/pink_100</item>
+        <item name="colorAccent">@color/pink_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_200</item>
+        <item name="colorPrimaryDark">@color/pink_200</item>
+        <item name="colorAccent">@color/pink_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_300</item>
+        <item name="colorPrimaryDark">@color/pink_300</item>
+        <item name="colorAccent">@color/pink_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_400</item>
+        <item name="colorPrimaryDark">@color/pink_400</item>
+        <item name="colorAccent">@color/pink_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_500</item>
+        <item name="colorPrimaryDark">@color/pink_500</item>
+        <item name="colorAccent">@color/pink_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_600</item>
+        <item name="colorPrimaryDark">@color/pink_600</item>
+        <item name="colorAccent">@color/pink_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_700</item>
+        <item name="colorPrimaryDark">@color/pink_700</item>
+        <item name="colorAccent">@color/pink_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_800</item>
+        <item name="colorPrimaryDark">@color/pink_800</item>
+        <item name="colorAccent">@color/pink_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_900</item>
+        <item name="colorPrimaryDark">@color/pink_900</item>
+        <item name="colorAccent">@color/pink_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_A100</item>
+        <item name="colorPrimaryDark">@color/pink_A100</item>
+        <item name="colorAccent">@color/pink_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_A200</item>
+        <item name="colorPrimaryDark">@color/pink_A200</item>
+        <item name="colorAccent">@color/pink_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_A400</item>
+        <item name="colorPrimaryDark">@color/pink_A400</item>
+        <item name="colorAccent">@color/pink_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.pink_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/pink_A700</item>
+        <item name="colorPrimaryDark">@color/pink_A700</item>
+        <item name="colorAccent">@color/pink_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_050</item>
+        <item name="colorPrimaryDark">@color/purple_050</item>
+        <item name="colorAccent">@color/purple_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_100</item>
+        <item name="colorPrimaryDark">@color/purple_100</item>
+        <item name="colorAccent">@color/purple_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_200</item>
+        <item name="colorAccent">@color/purple_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_300</item>
+        <item name="colorPrimaryDark">@color/purple_300</item>
+        <item name="colorAccent">@color/purple_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_400</item>
+        <item name="colorPrimaryDark">@color/purple_400</item>
+        <item name="colorAccent">@color/purple_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/purple_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_600</item>
+        <item name="colorPrimaryDark">@color/purple_600</item>
+        <item name="colorAccent">@color/purple_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_700</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/purple_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_800</item>
+        <item name="colorPrimaryDark">@color/purple_800</item>
+        <item name="colorAccent">@color/purple_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_900</item>
+        <item name="colorPrimaryDark">@color/purple_900</item>
+        <item name="colorAccent">@color/purple_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_A100</item>
+        <item name="colorPrimaryDark">@color/purple_A100</item>
+        <item name="colorAccent">@color/purple_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_A200</item>
+        <item name="colorPrimaryDark">@color/purple_A200</item>
+        <item name="colorAccent">@color/purple_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_A400</item>
+        <item name="colorPrimaryDark">@color/purple_A400</item>
+        <item name="colorAccent">@color/purple_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.purple_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_A700</item>
+        <item name="colorPrimaryDark">@color/purple_A700</item>
+        <item name="colorAccent">@color/purple_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_050</item>
+        <item name="colorPrimaryDark">@color/deepPurple_050</item>
+        <item name="colorAccent">@color/deepPurple_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_100</item>
+        <item name="colorPrimaryDark">@color/deepPurple_100</item>
+        <item name="colorAccent">@color/deepPurple_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_200</item>
+        <item name="colorPrimaryDark">@color/deepPurple_200</item>
+        <item name="colorAccent">@color/deepPurple_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_300</item>
+        <item name="colorPrimaryDark">@color/deepPurple_300</item>
+        <item name="colorAccent">@color/deepPurple_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_400</item>
+        <item name="colorPrimaryDark">@color/deepPurple_400</item>
+        <item name="colorAccent">@color/deepPurple_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_500</item>
+        <item name="colorPrimaryDark">@color/deepPurple_500</item>
+        <item name="colorAccent">@color/deepPurple_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_600</item>
+        <item name="colorPrimaryDark">@color/deepPurple_600</item>
+        <item name="colorAccent">@color/deepPurple_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_700</item>
+        <item name="colorPrimaryDark">@color/deepPurple_700</item>
+        <item name="colorAccent">@color/deepPurple_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_800</item>
+        <item name="colorPrimaryDark">@color/deepPurple_800</item>
+        <item name="colorAccent">@color/deepPurple_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_900</item>
+        <item name="colorPrimaryDark">@color/deepPurple_900</item>
+        <item name="colorAccent">@color/deepPurple_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_A100</item>
+        <item name="colorPrimaryDark">@color/deepPurple_A100</item>
+        <item name="colorAccent">@color/deepPurple_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_A200</item>
+        <item name="colorPrimaryDark">@color/deepPurple_A200</item>
+        <item name="colorAccent">@color/deepPurple_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_A400</item>
+        <item name="colorPrimaryDark">@color/deepPurple_A400</item>
+        <item name="colorAccent">@color/deepPurple_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepPurple_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepPurple_A700</item>
+        <item name="colorPrimaryDark">@color/deepPurple_A700</item>
+        <item name="colorAccent">@color/deepPurple_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_050</item>
+        <item name="colorPrimaryDark">@color/indigo_050</item>
+        <item name="colorAccent">@color/indigo_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_100</item>
+        <item name="colorPrimaryDark">@color/indigo_100</item>
+        <item name="colorAccent">@color/indigo_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_200</item>
+        <item name="colorPrimaryDark">@color/indigo_200</item>
+        <item name="colorAccent">@color/indigo_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_300</item>
+        <item name="colorPrimaryDark">@color/indigo_300</item>
+        <item name="colorAccent">@color/indigo_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_400</item>
+        <item name="colorPrimaryDark">@color/indigo_400</item>
+        <item name="colorAccent">@color/indigo_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_500</item>
+        <item name="colorPrimaryDark">@color/indigo_500</item>
+        <item name="colorAccent">@color/indigo_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_600</item>
+        <item name="colorPrimaryDark">@color/indigo_600</item>
+        <item name="colorAccent">@color/indigo_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_700</item>
+        <item name="colorPrimaryDark">@color/indigo_700</item>
+        <item name="colorAccent">@color/indigo_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_800</item>
+        <item name="colorPrimaryDark">@color/indigo_800</item>
+        <item name="colorAccent">@color/indigo_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_900</item>
+        <item name="colorPrimaryDark">@color/indigo_900</item>
+        <item name="colorAccent">@color/indigo_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_A100</item>
+        <item name="colorPrimaryDark">@color/indigo_A100</item>
+        <item name="colorAccent">@color/indigo_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_A200</item>
+        <item name="colorPrimaryDark">@color/indigo_A200</item>
+        <item name="colorAccent">@color/indigo_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_A400</item>
+        <item name="colorPrimaryDark">@color/indigo_A400</item>
+        <item name="colorAccent">@color/indigo_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.indigo_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/indigo_A700</item>
+        <item name="colorPrimaryDark">@color/indigo_A700</item>
+        <item name="colorAccent">@color/indigo_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_050</item>
+        <item name="colorPrimaryDark">@color/blue_050</item>
+        <item name="colorAccent">@color/blue_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_100</item>
+        <item name="colorPrimaryDark">@color/blue_100</item>
+        <item name="colorAccent">@color/blue_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_200</item>
+        <item name="colorPrimaryDark">@color/blue_200</item>
+        <item name="colorAccent">@color/blue_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_300</item>
+        <item name="colorPrimaryDark">@color/blue_300</item>
+        <item name="colorAccent">@color/blue_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_400</item>
+        <item name="colorPrimaryDark">@color/blue_400</item>
+        <item name="colorAccent">@color/blue_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryDark">@color/blue_500</item>
+        <item name="colorAccent">@color/blue_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_600</item>
+        <item name="colorPrimaryDark">@color/blue_600</item>
+        <item name="colorAccent">@color/blue_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_700</item>
+        <item name="colorPrimaryDark">@color/blue_700</item>
+        <item name="colorAccent">@color/blue_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_800</item>
+        <item name="colorPrimaryDark">@color/blue_800</item>
+        <item name="colorAccent">@color/blue_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_900</item>
+        <item name="colorPrimaryDark">@color/blue_900</item>
+        <item name="colorAccent">@color/blue_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_A100</item>
+        <item name="colorPrimaryDark">@color/blue_A100</item>
+        <item name="colorAccent">@color/blue_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_A200</item>
+        <item name="colorPrimaryDark">@color/blue_A200</item>
+        <item name="colorAccent">@color/blue_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_A400</item>
+        <item name="colorPrimaryDark">@color/blue_A400</item>
+        <item name="colorAccent">@color/blue_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blue_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blue_A700</item>
+        <item name="colorPrimaryDark">@color/blue_A700</item>
+        <item name="colorAccent">@color/blue_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_050</item>
+        <item name="colorPrimaryDark">@color/lightBlue_050</item>
+        <item name="colorAccent">@color/lightBlue_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_100</item>
+        <item name="colorPrimaryDark">@color/lightBlue_100</item>
+        <item name="colorAccent">@color/lightBlue_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_200</item>
+        <item name="colorPrimaryDark">@color/lightBlue_200</item>
+        <item name="colorAccent">@color/lightBlue_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_300</item>
+        <item name="colorPrimaryDark">@color/lightBlue_300</item>
+        <item name="colorAccent">@color/lightBlue_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_400</item>
+        <item name="colorPrimaryDark">@color/lightBlue_400</item>
+        <item name="colorAccent">@color/lightBlue_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_500</item>
+        <item name="colorPrimaryDark">@color/lightBlue_500</item>
+        <item name="colorAccent">@color/lightBlue_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_600</item>
+        <item name="colorPrimaryDark">@color/lightBlue_600</item>
+        <item name="colorAccent">@color/lightBlue_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_700</item>
+        <item name="colorPrimaryDark">@color/lightBlue_700</item>
+        <item name="colorAccent">@color/lightBlue_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_800</item>
+        <item name="colorPrimaryDark">@color/lightBlue_800</item>
+        <item name="colorAccent">@color/lightBlue_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_900</item>
+        <item name="colorPrimaryDark">@color/lightBlue_900</item>
+        <item name="colorAccent">@color/lightBlue_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_A100</item>
+        <item name="colorPrimaryDark">@color/lightBlue_A100</item>
+        <item name="colorAccent">@color/lightBlue_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_A200</item>
+        <item name="colorPrimaryDark">@color/lightBlue_A200</item>
+        <item name="colorAccent">@color/lightBlue_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_A400</item>
+        <item name="colorPrimaryDark">@color/lightBlue_A400</item>
+        <item name="colorAccent">@color/lightBlue_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightBlue_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightBlue_A700</item>
+        <item name="colorPrimaryDark">@color/lightBlue_A700</item>
+        <item name="colorAccent">@color/lightBlue_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_050</item>
+        <item name="colorPrimaryDark">@color/cyan_050</item>
+        <item name="colorAccent">@color/cyan_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_100</item>
+        <item name="colorPrimaryDark">@color/cyan_100</item>
+        <item name="colorAccent">@color/cyan_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_200</item>
+        <item name="colorPrimaryDark">@color/cyan_200</item>
+        <item name="colorAccent">@color/cyan_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_300</item>
+        <item name="colorPrimaryDark">@color/cyan_300</item>
+        <item name="colorAccent">@color/cyan_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_400</item>
+        <item name="colorPrimaryDark">@color/cyan_400</item>
+        <item name="colorAccent">@color/cyan_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_500</item>
+        <item name="colorPrimaryDark">@color/cyan_500</item>
+        <item name="colorAccent">@color/cyan_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_600</item>
+        <item name="colorPrimaryDark">@color/cyan_600</item>
+        <item name="colorAccent">@color/cyan_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_700</item>
+        <item name="colorPrimaryDark">@color/cyan_700</item>
+        <item name="colorAccent">@color/cyan_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_800</item>
+        <item name="colorPrimaryDark">@color/cyan_800</item>
+        <item name="colorAccent">@color/cyan_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_900</item>
+        <item name="colorPrimaryDark">@color/cyan_900</item>
+        <item name="colorAccent">@color/cyan_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_A100</item>
+        <item name="colorPrimaryDark">@color/cyan_A100</item>
+        <item name="colorAccent">@color/cyan_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_A200</item>
+        <item name="colorPrimaryDark">@color/cyan_A200</item>
+        <item name="colorAccent">@color/cyan_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_A400</item>
+        <item name="colorPrimaryDark">@color/cyan_A400</item>
+        <item name="colorAccent">@color/cyan_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.cyan_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/cyan_A700</item>
+        <item name="colorPrimaryDark">@color/cyan_A700</item>
+        <item name="colorAccent">@color/cyan_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_050</item>
+        <item name="colorPrimaryDark">@color/teal_050</item>
+        <item name="colorAccent">@color/teal_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_100</item>
+        <item name="colorPrimaryDark">@color/teal_100</item>
+        <item name="colorAccent">@color/teal_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_200</item>
+        <item name="colorPrimaryDark">@color/teal_200</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_300</item>
+        <item name="colorPrimaryDark">@color/teal_300</item>
+        <item name="colorAccent">@color/teal_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_400</item>
+        <item name="colorPrimaryDark">@color/teal_400</item>
+        <item name="colorAccent">@color/teal_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_500</item>
+        <item name="colorPrimaryDark">@color/teal_500</item>
+        <item name="colorAccent">@color/teal_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_600</item>
+        <item name="colorPrimaryDark">@color/teal_600</item>
+        <item name="colorAccent">@color/teal_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_700</item>
+        <item name="colorPrimaryDark">@color/teal_700</item>
+        <item name="colorAccent">@color/teal_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_800</item>
+        <item name="colorPrimaryDark">@color/teal_800</item>
+        <item name="colorAccent">@color/teal_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_900</item>
+        <item name="colorPrimaryDark">@color/teal_900</item>
+        <item name="colorAccent">@color/teal_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_A100</item>
+        <item name="colorPrimaryDark">@color/teal_A100</item>
+        <item name="colorAccent">@color/teal_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_A200</item>
+        <item name="colorPrimaryDark">@color/teal_A200</item>
+        <item name="colorAccent">@color/teal_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_A400</item>
+        <item name="colorPrimaryDark">@color/teal_A400</item>
+        <item name="colorAccent">@color/teal_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.teal_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/teal_A700</item>
+        <item name="colorPrimaryDark">@color/teal_A700</item>
+        <item name="colorAccent">@color/teal_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_050</item>
+        <item name="colorPrimaryDark">@color/green_050</item>
+        <item name="colorAccent">@color/green_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_100</item>
+        <item name="colorPrimaryDark">@color/green_100</item>
+        <item name="colorAccent">@color/green_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_200</item>
+        <item name="colorPrimaryDark">@color/green_200</item>
+        <item name="colorAccent">@color/green_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_300</item>
+        <item name="colorPrimaryDark">@color/green_300</item>
+        <item name="colorAccent">@color/green_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_400</item>
+        <item name="colorPrimaryDark">@color/green_400</item>
+        <item name="colorAccent">@color/green_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_500</item>
+        <item name="colorPrimaryDark">@color/green_500</item>
+        <item name="colorAccent">@color/green_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_600</item>
+        <item name="colorPrimaryDark">@color/green_600</item>
+        <item name="colorAccent">@color/green_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_700</item>
+        <item name="colorPrimaryDark">@color/green_700</item>
+        <item name="colorAccent">@color/green_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_800</item>
+        <item name="colorPrimaryDark">@color/green_800</item>
+        <item name="colorAccent">@color/green_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_900</item>
+        <item name="colorPrimaryDark">@color/green_900</item>
+        <item name="colorAccent">@color/green_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_A100</item>
+        <item name="colorPrimaryDark">@color/green_A100</item>
+        <item name="colorAccent">@color/green_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_A200</item>
+        <item name="colorPrimaryDark">@color/green_A200</item>
+        <item name="colorAccent">@color/green_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_A400</item>
+        <item name="colorPrimaryDark">@color/green_A400</item>
+        <item name="colorAccent">@color/green_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.green_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/green_A700</item>
+        <item name="colorPrimaryDark">@color/green_A700</item>
+        <item name="colorAccent">@color/green_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_050</item>
+        <item name="colorPrimaryDark">@color/lightGreen_050</item>
+        <item name="colorAccent">@color/lightGreen_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_100</item>
+        <item name="colorPrimaryDark">@color/lightGreen_100</item>
+        <item name="colorAccent">@color/lightGreen_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_200</item>
+        <item name="colorPrimaryDark">@color/lightGreen_200</item>
+        <item name="colorAccent">@color/lightGreen_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_300</item>
+        <item name="colorPrimaryDark">@color/lightGreen_300</item>
+        <item name="colorAccent">@color/lightGreen_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_400</item>
+        <item name="colorPrimaryDark">@color/lightGreen_400</item>
+        <item name="colorAccent">@color/lightGreen_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_500</item>
+        <item name="colorPrimaryDark">@color/lightGreen_500</item>
+        <item name="colorAccent">@color/lightGreen_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_600</item>
+        <item name="colorPrimaryDark">@color/lightGreen_600</item>
+        <item name="colorAccent">@color/lightGreen_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_700</item>
+        <item name="colorPrimaryDark">@color/lightGreen_700</item>
+        <item name="colorAccent">@color/lightGreen_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_800</item>
+        <item name="colorPrimaryDark">@color/lightGreen_800</item>
+        <item name="colorAccent">@color/lightGreen_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_900</item>
+        <item name="colorPrimaryDark">@color/lightGreen_900</item>
+        <item name="colorAccent">@color/lightGreen_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_A100</item>
+        <item name="colorPrimaryDark">@color/lightGreen_A100</item>
+        <item name="colorAccent">@color/lightGreen_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_A200</item>
+        <item name="colorPrimaryDark">@color/lightGreen_A200</item>
+        <item name="colorAccent">@color/lightGreen_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_A400</item>
+        <item name="colorPrimaryDark">@color/lightGreen_A400</item>
+        <item name="colorAccent">@color/lightGreen_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lightGreen_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lightGreen_A700</item>
+        <item name="colorPrimaryDark">@color/lightGreen_A700</item>
+        <item name="colorAccent">@color/lightGreen_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_050</item>
+        <item name="colorPrimaryDark">@color/lime_050</item>
+        <item name="colorAccent">@color/lime_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_100</item>
+        <item name="colorPrimaryDark">@color/lime_100</item>
+        <item name="colorAccent">@color/lime_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_200</item>
+        <item name="colorPrimaryDark">@color/lime_200</item>
+        <item name="colorAccent">@color/lime_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_300</item>
+        <item name="colorPrimaryDark">@color/lime_300</item>
+        <item name="colorAccent">@color/lime_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_400</item>
+        <item name="colorPrimaryDark">@color/lime_400</item>
+        <item name="colorAccent">@color/lime_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_500</item>
+        <item name="colorPrimaryDark">@color/lime_500</item>
+        <item name="colorAccent">@color/lime_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_600</item>
+        <item name="colorPrimaryDark">@color/lime_600</item>
+        <item name="colorAccent">@color/lime_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_700</item>
+        <item name="colorPrimaryDark">@color/lime_700</item>
+        <item name="colorAccent">@color/lime_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_800</item>
+        <item name="colorPrimaryDark">@color/lime_800</item>
+        <item name="colorAccent">@color/lime_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_900</item>
+        <item name="colorPrimaryDark">@color/lime_900</item>
+        <item name="colorAccent">@color/lime_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_A100</item>
+        <item name="colorPrimaryDark">@color/lime_A100</item>
+        <item name="colorAccent">@color/lime_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_A200</item>
+        <item name="colorPrimaryDark">@color/lime_A200</item>
+        <item name="colorAccent">@color/lime_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_A400</item>
+        <item name="colorPrimaryDark">@color/lime_A400</item>
+        <item name="colorAccent">@color/lime_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.lime_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/lime_A700</item>
+        <item name="colorPrimaryDark">@color/lime_A700</item>
+        <item name="colorAccent">@color/lime_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_050</item>
+        <item name="colorPrimaryDark">@color/yellow_050</item>
+        <item name="colorAccent">@color/yellow_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_100</item>
+        <item name="colorPrimaryDark">@color/yellow_100</item>
+        <item name="colorAccent">@color/yellow_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_200</item>
+        <item name="colorPrimaryDark">@color/yellow_200</item>
+        <item name="colorAccent">@color/yellow_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_300</item>
+        <item name="colorPrimaryDark">@color/yellow_300</item>
+        <item name="colorAccent">@color/yellow_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_400</item>
+        <item name="colorPrimaryDark">@color/yellow_400</item>
+        <item name="colorAccent">@color/yellow_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_500</item>
+        <item name="colorPrimaryDark">@color/yellow_500</item>
+        <item name="colorAccent">@color/yellow_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_600</item>
+        <item name="colorPrimaryDark">@color/yellow_600</item>
+        <item name="colorAccent">@color/yellow_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_700</item>
+        <item name="colorPrimaryDark">@color/yellow_700</item>
+        <item name="colorAccent">@color/yellow_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_800</item>
+        <item name="colorPrimaryDark">@color/yellow_800</item>
+        <item name="colorAccent">@color/yellow_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_900</item>
+        <item name="colorPrimaryDark">@color/yellow_900</item>
+        <item name="colorAccent">@color/yellow_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_A100</item>
+        <item name="colorPrimaryDark">@color/yellow_A100</item>
+        <item name="colorAccent">@color/yellow_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_A200</item>
+        <item name="colorPrimaryDark">@color/yellow_A200</item>
+        <item name="colorAccent">@color/yellow_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_A400</item>
+        <item name="colorPrimaryDark">@color/yellow_A400</item>
+        <item name="colorAccent">@color/yellow_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.yellow_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/yellow_A700</item>
+        <item name="colorPrimaryDark">@color/yellow_A700</item>
+        <item name="colorAccent">@color/yellow_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_050</item>
+        <item name="colorPrimaryDark">@color/amber_050</item>
+        <item name="colorAccent">@color/amber_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_100</item>
+        <item name="colorPrimaryDark">@color/amber_100</item>
+        <item name="colorAccent">@color/amber_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_200</item>
+        <item name="colorPrimaryDark">@color/amber_200</item>
+        <item name="colorAccent">@color/amber_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_300</item>
+        <item name="colorPrimaryDark">@color/amber_300</item>
+        <item name="colorAccent">@color/amber_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_400</item>
+        <item name="colorPrimaryDark">@color/amber_400</item>
+        <item name="colorAccent">@color/amber_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_500</item>
+        <item name="colorPrimaryDark">@color/amber_500</item>
+        <item name="colorAccent">@color/amber_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_600</item>
+        <item name="colorPrimaryDark">@color/amber_600</item>
+        <item name="colorAccent">@color/amber_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_700</item>
+        <item name="colorPrimaryDark">@color/amber_700</item>
+        <item name="colorAccent">@color/amber_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_800</item>
+        <item name="colorPrimaryDark">@color/amber_800</item>
+        <item name="colorAccent">@color/amber_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_900</item>
+        <item name="colorPrimaryDark">@color/amber_900</item>
+        <item name="colorAccent">@color/amber_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_A100</item>
+        <item name="colorPrimaryDark">@color/amber_A100</item>
+        <item name="colorAccent">@color/amber_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_A200</item>
+        <item name="colorPrimaryDark">@color/amber_A200</item>
+        <item name="colorAccent">@color/amber_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_A400</item>
+        <item name="colorPrimaryDark">@color/amber_A400</item>
+        <item name="colorAccent">@color/amber_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.amber_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/amber_A700</item>
+        <item name="colorPrimaryDark">@color/amber_A700</item>
+        <item name="colorAccent">@color/amber_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_050</item>
+        <item name="colorPrimaryDark">@color/orange_050</item>
+        <item name="colorAccent">@color/orange_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_100</item>
+        <item name="colorPrimaryDark">@color/orange_100</item>
+        <item name="colorAccent">@color/orange_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_200</item>
+        <item name="colorPrimaryDark">@color/orange_200</item>
+        <item name="colorAccent">@color/orange_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_300</item>
+        <item name="colorPrimaryDark">@color/orange_300</item>
+        <item name="colorAccent">@color/orange_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_400</item>
+        <item name="colorPrimaryDark">@color/orange_400</item>
+        <item name="colorAccent">@color/orange_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorPrimaryDark">@color/orange_500</item>
+        <item name="colorAccent">@color/orange_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_600</item>
+        <item name="colorPrimaryDark">@color/orange_600</item>
+        <item name="colorAccent">@color/orange_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_700</item>
+        <item name="colorPrimaryDark">@color/orange_700</item>
+        <item name="colorAccent">@color/orange_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_800</item>
+        <item name="colorPrimaryDark">@color/orange_800</item>
+        <item name="colorAccent">@color/orange_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_900</item>
+        <item name="colorPrimaryDark">@color/orange_900</item>
+        <item name="colorAccent">@color/orange_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_A100</item>
+        <item name="colorPrimaryDark">@color/orange_A100</item>
+        <item name="colorAccent">@color/orange_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_A200</item>
+        <item name="colorPrimaryDark">@color/orange_A200</item>
+        <item name="colorAccent">@color/orange_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_A400</item>
+        <item name="colorPrimaryDark">@color/orange_A400</item>
+        <item name="colorAccent">@color/orange_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.orange_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange_A700</item>
+        <item name="colorPrimaryDark">@color/orange_A700</item>
+        <item name="colorAccent">@color/orange_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_050</item>
+        <item name="colorPrimaryDark">@color/deepOrange_050</item>
+        <item name="colorAccent">@color/deepOrange_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_100</item>
+        <item name="colorPrimaryDark">@color/deepOrange_100</item>
+        <item name="colorAccent">@color/deepOrange_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_200</item>
+        <item name="colorPrimaryDark">@color/deepOrange_200</item>
+        <item name="colorAccent">@color/deepOrange_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_300</item>
+        <item name="colorPrimaryDark">@color/deepOrange_300</item>
+        <item name="colorAccent">@color/deepOrange_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_400</item>
+        <item name="colorPrimaryDark">@color/deepOrange_400</item>
+        <item name="colorAccent">@color/deepOrange_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_500</item>
+        <item name="colorPrimaryDark">@color/deepOrange_500</item>
+        <item name="colorAccent">@color/deepOrange_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_600</item>
+        <item name="colorPrimaryDark">@color/deepOrange_600</item>
+        <item name="colorAccent">@color/deepOrange_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_700</item>
+        <item name="colorPrimaryDark">@color/deepOrange_700</item>
+        <item name="colorAccent">@color/deepOrange_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_800</item>
+        <item name="colorPrimaryDark">@color/deepOrange_800</item>
+        <item name="colorAccent">@color/deepOrange_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_900</item>
+        <item name="colorPrimaryDark">@color/deepOrange_900</item>
+        <item name="colorAccent">@color/deepOrange_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_A100</item>
+        <item name="colorPrimaryDark">@color/deepOrange_A100</item>
+        <item name="colorAccent">@color/deepOrange_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_A200</item>
+        <item name="colorPrimaryDark">@color/deepOrange_A200</item>
+        <item name="colorAccent">@color/deepOrange_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_A400</item>
+        <item name="colorPrimaryDark">@color/deepOrange_A400</item>
+        <item name="colorAccent">@color/deepOrange_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.deepOrange_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/deepOrange_A700</item>
+        <item name="colorPrimaryDark">@color/deepOrange_A700</item>
+        <item name="colorAccent">@color/deepOrange_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_050</item>
+        <item name="colorPrimaryDark">@color/brown_050</item>
+        <item name="colorAccent">@color/brown_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_100</item>
+        <item name="colorPrimaryDark">@color/brown_100</item>
+        <item name="colorAccent">@color/brown_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_200</item>
+        <item name="colorPrimaryDark">@color/brown_200</item>
+        <item name="colorAccent">@color/brown_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_300</item>
+        <item name="colorPrimaryDark">@color/brown_300</item>
+        <item name="colorAccent">@color/brown_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_400</item>
+        <item name="colorPrimaryDark">@color/brown_400</item>
+        <item name="colorAccent">@color/brown_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_500</item>
+        <item name="colorPrimaryDark">@color/brown_500</item>
+        <item name="colorAccent">@color/brown_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_600</item>
+        <item name="colorPrimaryDark">@color/brown_600</item>
+        <item name="colorAccent">@color/brown_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_700</item>
+        <item name="colorPrimaryDark">@color/brown_700</item>
+        <item name="colorAccent">@color/brown_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_800</item>
+        <item name="colorPrimaryDark">@color/brown_800</item>
+        <item name="colorAccent">@color/brown_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_900</item>
+        <item name="colorPrimaryDark">@color/brown_900</item>
+        <item name="colorAccent">@color/brown_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_A100</item>
+        <item name="colorPrimaryDark">@color/brown_A100</item>
+        <item name="colorAccent">@color/brown_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_A200</item>
+        <item name="colorPrimaryDark">@color/brown_A200</item>
+        <item name="colorAccent">@color/brown_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_A400</item>
+        <item name="colorPrimaryDark">@color/brown_A400</item>
+        <item name="colorAccent">@color/brown_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.brown_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/brown_A700</item>
+        <item name="colorPrimaryDark">@color/brown_A700</item>
+        <item name="colorAccent">@color/brown_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_050</item>
+        <item name="colorPrimaryDark">@color/grey_050</item>
+        <item name="colorAccent">@color/grey_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_100</item>
+        <item name="colorPrimaryDark">@color/grey_100</item>
+        <item name="colorAccent">@color/grey_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_200</item>
+        <item name="colorPrimaryDark">@color/grey_200</item>
+        <item name="colorAccent">@color/grey_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_300</item>
+        <item name="colorPrimaryDark">@color/grey_300</item>
+        <item name="colorAccent">@color/grey_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_400</item>
+        <item name="colorPrimaryDark">@color/grey_400</item>
+        <item name="colorAccent">@color/grey_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_500</item>
+        <item name="colorPrimaryDark">@color/grey_500</item>
+        <item name="colorAccent">@color/grey_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_600</item>
+        <item name="colorPrimaryDark">@color/grey_600</item>
+        <item name="colorAccent">@color/grey_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_700</item>
+        <item name="colorPrimaryDark">@color/grey_700</item>
+        <item name="colorAccent">@color/grey_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_800</item>
+        <item name="colorPrimaryDark">@color/grey_800</item>
+        <item name="colorAccent">@color/grey_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_900</item>
+        <item name="colorPrimaryDark">@color/grey_900</item>
+        <item name="colorAccent">@color/grey_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_A100</item>
+        <item name="colorPrimaryDark">@color/grey_A100</item>
+        <item name="colorAccent">@color/grey_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_A200</item>
+        <item name="colorPrimaryDark">@color/grey_A200</item>
+        <item name="colorAccent">@color/grey_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_A400</item>
+        <item name="colorPrimaryDark">@color/grey_A400</item>
+        <item name="colorAccent">@color/grey_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.grey_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/grey_A700</item>
+        <item name="colorPrimaryDark">@color/grey_A700</item>
+        <item name="colorAccent">@color/grey_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_050" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_050</item>
+        <item name="colorPrimaryDark">@color/blueGrey_050</item>
+        <item name="colorAccent">@color/blueGrey_050</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_100</item>
+        <item name="colorPrimaryDark">@color/blueGrey_100</item>
+        <item name="colorAccent">@color/blueGrey_100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_200</item>
+        <item name="colorPrimaryDark">@color/blueGrey_200</item>
+        <item name="colorAccent">@color/blueGrey_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_300" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_300</item>
+        <item name="colorPrimaryDark">@color/blueGrey_300</item>
+        <item name="colorAccent">@color/blueGrey_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_400</item>
+        <item name="colorPrimaryDark">@color/blueGrey_400</item>
+        <item name="colorAccent">@color/blueGrey_400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_500" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_500</item>
+        <item name="colorPrimaryDark">@color/blueGrey_500</item>
+        <item name="colorAccent">@color/blueGrey_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_600" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_600</item>
+        <item name="colorPrimaryDark">@color/blueGrey_600</item>
+        <item name="colorAccent">@color/blueGrey_600</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_700</item>
+        <item name="colorPrimaryDark">@color/blueGrey_700</item>
+        <item name="colorAccent">@color/blueGrey_700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_800" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_800</item>
+        <item name="colorPrimaryDark">@color/blueGrey_800</item>
+        <item name="colorAccent">@color/blueGrey_800</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_900" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_900</item>
+        <item name="colorPrimaryDark">@color/blueGrey_900</item>
+        <item name="colorAccent">@color/blueGrey_900</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_A100" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_A100</item>
+        <item name="colorPrimaryDark">@color/blueGrey_A100</item>
+        <item name="colorAccent">@color/blueGrey_A100</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_A200" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_A200</item>
+        <item name="colorPrimaryDark">@color/blueGrey_A200</item>
+        <item name="colorAccent">@color/blueGrey_A200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_A400" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_A400</item>
+        <item name="colorPrimaryDark">@color/blueGrey_A400</item>
+        <item name="colorAccent">@color/blueGrey_A400</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="Theme.App.blueGrey_A700" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/blueGrey_A700</item>
+        <item name="colorPrimaryDark">@color/blueGrey_A700</item>
+        <item name="colorAccent">@color/blueGrey_A700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
 
 </resources>

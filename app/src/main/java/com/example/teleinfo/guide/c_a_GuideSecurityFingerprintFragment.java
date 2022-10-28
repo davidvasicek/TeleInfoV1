@@ -411,7 +411,7 @@ public class c_a_GuideSecurityFingerprintFragment extends Fragment {
             imageViewFingertprintStatus.setImageResource(R.drawable.success);
             imageViewFingertprintStatus.setVisibility(View.VISIBLE);
             textViewFingerprintStatus1.setAllCaps(true);
-            textViewFingerprintStatus1.setTextColor(getActivity().getResources().getColor(R.color.green500text_primary));
+            textViewFingerprintStatus1.setTextColor(getActivity().getResources().getColor(R.color.green500colorPrimary));
             textViewFingerprintStatus1.setText("Otisk prstu ověřen");
 
             isVerify = true;

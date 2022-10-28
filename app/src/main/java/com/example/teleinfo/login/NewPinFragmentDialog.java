@@ -533,11 +533,11 @@ public class NewPinFragmentDialog extends BottomSheetDialogFragment {
 
                     if (p == rp) {
 
-                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.green500text_primary));
+                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.green500colorPrimary));
 
                     } else {
 
-                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.red700text_primary));
+                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.red700colorPrimary));
                     }
                 }
                 else{

@@ -239,7 +239,7 @@ public class c_c_GuideSecurityCredentialsFragment extends Fragment {
 
                         if (p == rp) {
 
-                            linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.green500text_primary));
+                            linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.green500colorPrimary));
                             countOfCorrectCharacter++;
 
 
@@ -323,7 +323,7 @@ public class c_c_GuideSecurityCredentialsFragment extends Fragment {
 
                             if (p == rp) {
 
-                                linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.green500text_primary));
+                                linearLayoutsCharacters[i].setBackgroundColor(getContext().getResources().getColor(R.color.green500colorPrimary));
                                 countOfCorrectCharacter++;
 
                             } else {
@@ -530,7 +530,7 @@ public class c_c_GuideSecurityCredentialsFragment extends Fragment {
         }
         else if (strengthPoints <= 9){
             textViewPasswordStrengthIndicatorText.setText("Vysoké");
-            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getContext().getResources().getColor(R.color.green500text_primary));
+            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getContext().getResources().getColor(R.color.green500colorPrimary));
         }
 
 

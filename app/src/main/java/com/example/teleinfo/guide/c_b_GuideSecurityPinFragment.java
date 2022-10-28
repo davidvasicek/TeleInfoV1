@@ -488,7 +488,7 @@ public class c_b_GuideSecurityPinFragment extends Fragment {
                             imageViewBtnDelete.setVisibility(View.GONE);
                             imageViewSuccessStatus.setVisibility(View.GONE);
 
-                            textViewInstructions.setTextColor(getContext().getResources().getColor(R.color.green500text_primaryDark));
+                            textViewInstructions.setTextColor(getContext().getResources().getColor(R.color.green500colorPrimaryDark));
                             textViewInstructions.setText("Pin nastaven");
 
 
@@ -618,11 +618,11 @@ public class c_b_GuideSecurityPinFragment extends Fragment {
 
                     if (p == rp) {
 
-                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.green500text_primary));
+                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.green500colorPrimary));
 
                     } else {
 
-                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.red700text_primary));
+                        linearLayoutsPin1[i].setBackgroundColor(getActivity().getResources().getColor(R.color.red700colorPrimary));
                     }
                 }
                 else{

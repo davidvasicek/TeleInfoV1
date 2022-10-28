@@ -483,7 +483,7 @@ public class FragmentLoginWithFingerprint extends Fragment {
             imageViewFingerprintStatus.setImageResource(R.drawable.success);
             imageViewFingerprintStatus.setVisibility(View.VISIBLE);
             textViewFingerprintTextStatus.setAllCaps(true);
-            textViewFingerprintTextStatus.setTextColor(getActivity().getResources().getColor(R.color.green500text_primary));
+            textViewFingerprintTextStatus.setTextColor(getActivity().getResources().getColor(R.color.green500colorPrimary));
             textViewFingerprintTextStatus.setText("Otisk prstu ověřen");
 
             isVerify = true;

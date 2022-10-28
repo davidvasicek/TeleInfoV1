@@ -178,7 +178,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                         if (p == rp) {
 
-                            linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500text_primary));
+                            linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500colorPrimary));
                             countOfCorrectCharacter++;
 
 
@@ -312,7 +312,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                             if (p == rp) {
 
-                                linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500text_primary));
+                                linearLayoutsCharacters[i].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500colorPrimary));
                                 countOfCorrectCharacter++;
 
                             } else {
@@ -529,7 +529,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         }
         else if (strengthPoints <= 9){
             textViewPasswordStrengthIndicatorText.setText("Vysoké");
-            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500text_primary));
+            linearLayoutPasswordStrengthIndicator.setBackgroundColor(getApplicationContext().getResources().getColor(R.color.green500colorPrimary));
         }
 
 
