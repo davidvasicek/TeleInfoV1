@@ -76,5 +76,6 @@ dependencies {
 
     implementation 'nl.bryanderidder:themed-toggle-button-group:1.4.1'
     implementation 'com.github.thealeksandr:PFLockScreen-Android:1.0.0-beta2'
+    implementation 'com.github.jakob-grabner:Circle-Progress-View:1.4'
 
 }

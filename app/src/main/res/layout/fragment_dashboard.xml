@@ -1,17 +1,2986 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.dashboard.DashboardFragment"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="můj rozvrh"
+                        android:textColor="#455A64"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.70">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:gravity="right">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginRight="0dp"
+                        android:src="@drawable/right_arrow"
+                        android:layout_gravity="right"
+                        android:foregroundGravity="right"
+                        />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Notifikace"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Nezapsané hodiny"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:textColor="@color/green500colorPrimary"
+                            android:textAllCaps="true"
+                            android:textSize="14dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            android:textStyle="bold"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Počet studentů s přesáhlých 35hod"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="2"
+                            android:textColor="@color/red700colorAccent"
+                            android:textAllCaps="true"
+                            android:textSize="14dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            android:textStyle="bold"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.30"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Probíhající událost"
+                    android:textColor="#455A64"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.70">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="ukončení za"
+                    android:textColor="@color/text_secondary"
+                    android:textAllCaps="true"
+                    android:textSize="10dp"
+                    android:tag="tagForDelete"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="6 min"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:background="@color/green500colorAccent"
+                android:layout_marginTop="5dp">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="1.HOD (8:15 - 9:00)"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Programovací jazyky"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="true"
+                    android:textSize="14dp"
+                    android:tag="tagForDelete"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Třída: 3.A sk a"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginTop="5dp"     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="učebna: 17"
+                    android:textColor="@color/text_primary"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginTop="5dp"     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Nahrazuje hodiny_St 19.10. 6, KB (Kybernetická bezpečnost), Bureš M., 3.A (b), 34"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.70">
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="následující události pro tento den "
+            android:textColor="#607D8B"
+            android:textAllCaps="true"
+            android:textSize="12dp"
+            android:tag="tagForDelete"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="za 26 min "
+            android:textColor="@color/text_primary"
+            android:textAllCaps="false"
+            android:textSize="12dp"
+            android:tag="tagForDelete"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="10dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/arrow">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/green500colorAccent"
+                    android:visibility="invisible">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1. hod"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="8:15"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="9:00"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="PJ"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="3.A (a)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="17"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="10dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/arrow">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/brown500colorPrimary"
+                    >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1.P"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="9:00"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="9:10"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="10dp"
+            android:paddingBottom="5dp">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/green500colorAccent">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="2. hod"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="9:10"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="9:55"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="PJ"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="3.A (a)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="17"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="10dp"
+            android:paddingBottom="5dp">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/green500colorAccent"
+                    android:visibility="invisible">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="4. hod"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="11:05"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="11:50"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="OS"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="2.C (c)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="17"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="10dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/arrow">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/brown500colorPrimary"
+                    >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="SUT."
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="11:50"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="11:55"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="10dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/arrow">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlue500colorAccent"
+                    >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="JÍD."
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="13:25"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="13:35"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="10dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/arrow">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightBlue500colorAccent"
+                    >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="JÍD."
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="13:35"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="14:00"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"/>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Rychlé rozvrhy"
+                        android:textColor="#607D8B"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:tag="tagForDelete"
+                        android:gravity="center"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/menu"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#90A4AE">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Pedagog"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Pavel\nDědičík"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Pedagog"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Václav\nJedlička"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Učebna"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="1"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Učebna"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="17"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Třída"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="3.A"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Pedagog"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Václav\nJedlička"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Učebna"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="1"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Učebna"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="17"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Pedagog"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Pavel\nDědičík"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:cardCornerRadius="10dp"
+                        android:paddingBottom="5dp"
+                        app:cardBackgroundColor="#ECEFF1">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Pedagog"
+                                    android:textColor="@color/text_primary"
+                                    android:textAllCaps="true"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="Václav\nJedlička"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10dp"
+                                    android:tag="tagForDelete"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="5dp"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Obědové menu"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="polévka bramborová s paprikou, dukátové buchtičky s vanilkovým krémem, ovoce, čaj, voda s limetkou"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Mimořádné události"
+                        android:textColor="@color/red700colorAccent"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="7:45 - 8:15 porada v zasedací místnosti"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Probíhající událost"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="ukončení za"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="10dp"
+                        android:tag="tagForDelete"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="6 min"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/brown500colorPrimary"
+                    android:layout_marginTop="5dp">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="9:00 - 9:10"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1.p - 1. Patro"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.70">
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:paddingBottom="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Probíhající událost"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="ukončení za"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="10dp"
+                        android:tag="tagForDelete"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="42 min"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/green500colorAccent"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Programovací jazyky"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Třída: 3.A sk a"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"     />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="učebna: 17"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.70">
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:paddingBottom="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Následující událost"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="zahájení za"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="10dp"
+                        android:tag="tagForDelete"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1 hod a 10 min"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/green500colorAccent"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Programovací jazyky"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="14dp"
+                        android:tag="tagForDelete"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Třída: 3.A sk a"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"     />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="učebna: 17"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.70">
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:paddingBottom="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Dnes již nemáte žádné události"
+                        android:textColor="@color/green500colorPrimary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="5dp"
-        android:weightSum="1"        >
+        android:weightSum="1"
+        android:layout_marginTop="100dp">
 
 
         <LinearLayout
@@ -153,4 +3122,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

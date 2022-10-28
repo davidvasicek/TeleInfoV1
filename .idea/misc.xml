@@ -22,8 +22,9 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fffffffffffffffffffff.xml" value="0.1421875" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ffffffffffffffffffffffffff.xml" value="0.22735507246376813" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/ffffffffffffffffffffffffffffffffff.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_home.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_notifications.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_dashboard.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/fragment_notifications.xml" value="0.30673642903858733" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/gggggggggggggggg.xml" value="0.1421875" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_finish.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/guide__fragment_permissions.xml" value="0.17916666666666667" />
@@ -47,6 +48,7 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/login_fragment_new_pin_dialog.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/login_fragment_pin.xml" value="0.33" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/rozvrh_activity_rozvrh_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/rozvrh_activity_rozvrh_nove.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/rozvrh_activity_rozvrh_nove1.xml" value="0.22735507246376813" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/rozvrh_activity_view_bottom_sheet_dialog.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/rozvrh_bottom_sheet_dialog_dinning_room_menu.xml" value="0.22826086956521738" />
@@ -71,7 +73,9 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/test_activity_test_recycler_view_horizontal.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/test_activity_test_recycler_view_horizontal_item.xml" value="0.75" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/layout/test_activity_test_recycler_view_horizontal_weeks.xml" value="0.33" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/menu/action_bar_plus.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/menu/action_bar_timetable.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/TeleInfo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25104166666666666" />
       </map>
     </option>
   </component>
