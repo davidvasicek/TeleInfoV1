@@ -38,21 +38,15 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
 
+    LinearLayout linearLayoutDailyTimetableTeachers;
+    LinearLayout linearLayoutDailyTimetableSchoolRooms;
+    LinearLayout linearLayoutDailyTimetableClasses;
+    LinearLayout linearLayoutWeeklyTimetableTeachers;
+    LinearLayout linearLayoutWeeklyTimetableSchoolRooms;
+    LinearLayout linearLayoutWeeklyTimetableClasses;
 
 
-    CardView card_view_rozvrh_my;
-    CardView card_view_rozvrh_dle_ucitelu;
-    CardView card_view_rozvrh_dle_uceben;
-    CardView card_view_rozvrh_dle_trid;
-    CardView card_view_rozvrh_ucitele;
-    CardView card_view_rozvrh_ucebny;
-    CardView card_view_rozvrh_tridy;
-    CardView card_view_najdi_ucebnu;
 
-    CardView card_view_speed_dial_1;
-    CardView card_view_speed_dial_2;
-    CardView card_view_speed_dial_3;
-    CardView card_view_speed_dial_4;
 
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
@@ -78,78 +72,45 @@ public class HomeFragment extends Fragment {
 
 
 
-        card_view_rozvrh_my = (CardView)root.findViewById(R.id.card_view_rozvrh_my);
-        card_view_rozvrh_dle_ucitelu = (CardView)root.findViewById(R.id.card_view_rozvrh_dle_ucitelu);
-        card_view_rozvrh_dle_uceben = (CardView)root.findViewById(R.id.card_view_rozvrh_dle_uceben);
-        card_view_rozvrh_dle_trid = (CardView)root.findViewById(R.id.card_view_rozvrh_dle_trid);
-        card_view_rozvrh_ucitele = (CardView)root.findViewById(R.id.card_view_rozvrh_ucitele);
-        card_view_rozvrh_ucebny = (CardView)root.findViewById(R.id.card_view_rozvrh_ucebny);
-        card_view_rozvrh_tridy = (CardView)root.findViewById(R.id.card_view_rozvrh_tridy);
-        card_view_najdi_ucebnu = (CardView)root.findViewById(R.id.card_view_najdi_ucebnu);
 
-        card_view_speed_dial_1 = (CardView)root.findViewById(R.id.card_view_speed_dial_1);
-        card_view_speed_dial_2 = (CardView)root.findViewById(R.id.card_view_speed_dial_2);
-        card_view_speed_dial_3 = (CardView)root.findViewById(R.id.card_view_speed_dial_3);
-        card_view_speed_dial_4 = (CardView)root.findViewById(R.id.card_view_speed_dial_4);
+
+        linearLayoutDailyTimetableTeachers = (LinearLayout)root.findViewById(R.id.dddddddddddddddLinearLayoutDailyTimetableTeachers);
+        linearLayoutDailyTimetableSchoolRooms = (LinearLayout)root.findViewById(R.id.dddddddddddddddLinearLayoutDailyTimetableSchoolRooms);
+        linearLayoutDailyTimetableClasses = (LinearLayout)root.findViewById(R.id.dddddddddddddddLinearLayoutDailyTimetableClasses);
+        linearLayoutWeeklyTimetableTeachers = (LinearLayout)root.findViewById(R.id.dddddddddddddddLinearLayoutWeeklyTimetableTeachers);
+        linearLayoutWeeklyTimetableSchoolRooms = (LinearLayout)root.findViewById(R.id.dddddddddddddddLinearLayoutWeeklyTimetableSchoolRooms);
+        linearLayoutWeeklyTimetableClasses = (LinearLayout)root.findViewById(R.id.dddddddddddddddLinearLayoutWeeklyTimetableClasses);
 
 
 
-        //card_view_rozvrh_my.setCardBackgroundColor(Color.parseColor(mSharedPreferences.getString(CURRENT_THEME, "#212121")));
 
-
-
-       // GradientDrawable gd = new GradientDrawable(
-         //       GradientDrawable.Orientation.BL_TR,
-         //       new int[] {0xFFF48FB1,0xFFEC407A,0xFFD81B60});
-        //gd.setCornerRadius(20f);
-
-       // card_view_rozvrh_dle_ucitelu.setBackground(gd);
-
-
-        card_view_rozvrh_my.setOnClickListener(new View.OnClickListener() {
+        linearLayoutDailyTimetableTeachers.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(getContext(), RozvrhNove1.class);
-                intent.putExtra("action", "weeklyByTeacher");
-                intent.putExtra("name", "Vašíček_David_Vaš");
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-
-            }
-        });
-
-
-        card_view_rozvrh_dle_ucitelu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
                 Intent intent = new Intent(getContext(), RozvrhNove1.class);
                 intent.putExtra("action", "dailyByTeachers");
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 
-
             }
         });
 
-        card_view_rozvrh_dle_uceben.setOnClickListener(new View.OnClickListener() {
+        linearLayoutDailyTimetableSchoolRooms.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
                 Intent intent = new Intent(getContext(), RozvrhNove1.class);
                 intent.putExtra("action", "dailyByschoolroom");
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 
-
             }
         });
 
-
-        card_view_rozvrh_dle_trid.setOnClickListener(new View.OnClickListener() {
+        linearLayoutDailyTimetableClasses.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
                 Intent intent = new Intent(getContext(), RozvrhNove1.class);
                 intent.putExtra("action", "dailyByClass");
@@ -159,13 +120,15 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-
-
-
-        card_view_rozvrh_ucitele.setOnClickListener(new View.OnClickListener() {
+        linearLayoutWeeklyTimetableTeachers.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+
+                //Intent intent = new Intent(getContext(), RozvrhNove1.class);
+                //intent.putExtra("action", "weeklyByTeacher");
+                //intent.putExtra("name", "Vašíček_David_Vaš");
+                //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                //startActivity(intent);
 
                 // Intent intent = new Intent(getContext(), RozvrhNove1.class);
                 // intent.putExtra("action", "weeklyByTeacher");
@@ -182,11 +145,9 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        card_view_rozvrh_ucebny.setOnClickListener(new View.OnClickListener() {
+        linearLayoutWeeklyTimetableSchoolRooms.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-
+            public void onClick(View v) {
 
 
 
@@ -234,11 +195,9 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        card_view_rozvrh_tridy.setOnClickListener(new View.OnClickListener() {
+        linearLayoutWeeklyTimetableClasses.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-
+            public void onClick(View v) {
 
                 List<String> tridy = new ArrayList<>();
 
@@ -271,6 +230,24 @@ public class HomeFragment extends Fragment {
         });
 
 
+
+
+
+        //card_view_rozvrh_my.setCardBackgroundColor(Color.parseColor(mSharedPreferences.getString(CURRENT_THEME, "#212121")));
+
+
+
+       // GradientDrawable gd = new GradientDrawable(
+         //       GradientDrawable.Orientation.BL_TR,
+         //       new int[] {0xFFF48FB1,0xFFEC407A,0xFFD81B60});
+        //gd.setCornerRadius(20f);
+
+       // card_view_rozvrh_dle_ucitelu.setBackground(gd);
+
+
+
+      /*
+
         card_view_najdi_ucebnu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -297,58 +274,7 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
-        card_view_speed_dial_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(getContext(), RozvrhNove1.class);
-                intent.putExtra("action", "weeklyByTeacher");
-                intent.putExtra("name", "Jedlička_Václav_Jed");
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-
-            }
-        });
-
-        card_view_speed_dial_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(getContext(), RozvrhNove1.class);
-                intent.putExtra("action", "weeklyByTeacher");
-                intent.putExtra("name", "Dědičík_Pavel_Dě");
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-
-            }
-        });
-
-        card_view_speed_dial_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(getContext(), RozvrhNove1.class);
-                intent.putExtra("action", "weeklyBySchoolroom");
-                intent.putExtra("schoolroom", "17");
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-
-            }
-        });
-
-        card_view_speed_dial_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(getContext(), RozvrhNove1.class);
-                intent.putExtra("action", "weeklyBySchoolClass");
-                intent.putExtra("schoolClass", "3_A");
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-
-            }
-        });
+*/
 
 
 

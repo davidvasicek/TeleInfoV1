@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -28,11 +29,8 @@ import com.example.teleinfo.settings._ActivityMainSettings;
 
 public class NotificationsFragment extends Fragment {
 
-    CardView card_view_settings;
     CardView card_view_settingsLunch;
-    CardView card_view_menu;
     CardView card_view_teacher_card;
-    CardView card_view_school_room_list;
     CardView card_view_teacher_list;
     CardView card_view_telephone_contact;
     CardView card_view_schooll_class_list;
@@ -42,6 +40,18 @@ public class NotificationsFragment extends Fragment {
     CardView card_view_administration;
     CardView card_view_erasepaire;
     CardView card_view_apologies;
+
+    LinearLayout linearLayoutSchoolCanteenMenu;
+    LinearLayout linearLayoutApologiesModule;
+    LinearLayout linearLayoutUnregisteredHours;
+    LinearLayout linearLayoutSchoolFloorPlan;
+    LinearLayout linearLayoutTeacherList;
+    LinearLayout linearLayoutSchoolRoomsList;
+    LinearLayout linearLayoutTelephoneContact;
+    LinearLayout linearLayoutAppSettings;
+    LinearLayout linearLayoutAdministration;
+
+
 
 
 
@@ -58,11 +68,8 @@ public class NotificationsFragment extends Fragment {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        card_view_settings = (CardView)root.findViewById(R.id.card_view_settings);
         card_view_settingsLunch = (CardView)root.findViewById(R.id.card_view_settingsLunch);
-        card_view_menu = (CardView)root.findViewById(R.id.card_view_menu);
         card_view_teacher_card = (CardView)root.findViewById(R.id.card_view_teacher_card);
-        card_view_school_room_list = (CardView)root.findViewById(R.id.card_view_school_room_list);
         card_view_teacher_list = (CardView)root.findViewById(R.id.card_view_teacher_list);
         card_view_telephone_contact = (CardView)root.findViewById(R.id.card_view_telephone_contact);
         card_view_schooll_class_list = (CardView)root.findViewById(R.id.card_view_schooll_class_list);
@@ -73,15 +80,88 @@ public class NotificationsFragment extends Fragment {
         card_view_erasepaire = (CardView)root.findViewById(R.id.card_view_erasepaire);
         card_view_apologies = (CardView)root.findViewById(R.id.card_view_apologies);
 
-
+        linearLayoutSchoolCanteenMenu = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutSchoolCanteenMenu);
+        linearLayoutApologiesModule = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutApologiesModule);
+        linearLayoutUnregisteredHours = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutUnregisteredHours);
+        linearLayoutSchoolFloorPlan = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutSchoolFloorPlan);
+        linearLayoutTeacherList = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutTeacherList);
+        linearLayoutSchoolRoomsList = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutSchoolRoomsList);
+        linearLayoutTelephoneContact = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutTelephoneContact);
+        linearLayoutAppSettings = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutAppSettings);
+        linearLayoutAdministration = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutAdministration);
 
 
         mSharedPreferences = getContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
 
 
+        linearLayoutSchoolCanteenMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        card_view_settings.setOnClickListener(new View.OnClickListener() {
+                BottomSheetDialogDiningRoomMenu bottomSheetDialogDiningRoomMenu = new BottomSheetDialogDiningRoomMenu();
+                bottomSheetDialogDiningRoomMenu.show(getChildFragmentManager(), "exampleBottomSheet");
+
+            }
+        });
+
+        linearLayoutApologiesModule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+        linearLayoutUnregisteredHours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+        linearLayoutSchoolFloorPlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+        linearLayoutTeacherList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+        linearLayoutSchoolRoomsList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
+                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
+
+
+            }
+        });
+
+        linearLayoutTelephoneContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+        linearLayoutAppSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -90,6 +170,17 @@ public class NotificationsFragment extends Fragment {
 
             }
         });
+
+
+        linearLayoutAdministration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
+
+
 
         card_view_settingsLunch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,15 +192,6 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
-        card_view_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                BottomSheetDialogDiningRoomMenu bottomSheetDialogDiningRoomMenu = new BottomSheetDialogDiningRoomMenu();
-                bottomSheetDialogDiningRoomMenu.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
 
         card_view_teacher_card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,15 +203,6 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
-        card_view_school_room_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
 
 
         card_view_teacher_list.setOnClickListener(new View.OnClickListener() {
