@@ -22,6 +22,9 @@ import com.example.teleinfo.administration.__ActivityMainAdministration;
 import com.example.teleinfo.databinding.FragmentNotificationsBinding;
 import com.example.teleinfo.modules.Apologies_ApologiesMainActivity;
 import com.example.teleinfo.modules.Apologies_ApologiesObject;
+import com.example.teleinfo.modules.ClassRooms_BottomSheetDialogClassRoomsList;
+import com.example.teleinfo.modules.FloorPlan_MainActivity;
+import com.example.teleinfo.modules.UnregisteredHours_MainActivity;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenu;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenuSettings;
 import com.example.teleinfo.rozvrh.BottomSheetDialogTeacherCard;
@@ -29,17 +32,6 @@ import com.example.teleinfo.settings._ActivityMainSettings;
 
 public class NotificationsFragment extends Fragment {
 
-    CardView card_view_settingsLunch;
-    CardView card_view_teacher_card;
-    CardView card_view_teacher_list;
-    CardView card_view_telephone_contact;
-    CardView card_view_schooll_class_list;
-    CardView card_view_schedule_of_the_year;
-    CardView card_view_school_plan;
-    CardView card_view_supervision;
-    CardView card_view_administration;
-    CardView card_view_erasepaire;
-    CardView card_view_apologies;
 
     LinearLayout linearLayoutSchoolCanteenMenu;
     LinearLayout linearLayoutApologiesModule;
@@ -50,9 +42,6 @@ public class NotificationsFragment extends Fragment {
     LinearLayout linearLayoutTelephoneContact;
     LinearLayout linearLayoutAppSettings;
     LinearLayout linearLayoutAdministration;
-
-
-
 
 
     private SharedPreferences mSharedPreferences;
@@ -68,17 +57,6 @@ public class NotificationsFragment extends Fragment {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        card_view_settingsLunch = (CardView)root.findViewById(R.id.card_view_settingsLunch);
-        card_view_teacher_card = (CardView)root.findViewById(R.id.card_view_teacher_card);
-        card_view_teacher_list = (CardView)root.findViewById(R.id.card_view_teacher_list);
-        card_view_telephone_contact = (CardView)root.findViewById(R.id.card_view_telephone_contact);
-        card_view_schooll_class_list = (CardView)root.findViewById(R.id.card_view_schooll_class_list);
-        card_view_schedule_of_the_year = (CardView)root.findViewById(R.id.card_view_schedule_of_the_year);
-        card_view_school_plan = (CardView)root.findViewById(R.id.card_view_school_plan);
-        card_view_supervision = (CardView)root.findViewById(R.id.card_view_supervision);
-        card_view_administration = (CardView)root.findViewById(R.id.card_view_administration);
-        card_view_erasepaire = (CardView)root.findViewById(R.id.card_view_erasepaire);
-        card_view_apologies = (CardView)root.findViewById(R.id.card_view_apologies);
 
         linearLayoutSchoolCanteenMenu = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutSchoolCanteenMenu);
         linearLayoutApologiesModule = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutApologiesModule);
@@ -109,7 +87,8 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
+                Intent intent = new Intent(getContext(), Apologies_ApologiesMainActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -118,7 +97,8 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
+                Intent intent = new Intent(getContext(), UnregisteredHours_MainActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -127,7 +107,8 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
+                Intent intent = new Intent(getContext(), FloorPlan_MainActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -145,8 +126,9 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
+
+                ClassRooms_BottomSheetDialogClassRoomsList classRooms_bottomSheetDialogClassRoomsList = new ClassRooms_BottomSheetDialogClassRoomsList();
+                classRooms_bottomSheetDialogClassRoomsList.show(getChildFragmentManager(), "exampleBottomSheet");
 
 
             }
@@ -176,135 +158,11 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
-            }
-        });
-
-
-
-        card_view_settingsLunch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                BottomSheetDialogDiningRoomMenuSettings bottomSheetDialogDiningRoomMenuSettings = new BottomSheetDialogDiningRoomMenuSettings();
-                bottomSheetDialogDiningRoomMenuSettings.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-
-        card_view_teacher_card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-
-
-        card_view_teacher_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-
-        card_view_telephone_contact.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-
-        card_view_schooll_class_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-
-        card_view_schedule_of_the_year.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-               // BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-
-        card_view_school_plan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-
-        card_view_supervision.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //BottomSheetDialogTeacherCard bottomSheetDialogTeacherCard = new BottomSheetDialogTeacherCard();
-                //bottomSheetDialogTeacherCard.show(getChildFragmentManager(), "exampleBottomSheet");
-
-            }
-        });
-
-        card_view_administration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
                 Intent intent = new Intent(getContext(), __ActivityMainAdministration.class);
                 startActivity(intent);
 
             }
         });
-
-        card_view_erasepaire.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                mEditor.putBoolean(DEVICE_IS_PAIRED, false );
-                mEditor.commit();
-
-            }
-        });
-
-        card_view_apologies.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getContext(), Apologies_ApologiesMainActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-
-
-
-
 
 
 

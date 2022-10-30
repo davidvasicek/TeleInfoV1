@@ -20,6 +20,12 @@
         android:theme="@style/Theme.TeleInfo"
         tools:targetApi="31">
         <activity
+            android:name=".modules.FloorPlan_MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".modules.UnregisteredHours_MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".modules.Apologies_ApologiesMainActivity"
             android:exported="false" />
         <activity
@@ -33,7 +39,7 @@
             android:exported="false" />
         <activity
             android:name=".login._ActivityMainLogin"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".administration._ActivityFragmentViewAdministration"
             android:exported="false" />

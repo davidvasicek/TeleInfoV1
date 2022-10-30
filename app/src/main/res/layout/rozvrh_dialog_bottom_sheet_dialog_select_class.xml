@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="lolo"
+                android:text="Výběr třídy"
                 android:gravity="left"
                 android:id="@+id/color1SelectBottomSheetDialogTextViewTitle"
                 android:textColor="@color/text_primary"

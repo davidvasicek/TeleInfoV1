@@ -87,8 +87,7 @@ public class MainActivity extends AppCompatActivity {
       //  mDatabaseReference = mFirebaseDatabaseDatabase.getReference("TeleInfo/Administration/");
 
 
-        ClassRooms_BottomSheetDialogClassRoomsList classRooms_bottomSheetDialogClassRoomsList = new ClassRooms_BottomSheetDialogClassRoomsList();
-        classRooms_bottomSheetDialogClassRoomsList.show(getSupportFragmentManager(), "exampleBottomSheet");
+
 
 
 

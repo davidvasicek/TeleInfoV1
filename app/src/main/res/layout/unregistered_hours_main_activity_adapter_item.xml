@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/unregisteredHoursMainActivityAdapterItemTextViewDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="10"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="center"/>
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/unregisteredHoursMainActivityAdapterItemTextViewMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="10"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="bottom"
+                        android:layout_weight="1"/>
+
+
+                    <TextView
+                        android:id="@+id/unregisteredHoursMainActivityAdapterItemTextViewYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="2022"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Vyučovací\nhodina"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="8dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/unregisteredHoursMainActivityAdapterItemTextViewLearnedHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/unregisteredHoursMainActivityAdapterItemTextViewClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3.A "
+                    android:textColor="@color/text_primary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="false"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+
+                <TextView
+                    android:id="@+id/unregisteredHoursMainActivityAdapterItemTextViewSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Kybernetická bezpečnost"
+                    android:textColor="@color/text_primary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="false"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+
+
+
+
+
+</LinearLayout>

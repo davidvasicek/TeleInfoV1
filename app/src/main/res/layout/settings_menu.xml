@@ -94,9 +94,9 @@
                         android:layout_weight="0.9"/>
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/arrow"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/right_arrow"
                             android:layout_gravity="center_vertical"/>
 
                 </LinearLayout>
@@ -160,11 +160,10 @@
                         android:layout_weight="0.9"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/right_arrow"
                         android:layout_gravity="center_vertical"/>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -227,11 +226,10 @@
                         android:layout_weight="0.9"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/right_arrow"
                         android:layout_gravity="center_vertical"/>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -242,39 +240,8 @@
                 android:layout_height="1dp"
                 android:background="@color/line" />
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:tag="tagForDelete"
-                        android:text="@string/settingsMenu_TextView_SensorsAndDevices"
-                        android:textAllCaps="true"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="@dimen/text_size_text" />
-
-                </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -284,8 +251,8 @@
             android:orientation="vertical"
             android:clickable="true"
             android:background="?android:attr/selectableItemBackground"
-            android:id="@+id/settingsMenuLinearLayoutLightsGenerals"
-            android:tag="settingsMenuLinearLayoutLightsGenerals">
+            android:id="@+id/settingsMenuLinearLayoutSchoolCanteenMenuSettings"
+            android:tag="settingsMenuLinearLayoutTheme">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -312,7 +279,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/settingsMenu_TextView_LightsGeneral"
+                            android:text="Nastavení obědů"
                             android:gravity="center_vertical"
                             android:textColor="@color/text_primary"
                             android:textSize="@dimen/text_size_text"
@@ -327,9 +294,9 @@
                         android:layout_weight="0.9"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/right_arrow"
                         android:layout_gravity="center_vertical"/>
 
                 </LinearLayout>
@@ -351,8 +318,8 @@
             android:orientation="vertical"
             android:clickable="true"
             android:background="?android:attr/selectableItemBackground"
-            android:id="@+id/settingsMenuLinearLayoutLightsBtn"
-            android:tag="settingsMenuLinearLayoutLightsBtn">
+            android:id="@+id/settingsMenuLinearLayoutMazaniParovani"
+            android:tag="settingsMenuLinearLayoutTheme">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -379,7 +346,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/settingsMenu_TextView_LightsBtn"
+                            android:text="Smazat parovaní"
                             android:gravity="center_vertical"
                             android:textColor="@color/text_primary"
                             android:textSize="@dimen/text_size_text"
@@ -394,9 +361,9 @@
                         android:layout_weight="0.9"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/right_arrow"
                         android:layout_gravity="center_vertical"/>
 
                 </LinearLayout>
@@ -412,71 +379,8 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:id="@+id/settingsMenuLinearLayoutPlants"
-            android:tag="settingsMenuLinearLayoutPlants">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="0.1">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/settingsMenu_TextView_Plants"
-                            android:gravity="center_vertical"
-                            android:textColor="@color/text_primary"
-                            android:textSize="@dimen/text_size_text"
-                            android:tag="tagForDelete" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="0.9"/>
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/arrow"
-                        android:layout_gravity="center_vertical"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -518,7 +422,7 @@
             android:orientation="vertical"
             android:clickable="true"
             android:background="?android:attr/selectableItemBackground"
-            android:id="@+id/settingsMenuLinearLayoutInfo"
+            android:id="@+id/aboutApp"
             android:tag="settingsMenuLinearLayoutInfo">
 
             <LinearLayout
@@ -546,7 +450,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/settingsMenu_TextView_Info"
+                            android:text="O oplikaci"
                             android:gravity="center_vertical"
                             android:textColor="@color/text_primary"
                             android:textSize="@dimen/text_size_text"
@@ -561,9 +465,9 @@
                         android:layout_weight="0.9"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/right_arrow"
                         android:layout_gravity="center_vertical"/>
 
                 </LinearLayout>

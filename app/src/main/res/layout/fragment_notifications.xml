@@ -107,7 +107,7 @@
                             android:layout_height="match_parent"
                             android:text="Obědové menu školní jídelny "
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -189,7 +189,7 @@
                             android:layout_height="match_parent"
                             android:text="Kontrola počtu zameškaných hodin u studentů dané třídy "
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -271,7 +271,90 @@
                             android:layout_height="match_parent"
                             android:text="Seznam nezapsaných hodin v Třídní knize"
                             android:textColor="@color/text_secondary"
+                            android:textSize="11dp" />
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9">
+
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="Obědy"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp"
+                        android:src="@drawable/right_arrow"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="1"
+                android:clickable="true"
+                android:id="@+id/ttttttttttttttLinearLayoutSchoolFloorPlan"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Plán školy"
+                            android:textColor="@color/text_primary"
                             android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Nahlížení do floor planu budovy"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -327,7 +410,7 @@
                 android:layout_marginBottom="10dp"
                 android:weightSum="1"
                 android:clickable="true"
-                android:id="@+id/ttttttttttttttLinearLayoutSchoolFloorPlan"
+                android:id="@+id/ttttttttttttttLinearLayoutLessonsLearned"
                 android:foreground="?android:attr/selectableItemBackground"
                 >
 
@@ -346,16 +429,16 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Plán školy"
+                            android:text="Mé odučené hodiny"
                             android:textColor="@color/text_primary"
                             android:textSize="12dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Nahlížení do floor planu budovy"
+                            android:text="Zobrazuje mé odučené hodiny v jednotlivých měsících školního roku"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -397,9 +480,6 @@
 
 
 
-
-
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -407,207 +487,380 @@
 
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp">
 
 
-        <LinearLayout
-            android:orientation="vertical"
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp">
+
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="1">
+                android:layout_marginTop="10dp">
 
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30"
+                        android:layout_marginLeft="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Seznamy"
+                            android:textColor="#455A64"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.30"
-                    android:layout_marginLeft="0dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Seznamy"
-                        android:textColor="#455A64"
-                        android:textAllCaps="true"
-                        android:textSize="12dp"
-                        android:tag="tagForDelete"
-                        android:layout_marginLeft="15dp"
-                        android:gravity="center_vertical"
-                        android:textStyle="bold"
-                        />
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="10dp"
-                android:weightSum="1"
-                android:clickable="true"
-                android:id="@+id/ttttttttttttttLinearLayoutTeacherList"
-                android:foreground="?android:attr/selectableItemBackground">
+                    android:layout_height="1dp"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.1">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="1"
+                    android:clickable="true"
+                    android:id="@+id/ttttttttttttttLinearLayoutTeacherList"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:layout_weight="0.1">
 
-                        <TextView
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Seznam pedagogů"
-                            android:textColor="@color/text_primary"
-                            android:textSize="12dp" />
+                            android:layout_height="wrap_content"
+                            >
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Seznam pedagogů zaměstaných na škole"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Seznam pedagogů"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Seznam pedagogů zaměstaných na škole"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+
+
+
+
+
 
                     </LinearLayout>
 
-
-
-
-
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.9">
-
-
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:text="Seznam učeben"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp"
-                        android:src="@drawable/right_arrow"/>
-
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="10dp"
-                android:weightSum="1"
-                android:clickable="true"
-                android:id="@+id/ttttttttttttttLinearLayoutSchoolRoomsList"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1">
-
                     <LinearLayout
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:layout_weight="0.9">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:text="Seznam učeben"
                             android:textColor="@color/text_primary"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            android:src="@drawable/right_arrow"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Seznam učeben v budově"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+
 
                     </LinearLayout>
-
-
-
-
 
 
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+                <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.9">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="1"
+                    android:clickable="true"
+                    android:id="@+id/ttttttttttttttLinearLayoutSchoolRoomsList"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Seznam učeben"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Seznam učeben v budově"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
 
 
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:text="Obědy"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp"
-                        android:src="@drawable/right_arrow"/>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="Obědy"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12dp"
+                            android:src="@drawable/right_arrow"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="1"
+                    android:clickable="true"
+                    android:id="@+id/ttttttttttttttLinearLayoutClassesAndStudents"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Seznam tříd a studentů"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Seznam tříd a studentů"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="Obědy"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12dp"
+                            android:src="@drawable/right_arrow"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="1"
+                    android:clickable="true"
+                    android:id="@+id/ttttttttttttttLinearLayoutTelephoneContact"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Telefonní kontakty"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Seznam kontaktů jednotlivých pracovníků a učeben"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="Obědy"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12dp"
+                            android:src="@drawable/right_arrow"/>
+
+
+
+                    </LinearLayout>
 
 
 
@@ -615,82 +868,218 @@
 
 
 
+
             </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp">
+
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:weightSum="1"
-                android:clickable="true"
-                android:id="@+id/ttttttttttttttLinearLayoutTelephoneContact"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:layout_marginTop="10dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.1">
+                    android:weightSum="1">
+
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        >
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30"
+                        android:layout_marginLeft="0dp">
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Telefonní kontakty"
-                            android:textColor="@color/text_primary"
-                            android:textSize="12dp" />
+                            android:text="Plány a harmonogramy"
+                            android:textColor="#455A64"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"
+                            />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Seznam kontaktů jednotlivých pracovníků a učeben"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
 
                     </LinearLayout>
 
 
 
+                </LinearLayout>
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="1"
+                    android:clickable="true"
+                    android:id="@+id/ttttttttttttttLinearLayoutSchoolYearHarmonogram"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Harmonogram roku"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Harmonogram školního roku"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="Seznam učeben"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12dp"
+                            android:src="@drawable/right_arrow"/>
+
+
+
+                    </LinearLayout>
 
 
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+                <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.9">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="1"
+                    android:clickable="true"
+                    android:id="@+id/ttttttttttttttLinearLayoutSchoolYearPlan"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Plán školního roku"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Plán školního roku"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
 
 
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:text="Obědy"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp"
-                        android:src="@drawable/right_arrow"/>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:text="Obědy"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12dp"
+                            android:src="@drawable/right_arrow"/>
+
+
+
+                    </LinearLayout>
 
 
 
@@ -698,16 +1087,12 @@
 
 
 
+
             </LinearLayout>
 
+        </androidx.cardview.widget.CardView>
 
 
-
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -802,7 +1187,7 @@
                                 android:layout_height="match_parent"
                                 android:text="Administrace aplikace"
                                 android:textColor="@color/text_secondary"
-                                android:textSize="12dp" />
+                                android:textSize="11dp" />
 
                         </LinearLayout>
 
@@ -849,8 +1234,11 @@
         <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp">
+        android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="20dp">
 
 
         <LinearLayout
@@ -939,7 +1327,7 @@
                             android:layout_height="match_parent"
                             android:text="Nastavení aplikace"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -983,666 +1371,7 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_settingsLunch"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="NASTAVENÍ OBĚDŮ"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_teacher_card"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="KARTA UČITELE"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_teacher_list"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="SEZNAM UČITELŮ"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_telephone_contact"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="TELEFONNÍ KONTAKTY"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_schooll_class_list"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="SEZNAM TŘÍD A STUDENTŮ"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_schedule_of_the_year"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="HARMONOGRAM ROKU"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_school_plan"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="PLÁN ŠKOLY"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_supervision"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-
-                        android:gravity="center"
-                        android:text="SEZNAM DOZORŮ"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="NEZAPSANÉ HODINY"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_administration"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="ADMINISTRACE"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="OMLUVENKY"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_erasepaire"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="SMAZAT PÁROVÁNÍ"
-                        android:textColor="@color/text_primary"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
-
-
-
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_apologies"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                app:cardElevation="3dp"
-                android:elevation="3dp"
-                android:clickable="true"
-                app:cardBackgroundColor="#ECEFF1"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"            >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="OMLUVENKY"
-                        android:textSize="12dp"
-                        android:gravity="center"
-                        android:textColor="@color/text_primary"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-    </LinearLayout>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

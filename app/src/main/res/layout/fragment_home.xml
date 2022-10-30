@@ -106,7 +106,7 @@
                             android:layout_height="match_parent"
                             android:text="Denní rozvrh všech pedagogů"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -188,7 +188,7 @@
                             android:layout_height="match_parent"
                             android:text="Denní rozvrh všech učeben"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -271,7 +271,7 @@
                             android:layout_height="match_parent"
                             android:text="Denní rozvrh všech tříd"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -398,7 +398,7 @@
                             android:layout_height="match_parent"
                             android:text="Týdenní rozvrh požadovaného pedagoga"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -480,7 +480,7 @@
                             android:layout_height="match_parent"
                             android:text="Týdenní rozvrh požadované učebny "
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -563,7 +563,7 @@
                             android:layout_height="match_parent"
                             android:text="Týdenní rozvrh požadované třídy"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 
@@ -619,6 +619,7 @@
             android:textSize="14dp"
             android:tag="tagForDelete"
             android:textStyle="bold"
+            android:layout_marginLeft="10dp"
             />
     </LinearLayout>
 
@@ -676,7 +677,7 @@
                                 android:layout_height="match_parent"
                                 android:text="Umožňuje vyhledávat neobsazené třídy v dané hodiny"
                                 android:textColor="@color/text_secondary"
-                                android:textSize="12dp" />
+                                android:textSize="11dp" />
 
                         </LinearLayout>
 
@@ -760,7 +761,7 @@
                             android:layout_height="match_parent"
                             android:text="Umožňuje nahlížet na seznam jednotlivých dozorů jednotlivých dnů"
                             android:textColor="@color/text_secondary"
-                            android:textSize="12dp" />
+                            android:textSize="11dp" />
 
                     </LinearLayout>
 

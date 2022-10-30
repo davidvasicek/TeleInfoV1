@@ -11,8 +11,8 @@
     app:cardElevation="3dp"
     android:elevation="3dp"
     android:clickable="true"
-    app:cardBackgroundColor="#EEEEEE"
-    android:foreground="?android:attr/selectableItemBackground">
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,8 +22,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="UČEBNA"
+            android:text="Učebna"
+            android:textAllCaps="true"
             android:layout_marginTop="10dp"
+            android:textSize="8dp"
             android:textColor="@color/text_secondary"
             android:gravity="center_horizontal"/>
 

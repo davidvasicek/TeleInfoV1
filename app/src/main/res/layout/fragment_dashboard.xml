@@ -16,563 +16,6 @@
 
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp">
-
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1">
-
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.30"
-                    android:layout_marginLeft="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Události třídy 4.C"
-                        android:textColor="@color/text_secondary"
-                        android:textAllCaps="true"
-                        android:textSize="12dp"
-                        android:tag="tagForDelete"
-                        android:layout_marginLeft="15dp"
-                        android:gravity="center_vertical"
-                        />
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Út 25.10. (08:15 - 09:00)"
-                            android:textColor="@color/text_secondary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Beseda - Nebudu překvapen"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Kná | 27"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Út 25.10. (08:15 - 09:00)"
-                            android:textColor="@color/text_secondary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Beseda - Nebudu překvapen"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Kop | 27"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Út 25.10. (08:15 - 09:00)"
-                            android:textColor="@color/text_secondary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Beseda - Nebudu překvapen"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Bd | 27"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Út 25.10. (08:15 - 09:00)"
-                            android:textColor="@color/text_secondary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Beseda - Nebudu překvapen"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Ště | POS"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Út 25.10. (08:15 - 09:00)"
-                            android:textColor="@color/text_secondary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Podzimní prázdniny"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text=""
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Út 25.10. (08:15 - 09:00)"
-                            android:textColor="@color/text_secondary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Podzimní prázdniny"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text=""
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
 
 
@@ -662,209 +105,6 @@
 
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp">
-
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1">
-
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.30"
-                    android:layout_marginLeft="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Notifikace"
-                        android:textColor="@color/text_secondary"
-                        android:textAllCaps="true"
-                        android:textSize="12dp"
-                        android:tag="tagForDelete"
-                        android:layout_marginLeft="15dp"
-                        android:gravity="center_vertical"
-                        />
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/line"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Nezapsané hodiny"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="0"
-                            android:textColor="@color/green500colorPrimary"
-                            android:textAllCaps="true"
-                            android:textSize="14dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            android:textStyle="bold"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp">
-
-
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="1">
-
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.30">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Počet studentů s přesáhlých 35hod"
-                            android:textColor="@color/text_primary"
-                            android:textAllCaps="true"
-                            android:textSize="12dp"
-                            android:tag="tagForDelete"
-                            android:layout_marginLeft="15dp"
-                            android:gravity="center_vertical"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.70">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="2"
-                            android:textColor="@color/red700colorAccent"
-                            android:textAllCaps="true"
-                            android:textSize="14dp"
-                            android:tag="tagForDelete"
-                            android:gravity="right"
-                            android:layout_marginRight="30dp"
-                            android:textStyle="bold"
-                            />
-
-
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
 
 
@@ -1279,8 +519,8 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             app:cardCornerRadius="10dp"
@@ -1332,29 +572,12 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="9:00"
+                        android:text="9:00 - 9:10"
                         android:textColor="@color/text_secondary"
-                        android:textSize="12dp"
+                        android:textSize="10dp"
                         android:tag="tagForDelete"
                         android:layout_marginTop="5dp"
                         android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="9:10"
-                        android:textColor="@color/text_secondary"
-                        android:textAllCaps="true"
-                        android:textSize="12dp"
-                        android:tag="tagForDelete"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"/>
-
-
-
-
 
                 </LinearLayout>
 
@@ -1933,6 +1156,213 @@
     </LinearLayout>
 
     </HorizontalScrollView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Notifikace"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Nezapsané hodiny"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:textColor="@color/green500colorPrimary"
+                            android:textAllCaps="true"
+                            android:textSize="14dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            android:textStyle="bold"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Počet studentů s přesáhlých 35hod"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="2"
+                            android:textColor="@color/red700colorAccent"
+                            android:textAllCaps="true"
+                            android:textSize="14dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            android:textStyle="bold"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 
     <androidx.cardview.widget.CardView
@@ -2872,7 +2302,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Mimořádné události"
+                        android:text="Planované události"
                         android:textColor="@color/red700colorAccent"
                         android:textAllCaps="true"
                         android:textSize="12dp"
@@ -2919,7 +2349,44 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="7:45 - 8:15 porada v zasedací místnosti"
+                        android:text="dnes 7:45 - 8:15 porada v zasedací místnosti"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Pá 18.11. 14:00 - 18:00 Den otevřených dveří"
                         android:textColor="@color/text_primary"
                         android:textAllCaps="true"
                         android:textSize="12dp"
@@ -2936,10 +2403,606 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="So 19.11. 09:00 - 12:00 Den otevřených dveří"
+                        android:textColor="@color/text_primary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Události třídy 4.C"
+                        android:textColor="@color/text_secondary"
+                        android:textAllCaps="true"
+                        android:textSize="12dp"
+                        android:tag="tagForDelete"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Út 25.10. (08:15 - 09:00)"
+                            android:textColor="@color/text_secondary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Beseda - Nebudu překvapen"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Kná | 27"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Út 25.10. (08:15 - 09:00)"
+                            android:textColor="@color/text_secondary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Beseda - Nebudu překvapen"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Kop | 27"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Út 25.10. (08:15 - 09:00)"
+                            android:textColor="@color/text_secondary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Beseda - Nebudu překvapen"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Bd | 27"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Út 25.10. (08:15 - 09:00)"
+                            android:textColor="@color/text_secondary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Beseda - Nebudu překvapen"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Ště | POS"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Út 25.10. (08:15 - 09:00)"
+                            android:textColor="@color/text_secondary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Podzimní prázdniny"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=""
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.30">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Út 25.10. (08:15 - 09:00)"
+                            android:textColor="@color/text_secondary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Podzimní prázdniny"
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.70">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=""
+                            android:textColor="@color/text_primary"
+                            android:textAllCaps="true"
+                            android:textSize="12dp"
+                            android:tag="tagForDelete"
+                            android:gravity="right"
+                            android:layout_marginRight="30dp"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
     <androidx.cardview.widget.CardView

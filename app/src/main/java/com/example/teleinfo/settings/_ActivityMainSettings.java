@@ -1,6 +1,7 @@
 package com.example.teleinfo.settings;
 
 import static com.example.teleinfo.parameters.MainParameters.CURRENT_THEME;
+import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 
 import android.content.Context;
@@ -17,7 +18,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.teleinfo.R;
+import com.example.teleinfo.dialogs.AboutAppDialog;
 import com.example.teleinfo.parameters.GetThemeStyle;
+import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenuSettings;
 
 public class _ActivityMainSettings extends AppCompatActivity {
 
@@ -27,10 +30,13 @@ public class _ActivityMainSettings extends AppCompatActivity {
     LinearLayout linearLayoutReset;
     LinearLayout linearLayoutNotification;
     LinearLayout linearLayoutTheme;
-    LinearLayout linearLayoutLightsGenerals;
-    LinearLayout linearLayoutLightsBtn;
-    LinearLayout linearLayoutPlants;
-    LinearLayout linearLayoutInfo;
+    LinearLayout linearLayoutSchoolCanteenMenuSettings;
+    LinearLayout settingsMenuLinearLayoutMazaniParovani;
+    LinearLayout aboutApp;
+
+
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,22 +53,53 @@ public class _ActivityMainSettings extends AppCompatActivity {
 
         getSupportActionBar().setTitle(Html.fromHtml("<small>" + "Nastavení" + "</small>"));
 
+        mSharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
+
         linearLayoutReset = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutReset);
         linearLayoutNotification = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutNotification);
         linearLayoutTheme = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutTheme);
-        linearLayoutLightsGenerals = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutLightsGenerals);
-        linearLayoutLightsBtn = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutLightsBtn);
-        linearLayoutPlants = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutPlants);
-        linearLayoutInfo = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutInfo);
+        linearLayoutSchoolCanteenMenuSettings = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutSchoolCanteenMenuSettings);
+        settingsMenuLinearLayoutMazaniParovani = (LinearLayout)findViewById(R.id.settingsMenuLinearLayoutMazaniParovani);
+        aboutApp = (LinearLayout)findViewById(R.id.aboutApp);
+
+
+        linearLayoutSchoolCanteenMenuSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                BottomSheetDialogDiningRoomMenuSettings bottomSheetDialogDiningRoomMenuSettings = new BottomSheetDialogDiningRoomMenuSettings();
+                bottomSheetDialogDiningRoomMenuSettings.show(getSupportFragmentManager(), "exampleBottomSheet");
+
+            }
+        });
+
+        aboutApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AboutAppDialog aboutAppDialog = new AboutAppDialog();
+                aboutAppDialog.show(getSupportFragmentManager(), "exampleBottomSheet");
+
+            }
+        });
+
+
+        settingsMenuLinearLayoutMazaniParovani.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mEditor.putBoolean(DEVICE_IS_PAIRED, false );
+                mEditor.commit();
+
+            }
+        });
 
 
         linearLayoutReset.setOnClickListener(mOnKeyClickListener);
         linearLayoutNotification.setOnClickListener(mOnKeyClickListener);
         linearLayoutTheme.setOnClickListener(mOnKeyClickListener);
-        linearLayoutLightsGenerals.setOnClickListener(mOnKeyClickListener);
-        linearLayoutLightsBtn.setOnClickListener(mOnKeyClickListener);
-        linearLayoutPlants.setOnClickListener(mOnKeyClickListener);
-        linearLayoutInfo.setOnClickListener(mOnKeyClickListener);
+
 
         fragmentManager = getSupportFragmentManager();
 
@@ -73,6 +110,7 @@ public class _ActivityMainSettings extends AppCompatActivity {
             isLargeDisplay = false;
             Toast.makeText(getApplicationContext(),"Mobil",Toast.LENGTH_SHORT).show();
         }
+
 
         if (isLargeDisplay) {
             fragmentManager.beginTransaction()
