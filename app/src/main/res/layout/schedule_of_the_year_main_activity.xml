@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbardd"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Nepodařilo se načíst žádná data"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="13dp"
+            android:tag="tagForDelete"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Zkontrolujte připojení k internetu"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="11dp"
+            android:tag="tagForDelete"
+            android:textAllCaps="true"/>
+
+        <Button
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_ButtonRefrest"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Opakovat"
+            android:layout_marginTop="120dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            />
+
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/administrationsOrganizationsOrganizationsListActivity_AVLoadingIndicatorViewIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            style="@style/AVLoadingIndicatorView"
+            android:visibility="visible"
+            app:indicatorName="BallClipRotatePulseIndicator"
+            app:indicatorColor="@color/text_secondary"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -732,6 +732,77 @@ public class Menu_MainActivity extends AppCompatActivity {
                 }else{
                     mainLightsViewHolder.DinnerSecondAllergens.setVisibility(View.GONE);
                 }
+
+
+
+
+                mainLightsViewHolder.BreakfastAllergens.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Menu_AlergensDialog menu_alergensDialog = new Menu_AlergensDialog(mSharedPreferences.getString(MY_ALERGENS, ""), dinningRoomMenuObject.BreakfastAllergens);
+                        menu_alergensDialog.show(fragmentManager, "exampleBottomSheet");
+
+                    }
+                });
+
+                mainLightsViewHolder.BrunchAllergens.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Menu_AlergensDialog menu_alergensDialog = new Menu_AlergensDialog(mSharedPreferences.getString(MY_ALERGENS, ""), dinningRoomMenuObject.BrunchAllergens);
+                        menu_alergensDialog.show(fragmentManager, "exampleBottomSheet");
+
+                    }
+                });
+
+                mainLightsViewHolder.LunchAllergens.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Menu_AlergensDialog menu_alergensDialog = new Menu_AlergensDialog(mSharedPreferences.getString(MY_ALERGENS, ""), dinningRoomMenuObject.LunchAllergens);
+                        menu_alergensDialog.show(fragmentManager, "exampleBottomSheet");
+
+                    }
+                });
+
+                mainLightsViewHolder.SnackAllergens.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Menu_AlergensDialog menu_alergensDialog = new Menu_AlergensDialog(mSharedPreferences.getString(MY_ALERGENS, ""), dinningRoomMenuObject.SnackAllergens);
+                        menu_alergensDialog.show(fragmentManager, "exampleBottomSheet");
+
+                    }
+                });
+
+                mainLightsViewHolder.DinnerAllergens.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Menu_AlergensDialog menu_alergensDialog = new Menu_AlergensDialog(mSharedPreferences.getString(MY_ALERGENS, ""), dinningRoomMenuObject.DinnerAllergens);
+                        menu_alergensDialog.show(fragmentManager, "exampleBottomSheet");
+
+                    }
+                });
+
+                mainLightsViewHolder.DinnerSecondAllergens.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Menu_AlergensDialog menu_alergensDialog = new Menu_AlergensDialog(mSharedPreferences.getString(MY_ALERGENS, ""), dinningRoomMenuObject.DinnerSecondAllergens);
+                        menu_alergensDialog.show(fragmentManager, "exampleBottomSheet");
+
+                    }
+                });
+
+
+
+
+
+
+
+
             }
 
 

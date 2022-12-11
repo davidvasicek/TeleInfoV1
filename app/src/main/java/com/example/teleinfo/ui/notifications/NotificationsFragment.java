@@ -25,6 +25,7 @@ import com.example.teleinfo.modules.Apologies_ApologiesObject;
 import com.example.teleinfo.modules.ClassRooms_BottomSheetDialogClassRoomsList;
 import com.example.teleinfo.modules.FloorPlan_MainActivity;
 import com.example.teleinfo.modules.Menu_MainActivity;
+import com.example.teleinfo.modules.ScheduleOfTheYear_MainActivity;
 import com.example.teleinfo.modules.UnregisteredHours_MainActivity;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenu;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenuSettings;
@@ -43,7 +44,7 @@ public class NotificationsFragment extends Fragment {
     LinearLayout linearLayoutTelephoneContact;
     LinearLayout linearLayoutAppSettings;
     LinearLayout linearLayoutAdministration;
-
+    LinearLayout linearLayoutSchoolYearHarmonogram;
 
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
@@ -68,7 +69,7 @@ public class NotificationsFragment extends Fragment {
         linearLayoutTelephoneContact = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutTelephoneContact);
         linearLayoutAppSettings = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutAppSettings);
         linearLayoutAdministration = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutAdministration);
-
+        linearLayoutSchoolYearHarmonogram = (LinearLayout)root.findViewById(R.id.ttttttttttttttLinearLayoutSchoolYearHarmonogram);
 
         mSharedPreferences = getContext().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
@@ -167,7 +168,15 @@ public class NotificationsFragment extends Fragment {
         });
 
 
+        linearLayoutSchoolYearHarmonogram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(getContext(), ScheduleOfTheYear_MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
 
