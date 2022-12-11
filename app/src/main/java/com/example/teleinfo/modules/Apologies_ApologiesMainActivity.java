@@ -84,7 +84,14 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(Html.fromHtml("<small>" + "Omluvenky 4.C" + "</small>"));
 
         mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
+
         mDatabaseReference = mFirebaseDatabaseDatabase.getReference("omluvenkyLG") ;
+
+
+
+
+
+
 
         recyclerView = (RecyclerView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_RecyclerView);
 

@@ -106,7 +106,7 @@ public class UnregisteredHours_MainActivity extends AppCompatActivity {
 
 
         mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("/TeleInfo/Administration/UnregisteredHours/Bureš_Miroslav_Bur") ;
+        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("/TeleInfo/Administration/UnregisteredHours/Vašíček_David_Vaš") ;
 
         recyclerView = (RecyclerView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_RecyclerView);
 

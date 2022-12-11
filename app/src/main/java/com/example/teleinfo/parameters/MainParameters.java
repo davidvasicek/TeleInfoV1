@@ -141,7 +141,7 @@ public interface MainParameters {
     String DINNER_SHOW = "DinnerShow";
     String DINNER_SECOND_SHOW = "DinnerSecondShow";
 
-
+    String MY_ALERGENS = "MyAlergens";
 
 
 

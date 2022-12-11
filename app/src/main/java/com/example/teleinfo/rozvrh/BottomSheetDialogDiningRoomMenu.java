@@ -12,13 +12,11 @@ import static com.example.teleinfo.parameters.MainParameters.SNACK_SHOW;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.fragment.app.FragmentManager;
@@ -26,6 +24,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.teleinfo.R;
+import com.example.teleinfo.modules.Menu_Object;
 import com.example.teleinfo.parameters.GetThemeStyle;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -35,7 +34,7 @@ import java.util.List;
 
 public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
 
-    private List<DinningRoomMenuObject> mDinningRoomMenuList;
+    private List<Menu_Object> mDinningRoomMenuList;
     private DinningRoomMenuAdapter mDinningRoomMenuAdapter;
 
     RecyclerView recyclerView;
@@ -62,8 +61,8 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
 
         mDinningRoomMenuList = new ArrayList<>();
 
-        DinningRoomMenuObject dinningRoomMenuObject = new DinningRoomMenuObject();
-        dinningRoomMenuObject.Date = new Date();
+        Menu_Object dinningRoomMenuObject = new Menu_Object();
+        //dinningRoomMenuObject.Date = new Date();
         dinningRoomMenuObject.DayOfWeek = "Pondělí";
         dinningRoomMenuObject.Breakfast = "FRGÁL, KAKAO GRANKO, OVOCE";
         dinningRoomMenuObject.BreakfastAllergens = "A: 01a,01c,03,07";
@@ -79,8 +78,8 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
         dinningRoomMenuObject.DinnerSecondAllergens = "A: 07,08b";
         mDinningRoomMenuList.add(dinningRoomMenuObject);
 
-        dinningRoomMenuObject = new DinningRoomMenuObject();
-        dinningRoomMenuObject.Date = new Date();
+        dinningRoomMenuObject = new Menu_Object();
+        //dinningRoomMenuObject.Date = new Date();
         dinningRoomMenuObject.DayOfWeek = "Pondělí";
         dinningRoomMenuObject.Breakfast = "FRGÁL, KAKAO GRANKO, OVOCE";
         dinningRoomMenuObject.BreakfastAllergens = "A: 01a,01c,03,07";
@@ -96,8 +95,8 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
         dinningRoomMenuObject.DinnerSecondAllergens = "A: 07,08b";
         mDinningRoomMenuList.add(dinningRoomMenuObject);
 
-        dinningRoomMenuObject = new DinningRoomMenuObject();
-        dinningRoomMenuObject.Date = new Date();
+        dinningRoomMenuObject = new Menu_Object();
+        //dinningRoomMenuObject.Date = new Date();
         dinningRoomMenuObject.DayOfWeek = "Pondělí";
         dinningRoomMenuObject.Breakfast = "FRGÁL, KAKAO GRANKO, OVOCE";
         dinningRoomMenuObject.BreakfastAllergens = "A: 01a,01c,03,07";
@@ -113,8 +112,8 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
         dinningRoomMenuObject.DinnerSecondAllergens = "A: 07,08b";
         mDinningRoomMenuList.add(dinningRoomMenuObject);
 
-        dinningRoomMenuObject = new DinningRoomMenuObject();
-        dinningRoomMenuObject.Date = new Date();
+        dinningRoomMenuObject = new Menu_Object();
+        //dinningRoomMenuObject.Date = new Date();
         dinningRoomMenuObject.DayOfWeek = "Pondělí";
         dinningRoomMenuObject.Breakfast = "FRGÁL, KAKAO GRANKO, OVOCE";
         dinningRoomMenuObject.BreakfastAllergens = "A: 01a,01c,03,07";
@@ -130,8 +129,8 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
         dinningRoomMenuObject.DinnerSecondAllergens = "A: 07,08b";
         mDinningRoomMenuList.add(dinningRoomMenuObject);
 
-        dinningRoomMenuObject = new DinningRoomMenuObject();
-        dinningRoomMenuObject.Date = new Date();
+        dinningRoomMenuObject = new Menu_Object();
+        //dinningRoomMenuObject.Date = new Date();
         dinningRoomMenuObject.DayOfWeek = "Pondělí";
         dinningRoomMenuObject.Breakfast = "FRGÁL, KAKAO GRANKO, OVOCE";
         dinningRoomMenuObject.BreakfastAllergens = "A: 01a,01c,03,07";
@@ -169,13 +168,13 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
 
     public class DinningRoomMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-        private List<DinningRoomMenuObject> mMainLightsList;
+        private List<Menu_Object> mMainLightsList;
         private Context mContext;
         SharedPreferences mSharedPreferences;
 
         FragmentManager fragmentManager;
 
-        public DinningRoomMenuAdapter(List<DinningRoomMenuObject> list, Context context, FragmentManager fragmentManager) {
+        public DinningRoomMenuAdapter(List<Menu_Object> list, Context context, FragmentManager fragmentManager) {
 
             this.mMainLightsList = list;
             this.mContext = context;
@@ -187,7 +186,7 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-            return new DinningRoomMenuAdapter.MainLightsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.rozvrh_bottom_sheet_dialog_dinning_room_menu_adapter_item,parent,false));
+            return new DinningRoomMenuAdapter.MainLightsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.menu_main_activity_adapter_item,parent,false));
 
         }
 
@@ -196,7 +195,7 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
-            final DinningRoomMenuObject dinningRoomMenuObject = mMainLightsList.get(position);
+            final Menu_Object dinningRoomMenuObject = mMainLightsList.get(position);
 
             MainLightsViewHolder mainLightsViewHolder = (MainLightsViewHolder)holder;
 
@@ -278,7 +277,7 @@ public class BottomSheetDialogDiningRoomMenu extends BottomSheetDialogFragment {
                 mainLightsViewHolder.DinnerSecondAllergens.setVisibility(View.GONE);
             }
 
-        mainLightsViewHolder.menuDate.setText("5.10.2022 (Pondělí)");
+            mainLightsViewHolder.menuDate.setText("5.10.2022 (Pondělí)");
             mainLightsViewHolder.BreakfastTitle.setText("Snídaně");
             mainLightsViewHolder.Breakfast.setText(dinningRoomMenuObject.Breakfast);
             mainLightsViewHolder.BreakfastAllergens.setText(dinningRoomMenuObject.BreakfastAllergens.replace(",",", "));

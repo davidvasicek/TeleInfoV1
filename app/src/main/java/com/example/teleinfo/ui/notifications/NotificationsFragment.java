@@ -24,6 +24,7 @@ import com.example.teleinfo.modules.Apologies_ApologiesMainActivity;
 import com.example.teleinfo.modules.Apologies_ApologiesObject;
 import com.example.teleinfo.modules.ClassRooms_BottomSheetDialogClassRoomsList;
 import com.example.teleinfo.modules.FloorPlan_MainActivity;
+import com.example.teleinfo.modules.Menu_MainActivity;
 import com.example.teleinfo.modules.UnregisteredHours_MainActivity;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenu;
 import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenuSettings;
@@ -77,9 +78,10 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                BottomSheetDialogDiningRoomMenu bottomSheetDialogDiningRoomMenu = new BottomSheetDialogDiningRoomMenu();
-                bottomSheetDialogDiningRoomMenu.show(getChildFragmentManager(), "exampleBottomSheet");
-
+                //BottomSheetDialogDiningRoomMenu bottomSheetDialogDiningRoomMenu = new BottomSheetDialogDiningRoomMenu();
+                //bottomSheetDialogDiningRoomMenu.show(getChildFragmentManager(), "exampleBottomSheet");
+                Intent intent = new Intent(getContext(), Menu_MainActivity.class);
+                startActivity(intent);
             }
         });
 
