@@ -386,7 +386,7 @@ public class ScheduleOfTheYear_MainActivity extends AppCompatActivity {
 
             }
 
-
+//test
             long zbyva = (int)((dinningRoomScheduleOfTheYearObject.From - System.currentTimeMillis()) / 86400000);
 
             mainLightsViewHolder.textViewNumberOfDayeTo.setText("za " + zbyva + " dní");
