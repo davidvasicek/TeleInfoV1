@@ -31,6 +31,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -131,7 +132,15 @@ public class ScheduleOfTheYear_MainActivity extends AppCompatActivity {
                 ScheduleOfTheYear_Object ScheduleOfTheYear_Object = dataSnapshot.getValue(ScheduleOfTheYear_Object.class);
                 ScheduleOfTheYear_Object.Key = dataSnapshot.getKey();
 
-                mScheduleOfTheYear_ObjectList.add(ScheduleOfTheYear_Object);
+
+                if(ScheduleOfTheYear_Object.From >= System.currentTimeMillis()){
+
+                    mScheduleOfTheYear_ObjectList.add(ScheduleOfTheYear_Object);
+
+
+                }
+
+
 
                 //  Collections.sort(mScheduleOfTheYear_ObjectList, new Comparator<ScheduleOfTheYear_Object>(){
                 //   public int compare(ScheduleOfTheYear_Object obj1, ScheduleOfTheYear_Object obj2) {
@@ -386,12 +395,21 @@ public class ScheduleOfTheYear_MainActivity extends AppCompatActivity {
 
             }
 
-//test
+
             long zbyva = (int)((dinningRoomScheduleOfTheYearObject.From - System.currentTimeMillis()) / 86400000);
 
             mainLightsViewHolder.textViewNumberOfDayeTo.setText("za " + zbyva + " dní");
             mainLightsViewHolder.textViewEvent.setText(dinningRoomScheduleOfTheYearObject.Event);
 
+            if(dinningRoomScheduleOfTheYearObject.State.compareTo("Volno") == 0){
+
+                mainLightsViewHolder.cardViewStatus.setCardBackgroundColor(mContext.getResources().getColor(R.color.green500colorAccent));
+            }
+
+            if(dinningRoomScheduleOfTheYearObject.State.compareTo("Událost") == 0){
+
+                mainLightsViewHolder.cardViewStatus.setCardBackgroundColor(mContext.getResources().getColor(R.color.blue500colorAccent));
+            }
 
             Log.e("mylog", "ttttttttt " + dinningRoomScheduleOfTheYearObject.From);
             Log.e("mylog", "ttttttttt111 " + System.currentTimeMillis());
@@ -416,6 +434,7 @@ public class ScheduleOfTheYear_MainActivity extends AppCompatActivity {
             TextView textViewDateTo;
             TextView textViewNumberOfDayeTo;
             TextView textViewEvent;
+            CardView cardViewStatus;
 
             public MainLightsViewHolder(View itemView){
                 super(itemView);
@@ -426,6 +445,7 @@ public class ScheduleOfTheYear_MainActivity extends AppCompatActivity {
                 textViewDateTo = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateTo);
                 textViewNumberOfDayeTo = itemView.findViewById(R.id.scheduleOfTheYearTextViewNumberOfDayeTo);
                 textViewEvent = itemView.findViewById(R.id.scheduleOfTheYearTextViewEvent);
+                cardViewStatus = itemView.findViewById(R.id.scheduleOfTheYearCardViewStatus);
 
 
             }

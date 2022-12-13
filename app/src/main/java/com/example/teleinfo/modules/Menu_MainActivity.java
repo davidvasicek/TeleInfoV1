@@ -33,13 +33,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.teleinfo.R;
 import com.example.teleinfo.parameters.GetThemeStyle;
 import com.example.teleinfo.parameters.IsOnline;
-import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenu;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -359,8 +357,13 @@ public class Menu_MainActivity extends AppCompatActivity {
 
             final Menu_Object dinningRoomMenuObject = mMainLightsList.get(position);
 
-            mainLightsViewHolder.menuDate.setText(dinningRoomMenuObject.Date);
-            mainLightsViewHolder.menuDateDay.setText(dinningRoomMenuObject.DayOfWeek);
+
+
+            mainLightsViewHolder.textViewDay.setText(dinningRoomMenuObject.Date.split("\\.")[0]);
+            mainLightsViewHolder.textViewMonth.setText(dinningRoomMenuObject.Date.split("\\.")[1]);
+            mainLightsViewHolder.textViewYear.setText(dinningRoomMenuObject.Date.split("\\.")[2]);
+            mainLightsViewHolder.textViewDayOfTheWeek.setText(dinningRoomMenuObject.DayOfWeek);
+
 
             if(dinningRoomMenuObject.Status == 1){
 
@@ -845,9 +848,11 @@ public class Menu_MainActivity extends AppCompatActivity {
 
         class MainLightsViewHolder extends RecyclerView.ViewHolder{
 
+            TextView textViewDay;
+            TextView textViewMonth;
+            TextView textViewYear;
+            TextView textViewDayOfTheWeek;
             TextView Status;
-            TextView menuDate;
-            TextView menuDateDay;
             TextView BreakfastTitle;
             TextView Breakfast;
             TextView BreakfastAllergens;
@@ -870,27 +875,30 @@ public class Menu_MainActivity extends AppCompatActivity {
             public MainLightsViewHolder(View itemView){
                 super(itemView);
 
+                textViewDay = itemView.findViewById(R.id.menuMainActivityAdapterItemTextViewDay);
+                textViewMonth = itemView.findViewById(R.id.menuMainActivityAdapterItemTextViewMonth);
+                textViewYear = itemView.findViewById(R.id.menuMainActivityAdapterItemTextViewYear);
+                textViewDayOfTheWeek = itemView.findViewById(R.id.menuMainActivityAdapterItemTextViewDayOfTheWeek);
+
                 Status = itemView.findViewById(R.id.Status);
-                menuDate = itemView.findViewById(R.id.menuDate);
-                menuDateDay = itemView.findViewById(R.id.menuDateDay);
-                BreakfastTitle = itemView.findViewById(R.id.BreakfastTitle);
-                Breakfast = itemView.findViewById(R.id.Breakfast);
-                BreakfastAllergens = itemView.findViewById(R.id.BreakfastAllergens);
-                BrunchTitle = itemView.findViewById(R.id.BrunchTitle);
-                Brunch = itemView.findViewById(R.id.Brunch);
-                BrunchAllergens = itemView.findViewById(R.id.BrunchAllergens);
-                LunchTitle = itemView.findViewById(R.id.LunchTitle);
-                Lunch = itemView.findViewById(R.id.Lunch);
-                LunchAllergens = itemView.findViewById(R.id.LunchAllergens);
-                SnackTitle = itemView.findViewById(R.id.SnackTitle);
-                Snack = itemView.findViewById(R.id.Snack);
-                SnackAllergens = itemView.findViewById(R.id.SnackAllergens);
-                DinnerTitle = itemView.findViewById(R.id.DinnerTitle);
-                Dinner = itemView.findViewById(R.id.Dinner);
-                DinnerAllergens = itemView.findViewById(R.id.DinnerAllergens);
-                DinnerSecondTitle = itemView.findViewById(R.id.DinnerSecondTitle);
-                DinnerSecond = itemView.findViewById(R.id.DinnerSecond);
-                DinnerSecondAllergens = itemView.findViewById(R.id.DinnerSecondAllergens);
+                BreakfastTitle = itemView.findViewById(R.id.BreakfastTitle1);
+                Breakfast = itemView.findViewById(R.id.Breakfast1);
+                BreakfastAllergens = itemView.findViewById(R.id.BreakfastAllergens1);
+                BrunchTitle = itemView.findViewById(R.id.BrunchTitle1);
+                Brunch = itemView.findViewById(R.id.Brunch1);
+                BrunchAllergens = itemView.findViewById(R.id.BrunchAllergens1);
+                LunchTitle = itemView.findViewById(R.id.LunchTitle1);
+                Lunch = itemView.findViewById(R.id.Lunch1);
+                LunchAllergens = itemView.findViewById(R.id.LunchAllergens1);
+                SnackTitle = itemView.findViewById(R.id.SnackTitle1);
+                Snack = itemView.findViewById(R.id.Snack1);
+                SnackAllergens = itemView.findViewById(R.id.SnackAllergens1);
+                DinnerTitle = itemView.findViewById(R.id.DinnerTitle1);
+                Dinner = itemView.findViewById(R.id.Dinner1);
+                DinnerAllergens = itemView.findViewById(R.id.DinnerAllergens1);
+                DinnerSecondTitle = itemView.findViewById(R.id.DinnerSecondTitle1);
+                DinnerSecond = itemView.findViewById(R.id.DinnerSecond1);
+                DinnerSecondAllergens = itemView.findViewById(R.id.DinnerSecondAllergens1);
             }
         }
 

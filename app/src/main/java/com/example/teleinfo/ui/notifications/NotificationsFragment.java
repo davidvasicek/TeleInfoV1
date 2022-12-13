@@ -1,6 +1,5 @@
 package com.example.teleinfo.ui.notifications;
 
-import static com.example.teleinfo.parameters.MainParameters.DEVICE_IS_PAIRED;
 import static com.example.teleinfo.parameters.MainParameters.SHARED_PREFERENCES;
 
 import android.content.Context;
@@ -13,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -21,15 +19,11 @@ import com.example.teleinfo.R;
 import com.example.teleinfo.administration.__ActivityMainAdministration;
 import com.example.teleinfo.databinding.FragmentNotificationsBinding;
 import com.example.teleinfo.modules.Apologies_ApologiesMainActivity;
-import com.example.teleinfo.modules.Apologies_ApologiesObject;
 import com.example.teleinfo.modules.ClassRooms_BottomSheetDialogClassRoomsList;
 import com.example.teleinfo.modules.FloorPlan_MainActivity;
 import com.example.teleinfo.modules.Menu_MainActivity;
 import com.example.teleinfo.modules.ScheduleOfTheYear_MainActivity;
 import com.example.teleinfo.modules.UnregisteredHours_MainActivity;
-import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenu;
-import com.example.teleinfo.rozvrh.BottomSheetDialogDiningRoomMenuSettings;
-import com.example.teleinfo.rozvrh.BottomSheetDialogTeacherCard;
 import com.example.teleinfo.settings._ActivityMainSettings;
 
 public class NotificationsFragment extends Fragment {

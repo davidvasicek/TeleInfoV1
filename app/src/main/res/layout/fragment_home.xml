@@ -932,7 +932,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Seznam dozorů"
+                            android:text="Najdi volného pedagoga"
                             android:textColor="@color/text_primary"
                             android:textSize="12dp" />
 

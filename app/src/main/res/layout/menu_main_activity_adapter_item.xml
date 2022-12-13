@@ -7,362 +7,791 @@
     android:layout_margin="10dp">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/menuMainActivityAdapterItemTextViewDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:tag="tagForDelete"
+                        android:text="10"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/menuMainActivityAdapterItemTextViewMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:tag="tagForDelete"
+                        android:text="10"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10dp" />
+
+
+                    <TextView
+                        android:id="@+id/menuMainActivityAdapterItemTextViewYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="tagForDelete"
+                        android:text="2022"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <TextView
+                    android:id="@+id/menuMainActivityAdapterItemTextViewDayOfTheWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:tag="tagForDelete"
+                    android:text="ČTVRTEK"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/Status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:text="Státní svátek"
+        android:textColor="@color/text_secondary"
+        android:textSize="16dp"
+        android:tag="tagForDelete"
+        android:textAllCaps="true"
+        android:gravity="left"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="105dp"/>
 
-        <TextView
-            android:layout_marginBottom="2.5dp"
-            android:layout_marginTop="2.5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="left"
-            android:textColor="@color/text_primary"
-            android:textSize="12dp"
-            android:id="@+id/menuDateDay"
-            android:textAllCaps="true"
-            android:textStyle="bold" />
 
-        <TextView
-            android:layout_marginBottom="2.5dp"
-            android:layout_marginTop="2.5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="left"
-            android:textColor="@color/text_secondary"
-            android:textSize="10dp"
-            android:id="@+id/menuDate"
-            android:layout_gravity="center_vertical" />
+            android:layout_margin="10dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/BreakfastTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Snídaně"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="top"
+                        android:textStyle="normal"/>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/Breakfast1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/BreakfastAllergens1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
 
     </LinearLayout>
 
 
 
 
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="1"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="----------------"
-        android:gravity="left"
-        android:textColor="@color/text_secondary"
-        android:textSize="12dp"
-        android:id="@+id/Status"
-        android:textAllCaps="true"/>
+        android:layout_height="wrap_content">
 
-
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="1"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="11dp"
-            android:textStyle="bold"
-            android:id="@+id/BreakfastTitle"/>
+            android:layout_margin="10dp"
+            android:weightSum="1">
 
-    
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                >
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="2"
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/BrunchTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Přesnidávka"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="top"
+                        android:textStyle="normal"/>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/Brunch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/BrunchAllergens1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="12dp"
-            android:id="@+id/Breakfast"/>
+            android:layout_margin="10dp"
+            android:weightSum="1">
 
-    
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                >
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="3"
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/LunchTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Oběd"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="top"
+                        android:textStyle="normal"/>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/Lunch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/LunchAllergens1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_secondary"
-            android:textSize="10dp"
-            android:id="@+id/BreakfastAllergens"/>
+            android:layout_margin="10dp"
+            android:weightSum="1">
 
-    
-
-
-
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                >
 
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/SnackTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Svačina"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="top"
+                        android:textStyle="normal"/>
 
 
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="1"
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/Snack1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/SnackAllergens1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="11dp"
-            android:textStyle="bold"
-            android:id="@+id/BrunchTitle"/>
+            android:layout_margin="10dp"
+            android:weightSum="1">
 
-    
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                >
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="2"
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/DinnerTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Večeře"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="top"
+                        android:textStyle="normal"/>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/Dinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/DinnerAllergens1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="12dp"
-            android:id="@+id/Brunch"/>
+            android:layout_margin="10dp"
+            android:weightSum="1">
 
-    
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_secondary"
-            android:textSize="10dp"
-            android:id="@+id/BrunchAllergens"/>
-
-    
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                >
 
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/DinnerSecondTitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Večeře II."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11dp"
+                        android:tag="tagForDelete"
+                        android:textAllCaps="true"
+                        android:gravity="top"
+                        android:textStyle="normal"/>
 
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="11dp"
-            android:textStyle="bold"
-            android:id="@+id/LunchTitle"/>
 
-    
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="12dp"
-            android:id="@+id/Lunch"
-        />
-
-    
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_secondary"
-            android:textSize="10dp"
-            android:id="@+id/LunchAllergens"/>
-
-    
+                </LinearLayout>
 
 
 
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="11dp"
-            android:textStyle="bold"
-            android:id="@+id/SnackTitle"/>
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="12dp"
-            android:id="@+id/Snack"/>
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_secondary"
-            android:textSize="10dp"
-            android:id="@+id/SnackAllergens"/>
 
 
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="11dp"
-            android:textStyle="bold"
-            android:id="@+id/DinnerTitle"/>
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="12dp"
-            android:id="@+id/Dinner"/>
-
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_secondary"
-            android:textSize="10dp"
-            android:id="@+id/DinnerAllergens"/>
 
 
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="11dp"
-            android:textStyle="bold"
-            android:id="@+id/DinnerSecondTitle"/>
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_primary"
-            android:textSize="12dp"
-            android:id="@+id/DinnerSecond"/>
+            </LinearLayout>
 
-    <TextView
-        android:layout_marginBottom="2.5dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:tag="3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="----------------"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_secondary"
-            android:textSize="10dp"
-            android:id="@+id/DinnerSecondAllergens"/>
 
-    <TextView
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/DinnerSecond1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/DinnerSecondAllergens1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ČTVRTEK"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/line"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </LinearLayout>
