@@ -1,79 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        >
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/statisticOfStudentId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="2.5dp"
+                        android:gravity="left"
+                        android:text="1"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/line"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Matěj Hlavsa"
+                        android:gravity="left"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp"
+                        android:id="@+id/statisticOfStudentJmeno"
+                        android:textAllCaps="true"
+                        />
+
+
+
+                    <TextView
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="celkem 134 hod"
+                        android:gravity="right"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12dp"
+                        android:id="@+id/statisticOfStudentCelkem"
+                        android:textAllCaps="false"
+                        android:textStyle="normal"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:weightSum="1">
 
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 >
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="1"
-                    android:id="@+id/textId"
-                    android:gravity="center"
-                    android:textSize="12dp"
-                    />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_viewColumnHeader"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:cardBackgroundColor="#16c58c"
+                    app:cardCornerRadius="3dp">
 
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical">
+                </androidx.cardview.widget.CardView>
 
                 <TextView
+                    android:id="@+id/statisticOfStudentPritomen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/textName"
-                    android:gravity="center_vertical"
-                    android:text="David Vašíček"
-                    android:textSize="12dp"
-                    />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="34"
+                    android:text="123"
+                    android:textColor="@color/text_secondary"
                     android:textSize="14dp"
-                    android:id="@+id/textHours"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
                     android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
 
-                    />
+
+
+
 
             </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_viewColussmnHeader"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:cardBackgroundColor="#f48c00"
+                    app:cardCornerRadius="3dp">
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/statisticOfStudentNepritomen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_viewColumnHeadddder"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:cardBackgroundColor="#7100c1"
+                    app:cardCornerRadius="3dp">
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/statisticOfStudentNezapocitavana"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_viewColumnHeadeddr"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:cardBackgroundColor="#c20e1a"
+                    app:cardCornerRadius="3dp">
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/statisticOfStudentNeomluveno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_viewColumnHffeadeddr"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:cardBackgroundColor="#00A2e2"
+                    app:cardCornerRadius="3dp">
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/statisticOfStudentPotvrzeno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_viewColumnHffeadeddccr"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:cardBackgroundColor="#607D8B"
+                    app:cardCornerRadius="3dp">
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/statisticOfStudentNepotvrzeno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16dp"
+                    android:tag="tagForDelete"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
 
 
         </LinearLayout>
@@ -84,15 +384,18 @@
 
     </LinearLayout>
 
-    <LinearLayout
+
+
+
+
+
+
+    <TextView
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line" />
-
-
-
-
+        android:background="@color/line"
+        android:layout_marginTop="5dp"/>
 
 
 

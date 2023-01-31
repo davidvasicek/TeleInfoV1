@@ -9,7 +9,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="50dp">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -17,7 +17,6 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
             android:weightSum="1">
 
             <LinearLayout
@@ -142,7 +141,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/BreakfastLinearLayout1">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -227,7 +227,7 @@
                     android:textColor="@color/text_secondary"
                     android:textSize="11dp"
                     android:tag="tagForDelete"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:gravity="center_vertical"
                     android:layout_weight="1"
                     android:layout_marginTop="5dp"/>
@@ -249,7 +249,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/BrunchLinearLayout1"
+        >
 
         <LinearLayout
             android:orientation="horizontal"
@@ -334,7 +336,7 @@
                     android:textColor="@color/text_secondary"
                     android:textSize="11dp"
                     android:tag="tagForDelete"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:gravity="center_vertical"
                     android:layout_weight="1"
                     android:layout_marginTop="5dp"/>
@@ -355,7 +357,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/LunchLinearLayout1">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -440,7 +443,7 @@
                     android:textColor="@color/text_secondary"
                     android:textSize="11dp"
                     android:tag="tagForDelete"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:gravity="center_vertical"
                     android:layout_weight="1"
                     android:layout_marginTop="5dp"/>
@@ -459,7 +462,10 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/SnackLinearLayout1"
+
+        >
 
         <LinearLayout
             android:orientation="horizontal"
@@ -544,7 +550,7 @@
                     android:textColor="@color/text_secondary"
                     android:textSize="11dp"
                     android:tag="tagForDelete"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:gravity="center_vertical"
                     android:layout_weight="1"
                     android:layout_marginTop="5dp"/>
@@ -563,7 +569,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/DinnerLinearLayout1">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -648,7 +655,7 @@
                     android:textColor="@color/text_secondary"
                     android:textSize="11dp"
                     android:tag="tagForDelete"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:gravity="center_vertical"
                     android:layout_weight="1"
                     android:layout_marginTop="5dp"/>
@@ -667,7 +674,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/DinnerSecondLinearLayout1">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -752,7 +760,7 @@
                     android:textColor="@color/text_secondary"
                     android:textSize="11dp"
                     android:tag="tagForDelete"
-                    android:textAllCaps="true"
+                    android:textAllCaps="false"
                     android:gravity="center_vertical"
                     android:layout_weight="1"
                     android:layout_marginTop="5dp"/>
@@ -769,8 +777,8 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/line"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"/>
 
 
 

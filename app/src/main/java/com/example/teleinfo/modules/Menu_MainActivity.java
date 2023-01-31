@@ -33,6 +33,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.teleinfo.R;
@@ -93,14 +94,14 @@ public class Menu_MainActivity extends AppCompatActivity {
         Log.e("mylog", "ttttttttt " + mSharedPreferences.getString(MY_ALERGENS, ""));
 
         mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("jidelnicek") ;
+        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("jidelnicek");
 
-        recyclerView = (RecyclerView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_RecyclerView);
+        recyclerView = (RecyclerView) findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_RecyclerView);
 
-        textViewMessageRow1 = (TextView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow1);
-        textViewMessageRow2 = (TextView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow2);
-        buttonRefrest = (Button)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_ButtonRefrest);
-        aVLoadingIndicatorViewIndicator = (AVLoadingIndicatorView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_AVLoadingIndicatorViewIndicator);
+        textViewMessageRow1 = (TextView) findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow1);
+        textViewMessageRow2 = (TextView) findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow2);
+        buttonRefrest = (Button) findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_ButtonRefrest);
+        aVLoadingIndicatorViewIndicator = (AVLoadingIndicatorView) findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_AVLoadingIndicatorViewIndicator);
 
         mMenu_ObjectList = new ArrayList<>();
 
@@ -172,7 +173,6 @@ public class Menu_MainActivity extends AppCompatActivity {
             }
 
 
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -189,18 +189,16 @@ public class Menu_MainActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
 
-    private int GetItemIndex(Menu_Object Menu_Object, List<Menu_Object> list){
+    private int GetItemIndex(Menu_Object Menu_Object, List<Menu_Object> list) {
 
         int index = -1;
 
-        for(int i = 0; i<list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
 
-            if(list.get(i).Key.equals(Menu_Object.Key)){
+            if (list.get(i).Key.equals(Menu_Object.Key)) {
                 index = i;
                 break;
             }
@@ -210,7 +208,7 @@ public class Menu_MainActivity extends AppCompatActivity {
     }
 
 
-    private void hideAllViews(){
+    private void hideAllViews() {
 
         textViewMessageRow1.setVisibility(View.GONE);
         textViewMessageRow2.setVisibility(View.GONE);
@@ -219,9 +217,9 @@ public class Menu_MainActivity extends AppCompatActivity {
         aVLoadingIndicatorViewIndicator.setVisibility(View.GONE);
     }
 
-    private void CheckIsListEmpty(int action){
+    private void CheckIsListEmpty(int action) {
 
-        if(action == INIT){
+        if (action == INIT) {
 
             recyclerView.setVisibility(View.GONE);
             aVLoadingIndicatorViewIndicator.setVisibility(View.VISIBLE);
@@ -231,7 +229,7 @@ public class Menu_MainActivity extends AppCompatActivity {
 
             textViewMessageRow1.setText("Načítání dat");
 
-        }else if(action == NO_INTERNET){
+        } else if (action == NO_INTERNET) {
 
             recyclerView.setVisibility(View.GONE);
             aVLoadingIndicatorViewIndicator.setVisibility(View.GONE);
@@ -242,7 +240,7 @@ public class Menu_MainActivity extends AppCompatActivity {
             textViewMessageRow1.setText("Nepodařilo se načíst adata");
             textViewMessageRow2.setText("Zkontrolujte připojení k internetu");
 
-        }else if(action == NO_DATA){
+        } else if (action == NO_DATA) {
 
             recyclerView.setVisibility(View.GONE);
             aVLoadingIndicatorViewIndicator.setVisibility(View.GONE);
@@ -255,9 +253,7 @@ public class Menu_MainActivity extends AppCompatActivity {
             // TODO
             textViewMessageRow2.setText("K datu synchronizace nemáte žádné nezapsané hodiny");
 
-        }
-
-        else if(action == DATA){
+        } else if (action == DATA) {
 
             recyclerView.setVisibility(View.VISIBLE);
             aVLoadingIndicatorViewIndicator.setVisibility(View.GONE);
@@ -267,9 +263,9 @@ public class Menu_MainActivity extends AppCompatActivity {
         }
     }
 
-    private void Loaddata(){
+    private void Loaddata() {
 
-        if(new IsOnline(getApplicationContext()).isOnline() == IS_ONLINE){
+        if (new IsOnline(getApplicationContext()).isOnline() == IS_ONLINE) {
 
             CheckIsListEmpty(INIT);
 
@@ -279,17 +275,18 @@ public class Menu_MainActivity extends AppCompatActivity {
 
                     Log.i("kokot", dataSnapshot.getChildrenCount() + "");
 
-                    if(dataSnapshot.getChildrenCount() == 0){
+                    if (dataSnapshot.getChildrenCount() == 0) {
 
                         CheckIsListEmpty(NO_DATA);
 
-                    }else{
+                    } else {
 
                         CheckIsListEmpty(DATA);
                         mDatabaseReference.addChildEventListener(listener);
                     }
 
                 }
+
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
 
@@ -300,7 +297,7 @@ public class Menu_MainActivity extends AppCompatActivity {
                 }
             });
 
-        }else{
+        } else {
 
             CheckIsListEmpty(NO_INTERNET);
         }
@@ -308,21 +305,10 @@ public class Menu_MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
-
-
-
     // ------------------------------------------------------------------------------------ Adapter ------------------------------------------------------------------------------------
 
 
-
-    public static class MenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+    public static class MenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         private List<Menu_Object> mMainLightsList;
         private Context mContext;
@@ -344,20 +330,17 @@ public class Menu_MainActivity extends AppCompatActivity {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-            return new MenuAdapter.MainLightsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.menu_main_activity_adapter_item,parent,false));
+            return new MenuAdapter.MainLightsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.menu_main_activity_adapter_item, parent, false));
 
         }
-
 
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
-            MenuAdapter.MainLightsViewHolder mainLightsViewHolder = (MenuAdapter.MainLightsViewHolder)holder;
+            MenuAdapter.MainLightsViewHolder mainLightsViewHolder = (MenuAdapter.MainLightsViewHolder) holder;
 
             final Menu_Object dinningRoomMenuObject = mMainLightsList.get(position);
-
-
 
             mainLightsViewHolder.textViewDay.setText(dinningRoomMenuObject.Date.split("\\.")[0]);
             mainLightsViewHolder.textViewMonth.setText(dinningRoomMenuObject.Date.split("\\.")[1]);
@@ -365,7 +348,7 @@ public class Menu_MainActivity extends AppCompatActivity {
             mainLightsViewHolder.textViewDayOfTheWeek.setText(dinningRoomMenuObject.DayOfWeek);
 
 
-            if(dinningRoomMenuObject.Status == 1){
+            if (dinningRoomMenuObject.Status == 1) {
 
                 mainLightsViewHolder.Status.setVisibility(View.VISIBLE);
                 mainLightsViewHolder.Status.setText("Státní svátek");
@@ -389,83 +372,89 @@ public class Menu_MainActivity extends AppCompatActivity {
                 mainLightsViewHolder.DinnerSecond.setVisibility(View.GONE);
                 mainLightsViewHolder.DinnerSecondAllergens.setVisibility(View.GONE);
 
-            }else{
+            } else {
 
                 mainLightsViewHolder.Status.setVisibility(View.GONE);
 
-                if(mSharedPreferences.getBoolean(BREAKFAST_SHOW, false)){
+                if (mSharedPreferences.getBoolean(BREAKFAST_SHOW, false)) {
 
                     mainLightsViewHolder.BreakfastTitle.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.Breakfast.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.BreakfastAllergens.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
 
+                    mainLightsViewHolder.BreakfastLinearLayout1.setVisibility(View.GONE);
                     mainLightsViewHolder.BreakfastTitle.setVisibility(View.GONE);
                     mainLightsViewHolder.Breakfast.setVisibility(View.GONE);
                     mainLightsViewHolder.BreakfastAllergens.setVisibility(View.GONE);
                 }
 
-                if(mSharedPreferences.getBoolean(BRUNCH_SHOW, false)){
+                if (mSharedPreferences.getBoolean(BRUNCH_SHOW, false)) {
 
                     mainLightsViewHolder.BrunchTitle.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.Brunch.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.BrunchAllergens.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
 
+                    mainLightsViewHolder.BrunchLinearLayout1.setVisibility(View.GONE);
                     mainLightsViewHolder.BrunchTitle.setVisibility(View.GONE);
                     mainLightsViewHolder.Brunch.setVisibility(View.GONE);
                     mainLightsViewHolder.BrunchAllergens.setVisibility(View.GONE);
                 }
 
-                if(mSharedPreferences.getBoolean(LUNCH_SHOW, true)){
+                if (mSharedPreferences.getBoolean(LUNCH_SHOW, true)) {
 
                     mainLightsViewHolder.LunchTitle.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.Lunch.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.LunchAllergens.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
 
+                    mainLightsViewHolder.LunchLinearLayout1.setVisibility(View.GONE);
                     mainLightsViewHolder.LunchTitle.setVisibility(View.GONE);
                     mainLightsViewHolder.Lunch.setVisibility(View.GONE);
                     mainLightsViewHolder.LunchAllergens.setVisibility(View.GONE);
                 }
 
-                if(mSharedPreferences.getBoolean(SNACK_SHOW, false)){
+                if (mSharedPreferences.getBoolean(SNACK_SHOW, false)) {
 
                     mainLightsViewHolder.SnackTitle.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.Snack.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.SnackAllergens.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
 
+                    mainLightsViewHolder.SnackLinearLayout1.setVisibility(View.GONE);
                     mainLightsViewHolder.SnackTitle.setVisibility(View.GONE);
                     mainLightsViewHolder.Snack.setVisibility(View.GONE);
                     mainLightsViewHolder.SnackAllergens.setVisibility(View.GONE);
                 }
 
-                if(mSharedPreferences.getBoolean(DINNER_SHOW, false)){
+                if (mSharedPreferences.getBoolean(DINNER_SHOW, false)) {
 
                     mainLightsViewHolder.DinnerTitle.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.Dinner.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.DinnerAllergens.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
 
+                    mainLightsViewHolder.DinnerLinearLayout1.setVisibility(View.GONE);
                     mainLightsViewHolder.DinnerTitle.setVisibility(View.GONE);
                     mainLightsViewHolder.Dinner.setVisibility(View.GONE);
                     mainLightsViewHolder.DinnerAllergens.setVisibility(View.GONE);
                 }
 
-                if(mSharedPreferences.getBoolean(DINNER_SECOND_SHOW, false)){
+                if (mSharedPreferences.getBoolean(DINNER_SECOND_SHOW, false)) {
 
                     mainLightsViewHolder.DinnerSecondTitle.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.DinnerSecond.setVisibility(View.VISIBLE);
                     mainLightsViewHolder.DinnerSecondAllergens.setVisibility(View.VISIBLE);
 
-                }else{
+                } else {
 
+                    mainLightsViewHolder.DinnerSecondLinearLayout1.setVisibility(View.GONE);
                     mainLightsViewHolder.DinnerSecondTitle.setVisibility(View.GONE);
                     mainLightsViewHolder.DinnerSecond.setVisibility(View.GONE);
                     mainLightsViewHolder.DinnerSecondAllergens.setVisibility(View.GONE);
@@ -477,27 +466,26 @@ public class Menu_MainActivity extends AppCompatActivity {
                 Log.e("mylog", "bbbbbbbb " + myAlergensStringSplit.length);
 
 
-
                 mainLightsViewHolder.BreakfastTitle.setText("Snídaně");
-                if(dinningRoomMenuObject.Breakfast.compareTo("") != 0){
+                if (dinningRoomMenuObject.Breakfast.compareTo("") != 0) {
                     mainLightsViewHolder.Breakfast.setText(dinningRoomMenuObject.Breakfast);
-                }else{
+                } else {
                     mainLightsViewHolder.Breakfast.setText("-");
                 }
-                if(dinningRoomMenuObject.BreakfastAllergens.compareTo("") != 0){
+                if (dinningRoomMenuObject.BreakfastAllergens.compareTo("") != 0) {
 
                     String[] foodAlergensStringSplit = dinningRoomMenuObject.BreakfastAllergens.split(",");
                     String finalHTMLString = "";
 
-                    for(int i = 0; i<foodAlergensStringSplit.length;i++){
+                    for (int i = 0; i < foodAlergensStringSplit.length; i++) {
 
                         String foodAlergen = foodAlergensStringSplit[i].replace(" ", "");
                         boolean find = false;
                         Log.e("mylog", "ttttttttt " + foodAlergen);
 
-                        for(int j = 0; j<myAlergensStringSplit.length;j++){
+                        for (int j = 0; j < myAlergensStringSplit.length; j++) {
 
-                            if(myAlergensStringSplit[j].compareTo(foodAlergen) == 0){
+                            if (myAlergensStringSplit[j].compareTo(foodAlergen) == 0) {
 
                                 Log.e("mylog", "ttttttttt " + "ano");
                                 find = true;
@@ -505,42 +493,42 @@ public class Menu_MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        if(find){
+                        if (find) {
                             Log.e("mylog", "ttttttttt " + "anoooo");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.red700colorAccent) + "'>" + foodAlergen + "</font>, ";
 
-                        }else{
+                        } else {
                             Log.e("mylog", "ttttttttt " + "ne");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.text_secondary) + "'>" + foodAlergen + "</font>, ";
                         }
                     }
-                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length()-2));
+                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length() - 2));
                     mainLightsViewHolder.BreakfastAllergens.setText(Html.fromHtml(finalHTMLString), TextView.BufferType.SPANNABLE);
 
-                }else{
+                } else {
                     mainLightsViewHolder.BreakfastAllergens.setVisibility(View.GONE);
                 }
 
                 mainLightsViewHolder.BrunchTitle.setText("Přesnidávka");
-                if(dinningRoomMenuObject.Brunch.compareTo("") != 0){
+                if (dinningRoomMenuObject.Brunch.compareTo("") != 0) {
                     mainLightsViewHolder.Brunch.setText(dinningRoomMenuObject.Brunch);
-                }else{
+                } else {
                     mainLightsViewHolder.Brunch.setText("-");
                 }
-                if(dinningRoomMenuObject.BrunchAllergens.compareTo("") != 0){
+                if (dinningRoomMenuObject.BrunchAllergens.compareTo("") != 0) {
 
                     String[] foodAlergensStringSplit = dinningRoomMenuObject.BrunchAllergens.split(",");
                     String finalHTMLString = "";
 
-                    for(int i = 0; i<foodAlergensStringSplit.length;i++){
+                    for (int i = 0; i < foodAlergensStringSplit.length; i++) {
 
                         String foodAlergen = foodAlergensStringSplit[i].replace(" ", "");
                         boolean find = false;
                         Log.e("mylog", "ttttttttt " + foodAlergen);
 
-                        for(int j = 0; j<myAlergensStringSplit.length;j++){
+                        for (int j = 0; j < myAlergensStringSplit.length; j++) {
 
-                            if(myAlergensStringSplit[j].compareTo(foodAlergen) == 0){
+                            if (myAlergensStringSplit[j].compareTo(foodAlergen) == 0) {
 
                                 Log.e("mylog", "ttttttttt " + "ano");
                                 find = true;
@@ -548,42 +536,42 @@ public class Menu_MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        if(find){
+                        if (find) {
                             Log.e("mylog", "ttttttttt " + "anoooo");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.red700colorAccent) + "'>" + foodAlergen + "</font>, ";
 
-                        }else{
+                        } else {
                             Log.e("mylog", "ttttttttt " + "ne");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.text_secondary) + "'>" + foodAlergen + "</font>, ";
                         }
                     }
-                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length()-2));
+                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length() - 2));
                     mainLightsViewHolder.BrunchAllergens.setText(Html.fromHtml(finalHTMLString), TextView.BufferType.SPANNABLE);
 
-                }else{
+                } else {
                     mainLightsViewHolder.BrunchAllergens.setVisibility(View.GONE);
                 }
 
                 mainLightsViewHolder.LunchTitle.setText("Oběd");
-                if(dinningRoomMenuObject.Lunch.compareTo("") != 0){
+                if (dinningRoomMenuObject.Lunch.compareTo("") != 0) {
                     mainLightsViewHolder.Lunch.setText(dinningRoomMenuObject.Lunch);
-                }else{
+                } else {
                     mainLightsViewHolder.Lunch.setText("-");
                 }
-                if(dinningRoomMenuObject.LunchAllergens.compareTo("") != 0){
+                if (dinningRoomMenuObject.LunchAllergens.compareTo("") != 0) {
 
                     String[] foodAlergensStringSplit = dinningRoomMenuObject.LunchAllergens.split(",");
                     String finalHTMLString = "";
 
-                    for(int i = 0; i<foodAlergensStringSplit.length;i++){
+                    for (int i = 0; i < foodAlergensStringSplit.length; i++) {
 
                         String foodAlergen = foodAlergensStringSplit[i].replace(" ", "");
                         boolean find = false;
                         Log.e("mylog", "ttttttttt " + foodAlergen);
 
-                        for(int j = 0; j<myAlergensStringSplit.length;j++){
+                        for (int j = 0; j < myAlergensStringSplit.length; j++) {
 
-                            if(myAlergensStringSplit[j].compareTo(foodAlergen) == 0){
+                            if (myAlergensStringSplit[j].compareTo(foodAlergen) == 0) {
 
                                 Log.e("mylog", "ttttttttt " + "ano");
                                 find = true;
@@ -591,42 +579,42 @@ public class Menu_MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        if(find){
+                        if (find) {
                             Log.e("mylog", "ttttttttt " + "anoooo");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.red700colorAccent) + "'>" + foodAlergen + "</font>, ";
 
-                        }else{
+                        } else {
                             Log.e("mylog", "ttttttttt " + "ne");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.text_secondary) + "'>" + foodAlergen + "</font>, ";
                         }
                     }
-                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length()-2));
+                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length() - 2));
                     mainLightsViewHolder.LunchAllergens.setText(Html.fromHtml(finalHTMLString), TextView.BufferType.SPANNABLE);
 
-                }else{
+                } else {
                     mainLightsViewHolder.LunchAllergens.setVisibility(View.GONE);
                 }
 
                 mainLightsViewHolder.SnackTitle.setText("Svačina");
-                if(dinningRoomMenuObject.Snack.compareTo("") != 0){
+                if (dinningRoomMenuObject.Snack.compareTo("") != 0) {
                     mainLightsViewHolder.Snack.setText(dinningRoomMenuObject.Snack);
-                }else{
+                } else {
                     mainLightsViewHolder.Snack.setText("-");
                 }
-                if(dinningRoomMenuObject.SnackAllergens.compareTo("") != 0){
+                if (dinningRoomMenuObject.SnackAllergens.compareTo("") != 0) {
 
                     String[] foodAlergensStringSplit = dinningRoomMenuObject.SnackAllergens.split(",");
                     String finalHTMLString = "";
 
-                    for(int i = 0; i<foodAlergensStringSplit.length;i++){
+                    for (int i = 0; i < foodAlergensStringSplit.length; i++) {
 
                         String foodAlergen = foodAlergensStringSplit[i].replace(" ", "");
                         boolean find = false;
                         Log.e("mylog", "ttttttttt " + foodAlergen);
 
-                        for(int j = 0; j<myAlergensStringSplit.length;j++){
+                        for (int j = 0; j < myAlergensStringSplit.length; j++) {
 
-                            if(myAlergensStringSplit[j].compareTo(foodAlergen) == 0){
+                            if (myAlergensStringSplit[j].compareTo(foodAlergen) == 0) {
 
                                 Log.e("mylog", "ttttttttt " + "ano");
                                 find = true;
@@ -634,42 +622,42 @@ public class Menu_MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        if(find){
+                        if (find) {
                             Log.e("mylog", "ttttttttt " + "anoooo");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.red700colorAccent) + "'>" + foodAlergen + "</font>, ";
 
-                        }else{
+                        } else {
                             Log.e("mylog", "ttttttttt " + "ne");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.text_secondary) + "'>" + foodAlergen + "</font>, ";
                         }
                     }
-                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length()-2));
+                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length() - 2));
                     mainLightsViewHolder.SnackAllergens.setText(Html.fromHtml(finalHTMLString), TextView.BufferType.SPANNABLE);
 
-                }else{
+                } else {
                     mainLightsViewHolder.SnackAllergens.setVisibility(View.GONE);
                 }
 
                 mainLightsViewHolder.DinnerTitle.setText("Večeře");
-                if(dinningRoomMenuObject.Dinner.compareTo("") != 0){
+                if (dinningRoomMenuObject.Dinner.compareTo("") != 0) {
                     mainLightsViewHolder.Dinner.setText(dinningRoomMenuObject.Dinner);
-                }else{
+                } else {
                     mainLightsViewHolder.Dinner.setText("-");
                 }
-                if(dinningRoomMenuObject.DinnerAllergens.compareTo("") != 0){
+                if (dinningRoomMenuObject.DinnerAllergens.compareTo("") != 0) {
 
                     String[] foodAlergensStringSplit = dinningRoomMenuObject.DinnerAllergens.split(",");
                     String finalHTMLString = "";
 
-                    for(int i = 0; i<foodAlergensStringSplit.length;i++){
+                    for (int i = 0; i < foodAlergensStringSplit.length; i++) {
 
                         String foodAlergen = foodAlergensStringSplit[i].replace(" ", "");
                         boolean find = false;
                         Log.e("mylog", "ttttttttt " + foodAlergen);
 
-                        for(int j = 0; j<myAlergensStringSplit.length;j++){
+                        for (int j = 0; j < myAlergensStringSplit.length; j++) {
 
-                            if(myAlergensStringSplit[j].compareTo(foodAlergen) == 0){
+                            if (myAlergensStringSplit[j].compareTo(foodAlergen) == 0) {
 
                                 Log.e("mylog", "ttttttttt " + "ano");
                                 find = true;
@@ -677,42 +665,42 @@ public class Menu_MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        if(find){
+                        if (find) {
                             Log.e("mylog", "ttttttttt " + "anoooo");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.red700colorAccent) + "'>" + foodAlergen + "</font>, ";
 
-                        }else{
+                        } else {
                             Log.e("mylog", "ttttttttt " + "ne");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.text_secondary) + "'>" + foodAlergen + "</font>, ";
                         }
                     }
-                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length()-2));
+                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length() - 2));
                     mainLightsViewHolder.DinnerAllergens.setText(Html.fromHtml(finalHTMLString), TextView.BufferType.SPANNABLE);
 
-                }else{
+                } else {
                     mainLightsViewHolder.DinnerAllergens.setVisibility(View.GONE);
                 }
 
                 mainLightsViewHolder.DinnerSecondTitle.setText("Večeře II.");
-                if(dinningRoomMenuObject.DinnerSecond.compareTo("") != 0){
+                if (dinningRoomMenuObject.DinnerSecond.compareTo("") != 0) {
                     mainLightsViewHolder.DinnerSecond.setText(dinningRoomMenuObject.DinnerSecond);
-                }else{
+                } else {
                     mainLightsViewHolder.DinnerSecond.setText("-");
                 }
-                if(dinningRoomMenuObject.DinnerSecondAllergens.compareTo("") != 0){
+                if (dinningRoomMenuObject.DinnerSecondAllergens.compareTo("") != 0) {
 
                     String[] foodAlergensStringSplit = dinningRoomMenuObject.DinnerSecondAllergens.split(",");
                     String finalHTMLString = "";
 
-                    for(int i = 0; i<foodAlergensStringSplit.length;i++){
+                    for (int i = 0; i < foodAlergensStringSplit.length; i++) {
 
                         String foodAlergen = foodAlergensStringSplit[i].replace(" ", "");
                         boolean find = false;
                         Log.e("mylog", "ttttttttt " + foodAlergen);
 
-                        for(int j = 0; j<myAlergensStringSplit.length;j++){
+                        for (int j = 0; j < myAlergensStringSplit.length; j++) {
 
-                            if(myAlergensStringSplit[j].compareTo(foodAlergen) == 0){
+                            if (myAlergensStringSplit[j].compareTo(foodAlergen) == 0) {
 
                                 Log.e("mylog", "ttttttttt " + "ano");
                                 find = true;
@@ -720,23 +708,21 @@ public class Menu_MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        if(find){
+                        if (find) {
                             Log.e("mylog", "ttttttttt " + "anoooo");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.red700colorAccent) + "'>" + foodAlergen + "</font>, ";
 
-                        }else{
+                        } else {
                             Log.e("mylog", "ttttttttt " + "ne");
                             finalHTMLString += "<font color='" + mContext.getResources().getColor(R.color.text_secondary) + "'>" + foodAlergen + "</font>, ";
                         }
                     }
-                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length()-2));
+                    finalHTMLString = finalHTMLString.substring(0, (finalHTMLString.length() - 2));
                     mainLightsViewHolder.DinnerSecondAllergens.setText(Html.fromHtml(finalHTMLString), TextView.BufferType.SPANNABLE);
 
-                }else{
+                } else {
                     mainLightsViewHolder.DinnerSecondAllergens.setVisibility(View.GONE);
                 }
-
-
 
 
                 mainLightsViewHolder.BreakfastAllergens.setOnClickListener(new View.OnClickListener() {
@@ -800,37 +786,10 @@ public class Menu_MainActivity extends AppCompatActivity {
                 });
 
 
-
-
-
-
-
-
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
-
-
-
-
-
-
 
 
         @Override
@@ -845,8 +804,7 @@ public class Menu_MainActivity extends AppCompatActivity {
         }
 
 
-
-        class MainLightsViewHolder extends RecyclerView.ViewHolder{
+        class MainLightsViewHolder extends RecyclerView.ViewHolder {
 
             TextView textViewDay;
             TextView textViewMonth;
@@ -872,7 +830,14 @@ public class Menu_MainActivity extends AppCompatActivity {
             TextView DinnerSecond;
             TextView DinnerSecondAllergens;
 
-            public MainLightsViewHolder(View itemView){
+            LinearLayout BreakfastLinearLayout1;
+            LinearLayout BrunchLinearLayout1;
+            LinearLayout LunchLinearLayout1;
+            LinearLayout SnackLinearLayout1;
+            LinearLayout DinnerLinearLayout1;
+            LinearLayout DinnerSecondLinearLayout1;
+
+            public MainLightsViewHolder(View itemView) {
                 super(itemView);
 
                 textViewDay = itemView.findViewById(R.id.menuMainActivityAdapterItemTextViewDay);
@@ -899,11 +864,17 @@ public class Menu_MainActivity extends AppCompatActivity {
                 DinnerSecondTitle = itemView.findViewById(R.id.DinnerSecondTitle1);
                 DinnerSecond = itemView.findViewById(R.id.DinnerSecond1);
                 DinnerSecondAllergens = itemView.findViewById(R.id.DinnerSecondAllergens1);
+
+                BreakfastLinearLayout1 = itemView.findViewById(R.id.BreakfastLinearLayout1);
+                BrunchLinearLayout1 = itemView.findViewById(R.id.BrunchLinearLayout1);
+                LunchLinearLayout1 = itemView.findViewById(R.id.LunchLinearLayout1);
+                SnackLinearLayout1 = itemView.findViewById(R.id.SnackLinearLayout1);
+                DinnerLinearLayout1 = itemView.findViewById(R.id.DinnerLinearLayout1);
+                DinnerSecondLinearLayout1 = itemView.findViewById(R.id.DinnerSecondLinearLayout1);
             }
         }
 
     }
-
 
 
 }

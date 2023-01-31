@@ -15,10 +15,6 @@ public interface MainParameters {
 
 
 
-
-
-
-
     String TIME_OF_LAST_BLOCKED_READER = "TimeOfLastBlockedReader";
     String TIME_OF_LAST_BLOCKED_PIN = "TimeOfLastBlockedPin";
 
@@ -142,10 +138,6 @@ public interface MainParameters {
     String DINNER_SECOND_SHOW = "DinnerSecondShow";
 
     String MY_ALERGENS = "MyAlergens";
-
-
-
-
 
 
 

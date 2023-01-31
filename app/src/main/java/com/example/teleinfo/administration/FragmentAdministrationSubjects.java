@@ -101,7 +101,6 @@ public class FragmentAdministrationSubjects extends Fragment implements BottomSh
 
 
 
-
         /*
 
 
@@ -809,7 +808,6 @@ public class FragmentAdministrationSubjects extends Fragment implements BottomSh
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
             return new MainSubjectsViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.administration_fragment_subjects_adapter_item,parent,false));
-
         }
 
         @Override
@@ -842,6 +840,8 @@ public class FragmentAdministrationSubjects extends Fragment implements BottomSh
 
 
 
+
+
         class MainSubjectsViewHolder extends RecyclerView.ViewHolder{
 
             TextView teacherNamedssssf;
@@ -857,7 +857,6 @@ public class FragmentAdministrationSubjects extends Fragment implements BottomSh
             }
         }
 
-
         private void setMoveText(TextView moveText) {
             moveText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
             moveText.setSingleLine(true);
@@ -865,11 +864,7 @@ public class FragmentAdministrationSubjects extends Fragment implements BottomSh
             moveText.setMarqueeRepeatLimit(200);
             moveText.setSelected(true);
         }
-
-
     }
-
-
 }
 
 

@@ -58,7 +58,6 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
     AVLoadingIndicatorView aVLoadingIndicatorViewIndicator;
 
     TextView textLastSynchronization;
-    LinearLayout linearLayout_synchronization;
 
     private FirebaseDatabase mFirebaseDatabaseDatabase;
     private DatabaseReference mDatabaseReference;
@@ -108,9 +107,7 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
         aVLoadingIndicatorViewIndicator.setVisibility(View.VISIBLE);
 
         textLastSynchronization = (TextView)findViewById(R.id.textLastSynchronization);
-        linearLayout_synchronization = (LinearLayout)findViewById(R.id.linearLayout_synchronization);
 
-        linearLayout_synchronization.setVisibility(View.GONE);
 
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
@@ -153,7 +150,7 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
 
                 mMainStudentsAdapter.notifyDataSetChanged();
 
-                linearLayout_synchronization.setVisibility(View.VISIBLE);
+                //linearLayout_synchronization.setVisibility(View.VISIBLE);
                 hideAllViews();
                 CheckIsListEmpty(null,null);
             }
@@ -396,19 +393,31 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
 
             MainLightsViewHolder mainLightsViewHolder = (MainLightsViewHolder)holder;
 
-            mainLightsViewHolder.textId.setText(mainLightsObject.id + "");
-            mainLightsViewHolder.textName.setText(mainLightsObject.studentName);
 
 
-            if(mainLightsObject.pocNepotvrzeno > 35){
+mainLightsViewHolder.statisticOfStudentPritomen.setText(mainLightsObject.Pritomen + "");
+mainLightsViewHolder.statisticOfStudentNepritomen.setText(mainLightsObject.Neritomen + "");
+mainLightsViewHolder.statisticOfStudentNezapocitavana.setText(mainLightsObject.Nezapocitavana + "");
+mainLightsViewHolder.statisticOfStudentNeomluveno.setText(mainLightsObject.Neomluveno + "");
+mainLightsViewHolder.statisticOfStudentPotvrzeno.setText(mainLightsObject.Potvrzeno + "");
+mainLightsViewHolder.statisticOfStudentNepotvrzeno.setText((mainLightsObject.Omluveno-mainLightsObject.Potvrzeno) + "");
+mainLightsViewHolder.statisticOfStudentCelkem.setText("(" + mainLightsObject.CelkPocHod + " hod)");
+mainLightsViewHolder.statisticOfStudentJmeno.setText(mainLightsObject.studentName + "");
+mainLightsViewHolder.statisticOfStudentId.setText(mainLightsObject.id + "");
 
-                mainLightsViewHolder.textHours.setTextColor(Color.parseColor("#E53935"));
-                mainLightsViewHolder.textHours.setText(mainLightsObject.pocNepotvrzeno + "");
+           // mainLightsViewHolder.textId.setText(mainLightsObject.id + "");
+         //   mainLightsViewHolder.textName.setText(mainLightsObject.studentName);
+
+
+            if((mainLightsObject.Omluveno-mainLightsObject.Potvrzeno) > 35){
+
+                mainLightsViewHolder.statisticOfStudentNepotvrzeno.setTextColor(Color.parseColor("#E53935"));
+                mainLightsViewHolder.statisticOfStudentNepotvrzeno.setText((mainLightsObject.Omluveno-mainLightsObject.Potvrzeno) + "");
 
             }else{
 
-                mainLightsViewHolder.textHours.setTextColor(Color.parseColor("#212121"));
-                mainLightsViewHolder.textHours.setText(mainLightsObject.pocNepotvrzeno + "");
+                mainLightsViewHolder.statisticOfStudentNepotvrzeno.setTextColor(Color.parseColor("#212121"));
+                mainLightsViewHolder.statisticOfStudentNepotvrzeno.setText((mainLightsObject.Omluveno-mainLightsObject.Potvrzeno) + "");
             }
 
 
@@ -441,16 +450,28 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
         class MainLightsViewHolder extends RecyclerView.ViewHolder{
 
 
-            TextView textId;
-            TextView textName;
-            TextView textHours;
+            TextView statisticOfStudentPritomen;
+            TextView statisticOfStudentNepritomen;
+            TextView statisticOfStudentNezapocitavana;
+            TextView statisticOfStudentNeomluveno;
+            TextView statisticOfStudentPotvrzeno;
+            TextView statisticOfStudentNepotvrzeno;
+            TextView statisticOfStudentCelkem;
+            TextView statisticOfStudentJmeno;
+            TextView statisticOfStudentId;
 
             public MainLightsViewHolder(View itemView){
                 super(itemView);
 
-                textId = itemView.findViewById(R.id.textId);
-                textName = itemView.findViewById(R.id.textName);
-                textHours = itemView.findViewById(R.id.textHours);
+                statisticOfStudentPritomen = itemView.findViewById(R.id.statisticOfStudentPritomen);
+                statisticOfStudentNepritomen = itemView.findViewById(R.id.statisticOfStudentNepritomen);
+                statisticOfStudentNezapocitavana = itemView.findViewById(R.id.statisticOfStudentNezapocitavana);
+                statisticOfStudentNeomluveno = itemView.findViewById(R.id.statisticOfStudentNeomluveno);
+                statisticOfStudentPotvrzeno = itemView.findViewById(R.id.statisticOfStudentPotvrzeno);
+                statisticOfStudentNepotvrzeno = itemView.findViewById(R.id.statisticOfStudentNepotvrzeno);
+                statisticOfStudentCelkem = itemView.findViewById(R.id.statisticOfStudentCelkem);
+                statisticOfStudentJmeno = itemView.findViewById(R.id.statisticOfStudentJmeno);
+                statisticOfStudentId = itemView.findViewById(R.id.statisticOfStudentId);
 
             }
         }

@@ -36,6 +36,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         //mEditor.putString(PAIRING_STATUS, "waitingForUserVerification");
         //mEditor.commit();
 
+        //mSharedPreferences.edit().putBoolean().commit()
+
         if(sss){
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "notification_channel")
