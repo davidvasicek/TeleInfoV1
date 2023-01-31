@@ -17,6 +17,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -56,6 +57,7 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
     TextView textViewMessageRow2;
     Button buttonRefrest;
     AVLoadingIndicatorView aVLoadingIndicatorViewIndicator;
+    LinearLayout LinearLAyoutInfoBlock;
 
     TextView textLastSynchronization;
 
@@ -64,6 +66,10 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
     private ChildEventListener listener;
 
     Toolbar toolbar;
+
+    Handler handler;
+
+    long lastSyncData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +90,7 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
 
         mFirebaseDatabaseDatabase = FirebaseDatabase.getInstance();
 
-        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("omluvenkyLG") ;
+        mDatabaseReference = mFirebaseDatabaseDatabase.getReference("Omluvenky").child("4_C") ;
 
 
 
@@ -98,6 +104,9 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
         textViewMessageRow2 = (TextView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_TextViewMessageRow2);
         buttonRefrest = (Button)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_ButtonRefrest);
         aVLoadingIndicatorViewIndicator = (AVLoadingIndicatorView)findViewById(R.id.administrationsOrganizationsOrganizationsListActivity_AVLoadingIndicatorViewIndicator);
+        LinearLAyoutInfoBlock = (LinearLayout) findViewById(R.id.LinearLAyoutInfoBlock);
+
+
 
         mApologies_ApologiesObject = new ArrayList<>();
 
@@ -105,6 +114,8 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
         textViewMessageRow1.setVisibility(View.VISIBLE);
         textViewMessageRow1.setText("Načítání dat");
         aVLoadingIndicatorViewIndicator.setVisibility(View.VISIBLE);
+
+        LinearLAyoutInfoBlock.setVisibility(View.GONE);
 
         textLastSynchronization = (TextView)findViewById(R.id.textLastSynchronization);
 
@@ -129,23 +140,23 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
                 Apologies_ApologiesObject mainLightsObject = dataSnapshot.getValue(Apologies_ApologiesObject.class);
                 mainLightsObject.key = dataSnapshot.getKey();
 
-                String studenName = "";
+                //String studenName = "";
 
-                String[] keySplit = dataSnapshot.getKey().split("_");
+                //String[] keySplit = dataSnapshot.getKey().split("_");
 
-                for(int i = 2; i<keySplit.length; i++){
+                //for(int i = 2; i<keySplit.length; i++){
 
-                    studenName+= keySplit[i] + " ";
-                }
+                //    studenName+= keySplit[i] + " ";
+               // }
 
-                mainLightsObject.id = Integer.parseInt(keySplit[0]);
-                mainLightsObject.studentName = studenName;
+              //  mainLightsObject.Id = Integer.parseInt(keySplit[0]);
+               // mainLightsObject.Name = studenName;
 
                 mApologies_ApologiesObject.add(mainLightsObject);
 
                 Collections.sort(mApologies_ApologiesObject, new Comparator<Apologies_ApologiesObject>(){
                     public int compare(Apologies_ApologiesObject obj1, Apologies_ApologiesObject obj2) {
-                        return (obj1.id < obj2.id) ? -1: (obj1.id > obj2.id) ? 1:0 ;
+                        return (obj1.Id < obj2.Id) ? -1: (obj1.Id > obj2.Id) ? 1:0 ;
                     }});
 
                 mMainStudentsAdapter.notifyDataSetChanged();
@@ -161,17 +172,17 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
                 Apologies_ApologiesObject mainLightsObject = dataSnapshot.getValue(Apologies_ApologiesObject.class);
                 mainLightsObject.key = dataSnapshot.getKey();
 
-                String studenName = "";
+                //String studenName = "";
 
-                String[] keySplit = dataSnapshot.getKey().split("_");
+                //String[] keySplit = dataSnapshot.getKey().split("_");
 
-                for(int i = 2; i<keySplit.length; i++){
+                //for(int i = 2; i<keySplit.length; i++){
 
-                    studenName+= keySplit[i] + " ";
-                }
+                //    studenName+= keySplit[i] + " ";
+               // }
 
-                mainLightsObject.id = Integer.parseInt(keySplit[0]);
-                mainLightsObject.studentName = studenName;
+                //mainLightsObject.Id = Integer.parseInt(keySplit[0]);
+                //mainLightsObject.Name = studenName;
 
                 int index = GetItemIndex(mainLightsObject,mApologies_ApologiesObject);
                 mApologies_ApologiesObject.set(index, mainLightsObject);
@@ -305,6 +316,7 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
 
                     long epochtime = dataSnapshot.child("Info").child("lastSynchronizationTime").getValue(long.class);
 
+                    lastSyncData = epochtime;
 
                     Date date = new Date(epochtime);
                     DateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");
@@ -317,10 +329,32 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
                     SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy HH:mm");
                     format1.setTimeZone(TimeZone.getTimeZone("UTC"));
 
-                    textLastSynchronization.setText(format1.format(date1));
+                    handler = new Handler() ;
+                    handler.postDelayed(runnable, 0);
+
+                    //textLastSynchronization.setText("Synchronizováno před " + format1.format(date1));
+                    LinearLAyoutInfoBlock.setVisibility(View.VISIBLE);
+
+                    mDatabaseReference.child("Apologies").addChildEventListener(listener);
+
+                    mDatabaseReference.child("Info").addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+
+                            lastSyncData = dataSnapshot.child("lastSynchronizationTime").getValue(long.class);;
+
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                        // TODO
+                        //ErrorDialog errorDialog = new ErrorDialog(ERROR_CODE_UNKNOWN, databaseError + "");
+                        //errorDialog.show(getFragmentManager(), "exampleBottomSheet");
+
+                    }
+                });
 
 
-                    mDatabaseReference.child("omluvenky").addChildEventListener(listener);
 
                 }
                 @Override
@@ -348,6 +382,57 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
     }
 
 
+    public Runnable runnable = new Runnable() {
+
+        public void run() {
+
+
+
+            StringBuilder s = new StringBuilder(100);
+
+
+            long lastSyncDiff = (System.currentTimeMillis() - lastSyncData);
+
+            long differenceInDays = (lastSyncDiff) / 86400000;
+            long differenceInHours = (lastSyncDiff / (60 * 60 * 1000)) % 24;
+            long differenceInMinutes = (lastSyncDiff / (60 * 1000)) % 60;
+            long differenceInSeconds = (lastSyncDiff / 1000) % 60;
+
+
+
+
+
+
+            if(differenceInDays > 0){
+
+                s.append(differenceInDays + " dny, ");
+            }
+
+            if(differenceInHours > 0){
+
+                s.append(differenceInHours + " hod, ");
+            }
+
+            if(differenceInMinutes > 0){
+
+                s.append(differenceInMinutes + " min, ");
+            }
+
+            s.append(differenceInSeconds + " sec");
+
+
+            // TODO - když bude 2hod 0min a 1sec tak se minuty nezobrazí
+
+            textLastSynchronization.setText("Synchronizováno před " +  s);
+
+          //  1675188695483
+            //  1675191211518
+            Log.i("Lojza", "" + System.currentTimeMillis());
+
+            handler.postDelayed(this, 1000);
+        }
+
+    };
 
 
 
@@ -402,8 +487,8 @@ mainLightsViewHolder.statisticOfStudentNeomluveno.setText(mainLightsObject.Neoml
 mainLightsViewHolder.statisticOfStudentPotvrzeno.setText(mainLightsObject.Potvrzeno + "");
 mainLightsViewHolder.statisticOfStudentNepotvrzeno.setText((mainLightsObject.Omluveno-mainLightsObject.Potvrzeno) + "");
 mainLightsViewHolder.statisticOfStudentCelkem.setText("(" + mainLightsObject.CelkPocHod + " hod)");
-mainLightsViewHolder.statisticOfStudentJmeno.setText(mainLightsObject.studentName + "");
-mainLightsViewHolder.statisticOfStudentId.setText(mainLightsObject.id + "");
+mainLightsViewHolder.statisticOfStudentJmeno.setText(mainLightsObject.Name + "");
+mainLightsViewHolder.statisticOfStudentId.setText(mainLightsObject.Id + "");
 
            // mainLightsViewHolder.textId.setText(mainLightsObject.id + "");
          //   mainLightsViewHolder.textName.setText(mainLightsObject.studentName);

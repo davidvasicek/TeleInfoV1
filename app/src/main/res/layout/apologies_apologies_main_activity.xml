@@ -21,22 +21,23 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLAyoutInfoBlock">
+
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:weightSum="1">
+            android:layout_height="40dp"
+            android:layout_margin="10dp">
 
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 >
-
 
                 <TextView
                     android:id="@+id/unregisteredHoursMainActivityAdapterItemTextViewLearnedHour"
@@ -56,13 +57,11 @@
                     android:layout_height="match_parent"
                     android:text="od 26.1.2023"
                     android:textColor="@color/text_secondary"
-                    android:textSize="8dp"
+                    android:textSize="9dp"
                     android:tag="tagForDelete"
                     android:textAllCaps="true"
                     android:gravity="center"
                     android:layout_weight="1"/>
-
-
 
             </LinearLayout>
 
@@ -78,25 +77,15 @@
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 >
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Poslední synchronizace:"
-                    android:textSize="12dp"
-                    android:id="@+id/textHours"
-                    android:gravity="center"
-
-                    />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="26.9.2022"
+                    android:layout_height="match_parent"
+                    android:text="Synchronizováno před 1m"
                     android:textSize="12dp"
                     android:id="@+id/textLastSynchronization"
                     android:gravity="center"
@@ -104,17 +93,12 @@
                     />
 
 
+
+
             </LinearLayout>
 
 
         </LinearLayout>
-
-
-
-
-
-    </LinearLayout>
-
 
 
     <HorizontalScrollView
@@ -315,7 +299,7 @@
     </HorizontalScrollView>
 
 
-
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
