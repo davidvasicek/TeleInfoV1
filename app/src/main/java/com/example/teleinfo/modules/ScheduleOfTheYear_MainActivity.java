@@ -366,31 +366,61 @@ public class ScheduleOfTheYear_MainActivity extends AppCompatActivity {
 
             if(dinningRoomScheduleOfTheYearObject.From == dinningRoomScheduleOfTheYearObject.To){
 
-                mainLightsViewHolder.textViewDateSeparator.setVisibility(View.GONE);
-                mainLightsViewHolder.textViewDateTo.setVisibility(View.GONE);
+                mainLightsViewHolder.textViewDateSeparator.setVisibility(View.INVISIBLE);
+                mainLightsViewHolder.textViewDateToDay.setVisibility(View.INVISIBLE);
+                mainLightsViewHolder.textViewDateToMonth.setVisibility(View.INVISIBLE);
+                mainLightsViewHolder.textViewDateToYear.setVisibility(View.INVISIBLE);
+                mainLightsViewHolder.textViewDateToDayOfTheWeek.setVisibility(View.INVISIBLE);
 
             }
 
             try {
 
-                DateFormat sdf;
+                DateFormat sdfDay;
+                DateFormat sdfMonth;
+                DateFormat sdfYear;
+                DateFormat sdfDayOfTheWeek;
 
-                sdf = new SimpleDateFormat("dd.MM.yyyy");
+
+                sdfDay = new SimpleDateFormat("dd");
+                sdfMonth = new SimpleDateFormat("MM");
+                sdfYear = new SimpleDateFormat("yyyy");
+                sdfDayOfTheWeek = new SimpleDateFormat("EEEE");
+
 
                 Date newDate = (new Date(dinningRoomScheduleOfTheYearObject.From));
-                mainLightsViewHolder.textViewDateFrom.setText(sdf.format(newDate) + "");
+
+                mainLightsViewHolder.textViewDateFromDay.setText(sdfDay.format(newDate) + "");
+                mainLightsViewHolder.textViewDateFromMonth.setText(sdfMonth.format(newDate) + "");
+                mainLightsViewHolder.textViewDateFromYear.setText(sdfYear.format(newDate) + "");
+                mainLightsViewHolder.textViewDateFromDayOfTheWeek.setText(sdfDayOfTheWeek.format(newDate) + "");
+
+
             } catch (Exception ex) {
 
             }
 
             try {
 
-                DateFormat sdf;
+                DateFormat sdfDay;
+                DateFormat sdfMonth;
+                DateFormat sdfYear;
+                DateFormat sdfDayOfTheWeek;
 
-                sdf = new SimpleDateFormat("dd.MM.yyyy");
+
+                sdfDay = new SimpleDateFormat("dd");
+                sdfMonth = new SimpleDateFormat("MM");
+                sdfYear = new SimpleDateFormat("yyyy");
+                sdfDayOfTheWeek = new SimpleDateFormat("EEEE");
 
                 Date newDate = (new Date(dinningRoomScheduleOfTheYearObject.To));
-                mainLightsViewHolder.textViewDateTo.setText(sdf.format(newDate) + "");
+
+                mainLightsViewHolder.textViewDateToDay.setText(sdfDay.format(newDate) + "");
+                mainLightsViewHolder.textViewDateToMonth.setText(sdfMonth.format(newDate) + "");
+                mainLightsViewHolder.textViewDateToYear.setText(sdfYear.format(newDate) + "");
+                mainLightsViewHolder.textViewDateToDayOfTheWeek.setText(sdfDayOfTheWeek.format(newDate) + "");
+
+
             } catch (Exception ex) {
 
             }
@@ -429,23 +459,37 @@ public class ScheduleOfTheYear_MainActivity extends AppCompatActivity {
 
         class MainLightsViewHolder extends RecyclerView.ViewHolder{
 
-            TextView textViewDateFrom;
+            TextView textViewDateFromDay;
+            TextView textViewDateFromMonth;
+            TextView textViewDateFromYear;
+            TextView textViewDateFromDayOfTheWeek;
             TextView textViewDateSeparator;
-            TextView textViewDateTo;
-            TextView textViewNumberOfDayeTo;
+            TextView textViewDateToDay;
+            TextView textViewDateToMonth;
+            TextView textViewDateToYear;
+            TextView textViewDateToDayOfTheWeek;
             TextView textViewEvent;
+            TextView textViewNumberOfDayeTo;
             CardView cardViewStatus;
 
             public MainLightsViewHolder(View itemView){
                 super(itemView);
 
-
-                textViewDateFrom = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateFrom);
+                textViewDateFromDay = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateFromDay);
+                textViewDateFromMonth = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateFromMonth);
+                textViewDateFromYear = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateFromYear);
+                textViewDateFromDayOfTheWeek = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateFromDayOfTheWeek);
                 textViewDateSeparator = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateSeparator);
-                textViewDateTo = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateTo);
-                textViewNumberOfDayeTo = itemView.findViewById(R.id.scheduleOfTheYearTextViewNumberOfDayeTo);
+                textViewDateToDay = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateToDay);
+                textViewDateToMonth = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateToMonth);
+                textViewDateToYear = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateToYear);
+                textViewDateToDayOfTheWeek = itemView.findViewById(R.id.scheduleOfTheYearTextViewDateToDayOfTheWeek);
                 textViewEvent = itemView.findViewById(R.id.scheduleOfTheYearTextViewEvent);
+                textViewNumberOfDayeTo = itemView.findViewById(R.id.scheduleOfTheYearTextViewNumberOfDayeTo);
                 cardViewStatus = itemView.findViewById(R.id.scheduleOfTheYearCardViewStatus);
+
+
+
 
 
             }

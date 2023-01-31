@@ -5,155 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        >
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/scheduleOfTheYearCardViewStatus"
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                app:cardBackgroundColor="@color/blue500colorAccent"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginBottom="0dp"
-                android:layout_marginTop="0dp"
-                app:cardCornerRadius="1dp">
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            >
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_marginBottom="2.5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="12.2.2022"
-                    android:gravity="left"
-                    android:textColor="@color/text_primary"
-                    android:textSize="12dp"
-                    android:id="@+id/scheduleOfTheYearTextViewDateFrom"
-                    android:textAllCaps="true"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_marginBottom="2.5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:gravity="left"
-                    android:textColor="@color/text_primary"
-                    android:textSize="12dp"
-                    android:id="@+id/scheduleOfTheYearTextViewDateSeparator"
-                    android:textAllCaps="true"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:layout_marginBottom="2.5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="14.2.2022"
-                    android:gravity="left"
-                    android:textColor="@color/text_primary"
-                    android:textSize="12dp"
-                    android:id="@+id/scheduleOfTheYearTextViewDateTo"
-                    android:textAllCaps="true"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_marginBottom="2.5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="za 14 dní"
-                    android:gravity="right"
-                    android:textColor="@color/text_primary"
-                    android:textSize="12dp"
-                    android:id="@+id/scheduleOfTheYearTextViewNumberOfDayeTo"
-                    android:textAllCaps="false"
-                    android:textStyle="normal"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_marginBottom="2.5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:tag="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Velikonoční prázdniny + Velikonoční pondělí"
-                android:gravity="center_vertical"
-                android:textColor="@color/text_secondary"
-                android:textSize="11dp"
-                android:textStyle="normal"
-                android:id="@+id/scheduleOfTheYearTextViewEvent"
-                android:textAllCaps="true"/>
-
-
-
-
-
-
-
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-
-    </LinearLayout>
-
-
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="0dp">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -162,6 +19,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:weightSum="1">
 
             <LinearLayout
@@ -171,7 +29,7 @@
                 >
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/scheduleOfTheYearCardViewScvctatus"
+                    android:id="@+id/scheduleOfTheYearCardViewStatus"
                     android:layout_width="2dp"
                     android:layout_height="match_parent"
                     app:cardBackgroundColor="@color/blue500colorAccent"
@@ -203,7 +61,7 @@
                         android:layout_marginLeft="10dp">
 
                         <TextView
-                            android:id="@+id/menuMainActihghvityAdapterItemTextViewDay"
+                            android:id="@+id/scheduleOfTheYearTextViewDateFromDay"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -224,7 +82,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/menuMainActivityAdaptghgerItemTextViewMonth"
+                            android:id="@+id/scheduleOfTheYearTextViewDateFromMonth"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -237,7 +95,7 @@
 
 
                         <TextView
-                            android:id="@+id/menuMainActivityAdapterItghgemTextViewYear"
+                            android:id="@+id/scheduleOfTheYearTextViewDateFromYear"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -259,15 +117,15 @@
                     android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/menuMainAdgdctihghvityAdapterItemTextViewDay"
+                            android:id="@+id/scheduleOfTheYearTextViewDateFromDayOfTheWeek"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:tag="tagForDelete"
                             android:text="Pondělí"
                             android:textAllCaps="true"
                             android:textColor="@color/text_primary"
-                            android:textSize="10dp"
+                            android:textSize="8dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="2dp"/>
 
@@ -292,7 +150,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/menuMainActivityAdapterfgItemTextViewYear"
+                        android:id="@+id/scheduleOfTheYearTextViewDateSeparator"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -331,7 +189,7 @@
                         android:layout_marginLeft="0dp">
 
                         <TextView
-                            android:id="@+id/menuMainActicvcvhghvityAdapterItemTextViewDay"
+                            android:id="@+id/scheduleOfTheYearTextViewDateToDay"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
@@ -352,7 +210,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/menuMainActivitcvcvyAdaptghgerItemTextViewMonth"
+                            android:id="@+id/scheduleOfTheYearTextViewDateToMonth"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -365,7 +223,7 @@
 
 
                         <TextView
-                            android:id="@+id/menuMainActivitcvcyAdapterItghgemTextViewYear"
+                            android:id="@+id/scheduleOfTheYearTextViewDateToYear"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -387,7 +245,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/menuMainAdgdctihghvityAdaptecvcrItemTextViewDay"
+                        android:id="@+id/scheduleOfTheYearTextViewDateToDayOfTheWeek"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="left"
@@ -395,7 +253,7 @@
                         android:text="Pátek"
                         android:textAllCaps="true"
                         android:textColor="@color/text_primary"
-                        android:textSize="10dp"
+                        android:textSize="8dp"
                         android:layout_marginLeft="0dp"
                         android:layout_marginTop="2dp"/>
 
@@ -420,23 +278,10 @@
                 android:layout_height="wrap_content"
                 >
 
-                <TextView
-                    android:id="@+id/menuMainActivityAdaptekhjrItemTextViewDayOfTheWeek"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:tag="tagForDelete"
-                    android:text="za 10 dní"
-                    android:textAllCaps="true"
-                    android:textColor="@color/text_primary"
-                    android:textSize="12dp"
-                    android:textStyle="normal"
-                    android:layout_marginBottom="5dp"/>
 
 
                 <TextView
-                    android:id="@+id/menuMainActivityAdapterItemTextViewDayOfTheWeek"
+                    android:id="@+id/scheduleOfTheYearTextViewEvent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -444,9 +289,24 @@
                     android:tag="tagForDelete"
                     android:text="Velikonoční prázdniny + Velikonoční pondělí"
                     android:textAllCaps="true"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="@color/text_primary"
                     android:textSize="12dp"
                     android:textStyle="normal"/>
+
+                <TextView
+                    android:id="@+id/scheduleOfTheYearTextViewNumberOfDayeTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:tag="tagForDelete"
+                    android:text="za 10 dní"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10dp"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="0dp"/>
+
 
             </LinearLayout>
 
@@ -465,7 +325,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/line"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="0dp"/>
 
 
 
