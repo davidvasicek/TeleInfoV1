@@ -30,6 +30,7 @@ import android.widget.TextView;
 import com.example.teleinfo.R;
 import com.example.teleinfo.parameters.GetThemeStyle;
 import com.example.teleinfo.parameters.IsOnline;
+import com.example.teleinfo.rozvrh.TimetableMenuBottomSheetDialog;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -77,6 +78,9 @@ public class Apologies_ApologiesMainActivity extends AppCompatActivity {
         SharedPreferences shrPref = getApplication().getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE);
         setTheme(new GetThemeStyle().getThemeStyle(shrPref.getString(CURRENT_THEME, "#212121")));
         setContentView(R.layout.apologies_apologies_main_activity);
+
+        Apologies_SettingBottomSheetDialog apologies_settingBottomSheetDialog = new Apologies_SettingBottomSheetDialog();
+        apologies_settingBottomSheetDialog.show(getSupportFragmentManager(), "exampleBottomSheet");
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
