@@ -13,6 +13,8 @@ import android.text.Html;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.teleinfo.administration._ActivityFragmentViewAdministration;
+import com.example.teleinfo.krmitko.KrmitkoMainActivity;
 import com.example.teleinfo.login._ActivityMainLogin;
 import com.example.teleinfo.modules.ClassRooms_BottomSheetDialogClassRoomsList;
 import com.example.teleinfo.parameters.GetThemeStyle;
@@ -88,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        Intent intent = new Intent(getApplicationContext(), KrmitkoMainActivity.class);
+        startActivity(intent);
 
 
 
